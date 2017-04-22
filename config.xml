@@ -7,7 +7,7 @@
 	skins = ""
 	plugins = "zqtv.png"
 	backgrounds = ""
-	lists = ""
+	lists = "zqtv.xml"
 	
 	src_handler = "" 
 	lrc_handler = ""
