@@ -4,7 +4,7 @@
 	description = "『生活需要音乐』"
 	logo = "{src:logo.png,xywh:[10R,10R,0,0]}"
 	
-	skins = ""
+	skins = "imgo.png"
 	plugins = "zqtv.png"
 	backgrounds = ""
 	lists = "zqtv.xml"
