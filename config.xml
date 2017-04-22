@@ -5,7 +5,7 @@
 	logo = "{src:logo.png,xywh:[10R,10R,0,0]}"
 	
 	skins = ""
-	plugins = ""
+	plugins = "zqtv.png"
 	backgrounds = ""
 	lists = ""
 	
