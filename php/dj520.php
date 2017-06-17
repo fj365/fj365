@@ -73,6 +73,7 @@ function CURL($url){
 	curl_close($ch);
 	return $data;
 }
+//JP页面
 function HTML($dh,$mbx,$zy,$fy,$jsonp){
 	header("content-type:text/html; charset=utf-8");
 	echo '
@@ -174,22 +175,9 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 								<button class="jp-stop" role="button" tabindex="0">stop</button>
 								<button class="jp-next" role="button" tabindex="0">next</button>
 							</div>
-							<!--<div class="jp-toggles">
-								<button class="jp-repeat" role="button" tabindex="0">repeat</button>
-								<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
-								<button class="jp-full-screen" role="button" tabindex="0">full screen</button>
-							</div>
-							-->
 						</div>
 					</div>
 				</div>
-				<!--
-				<div class="jp-playlist" style="margin-top: -9px;">
-					<ul>
-						<li></li>
-					</ul>
-				</div>
-				-->
 			</div>
 		</div>
 	</div>
