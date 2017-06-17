@@ -102,7 +102,7 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-top:-7px;">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-top:-8px;margin-right: -14px;">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
 					<form class="navbar-header navbar-form navbar-left" role="请输入搜索内容">
