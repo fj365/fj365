@@ -218,7 +218,7 @@ $(document).ready(function(){
 		}
 	});
 	$("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
-	WNJP.play(1);
+	WNJP.play(0);
 });
 //]]>
 //酷狗
@@ -250,6 +250,7 @@ function kglist_success_jsonpCallback(data){
 		lkg_01+=\'<div class="list-group-item"><span class="badge"><a href="http://w.wo0.cn/x.php/kg_\'+v.hash+\'.mp3"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play(\'+k+\');">\'+v.filename+\'</a></div>\';
 	});
 	$(\'#jq_list\').html(lkg_01);
+	WNJP.play(0);
 }
 </script>
 </body>
