@@ -1,6 +1,7 @@
 <?php
 //JP播放器》my.php?p=1&t=zhongwenwuqu
 //XML CMP列表》my.php?p=1&a=zhongwenwuqu  默认列表：my.php
+//PHP Ajax酷狗搜索列表》my.php?kg=搜索内容
 error_reporting(0);
 $fname = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER["SCRIPT_NAME"];
 //开始编写
