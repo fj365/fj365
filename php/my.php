@@ -1,6 +1,6 @@
 <?php
-//JP播放器》djkk.php?p=1&t=zhongwenwuqu
-//XML CMP列表》djkk.php?p=1&a=zhongwenwuqu  默认列表：djkk.php
+//JP播放器》my.php?p=1&t=zhongwenwuqu
+//XML CMP列表》my.php?p=1&a=zhongwenwuqu  默认列表：my.php
 error_reporting(0);
 $fname = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER["SCRIPT_NAME"];
 //开始编写
@@ -91,10 +91,10 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 	<script type="text/javascript" src="//cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript" src="//cdn.staticfile.org/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="//cdn.staticfile.org/twitter-bootstrap/3.0.1/js/bootstrap.min.js"></script>
-	<script src="https://cdn.bootcss.com/jplayer/2.9.2/add-on/jplayer.playlist.min.js"></script>
-	<script src="https://cdn.bootcss.com/jplayer/2.9.2/add-on/jquery.jplayer.inspector.min.js"></script>
-	<script src="https://cdn.bootcss.com/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
-	<link href="https://cdn.bootcss.com/jplayer/2.9.2/skin/pink.flag/css/jplayer.pink.flag.min.css" rel="stylesheet">
+	<script src="//cdn.bootcss.com/jplayer/2.9.2/add-on/jplayer.playlist.min.js"></script>
+	<script src="//cdn.bootcss.com/jplayer/2.9.2/add-on/jquery.jplayer.inspector.min.js"></script>
+	<script src="//cdn.bootcss.com/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
+	<link href="//cdn.bootcss.com/jplayer/2.9.2/skin/pink.flag/css/jplayer.pink.flag.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
