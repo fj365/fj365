@@ -36,6 +36,7 @@ if(isset($_GET['a'])){
 		}
 	}
 	$fy .= '<li><a href="'.$fname.'?p='.($_GET['p']+4).'&t='.$_GET['t'].'"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></li>';
+	if($_GET['kg']){$fy = '';}
 	//导航
 	$dh = '<li><a href="'.$fname.'?p=1&t=manyaochuanshao">慢摇串烧</a></li><li><a href="'.$fname.'?p=1&t=yingwenwuqu">英文舞曲</a></li><li><a href="'.$fname.'?p=1&t=zhongwenwuqu">中文舞曲</a></li><li><a href="'.$fname.'?p=1&t=xianchangwuqu">现场舞曲</a></li><li><a href="'.$fname.'?p=1&t=jiubawuqu">酒吧舞曲</a></li><li><a href="'.$fname.'?p=1&t=yuenangu">越南鼓</a></li>';
 	echo HTML($dh,$mbx,$zy,$fy,$jsonp);
@@ -112,10 +113,10 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 						</li>
 						'.$dh.'
 					</ul>
-					<form class="navbar-form navbar-left" role="请输入搜索内容">
+					<form class="navbar-form navbar-left" role="酷狗搜索">
 						<div class="form-group">
-							<input type="text" class="form-control" />
-						</div> <button type="submit" class="btn btn-default">搜索</button>
+							<input type="text" name="kg" class="form-control" />
+						</div> <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span></button>
 					</form>
 				</div>
 				
