@@ -209,6 +209,7 @@ $(document).ready(function(){
 		keyEnabled: true
 	});
 	$("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
+	WNJP.play(1);
 });
 //]]>
 </script>
