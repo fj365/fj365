@@ -206,7 +206,10 @@ $(document).ready(function(){
 		autoBlur: false,
 		smoothPlayBar: true,
 		size: {width: "100%", height:"1px"},
-		keyEnabled: true
+		keyEnabled: true,
+		play: function(event) {
+			document.title = event.jPlayer.status.media.title;
+		}
 	});
 	$("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
 	WNJP.play(1);
