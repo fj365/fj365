@@ -132,7 +132,7 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 				</li>
 				'.$mbx.'
 			</ul>
-			<div class="list-group">
+			<div class="list-group" id="WNJP_List">
 				 <a href="#" class="list-group-item active">资源列表</a>
 				'.$zy.'
 			</div>
@@ -250,7 +250,7 @@ function kglist_success_jsonpCallback(data){
 	$.each(data, function(k, v) {
 		lkg_01+=\'<div class="list-group-item"><span class="badge"><a href="http://w.wo0.cn/x.php/kg_\'+v.hash+\'.mp3"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play(\'+k+\');">\'+v.filename+\'</a></div>\';
 	});
-	$(\'#jq_list\').html(lkg_01);
+	$(\'#WNJP_List\').html(lkg_01);
 	WNJP.play(0);
 }
 </script>
