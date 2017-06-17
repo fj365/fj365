@@ -107,7 +107,7 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 					<a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
 					<form class="navbar-header navbar-form navbar-left" role="请输入搜索内容">
 						<div class="form-group">
-							<div class="col-xs-9">
+							<div class="col-xs-6">
 							<input type="text" name="kg" class="form-control"  placeholder="酷狗搜索"/>
 							</div>
 						</div>
