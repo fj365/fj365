@@ -23,7 +23,7 @@ if(isset($_GET['a'])){
 	//资源列表
 	preg_match_all('|<i><input name="check" type="checkbox" value="(\d+)" /></i>\s+<p><a title="([^"]+)"|ims',$b,$c);
 	foreach($c[1] as $k => $v){
-		$zy .= '<div class="list-group-item"><span class="badge"><a href="'.$fname.'?id='.$v.'">下载</a></span><a href="javascript:WNJP.play('.$k.');">'.stripslashes($c[2][$k]).'</a></div>'."\n";
+		$zy .= '<div class="list-group-item"><span class="badge"><a href="'.$fname.'?id='.$v.'"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('.$k.');">'.stripslashes($c[2][$k]).'</a></div>'."\n";
 		//JPLAYER jsonp列表
 		$jsonp .='{mp3:"'.$fname.'?id='.$v.'",title:"'.stripslashes($c[2][$k]).'"},';
 	}
