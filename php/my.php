@@ -18,7 +18,7 @@ if(isset($_GET['a'])){
 	}
 	header("content-type:text/xml; charset=utf-8");
 	echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<list>\n$x_0\n</list>";
-}elseif(isset($_GET['t'])){
+}elseif(isset($_GET['t']) || isset($_GET['kg'])){
 	$b = CURL('http://www.dj520.com/html/'.$_GET['t'].'/index'.$_GET['p'].'.html');
 	//资源列表
 	preg_match_all('|<i><input name="check" type="checkbox" value="(\d+)" /></i>\s+<p><a title="([^"]+)"|ims',$b,$c);
@@ -187,6 +187,11 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 </nav>
 <script type="text/javascript">
 var WNJP;
+$(document).ready(function(){
+	if(location.search.substring(1).match(/kg=/)){
+		KUGOU(location.search.substring(1).replace(/kg=(.+)/, "$1"));
+	}
+});
 //<![CDATA[
 $(document).ready(function(){
 	WNJP = new jPlayerPlaylist({
@@ -215,6 +220,36 @@ $(document).ready(function(){
 	WNJP.play(1);
 });
 //]]>
+//酷狗
+function KUGOU(src){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: "http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+src+"&page=1&pagesize=500&showtype=1",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: \'callback\',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(jdata) {
+			kglist_success_jsonpCallback(jdata.data.info);
+		}
+	});
+}
+function kglist_success_jsonpCallback(data){
+	var lkg_0 = "[";
+	$.each(data, function(k, v) {
+		lkg_0 += \'{mp3:"http://w.wo0.cn/x.php/kg_\'+v.hash+\'.mp3",title:"\'+(v.filename).replace(\'\\\'\', \'\')+\'"},\';
+	});
+	lkg_0 += "]";
+	eval("lkg_d0=" + lkg_0);
+	WNJP.setPlaylist(lkg_d0);
+	var lkg_01=\'<a href="#" class="list-group-item active">KuGou SoMusic List</a>\';
+	$.each(data, function(k, v) {
+		lkg_01+=\'<div class="list-group-item"><span class="badge"><a href="http://w.wo0.cn/x.php/kg_\'+v.hash+\'.mp3"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play(\'+k+\');">\'+v.filename+\'</a></div>\';
+	});
+	$(\'#jq_list\').html(lkg_01);
+}
 </script>
 </body>
 </html>
