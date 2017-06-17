@@ -146,7 +146,7 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 		<div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player" style="width: 100%;">
 			<div class="jp-type-playlist">
 				<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-				<div class="jp-gui" id="jp-gui_hover" style="margin-top: -75px;">
+				<div class="jp-gui" id="jp-gui_hover">
 					<div class="jp-video-play">
 						<button class="jp-video-play-icon" role="button" tabindex="0">play</button>
 					</div>
@@ -205,7 +205,7 @@ $(document).ready(function(){
 		useStateClassSkin: true,
 		autoBlur: false,
 		smoothPlayBar: true,
-		size: {width: "100%", height:"30px"},
+		size: {width: "100%", height:"1px"},
 		keyEnabled: true
 	});
 	$("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
