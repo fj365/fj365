@@ -31,9 +31,13 @@ if(isset($_GET['p'])){
 	echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<list>\n$x_0\n</list>";
 }elseif(isset($_GET['id'])){
 	$j = json_decode(CURL('http://www.dj520.com/uc.php?m=uc&a=playlistadd&songid='.$_GET['id']),true);
-	header('Content-Type: application/octet-stream');
-	header('Content-Disposition: attachment; filename="'.$j[0]['songname'].'.m4a"');
-	header("location:http://music1.dj520.com/music20140219".$j[0]['Dj_Url']);
+	if(strstr($j[0]['Dj_Url'],'m4a')){
+		header('Content-Type: application/octet-stream');
+		header('Content-Disposition: attachment; filename="'.$j[0]['songname'].'.m4a"');
+		header("location:http://music1.dj520.com/music20140219".$j[0]['Dj_Url']);
+	}else{
+		echo '暂无资源';
+	}
 }else{
 	$x = '<list>
 	<m list_src="'.$fname.'?p=1&a=manyaochuanshao" label="慢摇串烧"/>
