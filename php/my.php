@@ -102,9 +102,18 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-top:-7px;">
 				<div class="navbar-header">
-					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="/">龒蜗牛D滚球影音</a>
+					<a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+					<form class="navbar-header navbar-form navbar-left" role="请输入搜索内容">
+						<div class="form-group">
+							<div class="col-xs-9">
+							<input type="text" name="kg" class="form-control"  placeholder="酷狗搜索"/>
+							</div>
+						</div>
+						<!--<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span></button>-->
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="margin-top:-15px;"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+					</form> 
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -114,11 +123,6 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 						</li>
 						'.$dh.'
 					</ul>
-					<form class="navbar-form navbar-left" role="酷狗搜索">
-						<div class="form-group">
-							<input type="text" name="kg" class="form-control" />
-						</div> <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span></button>
-					</form>
 				</div>
 				
 			</nav>
