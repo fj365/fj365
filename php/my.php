@@ -29,13 +29,13 @@ if(isset($_GET['a'])){
 	}
 	preg_match('|">下一页</a><a href="/html/\w+/index(\d+).html"|ims',$b,$pages);
 	//分页
-	$fy = '<li><a href="'.$fname.'?p=1&t='.$_GET['t'].'">首页</a></li><li><a href="'.$fname.'?p='.($_GET['p']-4).'&t='.$_GET['t'].'">上一页</a></li>';
+	$fy = '<li><a href="'.$fname.'?p=1&t='.$_GET['t'].'"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li><li><a href="'.$fname.'?p='.($_GET['p']-4).'&t='.$_GET['t'].'"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a></li>';
 	if(($_GET['p']+4)<=$pages[1]){
 		for($k=($_GET['p']); $k <= ($_GET['p']+4); $k++){
 			$fy .= '<li><a href="'.$fname.'?p='.$k.'&t='.$_GET['t'].'">'.$k.'</a></li>'."\n";
 		}
 	}
-	$fy .= '<li><a href="'.$fname.'?p='.($_GET['p']+4).'&t='.$_GET['t'].'">下一页</a></li>';
+	$fy .= '<li><a href="'.$fname.'?p='.($_GET['p']+4).'&t='.$_GET['t'].'"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></li>';
 	//导航
 	$dh = '<li><a href="'.$fname.'?p=1&t=manyaochuanshao">慢摇串烧</a></li><li><a href="'.$fname.'?p=1&t=yingwenwuqu">英文舞曲</a></li><li><a href="'.$fname.'?p=1&t=zhongwenwuqu">中文舞曲</a></li><li><a href="'.$fname.'?p=1&t=xianchangwuqu">现场舞曲</a></li><li><a href="'.$fname.'?p=1&t=jiubawuqu">酒吧舞曲</a></li><li><a href="'.$fname.'?p=1&t=yuenangu">越南鼓</a></li>';
 	echo HTML($dh,$mbx,$zy,$fy,$jsonp);
