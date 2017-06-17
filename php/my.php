@@ -156,8 +156,6 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 								<div class="jp-play-bar"></div>
 							</div>
 						</div>
-						<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-						<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
 						<div class="jp-details">
 							<div class="jp-title" aria-label="title">&nbsp;</div>
 						</div>
@@ -174,6 +172,10 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 								<button class="jp-play" role="button" tabindex="0">play</button>
 								<button class="jp-stop" role="button" tabindex="0">stop</button>
 								<button class="jp-next" role="button" tabindex="0">next</button>
+							</div>
+							<div>
+							<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+							<div class="jp-duration" role="timer" aria-label="duration" style="margin-left: -20px;">&nbsp;</div>
 							</div>
 						</div>
 					</div>
