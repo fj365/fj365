@@ -176,7 +176,6 @@ function HTML($dh,$mbx,$zy,$fy,$jsonp){
 							<div class="jp-controls">
 								<button class="jp-previous" role="button" tabindex="0">previous</button>
 								<button class="jp-play" role="button" tabindex="0">play</button>
-								<button class="jp-stop" role="button" tabindex="0">stop</button>
 								<button class="jp-next" role="button" tabindex="0">next</button>
 							</div>
 							<div>
