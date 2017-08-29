@@ -1,0 +1,83 @@
+就会发现取出了 255,255,255的全白色。
+
+于是：我们改进一下函数：
+
+function imgColor($imgUrl)
+{
+	$imageInfo = getimagesize($imgUrl);
+	$imgType   = strtolower(substr(image_type_to_extension($imageInfo[2]), 1));
+	$imageFun  = 'imagecreatefrom' . ($imgType == 'jpg' ? 'jpeg' : $imgType);
+	$i         = $imageFun($imgUrl);
+	$rColorNum = $gColorNum = $bColorNum = $total = 0;
+	for ($x = 50; $x < imagesx($i) - 50; $x++) {
+		for ($y = 50; $y < imagesy($i) - 50; $y++) {
+			$rgb = imagecolorat($i, $x, $y);
+			$r   = ($rgb >> 16) & 0xFF;
+			$g   = ($rgb >> 8) & 0xFF;
+			$b   = $rgb & 0xFF;
+			$rColorNum += $r;
+			$gColorNum += $g;
+			$bColorNum += $b;
+			$total++;
+		}
+	}
+	$rgb      = array();
+	$rgb['r'] = round($rColorNum / $total);
+	$rgb['g'] = round($gColorNum / $total);
+	$rgb['b'] = round($bColorNum / $total);
+	return $rgb;
+}
+$rgb = imgColor("图片地址");
+print_r($rgb); //将打印出一个数组 
+ 
+/**
+* x=50 
+* imagesx($i) - 50
+* y=50
+* imagesy($i) - 50
+* 相当于 margin 属性 
+**/
+
+
+我们发现取色正常了。如果不是很正常依然可以调大数值。
+
+
+
+根据图片色系来生成一个对应的字体：
+
+$gray      = '255,255,255';
+$grayLevel = $img['r'] * 0.299 + $img['g'] * 0.587 + $img['b'] * 0.114;
+if ($grayLevel >= 150) {
+	$gray = '0,0,0';
+}PHP中取图片色系并生成跟图片反色差的字体
+原取图片色系：
+
+function imgColor($imgUrl)
+{
+	$imageInfo = getimagesize($imgUrl);
+	$imgType   = strtolower(substr(image_type_to_extension($imageInfo[2]), 1));
+	$imageFun  = 'imagecreatefrom' . ($imgType == 'jpg' ? 'jpeg' : $imgType);
+	$i         = $imageFun($imgUrl);
+	$rColorNum = $gColorNum = $bColorNum = $total = 0;
+	for ($x = 0; $x < imagesx($i); $x++) {
+		for ($y = 0; $y < imagesy($i); $y++) {
+			$rgb = imagecolorat($i, $x, $y);
+			$r   = ($rgb >> 16) & 0xFF;
+			$g   = ($rgb >> 8) & 0xFF;
+			$b   = $rgb & 0xFF;
+			$rColorNum += $r;
+			$gColorNum += $g;
+			$bColorNum += $b;
+			$total++;
+		}
+	}
+	$rgb      = array();
+	$rgb['r'] = round($rColorNum / $total);
+	$rgb['g'] = round($gColorNum / $total);
+	$rgb['b'] = round($bColorNum / $total);
+	return $rgb;
+}
+ 
+$rgb = imgColor("图片地址");
+print_r($rgb); //将打印出一个数组
+根据函数我们可以理解到，此函数运行时会依次遍历所有的像素点。然后取出现最多的像素点。
