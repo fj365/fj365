@@ -81,3 +81,88 @@ function imgColor($imgUrl)
 $rgb = imgColor("图片地址");
 print_r($rgb); //将打印出一个数组
 根据函数我们可以理解到，此函数运行时会依次遍历所有的像素点。然后取出现最多的像素点。
+
+
+
+CRC32参数加密JS、php版-参数完整性验证
+
+    CRC32/CRC16于md5一样都是不可逆的加密函数，用于密码验证或者数据完整性检查。
+
+
+JS 版本：
+
+	function CRC32(str){    
+		str=encodeURIComponent(str);    
+		var Crc32Table=new Array(256);    
+		var i,j;    
+		var Crc;    
+		for(i=0; i<256; i++)    
+		{    
+			Crc=i;    
+			for(j=0; j<8; j++)    
+			{    
+				if(Crc & 1)    
+					Crc=((Crc >> 1)& 0x7FFFFFFF) ^ 0xEDB88320;    
+				else    
+					Crc=((Crc >> 1)& 0x7FFFFFFF);    
+			}    
+			Crc32Table[i]=Crc;    
+		}    
+		if (typeof str != "string") str = "" + str;    
+		Crc=0xFFFFFFFF;    
+		for(i=0; i<str.length; i++)    
+			Crc=((Crc >> 8)&0x00FFFFFF) ^ Crc32Table[(Crc & 0xFF)^ str.charCodeAt(i)];    
+		Crc ^=0xFFFFFFFF;    
+		return (Crc >> 3).toString(16);    
+	}
+
+
+PHP 版本（源自网络）
+
+function co($f) {
+            $d =  Array();  
+            $e = '';  
+            $c = '';  
+            $b = '';  
+            for ($e = 0; $e < 256; $e++) {  
+                $b = $e;  
+                for ($c = 0; $c < 8; $c++) {  
+                    if ($b & 1) {  
+                        $b = (($b >> 1) & 2147483647) ^ 3988292384;  
+                    } else {  
+                        $b = (($b >> 1) & 2147483647);  
+                    }  
+                }  
+                $d[$e] = $b;  
+            }  
+            if (!is_string($f)) {  
+                $f = "" + $f;  
+            }  
+            $b = 4294967295;  
+            for ($e = 0; $e < strlen($f); $e++) {  
+                $b = (($b >> 8) & 16777215) ^ $d[($b & 255) ^ get_bianma(substr($f, $e, 1))];  
+            }  
+            $b ^= 4294967295;//         $b = $b ^ 4294967295;  
+            $fuhao = (  !is_numeric(substr( $b >> 3, 0, 1 ))  ) ?  substr( $b >> 3, 0, 1 ) : '' ;  
+            return $fuhao.base_convert($b >> 3,10,16);//base_convert会去掉（$b >> 3）的负号,这里不要用dechex()转换为16进制  
+        }  
+        function get_bianma($str)//等同于js的charCodeAt()  
+    {  
+        $result = array();  
+        for($i = 0, $l = mb_strlen($str, 'utf-8');$i < $l;++$i)  
+        {  
+            $result[] = uniord(mb_substr($str, $i, 1, 'utf-8'));  
+        }  
+        return join(",", $result);  
+    }  
+    function uniord($str, $from_encoding = false)  
+    {  
+        $from_encoding = $from_encoding ? $from_encoding : 'UTF-8';  
+        if (strlen($str) == 1)  
+            return ord($str);  
+        $str = mb_convert_encoding($str, 'UCS-4BE', $from_encoding);  
+        $tmp = unpack('N', $str);  
+        return $tmp[1];  
+    }
+
+（PHP版本都可按套路推出，以上代码不代表标准版本）
