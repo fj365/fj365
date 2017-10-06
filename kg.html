@@ -1,1 +1,180 @@
-
+<!DOCTYPE html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="title" content="龒蜗牛D滚球影音">
+	<meta name="description" content="龒蜗牛D滚球影音">
+	<meta name="keywords" content="龒蜗牛D,滚球影音,龒蜗牛D滚球影音">
+	<link href="//cdn.staticfile.org/twitter-bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="//apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="//cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.staticfile.org/jqueryui/1.10.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="//cdn.staticfile.org/twitter-bootstrap/3.0.1/js/bootstrap.min.js"></script>
+	<script src="//cdn.bootcss.com/jplayer/2.9.2/add-on/jplayer.playlist.min.js"></script>
+	<script src="//cdn.bootcss.com/jplayer/2.9.2/add-on/jquery.jplayer.inspector.min.js"></script>
+	<script src="//cdn.bootcss.com/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
+	<link href="//cdn.bootcss.com/jplayer/2.9.2/skin/pink.flag/css/jplayer.pink.flag.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-top:-8px;margin-right: -14px;">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+					<form class="navbar-header navbar-form navbar-left" role="请输入搜索内容">
+						<div class="form-group">
+							<div class="col-xs-6">
+							<input type="text" name="kg" class="form-control"  placeholder="酷狗搜索"/>
+							</div>
+						</div>
+						<!--<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span></button>-->
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="margin-top:-15px;"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+					</form> 
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							 <a href="/">首页</a>
+						</li>
+						'.$dh.'
+					</ul>
+				</div>
+				
+			</nav>
+		</div>
+	</div>
+	<div class="row clearfix" style="margin-bottom:100px;">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li class="active">
+					 <a href="/">首页</a>
+				</li>
+				'.$mbx.'
+			</ul>
+			<div class="list-group" id="WNJP_List">
+				 <a href="#" class="list-group-item active">资源列表</a>
+				'.$zy.'
+			</div>
+			<ul class="pagination">
+				'.$fy.'
+			</ul>
+		</div>
+	</div>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">	
+<div class="row clearfix">
+	<div class="col-md-12 column">
+		<div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player" style="width: 100%;">
+			<div class="jp-type-playlist">
+				<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+				<div class="jp-gui" id="jp-gui_hover">
+					<div class="jp-video-play">
+						<button class="jp-video-play-icon" role="button" tabindex="0">play</button>
+					</div>
+					<div class="jp-interface">
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-details">
+							<div class="jp-title" aria-label="title">&nbsp;</div>
+						</div>
+						<div class="jp-controls-holder">
+							<div class="jp-volume-controls">
+								<button class="jp-mute" role="button" tabindex="0">mute</button>
+								<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+								<div class="jp-volume-bar">
+									<div class="jp-volume-bar-value"></div>
+								</div>
+							</div>
+							<div class="jp-controls">
+								<button class="jp-previous" role="button" tabindex="0">previous</button>
+								<button class="jp-play" role="button" tabindex="0">play</button>
+								<button class="jp-next" role="button" tabindex="0">next</button>
+							</div>
+							<div>
+							<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+							<div class="jp-duration" role="timer" aria-label="duration" style="margin-left: -20px;">&nbsp;</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</nav>
+<script type="text/javascript">
+var WNJP;
+$(document).ready(function(){
+	if(location.search.substring(1).match(/kg=/)){
+		KUGOU(location.search.substring(1).replace(/kg=(.+)/, "$1"));
+	}
+});
+//<![CDATA[
+$(document).ready(function(){
+	WNJP = new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_1",
+		cssSelectorAncestor: "#jp_container_1"
+	},[
+	'.$jsonp.'
+	], {
+		ready: function (){$(this).jPlayer("load").jPlayer("play");},
+		playlistOptions: {
+			autoPlay: true,
+			enableRemoveControls: false
+		},
+		solution: "html",
+		supplied: "mp3,m4v",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		size: {width: "100%", height:"1px"},
+		keyEnabled: true,
+		play: function(event) {
+			document.title = event.jPlayer.status.media.title;
+		}
+	});
+	$("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
+	WNJP.play(0);
+});
+//]]>
+//酷狗
+function KUGOU(src){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: "http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+src+"&page=1&pagesize=500&showtype=1",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'callback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(jdata) {
+			kglist_success_jsonpCallback(jdata.data.info);
+		}
+	});
+}
+function kglist_success_jsonpCallback(data){
+	var lkg_0 = "[";
+	$.each(data, function(k, v) {
+		lkg_0 += '{mp3:"http://link.hhtjim.com/kg/'+v.hash+'.mp3",title:"'+(v.filename).replace('\\\'', '')+'"},';
+	});
+	lkg_0 += "]";
+	eval("lkg_d0=" + lkg_0);
+	WNJP.setPlaylist(lkg_d0);
+	var lkg_01='<a href="#" class="list-group-item active">KuGou SoMusic List</a>';
+	$.each(data, function(k, v) {
+		lkg_01+='<div class="list-group-item"><span class="badge"><a href="http://link.hhtjim.com/kg/'+v.hash+'.mp3"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');">'+v.filename+'</a></div>';
+	});
+	$('#WNJP_List').html(lkg_01);
+	WNJP.play(0);
+}
+</script>
+</body>
+</html>
