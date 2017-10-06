@@ -244,7 +244,7 @@ function KUGOU(src){
 function kglist_success_jsonpCallback(data){
 	var lkg_0 = "[";
 	$.each(data, function(k, v) {
-		lkg_0 += \'{mp3:"http://w.wo0.cn/x.php/kg_\'+v.hash+\'.mp3",title:"\'+(v.filename).replace(\'\\\'\', \'\')+\'"},\';
+		lkg_0 += \'{mp3:"http://link.hhtjim.com/kg/\'+v.hash+\'.mp3",title:"\'+(v.filename).replace(\'\\\'\', \'\')+\'"},\';
 	});
 	lkg_0 += "]";
 	eval("lkg_d0=" + lkg_0);
