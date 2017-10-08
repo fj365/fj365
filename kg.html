@@ -149,7 +149,7 @@ function KUGOU(src){
 function kglist_success_jsonpCallback(data){
 	var lkg_0 = "[";
 	$.each(data, function(k, v) {
-		lkg_0 += '{mp3:"http://link.hhtjim.com/kg/'+v.hash+'.mp3",title:"'+(v.filename).replace('\\\'', '')+'"},';
+		lkg_0 += '{mp3:"'+KGM(v.hash)+'",title:"'+(v.filename).replace('\\\'', '')+'"},';
 	});
 	lkg_0 += "]";
 	eval("lkg_d0=" + lkg_0);
@@ -160,6 +160,20 @@ function kglist_success_jsonpCallback(data){
 	});
 	$('#WNJP_List').html(lkg_01);
 	WNJP.play(0);
+}
+//酷狗
+function KGM(src){
+	$.ajax({
+		url: "http://m.kugou.com/app/i/getSongInfo.php?cmd=playInfo&hash="+src+"",
+		type: "GET",
+		dataType: "json",
+		contentType: "application/json; charset=utf-8",
+		timeout: 3e3,
+		success: function(data) {
+			return(data.url);
+		},
+		error: function (XMLHttpRequest, textStatus, errorThrown) { alert(errorThrown); } 
+	});
 }
 </script>
 </body>
