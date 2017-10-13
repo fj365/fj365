@@ -1,0 +1,71 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width">  
+<title>表情包制作</title>   
+<style>  
+*{  
+    padding:0;  
+    margin:0;  
+    font-family:"微软雅黑";  
+    font-size: 14px;  
+}  
+#text{  
+    width:391px;  
+    height:50px;  
+    text-align:center;  
+    font-size: 18px;  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    border-radius: 5px;  
+    border:1px solid #666;  
+}  
+#mainCenter{  
+    max-width:500px;  
+    margin:0 auto;  
+    text-align:center;  
+}  
+#myCanvas{  
+    margin:30px 0 0 0;  
+}  
+.shadow{  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    border-radius: 5px;  
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/  
+    -moz-box-shadow: 0px 0px 10px #000000;  
+    -webkit-box-shadow: 0px 0px 10px #000000;  
+    box-shadow: 0px 0px 10px #000000;  
+    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/  
+}  
+</style>    
+</head>     
+<body>     
+<div id="mainCenter">  
+    <canvas id="myCanvas" class="shadow" width="391px" height="368px" style="none;">您的浏览器不支持canvas标签。</canvas>   
+    <br /><br />  
+    <p>在下方输入文字。在图片上使用鼠标右键或长按保存</p>  
+    <input name="text" id="text" onchange ="draw();" onpropertychange ="draw();" oninput  ="draw();" value="听说你很跳" />  
+</div>  
+<script type="text/javascript">  
+function draw(){  
+    var canvas = document.getElementById("myCanvas");       //获取Canvas对象(画布)   
+    var write = document.getElementById("text").value;        //获取文本的值  
+    if(canvas.getContext){     //简单地检测当前浏览器是否支持Canvas对象，以免在一些不支持html5的浏览器中提示语法错误   
+        var ctx = canvas.getContext("2d");       //获取对应的CanvasRenderingContext2D对象(画笔)     
+        var img = new Image();                    //创建新的图片对象     
+        img.src = "1.png";    //指定原始图片的URL     
+        img.onload = function(){   //浏览器加载图片完毕后再绘制图片     
+            ctx.drawImage(img, 0, 0, 391, 368);  //以Canvas画布上的坐标(0,0)为起始点，绘制高度、宽度分别为391和368的图像  
+            ctx.font = "35px 微软雅黑";      //设置字体样式   
+            ctx.fillStyle = "black";           //设置字体填充颜色   
+            ctx.textAlign = 'center'; //设置文本的水平对对齐方式  
+            ctx.fillText(write, canvas.width/2, 350);       //从画布高度为350px的地方居中绘制文本  
+        };        
+    }    
+}  
+draw();  
+</script>     
+</body>  
+</html>
