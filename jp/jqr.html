@@ -109,21 +109,21 @@ $("#input-form").submit(function(){
         function(json){  
             console.log(json);  
             console.log(json.text)
-            addTalk(false, json.text, 'QQ小冰', 'robot.png');
+            addTalk(false, json.text, 'QQ小冰', 'logo.png');
             if(json.code == 200000) addTalk(false, '<a href="' +json.url + '" target="_blank">点我查看</a>', 'QQ小冰', 'robot.png');
             if(json.code == 302000) {
                 var text = '';
                 for(var i =0; i<json.list.length; i++) {
                     text = text + '<p><a href="' +json.list[i].detailurl + '" target="_blank">' +json.list[i].article+ '</a></p>';
                 }
-                addTalk(false, text, 'QQ小冰', 'robot.png');
+                addTalk(false, text, 'QQ小冰', 'logo.png');
             }
             if(json.code == 308000) {
                 var text = '';
                 for(var i =0; i<json.list.length; i++) {
                     text = text + '<p><a href="' +json.list[i].detailurl + '" target="_blank">' +json.list[i].name+ '</a></p>';
                 }
-                addTalk(false, text, 'QQ小冰', 'robot.png');
+                addTalk(false, text, 'QQ小冰', 'logo.png');
             }
         }
     ,'json');
