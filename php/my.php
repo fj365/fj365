@@ -61,14 +61,14 @@ if(isset($_GET['a'])){
 	$jsons = $json['aweme_list'];
 	//print_r($jsons);
 	foreach ($jsons as $k => $v){
-		$xml.='{"type":"m4v","label":"'.$jsons[$k]['desc'].'","src":"'.$fname.'?t='.TH($jsons[$k]['video']['play_addr']['url_list'][0]).'","image":"'.$jsons[$k]['video']['cover']['url_list'][0].'"},';
+		$xml.='{"type":"m4v","label":"'.$jsons[$k]['desc'].'","src":"'.$fname.'?tr='.TH($jsons[$k]['video']['play_addr']['url_list'][0]).'","image":"'.$jsons[$k]['video']['cover']['url_list'][0].'"},';
 	}
 	header("Content-type: application/jsonp; charset=UTF-8");
 	echo 'success_jsonpCallback(['.$xml.'])';
-}else if(isset ($_GET['t'])){
+}else if(isset ($_GET['tr'])){
 	header("Content-type: video/mp4");
 	header("Content-Disposition: filename=douyin.mp4");
-	echo readfile(URLdecode($_GET['t']));
+	echo readfile(URLdecode($_GET['tr']));
 }else{
 	$x = '<list>
 	<m list_src="'.$fname.'?p=1&a=manyaochuanshao" label="慢摇串烧"/>
