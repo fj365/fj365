@@ -55,6 +55,20 @@ if(isset($_GET['a'])){
 	header('Content-Type: application/octet-stream');
 	header('Content-Disposition: attachment; filename="kugou.m4a"');
 	header("location:".stripslashes($b));
+}else if(isset ($_GET['dyuid'])){
+	$url = 'https://www.amemv.com/aweme/v1/aweme/post/?user_id='.$_GET['dyuid'].'&count=500&cursor=0&aid=1128';
+	$json = json_decode(file_get_contents($url),true);
+	$jsons = $json['aweme_list'];
+	//print_r($jsons);
+	foreach ($jsons as $k => $v){
+		$xml.='{"type":"m4v","label":"'.$jsons[$k]['desc'].'","src":"'.$fname.'?t='.TH($jsons[$k]['video']['play_addr']['url_list'][0]).'","image":"'.$jsons[$k]['video']['cover']['url_list'][0].'"},';
+	}
+	header("Content-type: application/jsonp; charset=UTF-8");
+	echo 'success_jsonpCallback(['.$xml.'])';
+}else if(isset ($_GET['t'])){
+	header("Content-type: video/mp4");
+	header("Content-Disposition: filename=douyin.mp4");
+	echo readfile($_GET['t']);
 }else{
 	$x = '<list>
 	<m list_src="'.$fname.'?p=1&a=manyaochuanshao" label="慢摇串烧"/>
@@ -79,6 +93,11 @@ function CURL($url){
 	$data = curl_exec($ch);
 	curl_close($ch);
 	return $data;
+}
+//
+function TH($str){
+	$strs=strtr($str,array('https:'=>'http:'));
+	return $strs;
 }
 //JP页面
 function HTML($dh,$mbx,$zy,$fy,$jsonp){
