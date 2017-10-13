@@ -97,7 +97,7 @@ function CURL($url){
 //
 function TH($str){
 	$strs=strtr($str,array('https:'=>'http:'));
-	return $strs;
+	return URLencode($strs);
 }
 //JP页面
 function HTML($dh,$mbx,$zy,$fy,$jsonp){
