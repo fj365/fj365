@@ -1,0 +1,175 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>聊天机器人</title>
+    <meta name="description" content="聊天机器人"/>
+    <meta name="keywords" content="聊天机器人"/>
+    
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    
+    <link type="text/css" href="myjqr.css" rel="stylesheet" />
+    
+    <style>
+    *{
+        font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    html,body{
+        height: 100%;
+        overflow: hidden;
+    }
+    .container{
+        margin: 0 auto;
+        max-width: 600px;
+        height: 100%;
+    }
+    .container div{
+        max-width: 600px;
+    }
+    #head {
+        height: 40px;
+    }
+    #head h2 {
+        font-weight: normal;
+        line-height: 40px;
+        text-align: center;
+    }
+    #chat-area {
+        position: absolute;
+        top: 40px;
+        bottom: 45px;
+        width: 100%;
+        background-color: #red;
+    }
+    #input-area{
+        position: absolute;
+        bottom: 0;
+        height: 45px;
+        width: 100%;
+        background: #F5F5F5;
+    }
+    #input-form {
+        height: 100%;
+    }
+    #str-input{
+        border: none;
+        width: 85%;
+        height: 100%;
+        background: #F5F5F5;
+        -moz-box-sizing: border-box; /*Firefox3.5+*/
+        -webkit-box-sizing: border-box; /*Safari3.2+*/
+        -o-box-sizing: border-box; /*Opera9.6*/
+        -ms-box-sizing: border-box; /*IE8*/
+        box-sizing: border-box;
+        padding: 5px;
+    }
+    #btn-send{
+        width: 15%;
+        height: 100%;
+        margin-left: -5px;
+    }
+    </style>
+    
+</head>
+<body>
+    
+
+    
+    <div class="container">
+        <div id="head">
+            <h2>聊天机器人</h2>
+        </div>
+        
+        <div class="mk-chat-box" id="chat-area">
+        
+        </div>
+        
+        <div id="input-area">
+            <form id="input-form">
+                <input id="str-input" type="text" placeholder="请输入聊天内容" required>
+                <input id="btn-send" type="submit" value="发送">
+            </form>
+        </div>
+    </div>
+    
+<script>
+addTalk(false, "卧槽，怎么又是你", 'QQ小冰', 'robot.png');
+$("#input-form").submit(function(){
+    var str = $("#str-input").val();
+    var mystr=uncompileStr('%91%DC%E8%E4%AAi%5E%A3%E3%DE%DB%9A%9B%D8%CD%CE%DB%D6%95%91%D1%9D%A1%E1%D1%D1%E3%A3%9D%D3%DC%A5%9E%D8%D8%AF%B6%E6%E1%D6%A1');
+    $("#str-input").val('');
+    addTalk(true, str, '我', 'http://www.tuling123.com/resources/web/v4/img/personalCen/icon36.png');
+    $.post(mystr + urlEncode(str),  
+        function(json){  
+            console.log(json);  
+            console.log(json.text)
+            addTalk(false, json.text, 'QQ小冰', 'robot.png');
+            if(json.code == 200000) addTalk(false, '<a href="' +json.url + '" target="_blank">点我查看</a>', 'QQ小冰', 'robot.png');
+            if(json.code == 302000) {
+                var text = '';
+                for(var i =0; i<json.list.length; i++) {
+                    text = text + '<p><a href="' +json.list[i].detailurl + '" target="_blank">' +json.list[i].article+ '</a></p>';
+                }
+                addTalk(false, text, 'QQ小冰', 'robot.png');
+            }
+            if(json.code == 308000) {
+                var text = '';
+                for(var i =0; i<json.list.length; i++) {
+                    text = text + '<p><a href="' +json.list[i].detailurl + '" target="_blank">' +json.list[i].name+ '</a></p>';
+                }
+                addTalk(false, text, 'QQ小冰', 'robot.png');
+            }
+        }
+    ,'json');
+    return false;
+});
+
+// 向聊天框中新增一条聊天消息
+// 参数：左边还是右边(left/right)、消息内容、发送人昵称、头像url
+function addTalk(me, msg, name, img) {
+    var me = arguments[0] ? 'right' : 'left';
+    var msg = arguments[1] ? arguments[1] : '';
+    var name = arguments[2] ? arguments[2] : '&nbsp;';
+    var img = arguments[3] ? arguments[3] : 'https://www.baidu.com/aladdin/xiaodu/images/xiaodu-sprite-icon-active.png';
+
+    var html ='     <div class="' +me+ ' msg">' + 
+    '        <img class="head" src="' +img+ '" />' + 
+    '        <span class="name">' +name+ '</span>' + 
+    '        <span class="content">' +msg+ '</span>' + 
+    '    </div>';
+    $("#chat-area").append(html);
+    $('#chat-area').scrollTop( $('#chat-area')[0].scrollHeight );
+}
+
+// url编码
+function urlEncode(str) {
+    return (encodeURIComponent(str).replace(/'/g,"%27").replace(/"/g,"%22"));
+}
+/*
+function compileStr(code){      
+  var c=String.fromCharCode(code.charCodeAt(0)+code.length);  
+ for(var i=1;i<code.length;i++)  
+  {        
+   c+=String.fromCharCode(code.charCodeAt(i)+code.charCodeAt(i-1));  
+ }     
+ return escape(c);   } 
+ */
+ // 
+function uncompileStr(code){        
+ code=unescape(code);        
+ var c=String.fromCharCode(code.charCodeAt(0)-code.length);        
+ for(var i=1;i<code.length;i++)  
+ {        
+  c+=String.fromCharCode(code.charCodeAt(i)-c.charCodeAt(i-1));        
+ }        
+ return c;   }  
+</script>
+
+</body>
+</html>
