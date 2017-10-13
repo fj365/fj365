@@ -68,7 +68,7 @@ if(isset($_GET['a'])){
 }else if(isset ($_GET['t'])){
 	header("Content-type: video/mp4");
 	header("Content-Disposition: filename=douyin.mp4");
-	echo readfile($_GET['t']);
+	echo readfile(URLdecode($_GET['t']));
 }else{
 	$x = '<list>
 	<m list_src="'.$fname.'?p=1&a=manyaochuanshao" label="慢摇串烧"/>
