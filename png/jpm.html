@@ -115,7 +115,7 @@ $(document).ready(function(){
 	if(location.search.substring(1).match(/kg=/)){
 		KUGOU(location.search.substring(1).replace(/kg=(.+)/, "$1"));
 	}else if(location.hash.substring(1).match(/lists=/)){
-		listplay(WXFXTH(location.hash.substring(1).replace(/lists=(.+)/, "$1")));
+		listplay(location.hash.substring(1).replace(/lists=(.+)/, "$1"));
 	}
 });
 //<![CDATA[
@@ -123,13 +123,14 @@ $(document).ready(function(){
 	WNJP = new jPlayerPlaylist({
 		jPlayer: "#jquery_jplayer_1",
 		cssSelectorAncestor: "#jp_container_1"
-	},[{"type":"","src":"","label":"","image":""}], {
+	},[{mp3:"",title:""}],{
 		ready: function (){$(this).jPlayer("load").jPlayer("play");},
 		playlistOptions: {
 			autoPlay: true,
 			enableRemoveControls: false
 		},
-		solution: "html",
+		solution: "html,flash",
+		wmode: "window",
 		supplied: "mp3,m4v",
 		useStateClassSkin: true,
 		autoBlur: false,
