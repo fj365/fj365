@@ -51,10 +51,12 @@ if(isset($_GET['a'])){
 		echo '暂无资源';
 	}
 }elseif(isset($_GET['kgid'])){
-	$b = json_decode(CURL("http://m.kugou.com/app/i/getSongInfo.php?cmd=playInfo&hash=".$_GET['kgid']))->url;
+	$j = json_decode(CURL("http://m.kugou.com/app/i/getSongInfo.php?cmd=playInfo&hash=".$_GET['kgid']));
+	$mp3 = $j->url;
+	$mz = URLencode($j->fileName);
 	header('Content-Type: application/octet-stream');
-	header('Content-Disposition: attachment; filename="kugou.m4a"');
-	header("location:".stripslashes($b));
+	header('Content-Disposition: attachment; filename="$mz.mp3"');
+	header("location:".$mp3);//stripslashes(
 }else if(isset ($_GET['dyuid'])){
 	$url = 'https://www.amemv.com/aweme/v1/aweme/post/?user_id='.$_GET['dyuid'].'&count=500&cursor=0&aid=1128';
 	$json = json_decode(file_get_contents($url),true);
@@ -275,7 +277,7 @@ function kglist_success_jsonpCallback(data){
 	WNJP.setPlaylist(lkg_d0);
 	var lkg_01=\'<a href="#" class="list-group-item active">KuGou SoMusic List</a>\';
 	$.each(data, function(k, v) {
-		lkg_01+=\'<div class="list-group-item"><span class="badge"><a href="/php/my.php?kgid=\'+v.hash+\'"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play(\'+k+\');">\'+v.filename+\'</a></div>\';
+		lkg_01+=\'<div class="list-group-item"><span class="badge"><a href="/php/my.php?kgid=\'+v.hash+\'" target="_blank"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play(\'+k+\');">\'+v.filename+\'</a></div>\';
 	});
 	$(\'#WNJP_List\').html(lkg_01);
 	WNJP.play(0);
