@@ -54,6 +54,7 @@ if(isset($_GET['a'])){
 	$j = json_decode(CURL("http://m.kugou.com/app/i/getSongInfo.php?cmd=playInfo&hash=".$_GET['kgid']));
 	$mp3 = $j->url;
 	$mz = URLencode($j->fileName);
+	header('Content-Type: audio/mpeg');
 	header('Content-Type: application/octet-stream');
 	header('Content-Disposition: attachment; filename="$mz.mp3"');
 	header("location:".$mp3);//stripslashes(
