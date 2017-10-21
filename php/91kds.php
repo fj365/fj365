@@ -1,5 +1,6 @@
 <?php
 error_reporting(0);
+header('Access-Control-Allow-Origin:*');
 function CURL($url){
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $url);
@@ -31,7 +32,7 @@ if(isset ($_GET['id'])){
 			$xml.='{"type":"lists","label":"'.$c[2][$k].'","src":"'.$fname.'?vid='.$v.'","image":"http://static.yingyonghui.com/icon/128/5079046.png"},';
 		}
 	}
-	//header("Content-type: application/jsonp; charset=UTF-8");
+	header("Content-type: application/jsonp; charset=UTF-8");
 	echo $url.'success_jsonpCallback(['.$xml.'])';
 }else if(isset ($_GET['vid'])){
 	$key = json_decode(CURL('http://m.91kds.com/auth1.php?t=0.'.TT().'&id='),true);
@@ -45,7 +46,7 @@ if(isset ($_GET['id'])){
 		$src = strtr($v,array('kds1://'=>'http://v.91kds.com/b7/','kds2://'=>'http://v.91kds.com/c7/','@@'=>".m3u8?$lk"));
 		$xml.='{"type":"m4v","label":"'.$c[2][$k].'","src":"'.$src.'","image":"http://static.yingyonghui.com/icon/128/5079046.png"},';
 	}
-	//header("Content-type: application/jsonp; charset=UTF-8");
+	header("Content-type: application/jsonp; charset=UTF-8");
 	echo $url.'success_jsonpCallback(['.$xml.'])';
 }
 function TT(){
