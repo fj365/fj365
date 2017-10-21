@@ -33,7 +33,7 @@ if(isset ($_GET['id'])){
 		}
 	}
 	header("Content-type: application/jsonp; charset=UTF-8");
-	echo $url.'success_jsonpCallback(['.$xml.'])';
+	echo 'success_jsonpCallback(['.$xml.'])';
 }else if(isset ($_GET['vid'])){
 	$key = json_decode(CURL('http://m.91kds.com/auth1.php?t=0.'.TT().'&id='),true);
 	$lk = $key['livekey'];$lt = $key['token'];
@@ -47,7 +47,7 @@ if(isset ($_GET['id'])){
 		$xml.='{"type":"m4v","label":"'.$c[2][$k].'","src":"'.$src.'","image":"http://static.yingyonghui.com/icon/128/5079046.png"},';
 	}
 	header("Content-type: application/jsonp; charset=UTF-8");
-	echo $url.'success_jsonpCallback(['.$xml.'])';
+	echo 'success_jsonpCallback(['.$xml.'])';
 }
 function TT(){
 	$a = range(0,9);
