@@ -276,38 +276,6 @@ function KUGOU(src){
 	});
 }
 function kglist_success_jsonpCallback(data){
-	var lkg_0 = "[";
-	$.each(data, function(k, v) {
-		lkg_0 += '{mp3:"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/my.php\?kgid='+v.hash+'",title:"'+(v.filename).replace('\'', '')+'"},';
-	});
-	lkg_0 += "]";
-	eval("lkg_d0=" + lkg_0);
-	WNJP.setPlaylist(lkg_d0);
-	var lkg_01='<a href="#" class="list-group-item active">KuGou SoMusic List</a>';
-	$.each(data, function(k, v) {
-		lkg_01+='<div class="list-group-item"><span class="badge"><a href="http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/my.php\?kgid='+v.hash+'" target="_blank"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');">'+v.filename+'</a></div>';
-	});
-	$('#WNJP_List').html(lkg_01);
-	WNJP.play(0);
-}
-/*
-//酷狗
-function KUGOU(src){
-	$.ajax({
-		cache: true,
-		async:false,
-		url: "http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+src+"&page=1&pagesize=500&showtype=1",
-		type: "GET",
-		dataType: "jsonp",
-		jsonpCallback: 'callback',
-		contentType: "application/jsonp; charset=utf-8",
-		timeout: 3e3,
-		success: function(jdata) {
-			kglist_success_jsonpCallback(jdata.data.info);
-		}
-	});
-}
-function kglist_success_jsonpCallback(data){
 	var kg_0 = "[";
 	$.each(data, function(k, v) {
 		kg_0 += '{mp3:"http://127.0.0.1/x.php/kg_'+v.hash+'.mp3",title:"'+v.filename+'",poster:"logo.jpg"},';
@@ -323,7 +291,6 @@ function kglist_success_jsonpCallback(data){
 	lb_0+='</ul>';
 	$('#hp_list').html(lb_0);
 }
-*/
 //判断手机PC
 function SP(size){
 	var szs;
