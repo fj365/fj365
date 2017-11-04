@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="app">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit|Trident|ie-comp|ie-stand">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>龒蜗牛D - 滚球影音</title>
+<meta name="keywords" content="龒蜗牛D,龒蜗牛,龒蜗牛D滚球影音,滚球影音,蜗牛影音,fj365,FJ365,fj_365,QQ121027740,121027740" />
+<meta name="description" content="龒蜗牛D,龒蜗牛,龒蜗牛D滚球影音,滚球影音,蜗牛影音,fj365,FJ365,fj_365,QQ121027740,121027740" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/jplayer/2.9.2/skin/pink.flag/css/jplayer.pink.flag.min.css" rel="stylesheet">
+<!--<script src="httpshttp://cdn.bootcss.com/html5media/1.1.8/html5media.min.js"></script>-->
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
+<script src="http://cdn.bootcss.com/jplayer/2.9.2/add-on/jplayer.playlist.min.js"></script>
+<script src="http://cdn.bootcss.com/jplayer/2.9.2/add-on/jquery.jplayer.inspector.min.js"></script>
+<style type="text/css">
+html,body{height: 100%;width: 100%;margin:0;padding:0;text-align:center;}  
+body{  
+    background:url('http://image.baidu.com/search/down?tn=download&word=download&ie=utf8&fr=detail&url=http://p19.qhimg.com/bdm/1024_768_100/t01660c412b77f101c0.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+    width:100%;  
+    height:100%;  
+    background-size:100% 100%;  
+	position:absolute;  
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://image.baidu.com/search/down?tn=download&word=download&ie=utf8&fr=detail&url=http://p19.qhimg.com/bdm/1024_768_100/t01660c412b77f101c0.jpg',sizingMethod='scale'); 
+}
+.jp-times {
+    width: 54px;
+    font-size: .7em;
+    margin: 0 1em;
+    display: none;
+    order: 2;
+} 
+</style>
+</head>
+<body>
+<!-- /导航 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid"> 
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+			<span class="sr-only">切换导航</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">龒蜗牛</a>
+		<form class="navbar-brand navbar-left" role="search">
+            <div class="form-group" style="margin-top: -5px;">
+                <input type="text" name="kg" class="form-control input-sm" placeholder="搜索内容">
+            </div>
+            <button type="submit" class="hide"> </button>
+        </form>
+	</div>
+	<ul class="hidden-xs nav navbar-nav navbar-right"> 
+		<li><a href="#"><span class="glyphicon glyphicon-qrcode"></span> 二维码</a></li> 
+		<li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li> 
+		<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li> 
+	</ul>
+	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="javascript:LL('/jp/jsonp/qcc.json')">QCC</a></li>
+			<li><a href="javascript:LL('/jp/jsonp/dy.json')">电影</a></li>
+			<li><a href="javascript:LL('/jp/jsonp/qcc.json')">电视剧</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span><b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="javascript:LL('/jp/jsonp/qcc.json')">动漫</a></li>
+					<li><a href="javascript:LL('/jp/jsonp/qcc.json')">综艺</a></li>
+					<li><a href="javascript:LL('/jp/jsonp/qcc.json')">音乐</a></li>
+					<li><a href="javascript:LL('/jp/jsonp/qcc.json')">美文美图</a></li>
+					<li class="divider"></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</div>
+</nav>
+<!-- /导航 -->
+<!-- 页面  style="width: 90%;"-->
+<div class="container-fluid" id="top">
+	<!-- lb框 -->
+	<div class="row" id="hp_list"></div>
+	<!-- /lb框 -->
+	<!-- 模态框 -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h5 class="modal-title" id="myModalLabel">播放页面</h5>
+				</div>
+				<div class="modal-body">
+					<!--<div id="av_src"></div>-->
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /模态框（Modal） -->
+</div>
+<!-- /页面 -->
+<!-- 底部 -->
+<footer>
+<div class="container-fluid">
+	<nav class="navbar navbar-default navbar-fixed-bottom" style="min-height: 30px;" role="navigation">
+<div class="row clearfix">
+	<div class="col-md-12 column">
+		<div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player" style="width: 100%;">
+			<div class="jp-type-playlist">
+				<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+				<div class="jp-gui" id="jp-gui_hover">
+					<div class="jp-video-play">
+						<button class="jp-video-play-icon" role="button" tabindex="0">play</button>
+					</div>
+					<div class="jp-interface">
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-details">
+							<div class="jp-title" aria-label="title">&nbsp;</div>
+						</div>
+						<div class="jp-controls-holder">
+							<div class="jp-volume-controls">
+								<button class="jp-mute" role="button" tabindex="0">mute</button>
+								<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+								<div class="jp-volume-bar">
+									<div class="jp-volume-bar-value"></div>
+								</div>
+							</div>
+							<div class="jp-controls">
+								<button class="jp-previous" role="button" tabindex="0">previous</button>
+								<button class="jp-play" role="button" tabindex="0">play</button>
+								<button class="jp-next" role="button" tabindex="0">next</button>
+							</div>
+							<div>
+							<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+							<div class="jp-duration" role="timer" aria-label="duration" style="margin-left: -20px;">&nbsp;</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--/jplayer->
+	<!--<div id="av_src"></div>
+    <div class="navbar-header">
+
+
+    </div>
+	<div class="progress" style="height: 50px;margin-bottom: 0px;">
+		<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-play"></span> </a>
+		<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-list"></span> </a>
+		<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-share-alt"></span> </a>
+		<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-download-alt"></span> </a>
+		<a class="navbar-brand" href="#top"><span class="glyphicon glyphicon-menu-up"></span> </a>
+		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+			<span class="sr-only">40% Complete (success)</span></div>
+		</div>
+    </div>-->
+	</nav>
+</div>
+</footer>
+<!-- /底部 -->
+<script type="text/javascript">
+var WNJP;
+var dataStr;
+var jp_h;
+//
+$(document).ready(function() {
+	if(location.search.substring(1).match(/url=/)){
+		var srcs = (location.search.substring(1)).replace(/url=(.+)/, "$1");
+		LL(srcs);
+	}else if(location.search.substring(1).match(/kg=/)){
+		KUGOU(location.search.substring(1).replace(/kg=(.+)/, "$1"));
+	}
+});
+//JP
+//<![CDATA[
+$(document).ready(function(){
+	WNJP = new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_1",
+		cssSelectorAncestor: "#jp_container_1"
+	},[], {
+		ready: function (){$(this).jPlayer("load").jPlayer("play");},
+		playlistOptions: {
+			enableRemoveControls: true,
+			autoPlay: true
+		},
+		swfPath: 'js',
+		solution: "html",
+		supplied: "m4v,mp3",
+		wmode: "window",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		size: {width:"100%",height:browserRedirect()+"px"},
+		audioFullScreen: true,
+		preload: "auto"
+	});
+	$("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
+	WNJP.play(0);
+});
+//]]>
+//JP END
+function LL(lsrc){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: decodeURIComponent(lsrc),
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(data) {
+			LL_success_jsonpCallback(data);
+		}
+	});
+}
+function LL_success_jsonpCallback(data){
+	var j_0 = "[";
+	$.each(data, function(k, v) {
+		j_0 += '{'+v.type+':"'+v.src+'",title:"'+v.label+'",poster:"'+v.image+'"},';
+	});
+	j_0 += "]";
+	eval("jj =" + j_0);
+	console.log(jj);
+	WNJP.setPlaylist(''+jj);
+	var lb='<ul class="nav nav-pills nav-stacked"><li class="active"><a href="#">lists</a></li>';
+	$.each(data, function(k, v) {
+		lb+='<li><a href="javascript:WNJP.play('+k+');">'+k+'-'+v.label+'</li>';// data-toggle="modal" data-target="#myModal"<li><a href="javascript:myPlaylist.play('+k+');" onclick="javascript:HP\(\''+v.type+'\',\''+decodeURIComponent(v.src)+'\'\)">'+k+'：'+v.label+'</li>
+	});
+	lb+='</ul>';
+	$('#hp_list').html(lb);
+}
+//
+function HP(type,str){
+	var sp = SP();
+	if(type=='mp3'){
+		//$("#av_src").attr("src",str);
+		$('#av_src').html('<audio src="'+str+'" width="100%" height="'+sp+'" controls="controls" autoplay="autoplay"></audio>');
+	}else if(type=='m4v'){
+		$('#av_src').html('<video src="'+str+'" width="100%" height="'+sp+'" controls="controls" autoplay="autoplay"></video>');
+	}
+}
+//
+//酷狗
+function KUGOU(src){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: "http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+src+"&page=1&pagesize=500&showtype=1",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'callback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(jdata) {
+			kglist_success_jsonpCallback(jdata.data.info);
+		}
+	});
+}
+function kglist_success_jsonpCallback(data){
+	var lkg_0 = "[";
+	$.each(data, function(k, v) {
+		lkg_0 += '{mp3:"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/my.php\?kgid='+v.hash+'",title:"'+(v.filename).replace('\'', '')+'"},';
+	});
+	lkg_0 += "]";
+	eval("lkg_d0=" + lkg_0);
+	WNJP.setPlaylist(lkg_d0);
+	var lkg_01='<a href="#" class="list-group-item active">KuGou SoMusic List</a>';
+	$.each(data, function(k, v) {
+		lkg_01+='<div class="list-group-item"><span class="badge"><a href="http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/my.php\?kgid='+v.hash+'" target="_blank"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');">'+v.filename+'</a></div>';
+	});
+	$('#WNJP_List').html(lkg_01);
+	WNJP.play(0);
+}
+/*
+//酷狗
+function KUGOU(src){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: "http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+src+"&page=1&pagesize=500&showtype=1",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'callback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(jdata) {
+			kglist_success_jsonpCallback(jdata.data.info);
+		}
+	});
+}
+function kglist_success_jsonpCallback(data){
+	var kg_0 = "[";
+	$.each(data, function(k, v) {
+		kg_0 += '{mp3:"http://127.0.0.1/x.php/kg_'+v.hash+'.mp3",title:"'+v.filename+'",poster:"logo.jpg"},';
+	});
+	kg_0 += "]";
+	eval("kgl =" + kg_0);
+	WNJP.setPlaylist(kgl);
+	//
+	var lb_0='<ul class="nav nav-pills nav-stacked"><li class="active"><a href="#">播放列表</a></li>';
+	$.each(data, function(k, v) {
+		lb_0+='<li><a href="javascript:WNJP.play\('+k+'\);">'+k+'：'+v.filename+'</li>';
+	});
+	lb_0+='</ul>';
+	$('#hp_list').html(lb_0);
+}
+*/
+//判断手机PC
+function SP(size){
+	var szs;
+	var sUserAgent = navigator.userAgent.toLowerCase();
+	var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+	var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+	var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+	var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+	var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+	var bIsAndroid = sUserAgent.match(/android/i) == "android";
+	var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+	var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+	if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM)){
+		szs = "550";
+	}else{
+		szs = "250";
+	}
+	size = szs;
+	return(size);
+}
+</script>
+</body>
+</html>
