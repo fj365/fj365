@@ -132,14 +132,14 @@ body{
 							<div class="jp-title" aria-label="title">&nbsp;</div>
 						</div>
 						<div class="jp-controls-holder">
-							<div class="jp-volume-controls">
+							<div class="hidden-xs hidden-sm jp-volume-controls">
 								<button class="jp-mute" role="button" tabindex="0">mute</button>
 								<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
 								<div class="jp-volume-bar">
 									<div class="jp-volume-bar-value"></div>
 								</div>
 							</div>
-							<div class="jp-controls">
+							<div class="jp-controls" style="width: 152px;">
 								<button class="jp-previous" role="button" tabindex="0">previous</button>
 								<button class="jp-play" role="button" tabindex="0">play</button>
 								<button class="jp-next" role="button" tabindex="0">next</button>
@@ -200,8 +200,8 @@ $(document).ready(function(){
 			enableRemoveControls: true,
 			autoPlay: true
 		},
-		swfPath: 'js',
-		solution: "html",
+		swfPath: 'https://cdn.bootcss.com/jplayer/2.9.2/jplayer/jquery.jplayer.swf',
+		solution: "flash, html",
 		supplied: "m4v,mp3",
 		wmode: "window",
 		useStateClassSkin: true,
@@ -210,10 +210,47 @@ $(document).ready(function(){
 		keyEnabled: true,
 		size: {width:"100%",height:SP()+"px"},
 		audioFullScreen: true,
-		preload: "auto"
+		preload: "auto",
+		timeupdate: function(event){
+			if(event.jPlayer.status.currentTime==0){
+				time = "";
+			}else {
+				time = event.jPlayer.status.currentTime;
+			}
+
+		},
+		play: function(event){
+			document.title = event.jPlayer.status.media.title;
+			if (event.jPlayer.status.formatType === "m4v"){
+				$("#jquery_jplayer_1").css("height","550px");
+			}else if (event.jPlayer.status.formatType === "mp3"){
+				$("#jquery_jplayer_1").css("height","0px");
+			}
+		},
+		pause: function(event) {
+			$("#jquery_jplayer_1").css("height","0px");
+			//$("#jquery_jplayer_1").css("display","none");
+			//$("#ffull").css("display","table-cell");
+		},
+		stop: function(event) {
+			$("#jquery_jplayer_1").css("height","0px");
+			//$("#jquery_jplayer_1").css("display","none");
+			//$("#ffull").css("display","none");
+		},
+		error: function(event) {
+			$("#jquery_jplayer_1").css("height","0px");
+			//$("#jquery_jplayer_1").css("display","none");
+			//$("#ffull").css("display","none");
+		},
+		ended:function(event){
+			$("#jquery_jplayer_1").css("height","0px");
+			//$("#ffull").css("display","none");
+			//$("#jquery_jplayer_1").css("display","none");
+		}
 	});
 	$("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
 	WNJP.play(0);
+	$("#jquery_jplayer_1").css("height","0px");
 });
 //]]>
 //JP END
