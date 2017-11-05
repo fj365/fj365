@@ -182,7 +182,7 @@ var jp_h;
 //
 $(document).ready(function() {
 	if(location.search.substring(1).match(/url=/)){
-		LL(location.search.substring(1).replace(/url=(.+)/, "$1"));
+		LLL(location.search.substring(1).replace(/url=(.+)/, "$1"));
 	}else if(location.search.substring(1).match(/kg=/)){
 		KUGOU(location.search.substring(1).replace(/kg=(.+)/, "$1"));
 	}
@@ -228,23 +228,15 @@ $(document).ready(function(){
 		},
 		pause: function(event) {
 			$("#jquery_jplayer_1").css("height","0px");
-			//$("#jquery_jplayer_1").css("display","none");
-			//$("#ffull").css("display","table-cell");
 		},
 		stop: function(event) {
 			$("#jquery_jplayer_1").css("height","0px");
-			//$("#jquery_jplayer_1").css("display","none");
-			//$("#ffull").css("display","none");
 		},
 		error: function(event) {
 			$("#jquery_jplayer_1").css("height","0px");
-			//$("#jquery_jplayer_1").css("display","none");
-			//$("#ffull").css("display","none");
 		},
 		ended:function(event){
 			$("#jquery_jplayer_1").css("height","0px");
-			//$("#ffull").css("display","none");
-			//$("#jquery_jplayer_1").css("display","none");
 		}
 	});
 	$("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
@@ -253,7 +245,7 @@ $(document).ready(function(){
 });
 //]]>
 //JP END
-function LL(lsrc){
+function LLL(lsrc){
 	$.ajax({
 		cache: true,
 		async:false,
@@ -264,36 +256,35 @@ function LL(lsrc){
 		contentType: "application/jsonp; charset=utf-8",
 		timeout: 3e3,
 		success: function(data) {
-			LL_success_jsonpCallback(data);
+			LLL_success_jsonpCallback(data);
 		}
 	});
 }
-function LL_success_jsonpCallback(data){
+function LLL_success_jsonpCallback(data){
 	var j_0 = "[";
 	$.each(data, function(k, v) {
 		j_0 += '{'+v.type+':"'+v.src+'",title:"'+v.label+'",poster:"'+v.image+'"},';
 	});
 	j_0 += "]";
-	eval("jj =" + j_0);
-	WNJP.setPlaylist(jj);
+	eval("jjj =" + j_0);
+	WNJP.setPlaylist(jjj);
 	var lb='<ul class="nav nav-pills nav-stacked"><li class="active"><a href="#">lists</a></li>';
 	$.each(data, function(k, v) {
-		lb+='<li><a href="javascript:WNJP.play\('+k+'\);">'+k+'-'+v.label+'</li>';// data-toggle="modal" data-target="#myModal"<li><a href="javascript:myPlaylist.play\('+k+'\);" onclick="javascript:HP\(\''+v.type+'\',\''+decodeURIComponent(v.src)+'\'\)">'+k+'：'+v.label+'</li>
+		lb+='<li><a href="javascript:WNJP.play\('+k+'\);">'+k+'-'+v.label+'</li>';
 	});
 	lb+='</ul>';
 	$('#hp_list').html(lb);
 }
-//
+/*
 function HP(type,str){
 	var sp = SP();
 	if(type=='mp3'){
-		//$("#av_src").attr("src",str);
 		$('#av_src').html('<audio src="'+str+'" width="100%" height="'+sp+'" controls="controls" autoplay="autoplay"></audio>');
 	}else if(type=='m4v'){
 		$('#av_src').html('<video src="'+str+'" width="100%" height="'+sp+'" controls="controls" autoplay="autoplay"></video>');
 	}
 }
-//
+*/
 //酷狗
 function KUGOU(src){
 	$.ajax({
