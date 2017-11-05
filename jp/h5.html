@@ -278,7 +278,7 @@ function LL_success_jsonpCallback(data){
 	WNJP.setPlaylist(jj);
 	var lb='<ul class="nav nav-pills nav-stacked"><li class="active"><a href="#">lists</a></li>';
 	$.each(data, function(k, v) {
-		lb+='<li><a href="javascript:WNJP.play('+k+');">'+k+'-'+v.label+'</li>';// data-toggle="modal" data-target="#myModal"<li><a href="javascript:myPlaylist.play('+k+');" onclick="javascript:HP\(\''+v.type+'\',\''+decodeURIComponent(v.src)+'\'\)">'+k+'：'+v.label+'</li>
+		lb+='<li><a href="javascript:WNJP.play\('+k+'\);">'+k+'-'+v.label+'</li>';// data-toggle="modal" data-target="#myModal"<li><a href="javascript:myPlaylist.play\('+k+'\);" onclick="javascript:HP\(\''+v.type+'\',\''+decodeURIComponent(v.src)+'\'\)">'+k+'：'+v.label+'</li>
 	});
 	lb+='</ul>';
 	$('#hp_list').html(lb);
