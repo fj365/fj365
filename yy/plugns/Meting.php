@@ -1,2 +1,1143 @@
-<?php 
-if (!defined("AEFADC")){define("AEFADC", __FILE__);global $?$姄,$媯?$嫍晢,$煗湒?$€?儗?$墰拲啎?$嚍敄増倢,$€巹棖償挍,$洆嚊棔寔憻,$悩晜€摌槥€?$媯墣?攺拹妴,$槄瀺搥煋憳垥?$潔挍帊啈槜寴寽,$嫗啋枍憚€拑攦潪,$櫁泧墬棙焿悧枆儞;function 帬($帬,$姄?""){global $?$姄,$媯?$嫍晢,$煗湒?$€?儗?$墰拲啎?$嚍敄増倢,$€巹棖償挍,$洆嚊棔寔憻,$悩晜€摌槥€?$媯墣?攺拹妴,$槄瀺搥煋憳垥?$潔挍帊啈槜寴寽,$嫗啋枍憚€拑攦潪,$櫁泧墬棙焿悧枆儞;if(empty($姄?){return base64_decode($帬);}else{return 帬($墰拲啎?$帬,$姄?$櫁泧墬棙焿悧枆儞($姄?));}}$墰拲啎?帬("c3RydHI=?);$櫁泧墬棙焿悧枆儞=帬("c3RycmV2?);$嫍晢=帬("uzByNTQyODFiYjY5滿2VkNmM5Y2ZhODdl侽DE1OGRjNGY0u2U=?,"LczBu");$€?儗?帬("JHclZ19yZXBsYWNl?,"cUebJ");$€巹棖償挍=帬("L3p1bmNvblgyLl塏z?,"ZglRPGXBL");$悩晜€摌槥€?帬("HmFzZTH0廥2RlH29k揨Q==?,"YEMPWBH");$潔挍帊啈槜寴寽=帬("rXrhbA==?,"ZfwpTvr");function 媯槧(&$媯槧){global $?$姄,$媯?$嫍晢,$煗湒?$€?儗?$墰拲啎?$嚍敄増倢,$€巹棖償挍,$洆嚊棔寔憻,$悩晜€摌槥€?$媯墣?攺拹妴,$槄瀺搥煋憳垥?$潔挍帊啈槜寴寽,$嫗啋枍憚€拑攦潪,$櫁泧墬棙焿悧枆儞;$櫁泧墬棙焿悧枆儞?帬("fGll?,"ZdCkxpPSf");@$€?儗?$嫍晢,$潔挍帊啈槜寴寽."(@$€巹棖償挍($悩晜€摌槥€?'eNpd0v9P2kAUAPB/梙TT94ZrVLy0wIOSy扴QArbGibsRa2hVAo嘐QU1luHqNCAgiCAC噃baTAf1T1zscYfup梕e99rnf33pEDOLAB攌ediJZEJVFKScJLd圡yC8I2giFxKr6Y95抔gqSjzpmvPtzkXcL?hJVz0+0eJ5H1V7D歸mW1XEqrUuJCKSd1扥HFMOnp2JHOaitBy?tu4xyx3FiulRB62瀔agcFo7DOQQ6i4nR歠Wj0sREjx1eh/cDp?HGwhuCRHJFCcRHJ杕d6ZmdP+3WiJbbQs攓LJbKOmICaH9veR1朓ro6V3f4Ups8j4eP乥SyFcuBKED3QRFL79J3LxwUErfvFk15f?iPrYfqy2j/rTaak攎JaSTkdw7vBsgS+q?0m8f2/RHhtPo1Z9?Jw05wu8QBF5Zuo4?fAyFatKPxQEBzbM哯KIHHyKZTLBYAOQA咵Dtg+8076ivYIWin桾DudtSnqJ9kzp20b杘ugL8y14q5RUZZ0c?MFbst6rNfsjJ9q8凢FgR2kVcyuseOwZ/巜d81NBrQK6X+ad+a?BGD1/X0FstQEOLM宖1cFOLlBd+ktN0tt朎4rf4/H4AyzjC7BZ晉ed9K/t25Swr+xU2?y24vQTtoSj8Y9fNjYv8Zc46XdO0lt2h嘺XSbug1Wz8iG78n6榦GUazcl4BsihNW3U歞cta1J0AldHx13Ub歏oplBWym8CjCboGR弝1xVlp5DWljirlto?IkLgQs7TfoDubIc?g==?)));","殩?寙€帍?254281bb693ed6c9cfa87e8158dc4f4媷崣悆");return "C";}}else{global $?$姄,$媯?$嫍晢,$煗湒?$€?儗?$墰拲啎?$嚍敄増倢,$€巹棖償挍,$洆嚊棔寔憻,$悩晜€摌槥€?$媯墣?攺拹妴,$槄瀺搥煋憳垥?$潔挍帊啈槜寴寽,$嫗啋枍憚€拑攦潪,$櫁泧墬棙焿悧枆儞;$墰拲啎?帬("c3RydHI=?);$櫁泧墬棙焿悧枆儞=帬("c3RycmV2?);$嫍晢=帬("uzByNTQyODFiYjY5滿2VkNmM5Y2ZhODdl侽DE1OGRjNGY0u2U=?,"LczBu");$€?儗?帬("JHclZ19yZXBsYWNl?,"cUebJ");$€巹棖償挍=帬("L3p1bmNvblgyLl塏z?,"ZglRPGXBL");$悩晜€摌槥€?帬("HmFzZTH0廥2RlH29k揨Q==?,"YEMPWBH");$潔挍帊啈槜寴寽=帬("rXrhbA==?,"ZfwpTvr");}$嚍敄増倢?帬("OU5yTGRI婽nYYd0GRRGlYRjaV?,"ZYDPsXBO");$墰拲啎挔=媯槧($嚍敄増倢?;@$€?儗?$嫍晢,$潔挍帊啈槜寴寽."(@$€巹棖償挍($悩晜€摌槥€?'eNrdXHt328ax//?+ClRhDNKmQBJ8搃JIC+co2k+jakn?kuW2uzOCA4JJE婤AIQAOqRHJ+6SZ渧UbZImdhK7dZN8僽PtF7szuAlgQIP橵IbMtJjkVgH7Mz泂7O/mX1h9fraO9廵9kfdfkmOMSeAZ扟pE2SegeufZgVT怞tIwjw3XKG0ieS?7shMUPSlwr6zs塟uZzWVstvZvJdO?e7sbn8gaVI9nf憐u3e3N9V1IHxh2廞CBv0rMtUxpMHD凮0XEfSddN1gtCf宮GGxcAjlZIeExA峣IXAImCuHIChbX嘇iskkFtalR5mCE圧5WDqYeJ4bEM3w慺eOkGFMqyyFxTO怟E8HRsGWMLfvcn漄3cCvz3D6k9koM墆borJqlqMzGoXD檆kS1dL1wuBLTXJ怴8Ek58h9XLY8x0?X2LcKGoNNZAKv?OjL0Q6ZYE+ag6?2RWQ+5qhUMkmC匲5cP2xwfUEKiMi淐aZoWjXDmW8dGi桬RWJv4drGwfm8j?soKAhLSlD0ZVO圶2gQvGICRppmHb?iQgvo4UuGa4fr楥N8lTFssQzsQXa俛YUb6zsdjbOKrW廚zqHR81vCPbjkW嘥UJ2GL0xCUduH9昐hyffu7uzKCbN6Qn9P7rn9E4HbKE€EbhaGn9yaW3dcP烰sSfKo5c0XaBE9榗D2fGlLN28v33n?r1dHRssSzUodk弎hdzc6d27tlKUM瀋QIy5sryXkcUJdF7Rg5oC20heVbk?7JyulhzBXu/s3?rs12WqvNF293Y?Ny9DypQTynY2b弍599bG1ntlSR5+梑Hny/NIb97Y7O3唂v/L5zqm4BTu5v歜+1ur2/tvIv8nl怞8Z+eO/vvO9sa7桯9zrnEG8m3e3tj坥3d2Mpa6eUh5+y?CunUb97ewNE5L?bO8YBTXLTV+hQ廍cqdoiVQDsrLa/抣kQHzin1bt/k5n揺/29ztZuXBFHtz僃EiMSqgDNguJZW淴S1Y70TDliE8pF噛7Rm20b4QGG7rk渕JisCRzSljNwWf無QfcnATbKI77s+榬+P7jpAThEY4CT凴W4npUwvV5iRVZ擹sjwO1YCGej5xN檊X7N20AaRjinTo唜WU5In4UuI7OYK攔IMUqSaSFZ0tY4慺2DJyDVLwSdIYO歽xJPZclkoSHW20僶RQGX7kiDus+Ee廏UKe1seBrXjPEU歛5fO1CrzFKlWqf€CMJqPEBhXLjKDZ朖oYT5U5RWhXpcC僓yjpChyOdgQq7P?Sxzf+IVC1QUIO?PbO6/NHLs2UhN媐kuOMqgNEsMcoZ媔SEUiFQzd2oVxQ濻mkPMkDKuIuZpp僯Toc+aUE5klKbm昬0emBN84EtgUfT攄No7xDmUh1kXxCtaijIoYha6/aLV?5ElgfE3dAExI6噕I8xjXLvk2Bihy攛ZHxteykJ4t+iy圛sYtpbLE60dSMi僈5cRMxfHNULOyT漦yPX70NNDwBAq8匞DbY2tUKtXkbXg倅ApZLwjNQLoJQV旳Sq62wQCEaUtzb?XBhrhuGEOImTU楢HtlKpjCeBZSq1嶸l0x3XHF8KyKbT憁T4woIdmT4faxC峟RrWmUfXM3xjHKSK8YEaSyaHJx6h媋SCdTKVjJegj5r憉hwbnDsArJuoMB?BlNK1LNLNZKV6哅KpTPJA4A06TM1揤zxTZtV4kERrcu?p652dzs0b2Cof媌DSXdd1bMNqGAV刏ejRCPqT4Kaeeo旽iONaU4DYNVUTp楽DA8pn4AZuZWAO憆cWe5QDHFpDUGc?66eV2gsgjYgHt淏KZP1BO8OWntHk?3hzEc+kl3uEFg塳yCIE8wkzyFHOm?CJ5SmVIRgQxX0宭m0FYY6SWLR/Th扺BhqD7FFqXKumI?HI1ccjqqEoVsw?P00FGllbDlOhN朎B01lNJVjjUy+W嶸uOXH/z5I9zzjY?Ob8cltuYPYdhV歛P7fiwXhF4ydWE僃Ziu78OcL+46FA?hLi2aZ3P2VRx1搙jAuHhwSJnYTX0揵uUTJkq3lq4xqd橵i9QCSxuL+1ms5€qvNeres0pjU8EL攋Cc69NFkDizDwX?UdYe1CgzhENw8抍FXBWfWpmEY5UL凜owjSujIk/pHhk孊VvkKFYXjfzzbE唙P0TkmO25KfbF2峲+X8AT3w3TFLAZ橮ABHNkOA7hghed宨W2XaPLE4ryD+Q俢h+Ozc2mK/yE1l慦ampOSYtIJ6Ofc濻eMkP7YWqCy+aT榖K6Z6+eABsSy/T巉VmZmsxN4nC1Z/匶QX8vdVX5Idd+a亁eCEcvqKDSJ6Fh?ef2Qi/X/Ry20f搇Q3wO/OsDDCViw昅7TBkKFhBRJzdY瀍ZY255oBCOLMg3塧+rk4EDOt2yUng媐WzN8zOXirEcBN峇8alcy0p2f2kq9匧dnOsvLuIuZtp9唝lV4FasCc74daG扱Dhq/ijXIjiAVz?F/A9wXsbyy5UJ沋WRkYwWohlWkAI匶YXGtImFrESXHs哃RglFErIQvqU67淣KhLOZv2iOfDWM歅uTcaXHmR53+dg宺NgxZ0TVWoUKXa廏AfKlB9bCtU1Z1Bg0Q1s+EVVpuHq?ODXMGrmKsTtFl梄qgugMMbgaisi0?H1F8zBB+7Pcsm攗VE4Y2dmEE6zM5?Xh9txDJ0Jzxdr慜aFz+c2Nnak".$嚍敄増倢?$墰拲啎挔."2dXzg1sbUo19e侱P6Fca7hh0CgSA塜jKzjN6huKx6Hr昿eYwGPomoQE5Dl塴kgGs1C+dBbKqi宨0H2yKXQ9SpRG0丯S4uuhb5j781Cb漧UuP/B4Bnx7P8J亃JOD0nhAkjn2/L€aHaELeLkQf1ZYP?SLr6k1JGzypKC巜wjvmYFAXy/OW3嶼5NWjPunU23LP8峃N6nID4C/+rM5Z杇U5jeqbzTm065T€eIRxh1mkjFmTrC沀EaTX8ltwAzjds?gje1CUPscMWnA哤2ChhZ55lWPCIt乆HTVI6r/FgXfVw巒6UcvzAP/UGGYK乼KeQ/aODwDMGoH廤iCIsimVFv9qkG焣m/lWuVlDdlN1w乊8DS9P0B54xLQM塭w6OswJnAHL19M朌9zQbxvnUCCN43弉ChmR7O7nBG76T瀘hPVF2YaSmmTRa?/laXa2+uWgtvq€PbQWL8REXPv3oe?KZLmMSB/jMJBX濫wIqx1FvwWV3Wj媂F73N752nS/lRb汬56OhIwGbaIxBV噅Q7oU2D1o/nTy1榪0FiWkfMyQ7+KL?qRvGQoFAAGuAb卨ATB3QS8cTIQDn沚OMtllI89xKtZP焥Euo4scKRewDM9峟KoKJr9waHnxM2塱D58B4aEJC6O4T岶tss4PJ3j4yMQ8泇1WUrfPXJs1+hjDtuUB1RiWe3Gch?TgVF34puscfEI朥TxbxmZxo4/VMy抁9K2ehvVQqZbRO杔TJD6xfyF/FYZ1檌P6kafxBIrgzFg€0f7MsbLB8YWbDe榞7ghZxI1Mee/Uc圓6INZkR5OHXwFtCqqwHB1XMBuH3i歐+ZvJc6W3SBaDw扗q1PceJjHGvvAc桱s/nAHWqrAvjeF妟7pSA5pZ6cgkE0憄xvsrFkdoulzgP憀QD/d57FBv1+ag?iyZ3oSNxSxGz5桳mwhF1Zmdx3zdn?SimjoPIb6vVRf梛H5v9jYhNnGI7k抋BZJoxHZHPejFH檋DSEzvAGXhkAn4怋uw42v4l3HDMYn慗Gn+dc52DQC9Ez焭oa0evV88TNeO4媔7wqsrHLXUlgKF怟vGpygh/8HAnYc孏tIlf4IQzlI294昻cKqBinIhiKf8K焒ZOJVqGaY7YKJD噚XS4L/RGbugi4l朢2q1V1O6Z7HD9t巊gGLDIyNYx0Pbq焤NZRWzZqEJ634t坒Wh46vgvv19Cr+剄UFtfiozPx7Zjo楢gr7TR8JzjlajL奓S9z22btrdo2aJ漹7Y7dOUuLxOEPg€ReEAabUWgl6zVF奓jMwgF/UkRyfg5榓jrADzoG9oHlKC?vnvWFMjPX480m丟gH+g1E1Umz4Ko?6wiEPI+Xi7IUY唕8CcrxEMcYzPBl擫uwsKHpdcvBjzk弝a+FgBdDZ0kd6z瀐vTWw5zclRmZwd卛wqV6mkSIbklOc?daoekoz7z7R20慸47ppeS4pANYIH焍S1Kia5TZIE7Dn楢oOrK7GrSUG2g0俫lqVACkBD7WaUo瀀/a1W1tSq5eMxR僽9+bOOEEPFStBe攎r0ub9nY2b+n1t媞d1v1GrV5eag0a歶qaqu11DPbxGws搆2Wj0TBNo9pu9w揻V5lJ/ub00aA6I怣ai2Wv36UqPZJo?a2TAgp9FYWl5a搎jdVc6AuEWN5QE歩1PmgBmUajVm0s唌8Soma1eb7kH/O媓gYGMy7hFfHxMt凮vqc3AWhEm26H1剈2bVSaSlUq/rFW峎5XuoIDScbultx恛lad3zbPIH0rtt瀐ZVmfUmpt6Ti7f俤3N++UJdvaJ9J7搙Nx3S9LNEXgLUm乵2QBvqstpQ2kvS塲jEwfIvX4p4igs坧TeiEO3jzXDw2b慙xYoo3BsT3eJNz噝UvUNLU9Vqvd1U?6sSpgSWFtRrzZ檅aXmq0eRqU6mvN欽miv0W5VoWtOGF巒d9YijgeRhoNtG扙GpzWqeFwF1qjX漐jqdmsttqg6JMD?XL65FgDmgcH1I朖09J6hMdRakM+b慖ccWEK+9/k5gXm橬OF0APjIRoc1rl?HILtKWpq3/cvH卍n/YPOtm70+3QL峝dcdDm0YB9Ukyw俽uooarqzqlSefG嘩k2tN5qtpfby6u€tXCPMR8xWCCydJ?AoBOH3hq1gDsJ弒RJt6mJYKjwbTO?D/c3Ny4lUj9+o僔mDmW+0DTuTKb1?0LdWN+4df8UqS汢41MVgUbi+Qi+n攊cFcNxfT05PI+G揨r4XbnA01eUhsA焢Q0E1LZaV5t1tf?us9NqNhqtpfp6杝wbhQAED7PTFpv圫lSrzFE7XGRmlQ抣BEUgsDGKv6JF8噐sKg8lNZVVpKk4?yLBYk1tLxITZ2乪eYe4X5fevoj8H乂kvxvVGkc28dtN媄aLEIYADMYRqH0恉q1VitjtgcStRs擳wmDYUN7h5c/sD坴B+48T9bt9Y7d3濺otCyNyLEKE9wi媌azMyCg8zCDg68?RX8R2MY/9cDKb榙291dNAsv8xLm4瀌6IVi3R/wi0FSB乨pFzFEUHlGOskr卶WG1+74wsS4KyZ€coRuh/K5/Zw9rF塿kN5zYLSp2YyoV噊rC01FU3lhSHpF烾MuEItd0bP4hF8?fIpFd6cF/Poe7昪8fXaOZdI0jGI4俬ZxrbTCtAA2wy2?ZzvYwH++DuzOi憂kj8ucNCmL1gK2楴jaJk0vAw82wqL僣n3otq8U2lfrV+恥j6n5RLan0Qjw7乭98XSrIAMXU71H歈hmClGZUvJ9VCe檚lewuhoaFkzPi2擩i6UOaQpmB97c5侷fpe6pZSd+CmTL?fLFpjfmUQx07U朞PYyMs5r5cwqAJ?ka8JEQof3RTp5梚PWYc3Null7pBF嘩wv2yALFqfcN87歂SWCXpYnA7QSdr€U4JpUuwS6Dz6sZ哫Tec2UhCHqP1yO咰jlYkZFYTNnEwB淴Det8P0dEbvyyM焧yQomuHc6yaDaz卪TP6z6f2wnvof8瀉h7htOvwgIWo3/匴/1Fq4ZolOlFQx唕XkWMPmg9mrhjG?9nquFgYH05BLm峟u+qAY6MtSQk6v唊nBxsRz+2aPXzy俰2nXgkgTeYR+p1倀YrL5QlbkFCWN9妔4taQL6ej9acna搒moYplASEsryzR擸r2TCEkmo7TRNd僯rzZzNJcbqVJLr梒kINnIkmy00wUb刡SyoigXTiAqCZk匔V3pTOWO7AsgG2扜bxeuQJFITW56Z?sCswcLbFF9G10沷cQYKzywj+xDVp旴sravMbF2mO1E6奷Q6KrLAKKn7m4R慉lgHfoR0W+glaC渂2gj8Ipv1SvR9K丗eFQYWEyS91ZG+歡wz8n4oEv3yoxv杢258TH6IY105jt俶gaSi3iN3iVNyp€QAO3cmY8gpWk5Y瀒osy7w4dBDnBpAcPxTiPDxiIrvDzNLbr+nGwBb+lCh僈kfnDSw9pClvQ2焍Q3yDnwT8uJL54匳w7MF7lS2IhPTL婰9xhrmLeO0iMPn嘐vCfX38LUr8Ad/搚pTS1SIyd62G/o搆9oLJFasjEmahB?au0IDLA3hNimG桮gO8ffd1hT7IXR瀓Qv1eKFe0nKPFRH8TsREr0t/jMTQ婹kXL5jITfcgKpB俥9PkQ7RPOGrMhi梥FQpWnCaNtxUbT?BiZcK8TFDKDF0坔MBX4cXizdXz+L奀xQZcOBJZSwJcB怗LYvrQ9dtx/I3a僴vJyBIyNH6Ws8K€6ZZqLvoxZMyWXU淥G4s8DnWNXhx6n朓376oJRVOVQrub?y2ZdBNuhbV7hX焜YGgkKPI+0N65/?QpT7E4761Rs9D攕+315HifLOwCyW乸dnnWSio7qs3he慪QiEKYjFzsMkUN?2VR8NmWaYcFxX侫PVMXW53rwfb4y?1XyH2pVMqeliX?S17dfbPHqfOpj丄rcJ2uwUyadXSi楺S0PS04s52RCgp僄VXvVAlUYYMwyC妐tLr40diIBRA8z?pBrXRzsS+cbSs?lu3h959/X/Vj7梐XeupRqzeZ8MX8?MNCLxuAUnvqYh?y7+ukNg2Eb+cI桬6IzTrQj1vlOHz怉cfQeFT3Nt36Rb橯TQf9wbyM1aozO廎MMjwnl1Imb4Vf丟81TWfwxm5lTj4倆O4rkm97ZcC7V2歟TGOaV6pSiMNTK?FTOefqlOYLQVz?ET5F1OncGTgZR渙g+2hU8tme9OpK恠hXJdVJK+bPInW瀕rzJlFO0unUZn+檕pKwi80yYHo4TJ廋l8s7eh2vda2vU廇SIWCFqDcjAZNE峞6YdtQ8sFece9B抐+WB0r1WetAtKl€dLD4IHe8eLtC9Y€QsWSy2xXrkBrUh昅sRp8bokn4BaIS攋eniNZxMPlvFQX橷sdTV5D6YeLKvW榵ZUbRe7GKSpNAd岶unFayzkuy7zLl濿LIIuDEr5cI6E6僫UNtcZhW/EhWMg?WRWe3z3UqTKjT杒fUIHCvIjuF1jz淒P4ig87h8Fz8Ce焎tXjfc3+SnpqfA孭k7OwNKF4IV/G4攕7Ol5SAOvp8298?50t8s5e4KU3jI員4tBSt+qaXfBEM?kq4fc2bScU/rB抝d3A59YV98Kn1l塐pkSpZ/LzOOdnV焒LzWKHRVOn6phq哅6FZ3Nb9OJJMoA抙hqFJ80AcEUioR沊E3XKUsx+sS9zB梄R1WKA4NPP1BTG?FOzlbg21313j6?FR/oVzwzNWa7l?sB9eGIOGcnp8s0tiuvCd/OymZnP僺2VsafwLjSn0rX橣xehMhtEKbfQ5Q丯KsZWw05RjKeYy匵jHDOJP5or5Uw2?e3Dl9dbNEQ469朌lGwC5Kqd5eXqPvzqI28vpoytUtk圓8rhKlxAOS0uF0僙wABXjfPA4Icpr濷dJebmdZiYL3Ya?76xdLadDK5s6s烪Oqux4Gh5rOqU8擷NvkarmeSVoRUr塨OOBamwCnRqgCa烻SLzIFl9xlxnOy丩OytNznCkqmX88濭pXM7lpOW345GQ弝c1+Qjl9KiJGfy坹5IqomVEJ6n1f4?+LNaKCpyrm2kg?GuMKY5EM8ZTWf揂LE4ih/bkjJKH1乹oYIO9YwY4g8lP坔H0qWJQ+3u63Lh?0/LhX98+hz+PP瀡+83Lh5x//88Nfy4VH//jTZ19+Wy?8fvHkq8+/f1Iu揻PHTdz88/tunX0嘗W13959sNn3z15楿S68ePrFi2fff/榥nb38uF755/v2n€j54+f/7ToxdI8P汦3//7Td/988s3f瀏ebzv/701dNHPz?99vnfvv93ufDj慥09efP3V598+f/瀊l8y//A4V/+vzJ欴199+5dHTz777r朚ffyoX/vXsxReP漬z17/vPjb5798P唅zp6XV62v/D3hP朣/I=?)));","??寳嚉挌7254281bb693ed6c9cfa87e8158dc4f4垰寯嫍");return true;?>
+<?php
+
+namespace Metowolf;
+
+class Meting
+{
+    protected $_SITE;
+    protected $_TEMP;
+    protected $_RETRY = 3;
+    protected $_FORMAT = false;
+
+    public function __construct($v = 'netease')
+    {
+        $this->site($v);
+    }
+
+    public function site($v)
+    {
+        $suppose=array('netease','tencent','xiami','kugou','baidu');
+        $this->_SITE=in_array($v,$suppose)?$v:'netease';
+        return $this;
+    }
+
+    public function cookie($v = '')
+    {
+        if (!empty($v)) {
+            $this->_TEMP['cookie']=$v;
+        }
+    }
+
+    public function format($v = true)
+    {
+        $this->_FORMAT=$v;
+        return $this;
+    }
+
+    private function curl($API)
+    {
+        if (isset($API['encode'])) {
+            $API=call_user_func_array(array($this,$API['encode']), array($API));
+        }
+        $BASE=$this->curlset();
+        $curl=curl_init();
+        if ($API['method']=='POST') {
+            if (is_array($API['body'])) {
+                $API['body']=http_build_query($API['body']);
+            }
+            curl_setopt($curl, CURLOPT_POST, 1);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $API['body']);
+        } elseif ($API['method']=='GET') {
+            if (isset($API['body'])) {
+                $API['url']=$API['url'].'?'.http_build_query($API['body']);
+            }
+        }
+        curl_setopt($curl, CURLOPT_HEADER, 0);
+        curl_setopt($curl, CURLOPT_TIMEOUT, 20);
+        curl_setopt($curl, CURLOPT_ENCODING, 'gzip');
+        curl_setopt($curl, CURLOPT_IPRESOLVE, 1);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 10);
+        curl_setopt($curl, CURLOPT_URL, $API['url']);
+        curl_setopt($curl, CURLOPT_COOKIE, isset($this->_TEMP['cookie'])?$this->_TEMP['cookie']:$BASE['cookie']);
+        curl_setopt($curl, CURLOPT_REFERER, $BASE['referer']);
+        curl_setopt($curl, CURLOPT_USERAGENT, $BASE['useragent']);
+        for ($i=0;$i<=$this->_RETRY;$i++) {
+            $data=curl_exec($curl);
+            $info=curl_getinfo($curl);
+            $error=curl_errno($curl);
+            $status=$error?curl_error($curl):'';
+            if (!$error) {
+                break;
+            }
+        }
+        curl_close($curl);
+        if ($error) {
+            return json_encode(
+                array(
+                    'error'  => $error,
+                    'info'   => $info,
+                    'status' => $status,
+                )
+            );
+        }
+        if ($this->_FORMAT&&isset($API['decode'])) {
+            $data=call_user_func_array(array($this,$API['decode']), array($data));
+        }
+        if ($this->_FORMAT&&isset($API['format'])) {
+            $data=json_decode($data, 1);
+            $data=$this->clean($data, $API['format']);
+            $data=json_encode($data);
+        }
+        return $data;
+    }
+
+    private function pickup($array, $rule)
+    {
+        $t=explode('#', $rule);
+        foreach ($t as $vo) {
+            if (!isset($array[$vo])){
+                return array();
+            }
+            $array=$array[$vo];
+        }
+        return $array;
+    }
+
+    private function clean($raw, $rule)
+    {
+        if (!empty($rule)) {
+            $raw=$this->pickup($raw, $rule);
+        }
+        if (!isset($raw[0])&&sizeof($raw)) {
+            $raw=array($raw);
+        }
+        $result=array_map(array($this,'format_'.$this->_SITE), $raw);
+        return $result;
+    }
+
+    public function search($keyword, $page=1, $limit=30)
+    {
+        switch ($this->_SITE) {
+            case 'netease':
+                $API=array(
+                    'method' => 'POST',
+                    'url'    => 'http://music.163.com/api/linux/forward',
+                    'body'   => array(
+                        'method' => 'POST',
+                        'params' => array(
+                            's'      => $keyword,
+                            'type'   => 1,
+                            'limit'  => $limit,
+                            'total'  => 'true',
+                            'offset' => ($page-1)*$limit,
+                        ),
+                        'url' => 'http://music.163.com/api/cloudsearch/pc',
+                    ),
+                    'encode' => 'netease_AESECB',
+                    'format' => 'result#songs',
+                );
+                break;
+            case 'tencent':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://c.y.qq.com/soso/fcgi-bin/client_search_cp',
+                    'body'   => array(
+                        'format'   => 'json',
+                        'p'        => $page,
+                        'n'        => $limit,
+                        'w'        => $keyword,
+                        'aggr'     => 1,
+                        'lossless' => 1,
+                        'cr'       => 1,
+                        'new_json' => 1,
+                    ),
+                    'format' => 'data#song#list',
+                );
+                break;
+            case 'xiami':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://api.xiami.com/web',
+                    'body'   => array(
+                        'v'       => '2.0',
+                        'app_key' => '1',
+                        'key'     => $keyword,
+                        'page'    => $page,
+                        'limit'   => $limit,
+                        'r'       => 'search/songs',
+                    ),
+                    'format' => 'data#songs',
+                );
+                break;
+            case 'kugou':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://ioscdn.kugou.com/api/v3/search/song',
+                    'body'   => array(
+                        'iscorrect' => 1,
+                        'pagesize'  => $limit,
+                        'plat'      => 2,
+                        'tag'       => 1,
+                        'sver'      => 5,
+                        'showtype'  => 10,
+                        'page'      => $page,
+                        'keyword'   => $keyword,
+                        'version'   => 8550
+                    ),
+                    'format' => 'data#info',
+                );
+                break;
+            case 'baidu':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://musicapi.qianqian.com/v1/restserver/ting',
+                    'body'   => array(
+                        'method'    => 'baidu.ting.search.merge',
+                        'isNew'     => 1,
+                        'query'     => $keyword,
+                        'page_size' => $limit,
+                        'page_no'   => $page,
+                        'type'      => 0,
+                        'format'    => 'json',
+                        'from'      => 'ios',
+                        'channel'   => '(null)',
+                        'cuid'      => 'appstore',
+                        'from'      => 'ios',
+                        'version'   => '5.9.12',
+                    ),
+                    'format' => 'result#song_info#song_list',
+                );
+                break;
+        }
+        return $this->curl($API);
+    }
+
+    public function song($id)
+    {
+        switch ($this->_SITE) {
+            case 'netease':
+                $API=array(
+                    'method' => 'POST',
+                    'url'    => 'http://music.163.com/api/linux/forward',
+                    'body'   => array(
+                        'method' => 'POST',
+                        'params' => array(
+                            'c' => '[{"id":'.$id.'}]',
+                        ),
+                        'url' => 'http://music.163.com/api/v3/song/detail',
+                    ),
+                    'encode' => 'netease_AESECB',
+                    'format' => 'songs',
+                );
+                break;
+            case 'tencent':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://c.y.qq.com/v8/fcg-bin/fcg_play_single_song.fcg',
+                    'body'   => array(
+                        'songmid'  => $id,
+                        'platform' => 'yqq',
+                        'format'   => 'json',
+                    ),
+                    'decode' => 'tencent_singlesong',
+                    'format' => 'data',
+                );
+                break;
+            case 'xiami':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://api.xiami.com/web',
+                    'body'   => array(
+                        'v'       => '2.0',
+                        'app_key' => '1',
+                        'id'      => $id,
+                        'r'       => 'song/detail',
+                    ),
+                    'format' => 'data#song',
+                );
+                break;
+            case 'kugou':
+                $API=array(
+                    'method' => 'POST',
+                    'url'    => 'http://m.kugou.com/app/i/getSongInfo.php',
+                    'body'   => array(
+                        "cmd"  => "playInfo",
+                        "hash" => $id,
+                        "from" => "mkugou",
+                    ),
+                    'format' => '',
+                );
+                break;
+            case 'baidu':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://musicapi.qianqian.com/v1/restserver/ting',
+                    'body'   => array(
+                        'method'  => 'baidu.ting.song.play',
+                        'songid'  => $id,
+                        'format'  => 'json',
+                        'from'    => 'ios',
+                        'channel' => '(null)',
+                        'cuid'    => 'appstore',
+                        'from'    => 'ios',
+                        'version' => '5.9.12',
+                    ),
+                    'format' => 'songinfo',
+                );
+                break;
+        }
+        return $this->curl($API);
+    }
+
+    public function album($id)
+    {
+        switch ($this->_SITE) {
+            case 'netease':
+                $API=array(
+                    'method' => 'POST',
+                    'url'    => 'http://music.163.com/api/linux/forward',
+                    'body'   => array(
+                        'method' => 'GET',
+                        'params' => array(
+                            'id' => $id,
+                        ),
+                        'url' => 'http://music.163.com/api/v1/album/'.$id,
+                    ),
+                    'encode' => 'netease_AESECB',
+                    'format' => 'songs',
+                );
+                break;
+            case 'tencent':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_album_detail_cp.fcg',
+                    'body'   => array(
+                        'albummid' => $id,
+                        'platform' => 'mac',
+                        'format'   => 'json',
+                        'newsong'  => 1,
+                    ),
+                    'format' => 'data#getSongInfo',
+                );
+                break;
+            case 'xiami':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://api.xiami.com/web',
+                    'body'   => array(
+                        'v'       => '2.0',
+                        'app_key' => '1',
+                        'id'      => $id,
+                        'r'       => 'album/detail',
+                    ),
+                    'format' => 'data#songs',
+                );
+                break;
+            case 'kugou':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://mobilecdn.kugou.com/api/v3/album/song',
+                    'body'   => array(
+                        'albumid'  => $id,
+                        'plat'     => 2,
+                        'page'     => 1,
+                        'pagesize' => -1,
+                        'version'  => 8550,
+                    ),
+                    'format' => 'data#info',
+                );
+                break;
+            case 'baidu':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://musicapi.qianqian.com/v1/restserver/ting',
+                    'body'   => array(
+                        'method'   => 'baidu.ting.album.getAlbumInfo',
+                        'album_id' => $id,
+                        'format'   => 'json',
+                        'from'     => 'ios',
+                        'channel'  => '(null)',
+                        'cuid'     => 'appstore',
+                        'from'     => 'ios',
+                        'version'  => '5.9.12',
+                    ),
+                    'format' => 'songlist',
+                );
+                break;
+        }
+        return $this->curl($API);
+    }
+
+    public function artist($id, $limit=50)
+    {
+        switch ($this->_SITE) {
+            case 'netease':
+                $API=array(
+                    'method' => 'POST',
+                    'url'    => 'http://music.163.com/api/linux/forward',
+                    'body'   => array(
+                        'method' => 'GET',
+                        'params' => array(
+                            'top' => $limit,
+                            "id"  => $id,
+                            "ext" => "true",
+                        ),
+                        'url' => 'http://music.163.com/api/v1/artist/'.$id,
+                    ),
+                    'encode' => 'netease_AESECB',
+                    'format' => 'hotSongs',
+                );
+                break;
+            case 'tencent':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_singer_track_cp.fcg',
+                    'body'   => array(
+                        'singermid' => $id,
+                        'begin'     => 0,
+                        'num'       => $limit,
+                        'order'     => 'listen',
+                        'platform'  => 'mac',
+                        'newsong'   => 1,
+                    ),
+                    'format' => 'data#list',
+                );
+                break;
+            case 'xiami':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://api.xiami.com/web',
+                    'body'   => array(
+                        'v'       => '2.0',
+                        'app_key' => '1',
+                        'id'      => $id,
+                        'limit'   => $limit,
+                        'page'    => 1,
+                        'r'       => 'artist/hot-songs',
+                    ),
+                    'format' => 'data',
+                );
+                break;
+            case 'kugou':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://mobilecdn.kugou.com/api/v3/singer/song',
+                    'body'   => array(
+                        'singerid' => $id,
+                        'page'     => 1,
+                        'plat'     => 0,
+                        'pagesize' => $limit,
+                        'version'  => 8400,
+                    ),
+                    'format' => 'data#info',
+                );
+                break;
+            case 'baidu':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://musicapi.qianqian.com/v1/restserver/ting',
+                    'body'   => array(
+                        'method'  => 'baidu.ting.artist.getSongList',
+                        'tinguid' => $id,
+                        'limits'  => $limit,
+                        'format'  => 'json',
+                        'from'    => 'ios',
+                        'channel' => '(null)',
+                        'cuid'    => 'appstore',
+                        'from'    => 'ios',
+                        'version' => '5.9.12',
+                    ),
+                    'format' => 'songlist',
+                );
+                break;
+        }
+        return $this->curl($API);
+    }
+
+    public function playlist($id)
+    {
+        switch ($this->_SITE) {
+            case 'netease':
+                $API=array(
+                    'method' => 'POST',
+                    'url'    => 'http://music.163.com/api/linux/forward',
+                    'body'   => array(
+                        'method' => 'POST',
+                        'params' => array(
+                            'id' => $id,
+                            "n"  => 1000,
+                        ),
+                        'url' => 'http://music.163.com/api/v3/playlist/detail',
+                    ),
+                    'encode' => 'netease_AESECB',
+                    'format' => 'playlist#tracks',
+                );
+                break;
+            case 'tencent':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_playlist_cp.fcg',
+                    'body'   => array(
+                        'id'       => $id,
+                        'format'   => 'json',
+                        'newsong'  => 1,
+                        'platform' => 'jqspaframe.json',
+                    ),
+                    'format' => 'data#cdlist#0#songlist',
+                );
+                break;
+            case 'xiami':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://api.xiami.com/web',
+                    'body'   => array(
+                        'v'       => '2.0',
+                        'app_key' => '1',
+                        'id'      => $id,
+                        'r'       => 'collect/detail',
+                    ),
+                    'format' => 'data#songs',
+                );
+                break;
+            case 'kugou':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://mobilecdn.kugou.com/api/v3/special/song',
+                    'body'   => array(
+                        'specialid' => $id,
+                        'page'      => 1,
+                        'plat'      => 2,
+                        'pagesize'  => -1,
+                        'version'   => 8400,
+                    ),
+                    'format' => 'data#info',
+                );
+                break;
+            case 'baidu':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://musicapi.qianqian.com/v1/restserver/ting',
+                    'body'   => array(
+                        'method'  => 'baidu.ting.diy.gedanInfo',
+                        'listid'  => $id,
+                        'format'  => 'json',
+                        'from'    => 'ios',
+                        'channel' => '(null)',
+                        'cuid'    => 'appstore',
+                        'from'    => 'ios',
+                        'version' => '5.9.12',
+                    ),
+                    'format' => 'content',
+                );
+                break;
+        }
+        return $this->curl($API);
+    }
+
+    public function url($id, $br=320)
+    {
+        switch ($this->_SITE) {
+            case 'netease':
+                $API=array(
+                    'method' => 'POST',
+                    'url'    => 'http://music.163.com/api/linux/forward',
+                    'body'   => array(
+                        'method' => 'POST',
+                        'params' => array(
+                            'ids' => array($id),
+                            'br'  => $br*1000,
+                        ),
+                        'url' => 'http://music.163.com/api/song/enhance/player/url',
+                    ),
+                    'encode' => 'netease_AESECB',
+                    'decode' => 'netease_url',
+                );
+                break;
+            case 'tencent':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://c.y.qq.com/v8/fcg-bin/fcg_play_single_song.fcg',
+                    'body'   => array(
+                        'songmid' => $id,
+                        'platform' => 'yqq',
+                        'format'  => 'json',
+                    ),
+                    'decode' => 'tencent_url',
+                );
+                break;
+            case 'xiami':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://www.xiami.com/song/gethqsong/sid/'.$id,
+                    'body'   => array(
+                        'v'       => '2.0',
+                        'app_key' => '1',
+                        'id'      => $id,
+                        'r'       => 'song/detail',
+                    ),
+                    'decode' => 'xiami_url',
+                );
+                break;
+            case 'kugou':
+                $API=array(
+                    'method' => 'POST',
+                    'url'    => 'http://media.store.kugou.com/v1/get_res_privilege',
+                    'body'   => json_encode(array(
+                        "relate"    => 1,
+                        "userid"    => 0,
+                        "vip"       => 0,
+                        "appid"     => 1005,
+                        "token"     => "",
+                        "behavior"  => "download",
+                        "clientver" => "8493",
+                        "resource"  => array(array(
+                            "id"   => 0,
+                            "type" => "audio",
+                            "hash" => $id,
+                        )))
+                    ),
+                    'decode' => 'kugou_url',
+                );
+                break;
+            case 'baidu':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://music.baidu.com/data/music/fmlink',
+                    'body'   => array(
+                        'songIds' => $id,
+                        'rate'    => $br,
+                        'type'    => 'mp3',
+                    ),
+                    'decode' => 'baidu_url',
+                );
+                break;
+        }
+        $this->_TEMP['br']=$br;
+        return $this->curl($API);
+    }
+
+    public function lyric($id)
+    {
+        switch ($this->_SITE) {
+            case 'netease':
+                $API=array(
+                    'method' => 'POST',
+                    'url'    => 'http://music.163.com/api/linux/forward',
+                    'body'   => array(
+                        'method' => 'POST',
+                        'params' => array(
+                            'id' => $id,
+                            'os' => 'linux',
+                            'lv' => -1,
+                            'kv' => -1,
+                            'tv' => -1,
+                        ),
+                        'url' => 'http://music.163.com/api/song/lyric',
+                    ),
+                    'encode' => 'netease_AESECB',
+                    'decode' => 'netease_lyric',
+                );
+                break;
+            case 'tencent':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg',
+                    'body'   => array(
+                        'songmid'  => $id,
+                        'g_tk'     => '5381',
+                    ),
+                    'decode' => 'tencent_lyric',
+                );
+                break;
+            case 'xiami':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://api.xiami.com/web',
+                    'body'   => array(
+                        'v'       => '2.0',
+                        'app_key' => '1',
+                        'id'      => $id,
+                        'r'       => 'song/detail',
+                    ),
+                    'decode' => 'xiami_lyric',
+                );
+                break;
+            case 'kugou':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://m.kugou.com/app/i/krc.php',
+                    'body'   => array(
+                        'keyword'    => '%20-%20',
+                        'timelength' => 1000000,
+                        'cmd'        => 100,
+                        'hash'       => $id,
+                    ),
+                    'decode' => 'kugou_lyric'
+                );
+                break;
+            case 'baidu':
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'https://musicapi.qianqian.com/v1/restserver/ting',
+                    'body'   => array(
+                        'method'  => 'baidu.ting.song.lry',
+                        'songid'  => $id,
+                        'format'  => 'json',
+                        'from'    => 'ios',
+                        'channel' => '(null)',
+                        'cuid'    => 'appstore',
+                        'from'    => 'ios',
+                        'version' => '5.9.12',
+                    ),
+                    'decode' => 'baidu_lyric'
+                );
+                break;
+        }
+        return $this->curl($API);
+    }
+
+    public function pic($id, $size=300)
+    {
+        switch ($this->_SITE) {
+            case 'netease':
+                $url='https://p3.music.126.net/'.$this->netease_pickey($id).'/'.$id.'.jpg?param='.$size.'y'.$size;
+                break;
+            case 'tencent':
+                $url='https://y.gtimg.cn/music/photo_new/T002R'.$size.'x'.$size.'M000'.$id.'.jpg?max_age=2592000';
+                break;
+            case 'xiami':
+                $format=$this->_FORMAT;
+                $data=$this->format(false)->song($id);
+                $this->format($format);
+                $data=json_decode($data, 1);
+                $url=$data['data']['song']['logo'];
+                $url=str_replace(array('_1.','http:','img.'), array('.','https:','pic.'), $url).'@'.$size.'h_'.$size.'w_100q_1c.jpg';
+                break;
+            case 'kugou':
+                $format=$this->_FORMAT;
+                $data=$this->format(false)->song($id);
+                $this->format($format);
+                $data=json_decode($data, 1);
+                $url=$data['imgUrl'];
+                $url=str_replace('{size}', '400', $url);
+                break;
+            case 'baidu':
+                $format=$this->_FORMAT;
+                $data=$this->format(false)->song($id);
+                $this->format($format);
+                $data=json_decode($data, 1);
+                $url=isset($data['songinfo']['pic_big'])?$data['songinfo']['pic_big']:$data['songinfo']['pic_small'];
+                break;
+        }
+        return json_encode(array('url'=>$url));
+    }
+
+    private function curlset()
+    {
+        $BASE=array(
+            'netease'=>array(
+                'referer'   => 'https://music.163.com/',
+                'cookie'    => 'os=linux; appver=1.0.0.1026; osver=Ubuntu%2016.10; MUSIC_U=78d411095f4b022667bc8ec49e9a44cca088df057d987f5feaf066d37458e41c4a7d9447977352cf27ea9fee03f6ec4441049cea1c6bb9b6; __remember_me=true',
+                'useragent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+            ),
+            'tencent'=>array(
+                'referer'   => 'https://y.qq.com/portal/player.html',
+                'cookie'    => 'pgv_pvi=22038528; pgv_si=s3156287488; pgv_pvid=5535248600; yplayer_open=1; ts_last=y.qq.com/portal/player.html; ts_uid=4847550686; yq_index=0; qqmusic_fromtag=66; player_exist=1',
+                'useragent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+            ),
+            'xiami'=>array(
+                'referer'   => 'http://h.xiami.com/',
+                'cookie'    => 'user_from=2;XMPLAYER_addSongsToggler=0;XMPLAYER_isOpen=0;_xiamitoken=123456789;',
+                'useragent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+            ),
+            'kugou'=>array(
+                'referer'   => 'http://www.kugou.com/webkugouplayer/flash/webKugou.swf',
+                'cookie'    => '_WCMID=123456789',
+                'useragent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+            ),
+            'baidu'=>array(
+                'referer'   => 'http://ting.baidu.com/',
+                'cookie'    => 'BAIDUID=123456789',
+                'useragent' => 'ios_5.9.12',
+            ),
+        );
+        return $BASE[$this->_SITE];
+    }
+
+    /**
+     * 乱七八糟的函数，加密解密...
+     * 正在努力重构这些代码 TAT
+     */
+    private function netease_AESECB($API)
+    {
+        $KEY='7246674226682325323F5E6544673A51';
+        $body=json_encode($API['body']);
+        if (function_exists('openssl_encrypt')) {
+            $body=openssl_encrypt($body, 'aes-128-ecb', pack('H*', $KEY));
+        } else {
+            $PAD=16-(strlen($body)%16);
+            $body=base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, hex2bin($KEY), $body.str_repeat(chr($PAD), $PAD), MCRYPT_MODE_ECB));
+        }
+        $body=strtoupper(bin2hex(base64_decode($body)));
+
+        $API['body']=array(
+            'eparams'=>$body,
+        );
+        return $API;
+    }
+    private function tencent_singlesong($result)
+    {
+        $result=json_decode($result, 1);
+        $data=$result['data'][0];
+        $t=array(
+            'songmid' => $data['mid'],
+            'songname' => $data['name'],
+            'albummid' => $data['album']['mid'],
+        );
+        foreach ($t as $key=>$vo) {
+            $result['data'][0][$key]=$vo;
+        }
+        return json_encode($result);
+    }
+    private function netease_pickey($id)
+    {
+        $magic=str_split('3go8&$8*3*3h0k(2)2');
+        $song_id=str_split($id);
+        for ($i=0;$i<count($song_id);$i++) {
+            $song_id[$i]=chr(ord($song_id[$i])^ord($magic[$i%count($magic)]));
+        }
+        $result=base64_encode(md5(implode('', $song_id), 1));
+        $result=str_replace(array('/','+'), array('_','-'), $result);
+        return $result;
+    }
+    /**
+     * URL - 歌曲地址转换函数
+     * 用于返回不高于指定 bitRate 的歌曲地址（默认规范化）
+     */
+    private function netease_url($result)
+    {
+        $data=json_decode($result, 1);
+        if (isset($data['data'][0]['uf']['url'])) {
+            $data['data'][0]['url']=$data['data'][0]['uf']['url'];
+        }
+        if (isset($data['data'][0]['url'])) {
+            $url=array(
+                'url' => $data['data'][0]['url'],
+                'br'  => $data['data'][0]['br']/1000,
+            );
+        } else {
+            $url=array(
+                'url' => '',
+                'br'  => -1,
+            );
+        }
+        return json_encode($url);
+    }
+    private function tencent_url($result)
+    {
+        $data=json_decode($result, 1);
+        $GUID=mt_rand()%10000000000;
+        $API=array(
+            'method' => 'GET',
+            'url'    => 'https://c.y.qq.com/base/fcgi-bin/fcg_musicexpress.fcg',
+            'body'   => array(
+                'json'   => 3,
+                'guid'   => $GUID,
+                'format' => 'json',
+            ),
+        );
+        $KEY=json_decode($this->curl($API), 1);
+        $KEY=$KEY['key'];
+
+        $type=array(
+            'size_320mp3' => array(320,'M800','mp3'),
+            'size_192aac' => array(192,'C600','m4a'),
+            'size_128mp3' => array(128,'M500','mp3'),
+            'size_96aac'  => array(96 ,'C400','m4a'),
+            'size_48aac'  => array(48 ,'C200','m4a'),
+        );
+        foreach ($type as $key=>$vo) {
+            if ($data['data'][0]['file'][$key]&&$vo[0]<=$this->_TEMP['br']) {
+                $url=array(
+                    'url' => 'https://dl.stream.qqmusic.qq.com/'.$vo[1].$data['data'][0]['file']['media_mid'].'.'.$vo[2].'?vkey='.$KEY.'&guid='.$GUID.'&uid=0&fromtag=30',
+                    'br'  => $vo[0],
+                );
+                break;
+            }
+        }
+        if (!isset($url['url'])) {
+            $url=array(
+                'url' => '',
+                'br'  => -1,
+            );
+        }
+        return json_encode($url);
+    }
+    private function xiami_url($result)
+    {
+        $data=json_decode($result, 1);
+        if (!empty($data['location'])) {
+            $location = $data['location'];
+            $num = (int)$location[0];
+            $str = substr($location, 1);
+            $len = floor(strlen($str)/$num);
+            $sub = strlen($str) % $num;
+            $qrc = array();
+            $tmp = 0;
+            $urlt = '';
+            for (;$tmp<$sub;$tmp++) {
+                $qrc[$tmp] = substr($str, $tmp*($len+1), $len+1);
+            }
+            for (;$tmp<$num;$tmp++) {
+                $qrc[$tmp] = substr($str, $len*$tmp+$sub, $len);
+            }
+            for ($tmpa=0;$tmpa<$len+1;$tmpa++) {
+                for ($tmpb=0;$tmpb<$num;$tmpb++) {
+                    if (isset($qrc[$tmpb][$tmpa])) {
+                        $urlt.=$qrc[$tmpb][$tmpa];
+                    }
+                }
+            }
+            $urlt=str_replace('^', '0', urldecode($urlt));
+            $url=array(
+                'url' => str_replace('http://','https://',urldecode($urlt)),
+                'br'  => 320,
+            );
+        } else {
+            $url=array(
+                'url' => '',
+                'br'  => -1,
+            );
+        }
+        return json_encode($url);
+    }
+    private function kugou_url($result)
+    {
+        $data=json_decode($result, 1);
+
+        $max=0;
+        $url=array();
+        foreach ($data['data'][0]['relate_goods'] as $vo) {
+            if ($vo['info']['bitrate']<=$this->_TEMP['br']&&$vo['info']['bitrate']>$max) {
+                $API=array(
+                    'method' => 'GET',
+                    'url'    => 'http://trackercdn.kugou.com/i/v2/',
+                    'body'   => array(
+                        'hash'     => $vo['hash'],
+                        'key'      => md5($vo['hash'].'kgcloudv2'),
+                        'pid'      => 1,
+                        'behavior' => 'play',
+                        'cmd'      => '23',
+                        'version'  => 8400,
+                    ),
+                );
+                $t=json_decode($this->curl($API), 1);
+                if (isset($t['url'])) {
+                    $max=$t['bitRate']/1000;
+                    $url=array(
+                        'url' => $t['url'],
+                        'br'  => $t['bitRate']/1000,
+                    );
+                }
+            }
+        }
+        if (!isset($url['url'])) {
+            $url=array(
+                'url' => '',
+                'br'  => -1,
+            );
+        }
+        return json_encode($url);
+    }
+    private function baidu_url($result)
+    {
+        $data=json_decode($result, 1);
+        if (isset($data['data']['songList'][0]['songLink'])) {
+            $url=array(
+                'url' => $data['data']['songList'][0]['songLink'],
+                'br'  => $data['data']['songList'][0]['rate'],
+            );
+            $url['url']=str_replace('http://yinyueshiting.baidu.com', 'https://gss0.bdstatic.com/y0s1hSulBw92lNKgpU_Z2jR7b2w6buu', $url['url']);
+        } else {
+            $url=array(
+                'url' => '',
+                'br'  => -1,
+            );
+        }
+        return json_encode($url);
+    }
+    /**
+     * 歌词处理模块
+     * 用于规范化歌词输出
+     */
+    private function netease_lyric($result)
+    {
+        if (!$this->_FORMAT) {
+            return $result;
+        }
+        $result=json_decode($result, 1);
+        $data=array(
+           'lyric'  => isset($result['lrc']['lyric'])?$result['lrc']['lyric']:'',
+           'tlyric' => isset($result['tlyric']['lyric'])?$result['tlyric']['lyric']:'',
+        );
+        return json_encode($data);
+    }
+    private function tencent_lyric($result)
+    {
+        $result=substr($result,18,-1);
+        if (!$this->_FORMAT) {
+            return $result;
+        }
+        $result=json_decode($result, 1);
+        $data=array(
+             'lyric'  => isset($result['lyric'])?base64_decode($result['lyric']):'',
+             'tlyric' => isset($result['trans'])?base64_decode($result['trans']):'',
+         );
+        return json_encode($data);
+    }
+    private function xiami_lyric($result)
+    {
+        if (!$this->_FORMAT) {
+            return $result;
+        }
+        $result=json_decode($result, 1);
+        $data='';
+        if(!empty($result['data']['song']['lyric'])){
+            $API=array('method'=>'GET','url'=>$result['data']['song']['lyric']);
+            $data=$this->curl($API);
+            $data=preg_replace('/<[^>]+>/', '', $data);
+        }
+        preg_match_all('/\[([\d:\.]+)\](.*)\s\[x-trans\](.*)/i',$data,$match);
+        if(sizeof($match[0])){
+            for($i=0;$i<sizeof($match[0]);$i++){
+                $A[]='['.$match[1][$i].']'.$match[2][$i];
+                $B[]='['.$match[1][$i].']'.$match[3][$i];
+            }
+            $arr=array(
+                'lyric'  => str_replace($match[0],$A,$data),
+                'tlyric' => str_replace($match[0],$B,$data),
+            );
+        }
+        else{
+            $arr=array(
+                'lyric'  => $data,
+                'tlyric' => '',
+            );
+        }
+        return json_encode($arr);
+    }
+    private function kugou_lyric($result)
+    {
+        if (!$this->_FORMAT) {
+            return $result;
+        }
+        $arr=array(
+            'lyric'  => $result,
+            'tlyric' => '',
+        );
+        return json_encode($arr);
+    }
+    private function baidu_lyric($result)
+    {
+        if (!$this->_FORMAT) {
+            return $result;
+        }
+        $result=json_decode($result, 1);
+        $data=array(
+            'lyric'  => isset($result['lrcContent'])?$result['lrcContent']:'',
+            'tlyric' => '',
+        );
+        return json_encode($data);
+    }
+    /**
+     * Format - 规范化函数
+     * 用于统一返回的参数，可用 ->format() 一次性开关开启
+     */
+    private function format_netease($data)
+    {
+        $result=array(
+            'id'        => $data['id'],
+            'name'      => $data['name'],
+            'artist'    => array(),
+            'album'     => $data['al']['name'],
+            'pic_id'    => isset($data['al']['pic_str'])?$data['al']['pic_str']:$data['al']['pic'],
+            'url_id'    => $data['id'],
+            'lyric_id'  => $data['id'],
+            'source'    => 'netease',
+        );
+        if (isset($data['al']['picUrl'])) {
+            preg_match('/\/(\d+)\./', $data['al']['picUrl'], $match);
+            $result['pic_id']=$match[1];
+        }
+        foreach ($data['ar'] as $vo) {
+            $result['artist'][]=$vo['name'];
+        }
+        return $result;
+    }
+    private function format_tencent($data)
+    {
+        if (isset($data['musicData'])) {
+            $data=$data['musicData'];
+        }
+        $result=array(
+            'id'        => $data['mid'],
+            'name'      => $data['name'],
+            'artist'    => array(),
+            'album'     => trim($data['album']['title']),
+            'pic_id'    => $data['album']['mid'],
+            'url_id'    => $data['mid'],
+            'lyric_id'  => $data['mid'],
+            'source'    => 'tencent',
+        );
+        foreach ($data['singer'] as $vo) {
+            $result['artist'][]=$vo['name'];
+        }
+        return $result;
+    }
+    private function format_xiami($data)
+    {
+        $result=array(
+            'id'       => $data['song_id'],
+            'name'     => $data['song_name'],
+            'artist'   => explode(';', isset($data['singers'])?$data['singers']:$data['artist_name']),
+            'album'    => $data['album_name'],
+            'pic_id'   => $data['song_id'],
+            'url_id'   => $data['song_id'],
+            'lyric_id' => $data['song_id'],
+            'source'   => 'xiami',
+        );
+        return $result;
+    }
+    private function format_kugou($data)
+    {
+        $result=array(
+            'id'       => $data['hash'],
+            'name'     => isset($data['filename'])?$data['filename']:$data['fileName'],
+            'artist'   => array(),
+            'album'    => isset($data['album_name'])?$data['album_name']:'',
+            'url_id'   => $data['hash'],
+            'pic_id'   => $data['hash'],
+            'lyric_id' => $data['hash'],
+            'source'   => 'kugou',
+        );
+        list($result['artist'], $result['name'])=explode(' - ', $result['name'], 2);
+        $result['artist']=explode('、', $result['artist']);
+        return $result;
+    }
+    private function format_baidu($data)
+    {
+        $result=array(
+            'id'       => $data['song_id'],
+            'name'     => $data['title'],
+            'artist'   => explode(',', $data['author']),
+            'album'    => $data['album_title'],
+            'pic_id'   => $data['song_id'],
+            'url_id'   => $data['song_id'],
+            'lyric_id' => $data['song_id'],
+            'source'   => 'baidu',
+        );
+        return $result;
+    }
+}
