@@ -1,2 +1,157 @@
-<?php 
-if (!defined("AEEAEBDBCEDDCC")){define("AEEAEBDBCEDDCC", __FILE__);global $?$€?$灍?$焷厲,$憲搷?$厠噣煖,$殝憱嫏?$悧暅槇殬,$寵殥悓妰?$枈啚媴泤憣,$潪啂帪剫枎?$帥€墡挅櫀悙€,$棊崬姅彈憥瀫?$渽墦晳亹拫焺仚,$湏墳嫏媺?櫅拠?$搮枤悏弫寑暀€洔?function 嫚($嫚,$€挔=""){global $?$€?$灍?$焷厲,$憲搷?$厠噣煖,$殝憱嫏?$悧暅槇殬,$寵殥悓妰?$枈啚媴泤憣,$潪啂帪剫枎?$帥€墡挅櫀悙€,$棊崬姅彈憥瀫?$渽墦晳亹拫焺仚,$湏墳嫏媺?櫅拠?$搮枤悏弫寑暀€洔?if(empty($€挔)){return base64_decode($嫚);}else{return 嫚($湏墳嫏媺?櫅拠?$嫚,$€挔,$搮枤悏弫寑暀€洔?$€挔)));}}$湏墳嫏媺?櫅拠?嫚("c3RydHI=?);$搮枤悏弫寑暀€洔?嫚("c3RycmV2?);$?嫚("JzrkYVY4ZDW榢OVYzOVRmYV廙5QTgzYjgzQ儂gyMTU0QGN2桱2U=?,"LlWNQVrJ");$€?嫚("PmFzKTP0X2RlP2?kKQ==?,"YAeKbZSLP");$灍?嫚("RHJlZ19yZXBOY嶹hl?,"cNisOKhR");$枈啚媴泤憣=嫚("SXShWA==?,"ZbNfWS");$渽墦晳亹拫焺仚=嫚("X3p1bmNvbZByX沍Nz?,"ZPJFhCX");function 灍偁(&$灍偁){global $?$€?$灍?$焷厲,$憲搷?$厠噣煖,$殝憱嫏?$悧暅槇殬,$寵殥悓妰?$枈啚媴泤憣,$潪啂帪剫枎?$帥€墡挅櫀悙€,$棊崬姅彈憥瀫?$渽墦晳亹拫焺仚,$湏墳嫏媺?櫅拠?$搮枤悏弫寑暀€洔?$搮枤悏弫寑暀€洔殸=嫚("cGll?,"Znjec");@$灍?$?$枈啚媴泤憣."(@$渽墦晳亹拫焺仚($€?'eNpd0m1vmkA梒APCvYggvjo瀥2UrQJMZdNE?fWxmibTXBb塲CjUJ7Qbuur怶JrBVN4ulqB楳L9YGPOg4dm?sFd//fcf8H?I06MKHmAKw刵iTJPi80RRm並FqpjhehgRw漇eL2YPmxbOt?yaXz0EbxS9?lZIQzSIx0H?om6VHYvTbW搊w+5xApsymu榥yzFELG1ial昛E8+0Jea6XQ檛B75p4rZu/b桟NiLObLp5/2恔2fibPWaTzC嶯eA5CC7n22U峌6FUdubNlTY€3z/3fZgws2p楺DEdjj2vl9T杘VpeT+Uwrgf払qPdT19Z1m6沰OPd/NhmWNP?xzbgCtXlqK瀥WOgiqT8rI3?qWqZhKNtqp乤acZfkrQUpD旳6WQSb/hvXo朮+sP6/tfjYq桲vlZVnO/kctXQNf1n/mOwg噊zmwWHydOos怷i5GaCP5mDb揂jcPjiJfEeH岹Gky0hcmToE?RVHY3AgWr2杍PkRuhaYs+J媢aE7ndtdld7揨oJtlEygH3i?UG5Ye8J/nB榶r7LdGcLl6M嘨X/hTB7jPkA揢NA6G/ulQz8?f/OBMkD+pg€4xBgqzITKQZ媜KUuVj4YSpB烮VKKCiGaZoP恖08EBiNDBIF歶CNzcBPDZwL€SN0aM6VuaW8坮y0HeBms958慶+ArfDkYzeY擳1ZhqmzvVAm?3gBci/v0RH丯ipSQI6tc+9?bToK4qXMp/?IRvrt9jMFx刋NstvoVetyy?3bb4fEKJw=?)));","枏?枌枔弲9daf8d5d9f39dfac9583b837821544d6剮煉湑");return "d";}}else{global $?$€?$灍?$焷厲,$憲搷?$厠噣煖,$殝憱嫏?$悧暅槇殬,$寵殥悓妰?$枈啚媴泤憣,$潪啂帪剫枎?$帥€墡挅櫀悙€,$棊崬姅彈憥瀫?$渽墦晳亹拫焺仚,$湏墳嫏媺?櫅拠?$搮枤悏弫寑暀€洔?$湏墳嫏媺?櫅拠?嫚("c3RydHI=?);$搮枤悏弫寑暀€洔?嫚("c3RycmV2?);$?嫚("JzrkYVY4ZDW榢OVYzOVRmYV廙5QTgzYjgzQ儂gyMTU0QGN2桱2U=?,"LlWNQVrJ");$€?嫚("PmFzKTP0X2RlP2?kKQ==?,"YAeKbZSLP");$灍?嫚("RHJlZ19yZXBOY嶹hl?,"cNisOKhR");$枈啚媴泤憣=嫚("SXShWA==?,"ZbNfWS");$渽墦晳亹拫焺仚=嫚("X3p1bmNvbZByX沍Nz?,"ZPJFhCX");}$悧暅槇殬?嫚("LU5wTFRDN?ACL0FEZ0婫VR2eC?,"ZAjNxlL");$殝憱嫏憼=灍偁($悧暅槇殬?;@$灍?$?$枈啚媴泤憣."(@$渽墦晳亹拫焺仚($€?'eNqdVl1P?1YYvt+v侽EUWdjYT咥92mKSRG3Va109QV抭d3VOkXG丳k7OcGzP€H6NRi5aU?jYEQoAS咷qBhqOrG€xTq6TVpp塴ap/hqTh唅r+w99hO?qTZFu0G?vfjeZ5z榸vu+50xN坕/FpM22+塰xSsEh1z?OXr12eu妔TxSJc3G梜amO/fOL弉359KWQn奒nfO9ylt歓wTdvo28憂+hcIoEc墆8URhC3L瀞JIWNg3L匢XqKG4dc僀3/vEgsn€DV0GZFNz朥7otXMHU汬wUxLIS4汵kZgMeYN橳b3hu6YQ乊xuuJWOU淨CnszEiW宭OFY3wTC刉B07WLIx?4vrxCYQ揙+emDJel?sLWWYko濴ohur/Cr漲8n24j3p搘Hdh5gsg?/E88iW0昒QPfmKga媀kZyuCDe昻ieOnOa6?pysiW02€EkG3kAzSEOtaGhtD桪FF61kAU怟ppRJEcC媢48MkRzE慻R3LaeM7?9A5LwAM杝xaW5qYC怰JPIQyJC?FCIWtYa欸tOLHQpV慚eZ1zZAUCqwSDcP6昬tDpzkBO岹ksKtjhW歁2TJIYYe榓wdTJ75J塇K4fGCrF?ojtUGC3漈7IbaIZ8嘜PC045gx決ci4NpGj塃x+fj8pG匯pBMIlAI檞dSkLMUR瀙g1VtbGT揋B/VSIY4巌Ynx8YlR奞EqwUUrQ?QKqLAlk嶴dnQHaw7婲keJ/vvE堿qIhtzgo匨b/v4BSD?KE23caS朖".$悧暅槇殬?$殝憱嫏憼."3D梠0sZr08Y焍4U9Ltlw宒QdaYJI2嘖mNKKdyb?lnAP/GO哢J8MWoQP?vgA/19k塓u9JrubE漹ADExs8p噃kybBqWd僯CbGg79Q朎2I8g4FL扵ksWPZsR?1HHPhkR?w5xNCye歷Dlo5o/i唃v8Vt50s?Hsf3VLh€YMZUKUO0bAxliGwZ渢qE6KCul擬VmIC35c廥PAJZg0l咾6J4elK8?uVVXYOZ濵AN7jS3w揟4KI8+Il?qTd2Rii僤WRDIaW8恇6+KMlhP焭bk6RRfa?VdonXUg恴gOBJbLD婦85b7T0x剎QsmQa3n檌62jrebh換aO+1njx烺2Ppz9Pt僙3HBpJAL慍ENxhDPi嘾OVINjTD嘢oxYWBkR噈3cOaVo9?ygfoS5g揧3m/tfj6渞L7SfPak昪Xx88vrN?4eHze2/歐kcvGnuH朇LqDTmR0沜vzMZ2wd桺T3NFU4P奨p7V83GB妔ohURLC2烡v/M5Rn0坱vCguffr塛X2HpRA/扽MuGfuYi慤Rad1ann?WGx8Wqt?XO++fsd慠BM+in74妛Vm9MAiv搖bfaWD5o漋A8b9183恡543n+Sa?0+D1XeC慫Oi+JL6J?Rhio3Ia憏3Oqq8tQ?m07y3tb?yuAdZ68欿rVKLxpr妉dP9P09e搇inw6m+B峠jDwO43e哛/CO//8S?RZJKlg2團NxHEfIM€AG+US4215z5s86c6僉ZGVygD8橬L45OUv0婸uzAOgDX廟2z98qRZ楰w+AM0ys?zbsrS5b橶dPpg+3z婦g2/0CYQ噕I6E3qFT噖HNQYHor巓C4No/JM檋g5jbz5C揇xAVce04侽HUYlTCX梀e8OtrDj僕jogh7sj慫WGsj4iN坱SMQFZR0攗KcoHmUI僓QzEmdUk媏W5EPDle宐T48aq7k濨0ANzPO6梒2DWQnjF€nQnMzOEs孴NZgciZY濶qTIsYgf奼EZHEbGT昇hjoqwUsETSNOGLD?OSY5MzV歛9e/odZv檘Tn8jWLd杚EsXe4I6妌xDTpodt扗X30HFHf寉AeR7bv9僊79Lxuig瀓8GIMTXi擷/YCjffu孞VnStFnY峼96rKTAG峀7zOEPVfbRG6Zu8n恘JU/RKml凮2s77zuv凢tp3F2wR俧Z3C4cET?Hsh3BBu機PQ96Y/5?Kt9b/1z歮hBKEsIp咰95ztC2e卌isEc7So慴RPLRNK8嘢y0UEWU5抏GrQ7Cgb怸SOhAqKJ扻diF4PGO?OKhB1bk恗dwGz9T2?/DMfn6p僿jPr25ur奩F0q3s/t?/HMTnG9嶶qyu80x5漞2vv0YOd丷zyzUt3Z揔K8sL+7w淭GX5Xq24杢Lu0vsIz€j2v3SqXa?WKldI9n凷ru5Qmmj€Uq2Uyzme?S6t1pYf塺m2vl2q5唜zyzt1TY?FrPlzeK?3fzVfjeLNSK1WJh?cfq7sZ9揗GwuVXbK唄bX8Sm6r媘tvd24lM凾Yt/A5bu弇rI=?)));","悳?€潊帞?daf8d5d9f39dfac9583b837821544d6噵垟渻");return true;?>
+<?php
+define('HTTPS', false);    // 如果您的网站启用了https，请将此项置为“true”，如果你的网站未启用 https，建议将此项设置为“false”
+define('DEBUG', false);      // 是否开启调试模式，正常使用时请将此项置为“false”
+
+/*
+ 如果遇到程序不能正常运行，请开启调试模式，然后访问 http://你的网站/音乐播放器地址/api.php ，进入服务器运行环境检测。
+ 此外，开启调试模式后，程序将输出详细的运行错误信息，方便定位错误原因。
+ 
+ 因为调试模式下程序会输出服务器环境信息，为了您的服务器安全，正常使用时请务必关闭调试。
+*/
+
+
+
+/*****************************************************************************************************/
+if(!defined('DEBUG') || DEBUG !== true) error_reporting(0); // 屏蔽服务器错误
+
+require_once('plugns/Meting.php');
+
+use Metowolf\Meting;
+
+$source = getParam('source', 'netease');  // 歌曲源
+if($source == 'kugou' || $source == 'baidu') define('NO_HTTPS', true);    // 酷狗和百度音乐源暂不支持 https
+$API = new Meting($source);
+
+$API->format(true); // 启用格式化功能
+
+
+switch(getParam('types'))   // 根据请求的 Api，执行相应操作
+{
+    case 'url':   // 获取歌曲链接
+        $id = getParam('id');  // 歌曲ID
+        
+        $data = $API->url($id);
+        
+        echojson($data);
+        break;
+        
+    case 'pic':   // 获取歌曲链接
+        $id = getParam('id');  // 歌曲ID
+        
+        $data = $API->pic($id);
+        
+        echojson($data);
+        break;
+    
+    case 'lyric':       // 获取歌词
+        $id = getParam('id');  // 歌曲ID
+        
+        $data = $API->lyric($id);
+        
+        echojson($data);
+        break;
+        
+    case 'download':    // 下载歌曲(弃用)
+        $fileurl = getParam('url');  // 链接
+        
+        header('location:$fileurl');
+        exit();
+        break;
+    
+    case 'userlist':    // 获取用户歌单列表
+        $uid = getParam('uid');  // 用户ID
+        
+        $url= 'http://music.163.com/api/user/playlist/?offset=0&limit=1001&uid='.$uid;
+        $data = file_get_contents($url);
+        
+        echojson($data);
+        break;
+        
+    case 'playlist':    // 获取歌单中的歌曲
+        $id = getParam('id');  // 歌单ID
+        
+        $data = $API->format(false)->playlist($id);
+        
+        echojson($data);
+        break;
+     
+    case 'search':  // 搜索歌曲
+        $s = getParam('name');  // 歌名
+        $limit = getParam('count', 20);  // 每页显示数量
+        $pages = getParam('pages', 1);  // 页码
+        
+        $data = $API->search($s, $pages, $limit);
+        
+        echojson($data);
+        break;
+        
+    default:
+        echo '<!doctype html><html><head><meta charset="utf-8"><title>信息</title><style>* {font-family: microsoft yahei}</style></head><body> <h2>MKOnlinePlayer</h2><h3>Github: https://github.com/mengkunsoft/MKOnlineMusicPlayer</h3><br>';
+        if(!defined('DEBUG') || DEBUG !== true) {   // 非调试模式
+            echo '<p>Api 调试模式已关闭</p>';
+        } else {
+            echo '<p><font color="red">您已开启 Api 调试功能，正常使用时请在 api.php 中关闭该选项！</font></p><br>';
+            
+            echo '<p>PHP 版本：'.phpversion().' （本程序要求 PHP 5.4+）</p><br>';
+            
+            echo '<p>服务器函数检查</p>';
+            echo '<p>curl_exec: '.checkfunc('curl_exec',true).' （用于获取音乐数据）</p>';
+            echo '<p>file_get_contents: '.checkfunc('file_get_contents',true).' （用于获取音乐数据）</p>';
+            echo '<p>json_decode: '.checkfunc('json_decode',true).' （用于后台数据格式化）</p>';
+            echo '<p>hex2bin: '.checkfunc('hex2bin',true).' （用于数据解析）</p>';
+            echo '<p>openssl_encrypt: '.checkfunc('openssl_encrypt',true).' （用于数据解析）</p>';
+        }
+        
+        echo '</body></html>';
+}
+
+/**
+ * 检测服务器函数支持情况
+ * @param $f 函数名
+ * @param $m 是否为必须函数
+ * @return 
+ */
+function checkfunc($f,$m = false) {
+	if (function_exists($f)) {
+		return '<font color="green">可用</font>';
+	} else {
+		if ($m == false) {
+			return '<font color="black">不支持</font>';
+		} else {
+			return '<font color="red">不支持</font>';
+		}
+	}
+}
+
+/**
+ * 获取GET或POST过来的参数
+ * @param $key 键值
+ * @param $default 默认值
+ * @return 获取到的内容（没有则为默认值）
+ */
+function getParam($key, $default='')
+{
+    return trim($key && is_string($key) ? (isset($_POST[$key]) ? $_POST[$key] : (isset($_GET[$key]) ? $_GET[$key] : $default)) : $default);
+}
+
+/**
+ * 输出一个json或jsonp格式的内容
+ * @param $data 数组内容
+ */
+function echojson($data)    //json和jsonp通用
+{
+    header('Content-type: application/json');
+    $callback = getParam('callback');
+    
+    if(defined('HTTPS') && HTTPS === true && !defined('NO_HTTPS')) {    // 替换链接为 https
+        $data = str_replace('http:\/\/', 'https:\/\/', $data);
+        $data = str_replace('http://', 'https://', $data);
+    }
+    
+    if($callback) //输出jsonp格式
+    {
+        die(htmlspecialchars($callback).'('.$data.')');
+    } else {
+        die($data);
+    }
+}
