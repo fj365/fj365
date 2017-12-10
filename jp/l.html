@@ -36,6 +36,74 @@ ul, ol, dl {
     order: 2;
 }  
 #textsl {width:200px; line-height:25px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.navsoso-off-screen {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    bottom: 0;
+    width: 75%;
+    visibility: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .navsoso-off-screen .nav-primary {
+    display: block !important;
+  }
+  .navsoso-off-screen .navbar-fixed-top-xs {
+    width: 75%;
+  }
+  .navsoso-off-screen.push-right .navbar-fixed-top-xs {
+    left: 25%;
+  }
+  .navsoso-off-screen.push-right {
+    left: auto;
+    right: 0;
+  }
+  .navsoso-off-screen.push-right + * {
+    -webkit-transform: translate3d(-75%,0px,0px);
+    transform: translate3d(-75%,0px,0px);
+  }
+  .navsoso-off-screen + * {
+    background-color: #f2f4f8;
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    -moz-transition: -moz-transform 0.2s ease-in-out;
+    -o-transition: -o-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transform: translate3d(0px,0px,0px);
+    transform: translate3d(0px,0px,0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(75%,0px,0px);
+    transform: translate3d(75%,0px,0px);
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  .navsoso-off-screen + * .navsoso-off-screen-block {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1950;
+  }
+  .navbar + section .navsoso-off-screen {
+    top: 50px;
+  }
+  .navbar + section .navsoso-off-screen + * {
+    top: 50px;
+  }
 </style>
 </head>
 <body class="auto">
