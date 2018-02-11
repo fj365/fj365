@@ -625,6 +625,18 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
+    "label": "复制情人之意识转移",
+    "src": "http://175.43.123.52/videos/v0/20171204/3b/4e/780a62bf056de1bf0698709b9f37c6c1.mp4",
+    "image": ""
+  },
+  {
+    "type": "m4v",
+    "label": "推理笔记",
+    "src": "http://175.43.123.52/videos/v0/20180209/b7/c3/e8813ca0a93d76674abf26a8c4b5094d.mp4",
+    "image": ""
+  },
+  {
+    "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=59842C02DCEC9942CEFB2A3195201D27&file=/c1/2016/dianying/lieshendongrizhizhan_53460/59842C02DCEC9942CEFB2A3195201D27_20160811_1_1_1077.mp4",
     "label": "猎神：冬日之战",
     "image": ""
