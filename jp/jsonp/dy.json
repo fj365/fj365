@@ -199,8 +199,20 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
+    "label": "海贼王825",
+    "src": "http://175.43.123.52/videos/v0/20180211/aa/52/472492026665f47b373a60a68db5f205.mp4",
+    "image": ""
+  },
+  {
+    "type": "m4v",
     "src": "http://211.143.165.80:6510/223.111.252.21/vwecam.tc.qq.com/1006_52ae67c7ed0f431daa93d588bee689e7.f20.mp4",
     "label": "海贼王824",
+    "image": ""
+  },
+  {
+    "type": "m4v",
+    "label": "龙珠超127",
+    "src": "http://175.43.123.52/videos/v0/20180211/12/f8/a0ac8b699abfd2083715da857162e6e2.mp4",
     "image": ""
   },
   {
