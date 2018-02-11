@@ -37,8 +37,8 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=5DFE6C48140F892CE712A8C27D9E4596&file=/c1/2018/01/17_0/5DFE6C48140F892CE712A8C27D9E4596_20180117_1_1_898.mp4",
-    "label": "公牛历险记 预告片",
+    "label": "红海行动 预告片",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=F4067E1C686D6F26899B468CF87FE34A&file=/c1/2018/02/01_0/F4067E1C686D6F26899B468CF87FE34A_20180201_1_1_1444.mp4",
     "image": ""
   },
   {
