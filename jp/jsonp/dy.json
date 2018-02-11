@@ -325,6 +325,12 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
+    "label": "妖凤云城",
+    "src": "http://sohu.zuida-163sina.com/20180209/pfaBh0RR/index.m3u8",
+    "image": ""
+  },
+  {
+    "type": "m4v",
     "src": "http://cn2.zuidadianying.com/20180102/jnp6YXnu/index.m3u8",
     "label": "全球风暴",
     "image": ""
