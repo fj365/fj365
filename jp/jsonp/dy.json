@@ -367,6 +367,12 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
+    "label": "超能萌妹战江湖",
+    "src": "http://175.43.123.52/videos/v0/20171107/db/5c/92f1fc22f98f56e35cf875c8aea0b379.mp4",
+    "image": ""
+  },
+  {
+    "type": "m4v",
     "label": "耍宝太君2",
     "src": "http://175.43.123.52/videos/v0/20180104/d4/49/4114137c9529da8e9bd943313f4f960a.mp4",
     "image": ""
