@@ -336,9 +336,15 @@ success_jsonpCallback([
     "image": ""
   },
   {
+    "type":"m4v",
+    "src":"http://175.43.123.52/videos/v0/20180118/e6/cc/7e43cd3a5d9c3bf49089432a59a58c13.mp4",
+    "label":"太子书院",
+    "image":""
+  },
+  {
     "type": "m4v",
     "label": "妖凤云城",
-    "src": "http://sohu.zuida-163sina.com/20180209/pfaBh0RR/index.m3u8",
+    "src": "http://175.43.123.52/videos/v0/20180125/e7/32/3ffd5586adb1b2f335f71bc70f72f6ad.mp4",
     "image": ""
   },
   {
@@ -638,13 +644,19 @@ success_jsonpCallback([
   {
     "type": "m4v",
     "label": "复制情人之意识转移",
-    "src": "http://175.43.123.52/videos/v0/20171204/3b/4e/780a62bf056de1bf0698709b9f37c6c1.mp4",
+    "src": "http://175.43.123.52/videos/v0/20171204/0a/d0/28fce67ac333c2d54a14383faec1fb07.mp4",
     "image": ""
   },
   {
     "type": "m4v",
     "label": "推理笔记",
-    "src": "http://175.43.123.52/videos/v0/20180209/b7/c3/e8813ca0a93d76674abf26a8c4b5094d.mp4",
+    "src": "http://175.43.123.52/videos/v0/20180207/b5/5a/442cc9f8abc08a51b2915765b379f278.mp4",
+    "image": ""
+  },
+  {
+    "type": "m4v",
+    "label": "偷香魔盗团",
+    "src": "http://175.43.123.52/videos/v0/20180110/a6/21/67006b450c22e3686ff231d6adbef01b.mp4",
     "image": ""
   },
   {
