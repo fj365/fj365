@@ -661,6 +661,12 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
+    "label": "鬼子也疯狂",
+    "src": "http://175.43.123.52/videos/v0/20171221/05/99/2c216a091471440d6e3e22870edc7b0c.mp4",
+    "image": ""
+  },
+  {
+    "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=59842C02DCEC9942CEFB2A3195201D27&file=/c1/2016/dianying/lieshendongrizhizhan_53460/59842C02DCEC9942CEFB2A3195201D27_20160811_1_1_1077.mp4",
     "label": "猎神：冬日之战",
     "image": ""
