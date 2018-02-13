@@ -193,6 +193,18 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
+    "label": "最后的武林",
+    "src": "http://tbm.alicdn.com/6vAsJsegVeBeb6vz3Vi/nWcwkRcTDYWEWQq6zqB@@hd.m3u8",
+    "image": ""
+  },
+  {
+    "type": "m4v",
+    "label": "最后的武林2铁砂掌",
+    "src": "http://videos.fjhps.com//ppvod/D914C4A8C41A5BC9E68FC8C2747FE8D2.m3u8",
+    "image": ""
+  },
+  {
+    "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=02D59AE0519DA8C3BBD958C9C0D3274D&file=/c1/2018/02/07_0/02D59AE0519DA8C3BBD958C9C0D3274D_20180207_1_1_891.mp4",
     "label": "妖铃铃",
     "image": ""
