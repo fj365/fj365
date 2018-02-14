@@ -391,6 +391,18 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
+    "label": "官人我要房",
+    "src": "http://sohu.zuida-163sina.com/20180213/5bGrU7z1/index.m3u8",
+    "image": ""
+  },
+  {
+    "type": "m4v",
+    "label": "清算日",
+    "src": "http://youku163.zuida-bofang.com/20180211/9TUG2BrA/index.m3u8",
+    "image": ""
+  },
+  {
+    "type": "m4v",
     "src": "http://cn2.zuidadianying.com/20180102/jnp6YXnu/index.m3u8",
     "label": "全球风暴",
     "image": ""
