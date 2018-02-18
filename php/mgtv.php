@@ -26,6 +26,7 @@ if(isset($_GET['hd'])){
 $mz = $json['data']['videoName'];
 $png = $json['data']['imageUrl'];
 $jsons = json_decode(CURLS($http.$host),true);
+$uu = $jsons['info'];
 if(strstr($uu,'/dianying/')){
 	preg_match('|http://\w+.titan.mgtv.com/(.*)/dianying/lpe_(\d+)/(.*)_201(.*)_mp4/|ims',$uu,$c);
 	$mp4 = 'http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid='.$c[3].'&file=/'.$c[1].'/dianying/lpe_'.$c[2].'/'.$c[3].'_201'.$c[4].'.mp4';
