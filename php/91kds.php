@@ -45,7 +45,7 @@ if(isset ($_GET['id'])){
         
 		//$src = strtr($v,array('kds1://'=>'http://v.91kds.com/b7/','kds2://'=>'http://v.91kds.com/c7/'));
 		$src = strtr($v,array('kds1://'=>"$fname?kid=kds1://",'kds2://'=>"$fname?kid=kds2://"));//,'@@'=>".m3u8?$lk")
-		$xml.='{"label":"'.$c[2][$k].'","src":"'.$src.'","image":"http://static.yingyonghui.com/icon/128/5079046.png"},';
+		$xml.='{"type":"m4v","label":"'.$c[2][$k].'","src":"'.$src.'","image":"http://static.yingyonghui.com/icon/128/5079046.png"},';
 	}
 	header("Content-type: application/jsonp; charset=UTF-8");
 	echo 'success_jsonpCallback(['.$xml.'])';
