@@ -53,6 +53,8 @@ if(isset($_GET['hd'])){
 }else{
 	$host = $json['data']['videoSources'][0]['url'];
 }
+echo ($http.$host);
+/*
 $mz = $json['data']['videoName'];
 $png = $json['data']['imageUrl'];
 $jsons = json_decode(CURLS($http.$host),true);
@@ -70,16 +72,17 @@ if(strstr($uu,'/dianying/')){
 }else if(strstr($uu,'/c1/201')){
 	preg_match('|http://pcvideocmnet.titan.mgtv.com/(.*)_0/(.*)_201(.*)_mp4/|ims',$uu,$c);
 	$mp4 = 'http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid='.$c[2].'&file=/'.$c[1].'_0/'.$c[2].'_201'.$c[3].'.mp4';
-}
+}*/
 /*
 $mp5 = '{"type":"m4v","src":"'.$mp4.'","label":"'.$mz.'","image":"'.$png.'"},';
 echo $mp5;//$uu,
 */
-//*
+/*
 header("Content-type: application/octet-stream");
 header("Content-Disposition:attachment;filename='QQ121027740_MGTV_".$_GET['vid'].".mp4'");
 header("location:".$mp4);
-//*/
+//
+*/
 //
 //
 //
