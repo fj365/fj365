@@ -10,7 +10,7 @@ function CURLS($url){
 	curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 	curl_setopt($ch, CURLOPT_REFERER, $url);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-FORWARDED-FOR:'.$_SERVER["REMOTE_ADDR"], 'CLIENT-IP:'.$_SERVER["REMOTE_ADDR"]));
-	curl_setopt($c, CURLOPT_COOKIE, 'sessionid=1514525461731; __STKUUID=f624f94b-f0ab-43a7-89fa-5a8d1d978929; MQGUID=946613877276545024; __MQGUID=946613877276545024; search-history=%u56E0%u4E3A%u7231%2C%u6728%u4E43%u4F0A; lastActionTime=1514526310223');
+	curl_setopt($ch, CURLOPT_COOKIE, 'sessionid=1514525461731; __STKUUID=f624f94b-f0ab-43a7-89fa-5a8d1d978929; MQGUID=946613877276545024; __MQGUID=946613877276545024; search-history=%u56E0%u4E3A%u7231%2C%u6728%u4E43%u4F0A; lastActionTime=1514526310223');
 	$data = curl_exec($ch);
 	curl_close($ch);
 	return $data;
