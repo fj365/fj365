@@ -2369,7 +2369,8 @@ function mgtv_vid_src(lid){
 	jQuery.ajax({
 		cache: true,
 		async:false,
-		url: "http://v.api.mgtv.com/list/tvlist?video_id="+lid+"&page=0&size=1000&_=1464074926043&callback=callback",
+		//url: "http://v.api.mgtv.com/list/tvlist?video_id="+lid+"&page=0&size=1000&_=1464074926043&callback=callback",
+		url: "https://v5m.api.mgtv.com/remaster/vrs/getVideoListByPartId?_support=10000000&abroad=0&partId="+lid+"&pageNum=1&pageSize=1000&needLocate=0",
 		type: "GET",
 		dataType: "jsonp",
 		jsonpCallback: 'callback',
@@ -2386,7 +2387,7 @@ function mgtv_vid_list_success_jsonpCallback(strdata){
 	//http://proxy520.duapp.com/mgid/?v=3606229 http://proxy.dy208.com/2/mgtv/mgid.php?v=3683487_mgtv http://f8dyyy.duapp.com/mgid/?v=
 	//http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/x.php/mgtv_'+v.video_id+'.mp4//http://proxy520.duapp.com/mgid/?v=
 	//http://proxy.ec899.com/ck/mgtv/mgid.php?v=3683487_mgtv
-		list_src_data_json += '{m4v:"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/mgtv.php?vid='+v.partId+'",title:"'+v.t1+':'+v.t2+'",poster:"'+v.img+'"},';
+		list_src_data_json += '{m4v:"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/mgtv.php?vid='+v.partId+'",title:"'+v.title+'",poster:"'+v.image+'"},';
 		//v.video_id
 	});
 	list_src_data_json += ']';
