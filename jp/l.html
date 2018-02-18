@@ -2386,7 +2386,7 @@ function mgtv_vid_list_success_jsonpCallback(strdata){
 	//http://proxy520.duapp.com/mgid/?v=3606229 http://proxy.dy208.com/2/mgtv/mgid.php?v=3683487_mgtv http://f8dyyy.duapp.com/mgid/?v=
 	//http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/x.php/mgtv_'+v.video_id+'.mp4//http://proxy520.duapp.com/mgid/?v=
 	//http://proxy.ec899.com/ck/mgtv/mgid.php?v=3683487_mgtv
-		list_src_data_json += '{m4v:"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/mgtv.php?url='+v.partId+'",title:"'+v.t1+':'+v.t2+'",poster:"'+v.img+'"},';
+		list_src_data_json += '{m4v:"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/mgtv.php?vid='+v.partId+'",title:"'+v.t1+':'+v.t2+'",poster:"'+v.img+'"},';
 		//v.video_id
 	});
 	list_src_data_json += ']';
@@ -2399,7 +2399,7 @@ $("#mgtv_vid_id").click(function() {
 });
 function mgtv_vid_id(data){
 	var dy_src_data = (decodeURIComponent(data)).split(",");
-	var dy_src_data_json = '[{m4v:"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/mgtv.php?url='+dy_src_data[0]+'",title:"'+dy_src_data[1]+'",poster:"'+dy_src_data[2]+'"}]';
+	var dy_src_data_json = '[{m4v:"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/mgtv.php?vid='+dy_src_data[0]+'",title:"'+dy_src_data[1]+'",poster:"'+dy_src_data[2]+'"}]';
 	eval("srcjson=" + dy_src_data_json);
 	myPlaylist.setPlaylist(srcjson);
 	$("#jplayer_N").jPlayer("play");
