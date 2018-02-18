@@ -65,14 +65,15 @@ $jsons = json_decode(CURLS($http.$host),true);
 //$m = json_decode(CURLS($http_host))->info;
 //http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=4B5639E5A69A3DE9F6BD659E82F90A4B&file=/c1/2017/12/21_0/4B5639E5A69A3DE9F6BD659E82F90A4B_20171221_1_1_957.mp4
 $uu = $jsons['info'];
-echo ($uu);
+//
 if(strstr($uu,'/dianying/')){
-	preg_match('|http://pcvideocmnet.titan.mgtv.com/(.*)/dianying/lpe_(\d+)/(.*)_201(.*)_mp4/|ims',$uu,$c);
+	preg_match('|http://\w+.titan.mgtv.com/(.*)/dianying/lpe_(\d+)/(.*)_201(.*)_mp4/|ims',$uu,$c);
 	$mp4 = 'http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid='.$c[3].'&file=/'.$c[1].'/dianying/lpe_'.$c[2].'/'.$c[3].'_201'.$c[4].'.mp4';
 }else if(strstr($uu,'/c1/201')){
-	preg_match('|http://pcvideocmnet.titan.mgtv.com/(.*)_0/(.*)_201(.*)_mp4/|ims',$uu,$c);
+	preg_match('|http://\w+.titan.mgtv.com/(.*)_0/(.*)_201(.*)_mp4/|ims',$uu,$c);
 	$mp4 = 'http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid='.$c[2].'&file=/'.$c[1].'_0/'.$c[2].'_201'.$c[3].'.mp4';
 }
+echo ($mp4);
 /*
 $mp5 = '{"type":"m4v","src":"'.$mp4.'","label":"'.$mz.'","image":"'.$png.'"},';
 echo $mp5;//$uu,
