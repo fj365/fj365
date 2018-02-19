@@ -65,7 +65,7 @@ if(isset($_GET['a'])){
 	$jsons = $json['aweme_list'];
 	//print_r($jsons);
 	foreach ($jsons as $k => $v){
-		$xml.='{"type":"m4v","label":"'.$jsons[$k]['desc'].'","src":"'.$fname.'?tr='.TH($jsons[$k]['video']['play_addr']['url_list'][0]).'","image":"'.$jsons[$k]['video']['cover']['url_list'][0].'"},';
+		$xml.='{"type":"m4v","label":"'.TTHH($jsons[$k]['desc']).'","src":"'.$fname.'?tr='.TH($jsons[$k]['video']['play_addr']['url_list'][0]).'","image":"'.$jsons[$k]['video']['cover']['url_list'][0].'"},';
 	}
 	header("Content-type: application/jsonp; charset=UTF-8");
 	echo 'success_jsonpCallback(['.$xml.'])';
@@ -80,7 +80,7 @@ if(isset($_GET['a'])){
 	$j = json_decode(YTSO('http://so.yinyuetai.com/search/video-search?callback=&_api=get.videoList&pageIndex=1&pageSize=500&offset=0&orderType=TOTALVIEWS&keyword='.$_GET['yytso']),true);
 	$jj = $j['videos']['data'];
 	foreach($jj as $k=>$v){
-		$json .= '{"type":"m4v","label":"'.$jj[$k]['title'].'","src":"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/my.php?yyt='.$jj[$k]['id'].'","image":"'.$jj[$k]['headImg'].'"},';
+		$json .= '{"type":"m4v","label":"'.TTHH($jj[$k]['title']).'","src":"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/my.php?yyt='.$jj[$k]['id'].'","image":"'.$jj[$k]['headImg'].'"},';
 	}
 	header("Content-type: application/jsonp; charset=UTF-8");
 	echo 'success_jsonpCallback(['.$json.'])';
@@ -127,6 +127,11 @@ function YTSO($url){
 function TH($str){
 	$strs=strtr($str,array('https:'=>'http:'));
 	return URLencode($strs);
+}
+//
+function TTHH($str) {
+	$strs = strtr($str,array('"'=>' ','\''=>' ','<'=>'《','>'=>'》','&amp;'=>'-','&lt;'=>' ','&gt;'=>' '));
+	return $strs;
 }
 //JP页面
 function HTML($dh,$mbx,$zy,$fy,$jsonp){
