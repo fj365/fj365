@@ -56,7 +56,7 @@ if(isset ($_GET['id'])){
 	//echo $src.$_GET['kid'];
 	//header("Content-type: application/octet-stream");
 	//header("Content-Disposition:attachment;filename='".$src."'");comid=qiyidmx
- 	$srcs = strstr($src,array('&from=comid='=>'&from=com&id='));
+ 	$srcs = strtr($src,array('&from=comid='=>'&from=com&id='));
 	header("location:".$srcs);
 }
 function TT(){
