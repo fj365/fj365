@@ -77,7 +77,7 @@ if(isset($_GET['a'])){
 	$j = json_decode(CURL('http://m.yinyuetai.com/mv/get-simple-video-info?videoId='.$_GET['yyt'].'&callback='),true);
 	header("location:".$j['videoInfo']['videoUrl']);
 }else if(isset ($_GET['yytso'])){
-	$j = json_decode(YTSO('http://so.yinyuetai.com/search/video-search?callback=&_api=get.videoList&pageIndex=1&pageSize=500&offset=0&orderType=TOTALVIEWS&keyword='.$_GET['yytso']),true);
+	$j = json_decode(YTSO('http://so.yinyuetai.com/search/video-search?callback=&_api=get.videoList&pageIndex=1&pageSize=200&offset=0&orderType=TOTALVIEWS&keyword='.$_GET['yytso']),true);
 	$jj = $j['videos']['data'];
 	foreach($jj as $k=>$v){
 		$json .= '{"type":"m4v","label":"'.TTHH($jj[$k]['title']).'","src":"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/my.php?yyt='.$jj[$k]['id'].'","image":"'.$jj[$k]['headImg'].'"},';
@@ -130,7 +130,7 @@ function TH($str){
 }
 //
 function TTHH($str) {
-	$strs = strtr($str,array('"'=>' ','\''=>' ','<'=>'《','>'=>'》','&amp;'=>'-','&lt;'=>' ','&gt;'=>' '));
+	$strs = strtr($str,array('"'=>'_','\''=>'_','<'=>'《','>'=>'》','&amp;'=>'-','&lt;'=>'_','('=>'_',')'=>'_',' '=>'_'));
 	return $strs;
 }
 //JP页面
