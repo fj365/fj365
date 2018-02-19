@@ -2392,8 +2392,12 @@ function mgtvlists_success_jsonpCallback(datas,ty_iv,pn,st){
 }
 //芒果匹配地址
 function mgtv_vid_pp(str){
+	if(str.indexOf("/s/")>-1){
+	return(str.replace(/http:\/\/www.mgtv.com\/\w+\/([0-9]+).html/,function($0,$1) {return($1);}));
+	}else{
 	return(str.replace(/http:\/\/www.mgtv.com\/\w+\/\d+\/([0-9]+).html/,function($0,$1) {return($1);}));
 	//http:\/\/www.mgtv.com\/\w+\/\d+\/\d+\/\w+\/([0-9]+).html
+	}
 }
 //芒果列表播放
 $("#mgtv_vid_src").click(function() {
