@@ -54,8 +54,8 @@ if(isset ($_GET['id'])){
 	$lk = $key['livekey'];$lt = $key['token'];
 	$src = strtr($_GET['kid'],array('kds1://'=>'http://v.91kds.com/b9/','kds2://'=>'http://v.91kds.com/c9/','@@'=>".m3u8?$lk"));
 	//echo $src.$_GET['kid'];
-	header("Content-type: application/octet-stream");
-	header("Content-Disposition:attachment;filename='".$src."'");
+	//header("Content-type: application/octet-stream");
+	//header("Content-Disposition:attachment;filename='".$src."'");
 	header("location:".$src);
 }
 function TT(){
