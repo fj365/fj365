@@ -6,7 +6,8 @@ preg_match('|"time":"(.*?)", "key": "(.*?)", "url": "(.*?)","type": "(.*?)"|ims'
 //echo $c[1].$c[2].$c[3].$c[4];
 $d = C_F('http://proxy.zhuangla.com.cn/OdParse/api.php?referer=http://www.f8dy.tv/&time='.$c[1].'&key='.$c[2].'&url='.$c[3].'&type=mgtv');
 $e = json_decode($d,true);
-echo $e['url'];
+//echo $e['url'];
+header("location:".$e['url']);
 }
 function C_F($url){
 	$ch=curl_init();
