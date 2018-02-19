@@ -3,6 +3,7 @@
 //XML CMP列表》my.php?p=1&a=zhongwenwuqu  默认列表：my.php
 //PHP Ajax酷狗搜索列表》my.php?kg=搜索内容
 error_reporting(0);
+header('Access-Control-Allow-Origin:*');
 $fname = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER["SCRIPT_NAME"];
 //开始编写
 if(isset($_GET['a'])){
@@ -72,6 +73,17 @@ if(isset($_GET['a'])){
 	header("Content-type: video/mp4");
 	header("Content-Disposition: filename=douyin.mp4");
 	echo readfile(URLdecode($_GET['tr']));
+}else if(isset ($_GET['yyt'])){
+	$j = json_decode(CURL('http://m.yinyuetai.com/mv/get-simple-video-info?videoId='.$_GET['yyt'].'&callback='),true);
+	header("location:".$j['videoInfo']['videoUrl']);
+}else if(isset ($_GET['yytso'])){
+	$j = json_decode(YTSO('http://so.yinyuetai.com/search/video-search?callback=&_api=get.videoList&pageIndex=1&pageSize=500&offset=0&orderType=TOTALVIEWS&keyword='.$_GET['yytso']),true);
+	$jj = $j['videos']['data'];
+	foreach($jj as $k=>$v){
+		$json .= '{"type":"m4v","label":"'.$jj[$k]['title'].'","src":"http://wow-fj365.a3c1.starter-us-west-1.openshiftapps.com/php/my.php?yyt='.$jj[$k]['id'].'","image":"'.$jj[$k]['headImg'].'"},';
+	}
+	header("Content-type: application/jsonp; charset=UTF-8");
+	echo 'success_jsonpCallback(['.$json.'])';
 }else{
 	$x = '<list>
 	<m list_src="'.$fname.'?p=1&a=manyaochuanshao" label="慢摇串烧"/>
@@ -93,6 +105,20 @@ function CURL($url){
 	curl_setopt($ch, CURLOPT_REFERER, $url);
 	curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 	curl_setopt($c, CURLOPT_HTTPHEADER, array('X-FORWARDED-FOR:'.$_SERVER["REMOTE_ADDR"], 'CLIENT-IP:'.$_SERVER["REMOTE_ADDR"]));
+	$data = curl_exec($ch);
+	curl_close($ch);
+	return $data;
+}
+//构造CURL函数
+function YTSO($url){
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+	curl_setopt($ch, CURLOPT_REFERER, $url);
+	curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+	curl_setopt($c, CURLOPT_HTTPHEADER, array('X-FORWARDED-FOR:'.$_SERVER["REMOTE_ADDR"], 'CLIENT-IP:'.$_SERVER["REMOTE_ADDR"]));
+	curl_setopt($ch, CURLOPT_COOKIE, 'yinyuetai_uid=aDjmW2GDjaGK2KO1zndURj59');
 	$data = curl_exec($ch);
 	curl_close($ch);
 	return $data;
