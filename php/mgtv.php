@@ -7,7 +7,16 @@ function CURLS($url){
 	curl_setopt($ch, CURLOPT_URL, $url);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
-	curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+	curl_setopt($curl, CURLOPT_POST, true);
+	curl_setopt($curl, CURLOPT_HTTPPROXYTUNNEL, true);
+	curl_setopt($ch, CURLOPT_PROXYAUTH, CURLAUTH_BASIC); //代理认证模式
+	curl_setopt($curl, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+    curl_setopt($ch, CURLOPT_PROXY, "61.155.164.110"); //代理服务器地址
+    curl_setopt($ch, CURLOPT_PROXYPORT, 3128); //代理服务器端口
+    //curl_setopt($ch, CURLOPT_PROXYUSERPWD, ":"); //http代理认证帐号，username:password的格式
+    curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
+	curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1');
+	//curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 	curl_setopt($ch, CURLOPT_REFERER, $url);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-FORWARDED-FOR:'.$_SERVER["REMOTE_ADDR"], 'CLIENT-IP:'.$_SERVER["REMOTE_ADDR"]));
 	curl_setopt($ch, CURLOPT_COOKIE, 'sessionid=1514525461731; __STKUUID=f624f94b-f0ab-43a7-89fa-5a8d1d978929; MQGUID=946613877276545024; __MQGUID=946613877276545024; search-history=%u56E0%u4E3A%u7231%2C%u6728%u4E43%u4F0A; lastActionTime=1514526310223');
