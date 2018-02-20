@@ -2,19 +2,6 @@
 error_reporting(0);
 header("Content-Type:text/html;charset=utf-8");
 $fname = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER["SCRIPT_NAME"];
-function CURL($url){
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
-	curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1');
-	curl_setopt($ch, CURLOPT_REFERER, $url);
-	curl_setopt($c, CURLOPT_HTTPHEADER, array('X-FORWARDED-FOR:'.$_SERVER["REMOTE_ADDR"], 'CLIENT-IP:'.$_SERVER["REMOTE_ADDR"]));
-	//curl_setopt($c, CURLOPT_COOKIE, 'sessionid=1505460780171_8kpqp21m4cm; __STKUUID=ec0e0e3c-115d-4365-88e9-492d9de20437; MQGUID=908594628054749184; __MQGUID=908594628054749184; lastActionTime=1505461768547');
-	$data = curl_exec($ch);
-	curl_close($ch);
-	return $data;
-}
 function CURLS($url){
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $url);
