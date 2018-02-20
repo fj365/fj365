@@ -37,16 +37,14 @@ $png = $json['data']['imageUrl'];
 $jsons = json_decode(CURLS($http.$host),true);
 $uu = $jsons['info'];
 if(strstr($uu,'/dianying/')){
-	preg_match('|http://\w+.titan.mgtv.com/(.*)/dianying/lpe_(\d+)/(.*)_201(.*)_mp4/|ims',$uu,$c);
+	preg_match('|/(.*)/dianying/lpe_(\d+)/(.*)_201(.*)_mp4/|ims',$uu,$c);
 	$mp4 = 'http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid='.$c[3].'&file=/'.$c[1].'/dianying/lpe_'.$c[2].'/'.$c[3].'_201'.$c[4].'.mp4';
 }else if(strstr($uu,'/c1/201')){
-	preg_match('|http://\w+.titan.mgtv.com/(.*)_(\d+)/(.*)_201(.*)_mp4/|ims',$uu,$c);
+	preg_match('|/(.*)_(\d+)/(.*)_201(.*)_mp4/|ims',$uu,$c);
 	$mp4 = 'http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid='.$c[3].'&file=/'.$c[1].'_'.$c[2].'/'.$c[3].'_201'.$c[4].'.mp4';
 }
-echo $uu.$mp4;
-/*
+//echo $uu.$mp4;
 header("Content-type: application/octet-stream");
 header("Content-Disposition:attachment;filename='QQ121027740_MGTV_".$_GET['vid'].".mp4'");
 header("location:".$mp4);
-*/
 ?>
