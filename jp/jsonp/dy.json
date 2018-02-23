@@ -7,14 +7,14 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=510AD2D62BEBDE4B3A47DF00DEF68B0D&file=/c1/2017/12/27_0/510AD2D62BEBDE4B3A47DF00DEF68B0D_20171227_1_1_1131.mp4",
-    "label": "《西游记女儿国》预告片",
+    "src": "http://v.yongjiujiexi.com/20180223/0hFSrhc8/index.m3u8",
+    "label": "《西游记女儿国》",
     "image": ""
   },
   {
     "type": "m4v",
-    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=3B9CD60DC59FB2515DECA684402DF90D&file=/c1/2017/12/13_0/3B9CD60DC59FB2515DECA684402DF90D_20171213_1_1_1237.mp4",
-    "label": "《捉妖记2》国际版预告",
+    "src": "http://v.yongjiujiexi.com/20180222/mGKSI3Cv/index.m3u8",
+    "label": "《捉妖记2》",
     "image": ""
   },
   {
@@ -25,8 +25,8 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=382DD93A4D5AC06B19EABA516EFE9651&file=/c1/2018/02/05_0/382DD93A4D5AC06B19EABA516EFE9651_20180205_1_1_875.mp4",
-    "label": "祖宗十九代 预告片",
+    "src": "http://v.yongjiujiexi.com/20180223/sNSQ5YtX/index.m3u8",
+    "label": "祖宗十九代",
     "image": ""
   },
   {
@@ -37,8 +37,8 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "label": "红海行动 预告片",
-    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=F4067E1C686D6F26899B468CF87FE34A&file=/c1/2018/02/01_0/F4067E1C686D6F26899B468CF87FE34A_20180201_1_1_1444.mp4",
+    "label": "红海行动",
+    "src": "http://v.yongjiujiexi.com/20180223/abcegWMs/index.m3u8",
     "image": ""
   },
   {
