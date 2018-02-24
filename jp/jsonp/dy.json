@@ -7,14 +7,14 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "http://v.yongjiujiexi.com/20180223/0hFSrhc8/index.m3u8",
-    "label": "《西游记女儿国》",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=AD6BA8C87E04329360E4E86EF4D4697A&file=/c1/2018/02/09_0/AD6BA8C87E04329360E4E86EF4D4697A_20180209_1_1_1210.mp4",
+    "label": "《西游记女儿国》预告片",
     "image": ""
   },
   {
     "type": "m4v",
-    "src": "http://v.yongjiujiexi.com/20180222/mGKSI3Cv/index.m3u8",
-    "label": "《捉妖记2》",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=A7B6DC6D2F649C250940A6A084A99929&file=/c1/2018/02/09_0/A7B6DC6D2F649C250940A6A084A99929_20180209_1_1_1171.mp4",
+    "label": "《捉妖记2》预告片",
     "image": ""
   },
   {
@@ -25,8 +25,8 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "http://v.yongjiujiexi.com/20180223/sNSQ5YtX/index.m3u8",
-    "label": "祖宗十九代",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=382DD93A4D5AC06B19EABA516EFE9651&file=/c1/2018/02/05_0/382DD93A4D5AC06B19EABA516EFE9651_20180205_1_1_875.mp4",
+    "label": "祖宗十九代 预告片",
     "image": ""
   },
   {
@@ -37,14 +37,20 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "label": "红海行动",
-    "src": "http://v.yongjiujiexi.com/20180223/abcegWMs/index.m3u8",
+    "label": "红海行动 预告片",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=F4067E1C686D6F26899B468CF87FE34A&file=/c1/2018/02/01_0/F4067E1C686D6F26899B468CF87FE34A_20180201_1_1_1444.mp4",
     "image": ""
   },
   {
     "type": "m4v",
     "src": "http://fuli.zuida-youku-le.com/20180131/bF4Ml8BF/index.m3u8",
     "label": "公牛历险记",
+    "image": ""
+  },
+  {
+    "type": "m4v",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=1F426B7B92EB0F709943ED097882A925&file=/c1/2018/02/23_0/1F426B7B92EB0F709943ED097882A925_20180223_1_1_1033.mp4",
+    "label": "飞鸟历险记",
     "image": ""
   },
   {
@@ -169,7 +175,7 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "https://vip.94kuyun.com/20180101/ACdO8fZP/index.m3u8",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=0CF04E80A50A7574C7D70168A0031A6A&file=/c1/2018/02/13_0/0CF04E80A50A7574C7D70168A0031A6A_20180213_1_1_1254.mp4",
     "label": "《机器之血》",
     "image": ""
   },
@@ -207,30 +213,6 @@ success_jsonpCallback([
     "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=02D59AE0519DA8C3BBD958C9C0D3274D&file=/c1/2018/02/07_0/02D59AE0519DA8C3BBD958C9C0D3274D_20180207_1_1_891.mp4",
     "label": "妖铃铃",
-    "image": ""
-  },
-  {
-    "type": "m4v",
-    "label": "海贼王825",
-    "src": "http://sohu.zuida-163sina.com/20180211/5DgAZjRL/index.m3u8",
-    "image": ""
-  },
-  {
-    "type": "m4v",
-    "src": "http://211.143.165.80:6510/223.111.252.21/vwecam.tc.qq.com/1006_52ae67c7ed0f431daa93d588bee689e7.f20.mp4",
-    "label": "海贼王824",
-    "image": ""
-  },
-  {
-    "type": "m4v",
-    "label": "龙珠超127",
-    "src": "http://yj.yongjiu6.com/20180211/qWTJtBjn/index.m3u8",
-    "image": ""
-  },
-  {
-    "type": "m4v",
-    "src": "http://211.143.165.80:6510/223.111.252.21/vwecam.tc.qq.com/1006_5deba6dcc73146c4a0e03aa50cbb6301.f20.mp4",
-    "label": "龙珠超126",
     "image": ""
   },
   {
