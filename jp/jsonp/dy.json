@@ -1285,6 +1285,12 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
+    "src": "http://youku163.zuida-bofang.com/20180222/lPw4ukS5/index.m3u8",
+    "label": "权力之眼",
+    "image": ""
+  },
+  {
+    "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2010&fid=A59D39E5336EBAAE42A9E8495CC52092&file=/c1/2017/10/10_0/A59D39E5336EBAAE42A9E8495CC52092_20171010_1_1_384.mp4",
     "label": "声之形 国语版",
     "image": ""
