@@ -25,8 +25,8 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=382DD93A4D5AC06B19EABA516EFE9651&file=/c1/2018/02/05_0/382DD93A4D5AC06B19EABA516EFE9651_20180205_1_1_875.mp4",
-    "label": "祖宗十九代 预告片",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=B9BAB2866ACBBE0072E0F31EE137EF5E&file=/c1/2018/03/24_0/B9BAB2866ACBBE0072E0F31EE137EF5E_20180324_1_1_720.mp4",
+    "label": "祖宗十九代",
     "image": ""
   },
   {
@@ -163,13 +163,13 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "https://vip.94kuyun.com/20180106/UHsWn7U6/index.m3u8",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=F41C91CF2BA3941AFE196A3C7D9CAF5B&file=/c1/2018/02/11_0/F41C91CF2BA3941AFE196A3C7D9CAF5B_20180211_1_1_811.mp4",
     "label": "《二代妖精》",
     "image": ""
   },
   {
     "type": "m4v",
-    "src": "http://pc.v.k.360kan.com/vod-shouzhu-bj/2835057298_20180105160320_ZGRkZHMubXA0.mp4",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=B26A3997A97B62BE5A590EC5F62990BA&file=/c1/2018/03/22_0/B26A3997A97B62BE5A590EC5F62990BA_20180322_1_1_838.mp4",
     "label": "《前任3》",
     "image": ""
   },
