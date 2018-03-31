@@ -103,6 +103,18 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
+    "src": "https://cdn.youku-letv.com/20180223/nnSUoHw8/index.m3u8",
+    "label": "游戏人生 ZERO",
+    "image": ""
+  },
+  {
+    "type": "m4v",
+    "src": "http://kakazy-yun.com/20170831/ppLhamvc/index.m3u8",
+    "label": "头文字D",
+    "image": ""
+  },
+  {
+    "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=D199A996CDBEB4B61D091D28AB2754B7&file=/c1/2017/08/08_0/D199A996CDBEB4B61D091D28AB2754B7_20170808_1_1_1157.mp4",
     "label": "超级工程第一季第1集：港珠澳大桥",
     "image": ""
