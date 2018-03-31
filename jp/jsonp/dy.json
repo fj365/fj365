@@ -7,7 +7,7 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "http://tbm.alicdn.com/vUAdB2SRl6Uwi7hn7WB/itmrRpJrsM0prqSBNVt@@hd.m3u8 ",
+    "src": "http://tbm.alicdn.com/vUAdB2SRl6Uwi7hn7WB/itmrRpJrsM0prqSBNVt@@ld.m3u8 ",
     "label": "《西游记女儿国》",
     "image": ""
   },
@@ -19,7 +19,7 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "http://tbm.alicdn.com/nvGpyhjCSfsbYn7YRNO/909w4aa9KTzA53PVxYm@@hd.m3u8 ",
+    "src": "http://tbm.alicdn.com/nvGpyhjCSfsbYn7YRNO/909w4aa9KTzA53PVxYm@@ld.m3u8 ",
     "label": "时尚女模头2",
     "image": ""
   },
