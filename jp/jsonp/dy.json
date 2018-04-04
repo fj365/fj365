@@ -31,8 +31,8 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=A7B6DC6D2F649C250940A6A084A99929&file=/c1/2018/02/09_0/A7B6DC6D2F649C250940A6A084A99929_20180209_1_1_1171.mp4",
-    "label": "《捉妖记2》预告片",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=496490CF3471F1F1378C8497E21CA03F&file=/c1/2018/04/03_0/496490CF3471F1F1378C8497E21CA03F_20180403_1_1_1011.mp4",
+    "label": "《捉妖记2》",
     "image": ""
   },
   {
