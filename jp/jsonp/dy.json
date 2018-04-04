@@ -32,7 +32,13 @@ success_jsonpCallback([
   {
     "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=496490CF3471F1F1378C8497E21CA03F&file=/c1/2018/04/03_0/496490CF3471F1F1378C8497E21CA03F_20180403_1_1_1011.mp4",
-    "label": "《捉妖记2》",
+    "label": "捉妖记2",
+    "image": ""
+  },
+  {
+    "type": "m4v",
+    "src": "https://tbm.alicdn.com/mACfybJ0A35PpUBpWyH/NBzbZVp6Jb50p3KYxnr@@ld.m3u8",
+    "label": "疯魔鲁智深",
     "image": ""
   },
   {
