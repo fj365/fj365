@@ -1,14 +1,14 @@
 success_jsonpCallback([
   {
     "type": "m4v",
-    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=49E281C76A9856D2EC96FBDD81D1E384&file=/c1/2017/12/14_0/49E281C76A9856D2EC96FBDD81D1E384_20171214_1_1_1309.mp4",
-    "label": "《唐人街探案2》预告片",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=AD7E6B8AFF6597D4AFF5490F9A7C2848&file=/c1/2018/04/20_0/AD7E6B8AFF6597D4AFF5490F9A7C2848_20180420_1_1_1230.mp4",
+    "label": "唐人街探案2",
     "image": ""
   },
   {
     "type": "m4v",
     "src": "http://tbm.alicdn.com/vUAdB2SRl6Uwi7hn7WB/itmrRpJrsM0prqSBNVt@@ld.m3u8 ",
-    "label": "《西游记女儿国》",
+    "label": "西游记女儿国",
     "image": ""
   },
   {
@@ -211,25 +211,25 @@ success_jsonpCallback([
   {
     "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=B26A3997A97B62BE5A590EC5F62990BA&file=/c1/2018/03/22_0/B26A3997A97B62BE5A590EC5F62990BA_20180322_1_1_838.mp4",
-    "label": "《前任3》",
+    "label": "前任3",
     "image": ""
   },
   {
     "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=0CF04E80A50A7574C7D70168A0031A6A&file=/c1/2018/02/13_0/0CF04E80A50A7574C7D70168A0031A6A_20180213_1_1_1254.mp4",
-    "label": "《机器之血》",
+    "label": "机器之血",
     "image": ""
   },
   {
     "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=E287D2DFAAB547A98473DD90D367AA94&file=/c1/2018/02/04_0/E287D2DFAAB547A98473DD90D367AA94_20180204_1_1_776.mp4",
-    "label": "《妖猫传》",
+    "label": "妖猫传",
     "image": ""
   },
   {
     "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=A875B409BA0659A981F9DC5AC5DC04FC&file=/c1/2018/01/26_0/A875B409BA0659A981F9DC5AC5DC04FC_20180126_1_1_1256.mp4",
-    "label": "《奇门遁甲》",
+    "label": "奇门遁甲",
     "image": ""
   },
   {
