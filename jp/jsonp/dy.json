@@ -7,25 +7,31 @@ success_jsonpCallback([
   },
   {
     "type": "m4v",
-    "src": "http://tbm.alicdn.com/vUAdB2SRl6Uwi7hn7WB/itmrRpJrsM0prqSBNVt@@ld.m3u8 ",
+    "src": "http://tbm.alicdn.com/vUAdB2SRl6Uwi7hn7WB/itmrRpJrsM0prqSBNVt@@ld.m3u8",
     "label": "西游记女儿国",
     "image": ""
   },
   {
     "type": "m4v",
-    "src": "http://tbm.alicdn.com/nvGpyhjCSfsbYn7YRNO/U7VOnYNvxWpOlrNEkOh@@hd.m3u8 ",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=DEEA2A97A659F6AFF84C7840FB1277D8&file=/c1/2018/03/01_0/DEEA2A97A659F6AFF84C7840FB1277D8_20180301_1_1_774.mp4",
+    "label": "英雄本色 2018",
+    "image": ""
+  },
+  {
+    "type": "m4v",
+    "src": "http://tbm.alicdn.com/nvGpyhjCSfsbYn7YRNO/U7VOnYNvxWpOlrNEkOh@@hd.m3u8",
     "label": "金装少年唐伯虎",
     "image": ""
   },
   {
     "type": "m4v",
-    "src": "http://tbm.alicdn.com/nvGpyhjCSfsbYn7YRNO/909w4aa9KTzA53PVxYm@@ld.m3u8 ",
+    "src": "http://tbm.alicdn.com/nvGpyhjCSfsbYn7YRNO/909w4aa9KTzA53PVxYm@@ld.m3u8",
     "label": "时尚女模头2",
     "image": ""
   },
   {
     "type": "m4v",
-    "src": "http://tbm.alicdn.com/nvGpyhjCSfsbYn7YRNO/awqH9XyBzOw1Xv6DxXz@@hd.m3u8 ",
+    "src": "http://tbm.alicdn.com/nvGpyhjCSfsbYn7YRNO/awqH9XyBzOw1Xv6DxXz@@hd.m3u8",
     "label": "引魂灯",
     "image": ""
   },
@@ -80,6 +86,12 @@ success_jsonpCallback([
     "type": "m4v",
     "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=1F426B7B92EB0F709943ED097882A925&file=/c1/2018/02/23_0/1F426B7B92EB0F709943ED097882A925_20180223_1_1_1033.mp4",
     "label": "飞鸟历险记",
+    "image": ""
+  },
+  {
+    "type": "m4v",
+    "src": "http://disp.titan.mgtv.com/vod.do?fmt=4&pno=2210&fid=01CF447BF5B7C34B7ED7BDA648695787&file=/c1/2018/04/12_0/01CF447BF5B7C34B7ED7BDA648695787_20180412_1_1_694.mp4",
+    "label": "妈妈咪鸭",
     "image": ""
   },
   {
