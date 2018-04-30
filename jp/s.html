@@ -213,7 +213,7 @@ $(document).ready(function(){
 		},
 		swfPath:	"/jp/Jplayer.swf",
 		solution: "flash, html",//flash, 
-		supplied:	"mp3, webmv, ogv, m4v, m4a, oga",
+		supplied:	"mp3, m4v, m4a",
 		size:{
 			width:		"100%",
 			height:		"5px",
@@ -246,7 +246,7 @@ $(document).ready(function(){
 		}
 	});
 });
-WNJP.play(0);
+//WNJP.play(0);
 function QQYY(src){
 	if(src.match(/@/)){
 		kw = src.replace(/(.+)@(.+)/, "$1");
@@ -258,7 +258,7 @@ function QQYY(src){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: "http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+kw+"&type=qry_song&out=json&p="+pg+"&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",//&jsonpCallback=searchJsonCallback  encodeToGb2312(ssrc)
+		url: "http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+kw+"&type=qry_song&out=json&p="+pg+"&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",
 		type: "GET",
 		dataType: "jsonp",
 		jsonpCallback: 'searchJsonCallback',
@@ -272,7 +272,7 @@ function QQYY(src){
 function QQ_List_success_jsonpCallback(data){
 	var JP_List = "[";
 	$.each(data, function(k, v) {
-		JP_List += '{m4a:"http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38",artist:"龒蜗牛D",png:"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1301/16/c0/17448568_1358310737079.jpg",title:"'+(v.songname).replace(/(.+)\((.+)/, "$1")+'"},';//(v.songname).replace(/(.+)\((.+)/, "$1")
+		JP_List += '{m4a:"http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38",artist:"龒蜗牛D",png:"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1301/16/c0/17448568_1358310737079.jpg",title:"'+(v.songname).replace(/(.+)\((.+)/, "$1")+'"},';
 	});
 	JP_List += "]";
 	eval("JP_Lists=" + JP_List);
@@ -284,7 +284,7 @@ function QQ_List_success_jsonpCallback(data){
 		JP_HList+='<div class="list-group-item" style="background-color: rgba(255, 255, 255, 0.3);"><span class="badge"><a href="http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38" download="m4a"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');">'+v.songname+'</a></div>';
 	});
 	$('#JP_HL').html(JP_HList);
-	WNJP.play(0);
+	//WNJP.play(0);
 }
 </script>
 </body>
