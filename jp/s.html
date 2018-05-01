@@ -394,7 +394,7 @@ function HTMLS(lsrc){
 function Htmls_success_jsonpCallback(data,types){
 	var mysrc;
 	var mypng;
-		var htmls_01='';
+		var htmls_01='<div class="bs-glyphicons"><ul class="bs-glyphicons-list">';
 		$.each(data, function(k, v) {
 			mysrc = types.match(/@([0-9a-zA-Z_]+)@/, "$1")[1];
 			if((v.PNG).indexOf("GS@")>-1){
@@ -404,7 +404,7 @@ function Htmls_success_jsonpCallback(data,types){
 			}
 			htmls_01+='<li><a href="javascript:'+mysrc+'(\''+v.HTML+'\')"><img src="'+mypng+'" width="80" height="80" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="javascript:'+mysrc+'(\''+v.HTML+'\')" class="text-ellipsis">'+v.HTML+'</a></span></li>';
 		});
-		htmls_01+='';
+		htmls_01+='</ul></div>';
 		//分页等加上
 		$('#GS_HL').html(htmls_01);
 }	
