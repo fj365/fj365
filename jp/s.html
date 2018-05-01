@@ -34,6 +34,50 @@ a {
     color: #000000;
     text-decoration: none;
 }
+.bs-glyphicons {
+  margin: 0 -10px 20px;
+  overflow: hidden;
+}
+.bs-glyphicons-list {
+  padding-left: 0;
+  list-style: none;
+}
+.bs-glyphicons li {
+  float: left;
+  width: 25%;
+  height: 115px;
+  padding: 10px;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+  background-color: rgba(249, 249, 249, 0.3);
+  border: 1px solid #fff;
+}
+.bs-glyphicons .glyphicon {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.bs-glyphicons .glyphicon-class {
+  display: block;
+  text-align: center;
+  word-wrap: break-word; /* Help out IE10+ with class names */
+}
+.bs-glyphicons li:hover {
+  color: #fff;
+  background-color: #563d7c;
+}
+
+@media (min-width: 768px) {
+  .bs-glyphicons {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .bs-glyphicons li {
+    width: 12.5%;
+    font-size: 12px;
+  }
+}
 </style>
 </head>
 
@@ -358,8 +402,7 @@ function Htmls_success_jsonpCallback(data,types){
 			}else{
 				mypng = (v.PNG);
 			}
-			htmls_01+='<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="thumbnail"><img src="'+mypng+'" width="84" height="84"/><div class="caption"><h6><a href="javascript:'+mysrc+'(\''+v.HTML+'\')">'+v.HTML+'</a></h6></div></div></div>';
-			/*<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="#" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:'+mysrc+'(\''+v.HTML+'\')"><i class="icon-control-play"></i></a></div></div><img src="'+mypng+'" width="84" height="84" class="r r-2x img-full"></div><div class="padder-v"><a href="javascript:'+mysrc+'(\''+v.HTML+'\')" id="listplay" class="text-ellipsis" style="color:#ffffff;">'+v.HTML+'</a></div></div></div>';*/
+			htmls_01+='<li><a href="javascript:'+mysrc+'(\''+v.HTML+'\')"><img src="'+mypng+'" width="80" height="80" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="javascript:'+mysrc+'(\''+v.HTML+'\')" class="text-ellipsis">'+v.HTML+'</a></span></li>';
 		});
 		htmls_01+='';
 		//分页等加上
