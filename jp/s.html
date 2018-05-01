@@ -5,13 +5,20 @@
 <title>龒蜗牛D - 腾讯 - QQ音乐</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 <link rel="shortcut icon" href="//tv.sohu.com/favicon.ico">
-<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="//cdn.bootcss.com/jplayer/2.9.2/add-on/jplayer.playlist.min.js"></script>
-<script src="//cdn.bootcss.com/jplayer/2.9.2/add-on/jquery.jplayer.inspector.min.js"></script>
-<script src="//cdn.bootcss.com/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/jp/styles.css" />
+
+<!-- JQUERY --
+<script type="text/javascript" src="./jquery.min.js"></script>
+-- JPLAYER --
+<script type="text/javascript" src="./jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="./add-on/jplayer.playlist.min.js"></script>
+-- JPLAYER THEME -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="//cdn.bootcss.com/jplayer/2.9.2/add-on/jplayer.playlist.min.js"></script>
+	<script src="//cdn.bootcss.com/jplayer/2.9.2/add-on/jquery.jplayer.inspector.min.js"></script>
+	<script src="//cdn.bootcss.com/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./theme-youtube/style.css" />
 <style type="text/css" media="screen">
 <!--
 body{
@@ -23,6 +30,7 @@ body{
 #jp_container_1{
   width:100%;
   margin:0 auto;
+  /*max-width:800px;//autoF1F1F1*/
   min-width:330px;
 }
 .jp-jplayer{
@@ -35,52 +43,77 @@ a {
 }
 </style>
 </head>
-<body style="background-image:url('http://pic1.16pic.com/00/07/66/16pic_766152_b.jpg');background-repeat:no-repeat; background-attachment:fixed;background-size:100% 100%; width:100%; height:100%;">
+
+<body style="overflow:-Scroll;overflow-x:hidden;background-image:url('http://pic1.16pic.com/00/07/66/16pic_766152_b.jpg');background-repeat:no-repeat; background-attachment:fixed;background-size:100% 100%; width:100%; height:100%;">
 <div class="container-fluid">
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
 	<!-- Brand and toggle get grouped for better mobile display -->
-	<div class="navbar-header">
+	<div class="navbar-header" style="margin-top: -8px;margin-bottom: -18px;">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			<span class="sr-only">Toggle navigation</span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="/jp/s.html">龒蜗牛D</a>
+		<a class="navbar-brand" href="/mk/jp/wn.html">龒蜗牛D</a>
+		<form class="navbar-header navbar-form navbar-left" role="search"  style="border-color: rgba(231, 231, 231, 0);">
+			<div class="form-group">
+				<div class="col-xs-6">
+				<input type="text" name="qq" class="form-control"  placeholder="搜索内容"/>
+				</div>
+			</div>
+			<!--<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span></button>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="margin-top:-15px;"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span> class="icon-bar"></span></button>-->
+		</form> 
 	</div>
 
 	<!-- Collect the nav links, forms, and other content for toggling<li class="active"> -->
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
+			<li>
+				<a href="javascript:HTMLS('/jp/jsonp/@QQYY@2.json')">歌手大全</a>
+			</li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					分类
+					<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
 					<b class="caret"></b>
 				</a>
 				<ul class="dropdown-menu">
 					<li>
-						<a href="#">1</a>
+						<a href="#">歌单</a>
+					</li>
+					<li>
+						<a href="#">排行榜</a>
+					</li>
+					<li>
+						<a href="#">电台</a>
+					</li>
+					<li>
+						<a href="#">专辑</a>
 					</li>
 					<li class="divider"></li>
 					<li>
-						<a href="#">12</a>
+						<a href="#">MV</a>
 					</li>
 				</ul>
 			</li>
 		</ul>
+		<!--
 		<form class="navbar-form navbar-left" role="search">
 			<div class="form-group">
 				<input type="text" name="qq" class="form-control" placeholder="搜索内容"></div>
 			<button type="submit" class="btn btn-default">搜索</button>
 		</form>
+		-->
 		<ul class="nav navbar-nav navbar-right">
 			<li>
 				<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","sqq","qzone","tsina","tqq","fbook","twi","copy"],"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","sqq","qzone","tsina","tqq","fbook","twi","copy"],"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 			</li>
+			<!--
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					设置
+					<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
 					<b class="caret"></b>
 				</a>
 				<ul class="dropdown-menu">
@@ -93,6 +126,7 @@ a {
 					</li>
 				</ul>
 			</li>
+			-->
 		</ul>
 	</div>
 	<!-- /.navbar-collapse -->
@@ -100,10 +134,39 @@ a {
 </div>
 <div class="row">
 	<div class="col-md-12 column" style="padding:0;">
-	<div class="clearfix" style="margin-bottom: 50px;"></div>
-	<!--资源开始-->
-	<div class="list-group" id="JP_HL"></div>
-	<!--/资源-->		
+	<div class="clearfix" style="margin-bottom: 85px;"></div>
+<div class="bg-black" style="width:100%;left:0px;height:34px;top:50px;position:fixed;z-index:5;">
+	<!--面包屑导航-->
+	<div class="row clearfix" style="margin:0;">
+		<div class="col-md-12 column" style="padding:0;">
+			<ul class="breadcrumb" style="background-color:rgba(168, 168, 168, 0.8);">
+				<li>
+					 <a href="javascript:HTMLS('/jp/jsonp/@QQYY@2.json')">推荐</a>
+				</li>
+				<li>
+					 <a href="javascript:;" id="BT_ZY">资源</a>
+				</li>
+				<li>
+					 <a href="javascript:;" id="BT_JP">列表</a>
+				</li>
+				<!--
+				<li>
+					<a href="#">歌词</a>
+				</li>
+				-->
+			</ul>
+		</div>
+	</div>
+	<!--/面包屑导航 class="active"-->
+</div>
+<div class="row row-sm" style="margin-bottom:50px;">
+	<!--资源开始class="list-group" -->
+	<div class="GS_KG"><div class="list-group" id="GS_HL" style="margin: 0 15px 0px;"></div></div>
+	<!--/资源-->
+	<!--列表开始-->
+	<div class="JP_KG"><div class="list-group" id="JP_HL" style="margin: 0 15px 0px;"></div></div>
+	<!--/列表-->
+</div>	
 	</div>
 </div>
 <!--公共foot部分开始-->
@@ -183,6 +246,10 @@ $(document).ready(function(){
 		KUGOU(location.search.substring(1).replace(/kg=(.+)/, "$1"));
 	}else if(location.search.substring(1).match(/qq=/)){
 		QQYY(location.search.substring(1).replace(/qq=(.+)/, "$1"));
+	}else if(location.search.substring(1).match(/lb=/)){
+		HTMLS(location.search.substring(1).replace(/lb=(.+)/, "$1"));
+	}else{
+		HTMLS('/jp/jsonp/@QQYY@2.json');
 	}
 	WNJP = new jPlayerPlaylist({
 		jPlayer: "#jquery_jplayer_1",
@@ -207,18 +274,11 @@ $(document).ready(function(){
 			}
 		});
 		},
-		playlistOptions: {
-			autoPlay: true,
-			enableRemoveControls: false
-		},
-		swfPath:	"/jp/Jplayer.swf",
-		solution: "flash, html",//flash, 
-		supplied:	"mp3, m4v, m4a",
-		size:{
-			width:		"100%",
-			height:		"5px",
-			cssClass:	"jp-video-360p"
-		},
+		playlistOptions:{autoPlay: true,enableRemoveControls: false},
+		swfPath:"/mk/jp/Jplayer.swf",
+		solution:"flash, html",//flash, 
+		supplied:"mp3, m4a, m4v, webmv, ogv, oga, flv, fla, wav, m3uv, m3ua, rtmpa, rtmpv",
+		size:{width:"100%",height:"5px",cssClass:"jp-video-360p"},
 		play: function(event) {
 			document.title = event.jPlayer.status.media.title;
 			if (event.jPlayer.status.formatType === "m4v"){
@@ -247,6 +307,56 @@ $(document).ready(function(){
 	});
 });
 //WNJP.play(0);
+/*
+		{
+			title:"Big Buck Bunny Trailer",
+			artist:"Blender Foundation",
+			free:true,
+			m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
+			ogv: "http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
+			webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
+			poster:"http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+		},
+		
+*/
+//资源列表点播
+function HTMLS(lsrc){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: decodeURIComponent(lsrc),
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(data) {
+			Htmls_success_jsonpCallback(data,lsrc);
+		}
+	});
+	$(".JP_KG").hide();
+	$(".GS_KG").show();
+}
+function Htmls_success_jsonpCallback(data,types){
+	var mysrc;
+	var mypng;
+		var htmls_01='';
+		$.each(data, function(k, v) {
+			mysrc = types.match(/@([0-9a-zA-Z_]+)@/, "$1")[1];
+			if((v.PNG).indexOf("GS@")>-1){
+				mypng = (v.PNG).replace('GS@', 'http://i.gtimg.cn/music/photo/mid_singer_150/');
+			}else{
+				mypng = (v.PNG);
+			}
+			htmls_01+='<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="thumbnail"><img src="'+mypng+'" width="84" height="84"/><div class="caption"><h6><a href="javascript:'+mysrc+'(\''+v.HTML+'\')">'+v.HTML+'</a></h6></div></div></div>';
+			/*<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="#" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:'+mysrc+'(\''+v.HTML+'\')"><i class="icon-control-play"></i></a></div></div><img src="'+mypng+'" width="84" height="84" class="r r-2x img-full"></div><div class="padder-v"><a href="javascript:'+mysrc+'(\''+v.HTML+'\')" id="listplay" class="text-ellipsis" style="color:#ffffff;">'+v.HTML+'</a></div></div></div>';*/
+		});
+		htmls_01+='';
+		//分页等加上
+		$('#GS_HL').html(htmls_01);
+}	
+
+//qqmusic
 function QQYY(src){
 	if(src.match(/@/)){
 		kw = src.replace(/(.+)@(.+)/, "$1");
@@ -258,7 +368,7 @@ function QQYY(src){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: "http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+kw+"&type=qry_song&out=json&p="+pg+"&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",
+		url: "http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+kw+"&type=qry_song&out=json&p="+pg+"&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",//&jsonpCallback=searchJsonCallback  encodeToGb2312(ssrc)
 		type: "GET",
 		dataType: "jsonp",
 		jsonpCallback: 'searchJsonCallback',
@@ -268,24 +378,60 @@ function QQYY(src){
 			QQ_List_success_jsonpCallback(json.list);
 		}
 	});
+	$(".GS_KG").hide();
+	$(".JP_KG").show();
 }
 function QQ_List_success_jsonpCallback(data){
 	var JP_List = "[";
 	$.each(data, function(k, v) {
-		JP_List += '{m4a:"http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38",artist:"龒蜗牛D",png:"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1301/16/c0/17448568_1358310737079.jpg",title:"'+(v.songname).replace(/(.+)\((.+)/, "$1")+'"},';
+		JP_List += '{m4a:"http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38",artist:"龒蜗牛D",png:"http://i.gtimg.cn/music/photo/mid_singer_150/'+(v.singermid).substring(12,13)+'/'+(v.singermid).substring(13)+'/'+v.singermid+'.jpg",title:"'+(v.songname).replace(/(.+)\((.+)/, "$1")+'"},';//(v.songname).replace(/(.+)\((.+)/, "$1")
 	});
 	JP_List += "]";
 	eval("JP_Lists=" + JP_List);
 	console.log(JP_List);
 	WNJP.setPlaylist(JP_Lists);
 	//
-	var JP_HList='';
+	var JP_HList='';//<a href="#" class="list-group-item active">资源列表</a>
 	$.each(data, function(k, v) {
 		JP_HList+='<div class="list-group-item" style="background-color: rgba(255, 255, 255, 0.3);"><span class="badge"><a href="http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38" download="m4a"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');">'+v.songname+'</a></div>';
 	});
 	$('#JP_HL').html(JP_HList);
 	//WNJP.play(0);
 }
+function PC2SJ(data){
+	var JP;
+	var CMP4;
+	var sUserAgent = navigator.userAgent.toLowerCase();
+	var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+	var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+	var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+	var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+	var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+	var bIsAndroid = sUserAgent.match(/android/i) == "android";
+	var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+	var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+	if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM)){
+		
+	}else{
+	
+	}
+}
+$("#BT_JP").on("click",function(){
+	if($(".JP_KG").is(":visible")){
+		//$(".lb_row").hide();
+	}else{
+		$(".JP_KG").show();
+		$(".GS_KG").hide();
+	}
+})
+$("#BT_ZY").on("click",function(){
+	if($(".GS_KG").is(":visible")){
+		//$(".lb_row").hide();
+	}else{
+		$(".GS_KG").show();
+		$(".JP_KG").hide();
+	}
+})
 </script>
 </body>
 </html>
