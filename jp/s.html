@@ -78,10 +78,17 @@ a {
     font-size: 12px;
   }
 }
+.txt{
+    width:230px;
+    /*border:1px solid #ddd;*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 </style>
 </head>
 
-<body style="overflow:-Scroll;overflow-x:hidden;background-image:url('http://pic1.16pic.com/00/07/66/16pic_766152_b.jpg');background-repeat:no-repeat; background-attachment:fixed;background-size:100% 100%; width:92%; height:100%;">
+<body style="overflow:-Scroll;overflow-x:hidden;background-image:url('http://pic1.16pic.com/00/07/66/16pic_766152_b.jpg');background-repeat:no-repeat; background-attachment:fixed;background-size:100% 100%; width:100%; height:100%;">
 <div class="container-fluid">
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
 	<!-- Brand and toggle get grouped for better mobile display -->
@@ -214,11 +221,11 @@ a {
 	<!--/面包屑导航 class="active"-->
 </div>
 <div class="row row-sm" style="margin-bottom:50px;">
-	<!--资源开始class="list-group" class="list-group" -->
-	<div class="GS_KG"><div id="GS_HL" style="margin: 0 15px 0px;"></div></div>
+	<!--资源开始class="list-group" class="list-group" style="margin: 0 15px 0px;" -->
+	<div class="GS_KG"><div id="GS_HL"></div></div>
 	<!--/资源-->
 	<!--列表开始-->
-	<div class="JP_KG"><div class="list-group" id="JP_HL" style="margin: 0 15px 0px;"></div></div>
+	<div class="JP_KG"><div class="list-group" id="JP_HL"></div></div>
 	<!--/列表-->
 </div>	
 	</div>
@@ -280,10 +287,7 @@ a {
                     <li></li>
                 </ul>
             </div>
-            <div class="jp-no-solution">
-                <span>Update Required</span>
-                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-            </div>
+            <div class="jp-no-solution"></div>
         </div>
     </div>
 <!-- /jp -->
@@ -446,7 +450,7 @@ function QQ_List_success_jsonpCallback(data){
 	//
 	var JP_HList='';//<a href="#" class="list-group-item active">资源列表</a>
 	$.each(data, function(k, v) {
-		JP_HList+='<div class="list-group-item" style="background-color: rgba(255, 255, 255, 0.3);"><span class="badge"><a href="http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38" download="m4a"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');">'+v.songname+'</a></div>';
+		JP_HList+='<div class="list-group-item" style="background-color: rgba(255, 255, 255, 0.3);"><span class="badge"><a href="http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38" download="m4a"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');"><p class="txt">'+v.songname+'</a></p></a></div>';
 	});
 	$('#JP_HL').html(JP_HList);
 	//WNJP.play(0);
