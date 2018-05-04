@@ -51,7 +51,7 @@ a {
   line-height: 1.4;
   text-align: center;
   background-color: rgba(249, 249, 249, 0.3);
-  border: 1px solid #fff;
+  /*border: 1px solid #fff;*/
 }
 .bs-glyphicons .glyphicon {
   margin-top: 5px;
@@ -190,7 +190,7 @@ a {
 			-->
 		</ul>
 	</div>
-	<!-- /.navbar-collapse  style="padding:0;-->
+	<!-- /.navbar-collapse  style="padding:0; style="padding:0;"-->
 </nav>
 </div>
 <div class="row">
@@ -199,7 +199,7 @@ a {
 <div class="bg-black" style="width:100%;left:0px;height:34px;top:50px;position:fixed;z-index:5;">
 	<!--面包屑导航-->
 	<div class="row clearfix" style="margin:0;">
-		<div class="col-md-12 column" style="padding:0;">
+		<div class="col-md-12 column">
 			<ul class="breadcrumb" style="background-color:rgba(168, 168, 168, 0.8);">
 				<li>
 					 <a href="javascript:HTMLS('/jp/jsonp/@QQYY@2.json')">推荐</a>
@@ -406,7 +406,7 @@ function Htmls_success_jsonpCallback(data,types){
 			}else{
 				mypng = (v.PNG);
 			}
-			htmls_01+='<li><a href="javascript:'+mysrc+'(\''+v.HTML+'\')"><img src="'+mypng+'" width="80" height="80" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="javascript:'+mysrc+'(\''+v.HTML+'\')" class="text-ellipsis">'+v.HTML+'</a></span></li>';
+			htmls_01+='<li><a href="javascript:'+mysrc+'(\''+v.HTML+'\')"><img src="'+mypng+'" width="60" height="60" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="javascript:'+mysrc+'(\''+v.HTML+'\')" class="text-ellipsis">'+v.HTML+'</a></span></li>';
 		});
 		htmls_01+='</ul></div>';
 		//分页等加上
