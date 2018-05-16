@@ -399,6 +399,7 @@ function HTMLS(lsrc){
 	});
 	$(".JP_KG").hide();
 	$(".GS_KG").show();
+	$('html,body').animate({scrollTop: '0px'}, 800);
 	$("img").lazyload({effect:"fadeIn"});
 }
 function Htmls_success_jsonpCallback(data,types){
