@@ -11,6 +11,7 @@
 	<script src="//cdn.bootcss.com/jplayer/2.9.2/add-on/jplayer.playlist.min.js"></script>
 	<script src="//cdn.bootcss.com/jplayer/2.9.2/add-on/jquery.jplayer.inspector.min.js"></script>
 	<script src="//cdn.bootcss.com/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
+	<script src="//apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/jp/styles.css" />
 <style type="text/css" media="screen">
 <!--
@@ -44,7 +45,7 @@ a {
 }
 .bs-glyphicons li {
   float: left;
-  width: 25%;
+  width: 20%;
   height: 115px;
   padding: 10px;
   font-size: 10px;
@@ -74,7 +75,7 @@ a {
     margin-left: 0;
   }
   .bs-glyphicons li {
-    width: 12.5%;
+    width: 10%;
     font-size: 12px;
   }
 }
@@ -398,6 +399,7 @@ function HTMLS(lsrc){
 	});
 	$(".JP_KG").hide();
 	$(".GS_KG").show();
+	$("img").lazyload({effect:"fadeIn"});
 }
 function Htmls_success_jsonpCallback(data,types){
 	var mysrc;
