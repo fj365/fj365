@@ -97,6 +97,7 @@ ul, ol, dl {
 			<option value="kggs">酷狗音乐</option>
 			<option value="qqgs">腾讯音乐</option>
 			<option value="wygs">网易音乐</option>
+			<option value="xmgs">虾米音乐</option>
 			<option value="yytsoso">音悦台</option>
 			<option value="kaolasoso">考拉FM</option>
 			<option value="ikdj">深港DJ</option>
@@ -1651,6 +1652,8 @@ $(document).ready(function() {
 		listplay('http://fj365.gear.host/j.php/kw_'+WXFXTH(location.hash.substring(1).replace(/kwgs=(.+)/, "$1"))+'.so');
 	}else if(location.hash.substring(1).match(/wygs=/)){
 		listplay('http://fj365.gear.host/php/163.php?so='+WXFXTH(location.hash.substring(1).replace(/wygs=(.+)/, "$1"))+'');
+	}else if(location.hash.substring(1).match(/xmgs=/)){
+		listplay('http://fj365.gear.host/php/163.php?xmso='+WXFXTH(location.hash.substring(1).replace(/xmgs=(.+)/, "$1"))+'');
 	}else if(location.hash.substring(1).match(/klgs=/)){
 		kaolalist(WXFXTH(location.hash.substring(1).replace(/klgs=(.+)/, "$1")));
 	}else if(location.hash.substring(1).match(/lrtsgs=/)){
@@ -1700,7 +1703,9 @@ $(document).ready(function() {
 			kaolasoso(result2);
 		}else if(item === 'wygs'){
 			listplay('http://fj365.gear.host/php/163.php?so='+result2+'');
-				}else if(item === 'douyin'){
+		}else if(item === 'xmgs'){
+			listplay('http://fj365.gear.host/php/163.php?xmso='+result2+'');
+		}else if(item === 'douyin'){
 			listplay('http://fj365.gear.host/php/my.php?dyuid='+result2+'');
 		}else if(item === 'ikdj'){
 			listplay('http://fj365.gear.host/php/ik123.php?kid='+result2+'');
