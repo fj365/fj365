@@ -26,7 +26,7 @@ logo = "{src:/jp/logo.png,xywh:[10R,10,50,50]}"
 	
 skins = "wn.png"
 plugins = ""
-backgrounds = "bg.swf"
+backgrounds = "bg.swf,m3u8.swf"
 lists = "list.xml"
 bg="images/bg.jpg"
 bg_src="image"
