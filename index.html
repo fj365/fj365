@@ -6,57 +6,24 @@
 <style type="text/css">
 html, body {background:#000;text-align:center;font-size:12px;padding:0;margin:0;width:100%;height:100%;overflow:hidden;cursor: default;font-family:Verdana; }
 a, a:visited { color:#000; text-decoration:none; }
-.head { height:30px; background:#f5f5f5; }
-.head_inner { width:800px; margin:0px auto; text-align:left; line-height:30px; font-weight:bold; font-size:14px; }
 .cmp { background:#000000; }
-.cmp_inner {position:absolute;width:100%;height:100%;width:100%; height:500px; margin:0px auto; background:#000; }
-.main { }
-.main_inner { width:800px; margin:0px auto; text-align:left; }
-.info { padding:10px 0px; line-height:20px; }
-.foot { border-top:1px dashed #eee; margin-top:10px; }
-.foot_inner { width:800px; margin:0px auto; text-align:left; color:#999; font-size:11px; padding:5px 0px; }
-.foot_inner a { color:#999; }
+.cmp_inner {position:absolute;width:100%;height:100%;width:100%;margin:0px auto; background:#000; }
 </style>
 <script type="text/javascript" src="cmp.js"></script>
 </head>
 <body>
-<div class="head">
-  <div class="head_inner">CMP4 demo</div>
-</div>
 <div class="cmp">
   <div class="cmp_inner" id="player">loading ...</div>
 </div>
-<div class="main">
-  <div class="main_inner">
-    <div class="info">
-      <div id="cmpinfo">loading ...</div>
-    </div>
-  </div>
-</div>
 <script>
 function cmp_loaded(key) {
-	//cmp loaded
 	var cmpo = CMP.get("cmp");
-	if (cmpo) {
-		//cmp callback
-		var config = cmpo.config();
-		document.title = config.name;
-		var arr = [];
-		arr.push('<b>CMP name:</b> <a href="' + config.link + '" target="_blank">' +　config.name + '</a>');
-		arr.push('<b>CMP version:</b> ' +　config.version);
-		arr.push('<b>flash version:</b> ' +　config.flash_version);
-		var cmpinfo = arr.join("<br />");
-		document.getElementById("cmpinfo").innerHTML = cmpinfo;
-	}
 }
 var flashvars = {
 	plugins : "m3u8.swf,hd5.swf",url : "config.xml",lists : "list.xml",skins : "wn.png",xoxo365_curl : "",api : "cmp_loaded"
 };
-//id, width, height, swf_url, flashvars, params, attrs
 var htm = CMP.create("cmp", "100%", "100%", "n.swf", flashvars);
 document.getElementById("player").innerHTML = htm;
 </script>
-<div class="foot">
-</div>
 </body>
 </html>
