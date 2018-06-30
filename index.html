@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>CMP4 demo</title>
+<title></title>
 <style type="text/css">
 html, body { text-align:center; font-size:12px; padding:0; margin:0; font-family:Verdana; }
 a, a:visited { color:#000; text-decoration:none; }
@@ -30,8 +30,6 @@ a, a:visited { color:#000; text-decoration:none; }
   <div class="main_inner">
     <div class="info">
       <div id="cmpinfo">loading ...</div>
-      <p>CMP是一款免费的在线Flash音乐播放器，致力于提供最佳在线音乐播放解决方案。支持的音频视频格式主要有MP3,FLV,MP4,并可以通过网页JS接口实现WMP(Windows Media Player)所支持的格式播放，如wma等。主要功能特色有列表式播放(自定义音乐专辑和列表)，MP3可视化效果(声音频谱)，同步歌词（默认支持lrc歌词以及kmc卡拉ok歌词），高清视频和在线直播(h264/rtmp)，自定义皮肤，加载各种插件等等，CMP4支持api的调用，可让用户实现更多自定义功能。</p>
-      <p>交流论坛：<a href="http://bbs.cenfun.com/" target="_blank">http://bbs.cenfun.com/</a></p>
     </div>
   </div>
 </div>
@@ -52,20 +50,13 @@ function cmp_loaded(key) {
 	}
 }
 var flashvars = {
-       plugins : "proxy.swf,yktd20140516.swf,flvxzv1.png,plugins/dj5y.swf",
-	   lists : "list_proxy.xml,list.xml",
-	   skins : "qqplayer.zip",
-	   xoxo365_curl : "http://12.0.0.1/curl.php?",
-	   src : "proxy:v,http://www.yinyuetai.com/video/605109",
-       url : "config.xml",
-	api : "cmp_loaded"
+	plugins : "",url : "config.xml",lists : "list.xml",skins : "woniu_v3.png",xoxo365_curl : "",api : "cmp_loaded"
 };
 //id, width, height, swf_url, flashvars, params, attrs
-var htm = CMP.create("cmp", "100%", "100%", "cmp.swf", flashvars);
+var htm = CMP.create("cmp", "100%", "100%", "cmpn.swf", flashvars);
 document.getElementById("player").innerHTML = htm;
 </script>
 <div class="foot">
-  <div class="foot_inner">© 2012 <a href="http://www.cenfun.com/" target="_blank">CenFun.com</a> All Rights Reserved</div>
 </div>
 </body>
 </html>
