@@ -30,6 +30,8 @@ backgrounds = "bg.swf"
 lists = "list.xml"
 bg="images/bg.jpg"
 bg_src="image"
+hd_autohide="0"
+hd_button="145R,158R,0,0"
 hd_list_pic="http://w.wo0.cn/map.png"
 	
 src_handler = "" 
