@@ -1,26 +1,64 @@
+<!--
+蜗牛V3皮肤功能配置说明：
+so_handler = "http://w.wo0.cn/so.php" 设置搜索接口
+so_bg_xywh="-1200,0,2000,1000,0.8" 设置列表背景，位置，宽高，透明
+so_xywh="0,0,35P,240" 搜索尺寸位置
+so_info="酷狗音乐,kugou|音乐台,yyt|优酷,youku|百度视频,baidu|QQ音乐,qqyy|本地测试,cmpfile|单曲测试,s|列表测试,l" 下拉搜索列表配合搜索接口使用
+so_keyduration="5000" 初始搜索内容滚动时间
+so_keywords="dj,孙露,雷婷,7妹,邓紫棋,庄心妍,孙燕姿,童可可,tara" 初始搜索内容
+lists__xywh="0,50,35P,100P" 列表尺寸位置
+lists_info_xywh="0,80,120,1,5,0,50,0" 列表缩略图尺寸位置
+lists_info="默认列表,/jp/logo.png#/cmp/list.xml|LIST.TXT,/jp/logo.png#/list.txt" 缩略图下拉分类列表
+so_info1="KK唱响,/x.php/kkxiu_1.all|来疯秀,/x.php/lfxc_1.xml|QQ音乐,/x.php/qqyy_1.all|YY神曲,/x.php/yyv_1.all|音悦台,/x.php/yyt_1.all|摇头DJ网,/x.php/ytdj_1.all" 下拉分类列表
+lianxi_qq="121027740" 联系QQ
+share_url="http://w.wo0.cn/cmp/n.swf" 分享头CMP地址
+history_label = "历史记录" 历史记录名字
+history_position = "1" 
+history_max = "50000" 历史记录条数
+quickkeys_config = "view_play:p,view_stop:ctrl+shift+space,view_next:ctrl+right,view_prev:ctrl+left,view_fullscreen:ctrl+f,view_rewind:left,view_forward:right" 快捷键
+皮肤内置支持krc，清晰度切换(列表格式：<m type="woniu" src="地址1" hd1="地址2" hd2="地址3"  hd3="地址4" label="清晰度切换"/>)配合颓废新版清晰度切换插件,支持RTMP(列表格式：<m type="woniu" src="rtmp://地址1" label="清晰度切换"/>)。。。
+-->
 <cmp 
-	name = "『生活需要音乐』" 
-	link = "https://fj365.github.io/fj365/" 
-	description = "『生活需要音乐』"
-	logo = "{src:logo.png,xywh:[10R,10R,0,0]}"
+name = "龒蜗牛D滚球影音 - 『生活需要音乐』" 
+link = "/" 
+description = "龒蜗牛D滚球影音 - 『生活需要音乐』 - http://w.wo0.cn/"
+logo = "{src:/jp/logo.png,xywh:[10R,10,50,50]}"
 	
-	skins = "imgo.png"
-	plugins = "zqtv.png"
-	backgrounds = ""
-	lists = "zqtv.xml"
+skins = "wn.png"
+plugins = ""
+backgrounds = "bg.swf"
+lists = "http://w.wo0.cn/x.php/kg_dj.so"
+bg="images/bg.jpg"
+bg_src="image"
 	
-	src_handler = "" 
-	lrc_handler = ""
-
-	skin_id = "1"
-
-	play_id = ""
-	auto_play = "1"
-	list_delete = "1"
+src_handler = "" 
+lrc_handler = ""
 	
-	sound_sample = "true"
-	mixer_displace = "true"
-	mixer_filter = "true"
-	
-	counter = ""
+woniu="http://w.wo0.cn/x.php/"
+search_clean="1"
+so_handler = "http://w.wo0.cn/so.php"
+so_bg_xywh="-1200,0,2000,1000,0.8"
+so_xywh="0,0,35P,240"
+so_info="酷狗音乐,kugou|音乐台,yyt|优酷,youku|百度视频,baidu|QQ音乐,qqyy|本地测试,cmpfile|单曲测试,s|列表测试,l"
+so_keyduration="5000"
+so_keywords="dj,孙露,雷婷,7妹,邓紫棋,庄心妍,孙燕姿,童可可,tara"
+lists__xywh="0,50,35P,100P"
+lists_info_xywh="0,80,120,1,5,0,50,0"
+lists_info="默认列表,/jp/logo.png#/cmp/list.xml|LIST.TXT,/jp/logo.png#/list.txt"
+so_info1="KK唱响,/x.php/kkxiu_1.all|来疯秀,/x.php/lfxc_1.xml|QQ音乐,/x.php/qqyy_1.all|YY神曲,/x.php/yyv_1.all|音悦台,/x.php/yyt_1.all|摇头DJ网,/x.php/ytdj_1.all"
+lianxi_qq="121027740"
+share_url="http://w.wo0.cn/cmp/n.swf"
+history_label = "历史记录"
+history_position = "1"
+history_max = "50000"
+skin_id = "1"
+video_scalemode = "2"
+video_smoothing = "true"
+mixer_id = "0"
+logo_alpha = "0.5"
+play_id = "1"
+auto_play = "1"
+auto_open = "1"
+list_delete = "1"
+counter = ""
 />
