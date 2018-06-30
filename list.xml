@@ -1,5 +1,5 @@
 <list>
   <m type="m3u8" src="http://cctv5.txty.5213.liveplay.myqcloud.com/live/cctv1_txty.m3u8" label="CCTV-1(m3u8测试)"/>
   <m type="woniu" src="rtmp://rtmp-source.live.panda.tv/live_panda/7fe4014805f0c83b703f2571498d390a" label="rtmp(rtmp测试)"/>
-  <m type="woniu" src="http://fj365.gear.host/php/163.php?id=37653063&.mp3" hd1="http://fj365.gear.host/php/163.php?id=28532030&.mp3" hd2="http://fj365.gear.host/php/163.php?id=26466444&.mp3" hd3="http://fj365.gear.host/php/163.php?id=29600148&.mp3" label="地址清晰度切换(地址切换测试)"/>
+  <m type="woniu" src="http://fj365.gear.host/php/m.php?kgid=97a512d065e5dd70ec6327fcf75fa0c1&.mp3" hd1="http://fj365.gear.host/php/m.php?kgid=df3b3afbf793482560945b70f82874a1&.mp3" hd2="http://fj365.gear.host/php/m.php?kgid=64df771288fc425cac356f52d97ebf45&.mp3" hd3="http://fj365.gear.host/php/m.php?kgid=8e60f33f41846dc5d71b59d1d794b3ce&.mp3" label="地址清晰度切换(地址切换测试)"/>
 </list>
