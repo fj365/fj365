@@ -31,7 +31,7 @@ lists = "list.xml"
 bg="images/bg.jpg"
 bg_src="image"
 hd_autohide="0"
-Hd_button="200R,158R,0,0"
+Hd_button="320R,158R,0,0"
 hd_list_pic="map.png"
 hd_change_pic="change.png"
 	
