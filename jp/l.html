@@ -1645,6 +1645,8 @@ $(document).ready(function() {
 		srcplay(my__s001.replace(/type=(.+)&src=(.+)&label=(.+)&image=(.+)/, "$1,$2,$3,$4"));
 	}else if(location.hash.substring(1).match(/lists=/)){
 		listplay(WXFXTH(location.hash.substring(1).replace(/lists=(.+)/, "$1")));
+	}else if(location.hash.substring(1).match(/urls=/)){
+		srcplay(WXFXTH(location.hash.substring(1).replace(/urls=(.+)@@(.+)@@(.+)@@(.+)/, "$1,$2,$3,$4")));
 	}else if(location.hash.substring(1).match(/kggs=/)){
 		ajaxjplb(WXFXTH(location.hash.substring(1).replace(/kggs=(.+)/, "$1")));
 	}else if(location.hash.substring(1).match(/qqgs=/)){
