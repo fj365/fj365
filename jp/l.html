@@ -1,0 +1,2538 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="app">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="renderer" content="webkit|Trident|ie-comp|ie-stand">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<!-- 强制移动设备以app模式打开页面(即在移动设备下全屏，仅支持部分浏览器) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <!-- <meta name="full-screen" content="yes">UC强制全屏--
+   <meta name="browsermode" content="application">--UC应用模式-->
+    <meta name="x5-fullscreen" content="true"><!--QQ强制全屏-->
+    <meta name="x5-page-mode" content="app"><!--QQ应用模式-->
+  <title>龒蜗牛D - 滚球影音</title>
+  <meta name="keywords" content="龒蜗牛D,龒蜗牛,龒蜗牛D滚球影音,滚球影音,蜗牛影音,fj365,FJ365,fj_365,QQ121027740,121027740" />
+  <meta name="description" content="龒蜗牛D,龒蜗牛,龒蜗牛D滚球影音,滚球影音,蜗牛影音,fj365,FJ365,fj_365,QQ121027740,121027740" />
+  <link rel="stylesheet" href="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/js/jPlayer/jplayer.flat.css" type="text/css" />
+  <link rel="stylesheet" href="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/css/app.css" type="text/css" />
+  <!--<link rel="stylesheet" href="css/qplayer_style.css" type="text/css" />-->
+    <!--[if lt IE 9]>
+    <script src="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/js/ie/html5shiv.js"></script>
+    <script src="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/js/ie/respond.min.js"></script>
+    <script src="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/js/ie/excanvas.js"></script>
+  <![endif]-->
+<style type="text/css">
+ul, ol, dl {
+	list-style: none;
+}
+.content {text-align:center;width: 100%;height:158px;margin-top: 0px;overflow:hidden;padding:0px;background:rgba(255, 253, 253, 0);}
+#lrc_list{margin:0px auto;padding-right: 0px;padding-left: 0px;background:rgba(255, 253, 253, 0);}
+#lrc_list li{font:normal 24px/2.1 'microsoft yahei';text-align:center;}
+#lrc_list li.hover {color:#01ff7e;font-weight:bold;text-shadow:#15A25A 5px 5px 10px;}
+.jp-times {
+    width: 54px;
+    font-size: .7em;
+    margin: 0 1em;
+    display: none;
+    order: 2;
+}  
+#textsl {width:200px; line-height:25px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.navsoso-off-screen {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 35px;
+	height: 50px;
+    bottom: 0;
+    width: 100%;
+    visibility: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+</style>
+</head>
+<body class="auto">
+  <section class="vbox bg-black dk">
+    <header class="bg-black lter header header-md navbar navbar-fixed-top-xs">
+      <div class="navbar-header aside bg-success nav-xs">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="icon-list"></i>
+        </a>
+        <a href="l.html" class="navbar-brand text-lt">
+          <i class="icon-earphones"></i>
+          <img src="logo.png" alt="." class="hide">
+          <span class="hidden-nav-xs m-l-sm">龒蜗牛D</span>
+        </a>
+		<a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+          <i class="icon-settings"></i>
+        </a>
+		<a class="btn btn-link visible-xs" data-toggle="class:navsoso-off-screen,open" data-target="#MYsearch,html" style="top:-1px;left:35px;">
+          <i class="fa fa-search"></i>
+        </a>
+      </div>      <ul class="nav navbar-nav hidden-xs">
+        <li>
+          <a href="#nav,.navbar-header" data-toggle="class:nav-xs,nav-xs" class="text-muted">
+            <i class="fa fa-indent text"></i>
+            <i class="fa fa-dedent text-active"></i>
+          </a>
+        </li>
+      </ul>
+      <!--<form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search">-->
+        <div class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" id="MYsearch" style="margin-top: 15px;">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button type="submit" id="button_sotxt" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-search"></i></button>
+            </span>
+<!--搜索分类-->
+<span class="input-group-btn">
+	<select id="selectTest" name="selectTest" class="form-control m-b" style="width:80px;height:30px;padding: 0;">
+			<option value="kggs">酷狗音乐</option>
+			<option value="qqgs">腾讯音乐</option>
+			<option value="wygs">网易音乐</option>
+			<option value="xmgs">虾米音乐</option>
+			<option value="yytsoso">音悦台</option>
+			<option value="kaolasoso">考拉FM</option>
+			<option value="ikdj">深港DJ</option>
+			<!--
+			<option value="kwgs">酷我音乐</option>
+			<option value="yytsoso">音悦台</option>
+			<option value="kaolasoso">考拉FM</option>
+			<option value="bdsoso">百度</option>
+			<option value="yksoso">优酷</option>
+			<option value="douyin">抖音ID</option>
+			<option value="lrts">懒人听书</option>
+			<option value="douyin">抖音ID</option>-->
+	</select>
+</span>
+<!--/搜索分类-->
+            <input type="text" id="sotxt" class="form-control input-sm no-border rounded" placeholder=" 搜索内容" style="padding: 0;">
+          </div>
+        </div>
+      <!--</form> class="hidden-xs"-->
+      <div class="navbar-right ">
+	  <!--切换卡-->				
+	<ul class="nav navbar-nav nav-tabs pull-left m-n hidden-xs nav-user user" data-garbage="true">
+		<li class="active"><a href="#my_qhk_zy" data-toggle="tab">暂无</a></li>
+		<!--<li><a href="yy.html">音乐</a></li>
+		<li><a href="img.html">壁纸</a></li>
+		<li><a href="tv.html">直播</a></li>
+		<li><a href="#" target="_blank" title="下载安卓应用"><i class="fa fa-android"></i></a></li>-->
+		<!--<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">更多<b class="caret"></b></a>
+			<ul class="dropdown-menu text-left" data-garbage="true">
+				<li><a href="#dropdown1" data-toggle="tab">1</a></li>
+				<li><a href="#dropdown2" data-toggle="tab">2</a></li>
+			</ul>
+		</li>-->
+	</ul>
+<!--/切换卡-->
+        <!--<ul class="nav navbar-nav m-n hidden-xs nav-user user">
+<li>
+</li>
+		<li>
+			<a target="_blank" title="下载苹果应用"><i class="fa fa-apple"></i>
+            </a>
+          </li>
+		<li>
+			<a target="_blank" title="下载电脑应用"><i class="fa fa-windows"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-toggle lt" data-toggle="modal" data-target="#myModal">
+              <i class="icon-list"></i>
+            </a>
+			</li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="/logo.png" alt="...">
+              </span>
+              龒蜗牛D <b class="caret"></b>
+            </a>
+			<ul class="dropdown-menu animated fadeInRight">            
+              <li>
+                <span class="arrow top"></span>
+                <a href="#">设置</a>
+              </li>
+              <li>
+                <a href="#">文件</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge bg-danger pull-right">3</span>
+                  通知
+                </a>
+              </li>
+              <li>
+                <a href="docs.html">帮助</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="modal.lockme.html" data-toggle="ajaxModal" >登出</a>
+              </li>
+            </ul>
+          </li>
+        </ul>-->
+      </div>      
+    </header>
+<!--切换卡--
+<div class="panel-body dk">
+	<div class="tab-content dk">
+		<div class="tab-pane fade active in" id="my_qhk_zy">
+			<div class="row row-sm" id="ffenleilist">
+				<div class="row"></div>
+			
+			</div>
+		</div>
+		<div class="tab-pane fade" id="my_qhk_zy_lb" data-garbage="true" style="margin-top: 40px;">
+			<div id="jjq_list">
+			</div>
+		</div>
+		<div class="tab-pane fade" id="dropdown1" data-garbage="true">dropdown1</div>
+		<div class="tab-pane fade" id="dropdown2" data-garbage="true">dropdown2</div>
+	</div>
+</div>
+--/切换卡-->
+    <section>
+      <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-black dk nav-xs aside hidden-print" id="nav">          
+          <section class="vbox">
+            <section class="w-f-md scrollable">
+              <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                
+
+
+                <!-- nav -->                 
+                <nav class="nav-primary hidden-xs">
+                  <!--<ul class="nav bg clearfix">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                      分类导航
+                    </li>
+                    <li class="active">
+                      <a href="l.html">
+                        <i class="icon-music-tone-alt icon text-info"></i>
+                        <span class="font-bold">音乐</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="l.html">
+                        <i class="icon-social-youtube icon  text-primary"></i>
+                        <span class="font-bold">视频</span>
+                      </a>
+                    </li>
+<li>
+	<a  data-toggle="collapse" data-parent="#accordion" 
+				   href="#c_001" class="auto"> <span class="pull-right text-muted"><i class="fa fa-angle-left text"></i><i class="fa fa-angle-down text-active"></i></span><i class="icon icon-grid"></i><span>其他</span></a>
+<div id="c_001" class="panel-collapse collapse">
+	<ul class="nav dk text-sm" style="display: block;">
+                    <li>
+                      <a href="tl.html">
+                        <i class="icon-screen-desktop icon  text-primary"></i>
+                        <span class="font-bold">直播</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <i class="icon-social-youtube icon  text-primary"></i>
+                        <span class="font-bold">美文-待添加</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <i class="icon-social-youtube icon  text-primary"></i>
+                        <span class="font-bold">美图-待添加</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <i class="icon-social-youtube icon  text-primary"></i>
+                        <span class="font-bold">D.I.Y创意-待添加</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <i class="icon-social-youtube icon  text-primary"></i>
+                        <span class="font-bold">电商网店-待添加</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <i class="icon-social-youtube icon  text-primary"></i>
+                        <span class="font-bold">人才招聘-待添加</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <i class="icon-social-youtube icon  text-primary"></i>
+                        <span class="font-bold">房产中介-待添加</span>
+                      </a>
+                    </li>
+	</ul>
+</li>
+                    <li class="m-b hidden-nav-xs"></li>
+                  </ul>-->
+                  <ul class="nav" data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                      网站分类
+                    </li>
+<!--最新电影-电视剧。。。-->
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i class="icon-social-youtube icon"></i>
+		<span>最新电影</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/dy.json');" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>热门电影</span>
+			</a>
+		</li>
+	</ul>
+</li>
+<!--/最新电影-电视剧。。。-->
+<!--酷狗音乐-->
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<!-- class="icon-music-tone icon"-->
+		<i><img src="http://static.yingyonghui.com/icon/128/4150016.png" width="30" height="30"></i>
+		<span>酷狗音乐</span>
+	</a>
+	<ul class="nav dk text-sm">
+	<li><!--http://fj365.gear.host/j.php/kglist_cn-man-all@1.html-->
+			<a href="/jp/jsonp/kg1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台男歌手</span>
+			</a>
+		</li>
+		<li><!--http://fj365.gear.host/j.php/kglist_cn-woman-all@1.html-->
+			<a href="/jp/jsonp/kg2.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台女歌手</span>
+			</a>
+		</li>
+		<li><!--http://fj365.gear.host/j.php/kglist_cn-team-all@1.html-->
+			<a href="/jp/jsonp/kg3.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台组合</span>
+			</a>
+		</li>
+		<!--<li>
+			<a href="http://fj365.gear.host/j.php/kglist_k-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_k-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_k-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_j-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_j-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_j-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_eu-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_eu-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_eu-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美组合</span>
+			</a>
+		</li>
+	!--
+		<li>
+			<a href="http://fj365.gear.host/jp/pp/mylist.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>蜗牛推荐</span>
+			</a>
+		</li>
+		--<li>
+			<a href="http://fj365.gear.host/j.php/kglist_0@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>热门歌手</span>
+			</a>
+		</li>--
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_1@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_2@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_3@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_4@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日韩男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_5@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日韩女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_6@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日韩组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_7@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_8@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kglist_9@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美组合</span>
+			</a>
+		</li>-->
+	</ul>
+</li>
+<!--/酷狗音乐-->
+<!--QQ音乐--
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/4084332.png" width="30" height="30"></i>
+		<span>腾讯音乐</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_cn-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_cn-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_cn-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_k-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_k-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_k-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_j-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_j-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_j-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_eu-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_eu-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/qqyy_eu-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美组合</span>
+			</a>
+		</li>
+	</ul>
+</li>
+!--/QQ音乐-->
+<!--酷我音乐--
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/4112335.png" width="30" height="30"></i>
+		<span>酷我音乐</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="http://fj365.gear.host/j.php/kw_1@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kw_2@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kw_3@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kw_4@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日韩男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kw_5@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日韩女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kw_6@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日韩组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kw_7@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kw_8@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/kw_9@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美组合</span>
+			</a>
+		</li>
+	</ul>
+</li>
+!--/酷我音乐-->
+<!--网易音乐--
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/5113921.png" width="30" height="30"></i>
+		<span>网易音乐</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_cn-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_cn-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_cn-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_k-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_k-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_k-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_j-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_j-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_j-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_eu-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_eu-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/wy163_eu-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美组合</span>
+			</a>
+		</li>
+	</ul>
+</li>
+!--/网易音乐-->
+<!--考拉电台-->
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/4201748.png" width="30" height="30"></i>
+		<span>考拉电台</span>
+	</a>
+	<ul class="nav dk text-sm">
+	<!--
+<li><a href="http://fj365.gear.host/j.php/kldt_-4@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>传统电台</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_-1@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>智能电台</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_-3@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>热门榜单</span></a></li>
+-->
+<li><a href="/jp/jsonp/kl1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>王牌脱口秀</span></a></li>
+<li><a href="/jp/jsonp/kl2.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>情感心理</span></a></li>
+<li><a href="/jp/jsonp/kl3.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>小说</span></a></li>
+<li><a href="/jp/jsonp/kl4.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>搞笑</span></a></li>
+<li><a href="/jp/jsonp/kl5.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>音乐</span></a></li>
+<li><a href="/jp/jsonp/kl6.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>旅行</span></a></li>
+<li><a href="/jp/jsonp/kl7.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>生活</span></a></li>
+<!--<li><a href="http://fj365.gear.host/j.php/kldt_1331@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>王牌脱口秀</span></a></li><li><a href="http://fj365.gear.host/j.php/kldt_699@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>情感心理</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1393@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>经典典藏</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_2296@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>电影</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_706@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>新闻</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1001@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>名人演讲</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_32@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>小说</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_648@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>搞笑</span></a></li>
+<li><a href="#kaolaqiqita" class="auto"><span class="pull-right text-muted"><i class="fa fa-angle-left text"></i><i class="fa fa-angle-down text-active"></i></span><i class="fa fa-angle-right text-xs"></i><span>...其他...</span></a>
+<ul class="nav dker">
+<li><a href="http://fj365.gear.host/j.php/kldt_114@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>相声评书</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1215@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>名人专辑</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_255@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>音乐</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1338@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>旅游</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_12@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>综艺娱乐</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_819@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>广播剧</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_818@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>讲座讲坛</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_201@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>亲子</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_820@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>外语</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_195@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>星座风水</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_664@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>恐怖故事</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_656@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>科技</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_662@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>汽车</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_655@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>财经</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_657@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>历史人文</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_21@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>生活</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_18@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>体育</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1241@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>健康</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>教育</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1165@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>军事</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1251@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>动漫游戏</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1242@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>校园</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_200@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>电视电影</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_666@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>宗教信仰</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_994@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>公益</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1168@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>合作专区</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1167@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>广播精品</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_1130@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>今日必听</span></a></li>
+<li><a href="http://fj365.gear.host/j.php/kldt_-2@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>直播</span></a></li>
+</li>
+</ul>-->
+	</ul>
+</li>
+<!--/考拉电台-->
+<!--摇头DJ-->
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/5509651.png" width="30" height="30"></i>
+		<span>深港DJ</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li><a href="javascript:listplay('http://fj365.gear.host/php/ik123.php?kid=车载');" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>车载音乐</span></a></li>
+		<li><a href="javascript:listplay('http://fj365.gear.host/php/ik123.php?kid=串烧');" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>串烧舞曲</span></a></li>
+		<li><a href="javascript:listplay('http://fj365.gear.host/php/ik123.php?kid=慢摇');" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>慢摇舞曲</span></a></li>
+		<li><a href="javascript:listplay('http://fj365.gear.host/php/ik123.php?kid=伤感');" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>伤感舞曲</span></a></li>
+		<li><a href="javascript:listplay('http://fj365.gear.host/php/ik123.php?kid=越南鼓');" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>越南鼓</span></a></li>
+		<li><a href="javascript:listplay('http://fj365.gear.host/php/ik123.php?kid=重低音');" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>重低音</span></a></li>
+		<li><a href="javascript:listplay('http://fj365.gear.host/php/ik123.php?kid=2018');" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>2018</span></a></li>
+		<li><a href="javascript:listplay('http://fj365.gear.host/php/ik123.php?kid=电音');" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>电音</span></a></li>
+		<li><a href="javascript:listplay('http://fj365.gear.host/php/ik123.php?kid=情人节');" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>情人节</span></a></li>
+		<li><a href="javascript:listplay('http://fj365.gear.host/php/ik123.php?kid=club');" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>ClUb</span></a></li>
+		<li><a href="javascript:listplay('http://fj365.gear.host/php/ik123.php?kid=hifi');" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>HiFi</span></a></li>
+	</ul>
+</li>
+<!--/摇头DJ-->
+<!--懒人听书--
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/4220706.png" width="30" height="30"></i>
+		<span>懒人听书</span>
+	</a>
+	<ul class="nav dk text-sm">
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3020@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>现代言情</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3106@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>青春校园</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=8@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>都市传说</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=9@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>恐怖惊悚</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3107@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>悬疑探险</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3108@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>灵异奇谈</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3109@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>穿越架空</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=11@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>玄幻奇幻</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=10@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>古代言情</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=14@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>武侠仙侠</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=15@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>刑侦推理</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=44@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>官场商战</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3021@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>网游科幻</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=71@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>人生哲学</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=17@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>人物传记</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=109@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>公开课</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3064@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>大千世界</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3110@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>佛教音乐</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3111@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>经典名曲</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3112@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>轻音乐</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=1023@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>生活窍门</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=1022@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>时尚美容</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3029@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>情感杂谈</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3028@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>美食天地</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=69@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>通俗文学</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3022@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>散文随笔</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3113@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>青春文学</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=13@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>名家名著</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=81@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>诗词歌赋</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=82@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>外国文学</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=1024@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>国学经典</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=63@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>童话寓言</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=65@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>亲子读物</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3057@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>商业智慧</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=16@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>管理营销</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3059@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>投资理财</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3068@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>季节养生</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3069@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>中医养生</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3070@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>女性养生</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3071@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>老年养生</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3072@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>健康课堂</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3073@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>饮食药膳</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=3074@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>疾病预防</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=84@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>IT技术</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=85@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>法律法规</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=86@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>金融财会</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=87@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>其他学科</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=1030@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>医学药典</span></a></li>
+<li><a href="javascript:htmls('http://fj365.gear.host/php/lrts.php?lid=83@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>职场人生</span></a></li>
+	</ul>
+</li>
+!--/懒人听书-->
+<!--芒果tv-->
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/4220050.png" width="30" height="30"></i>
+		<span>芒果TV</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="javascript:mgtvlist('3vip','1','2');" id="mgtvlist" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>VIP电影</span>
+			</a>
+			</li>
+			<li>
+			<a href="javascript:mgtvlist('3','1','2');" id="mgtvlist" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>电影</span>
+			</a>
+			</li>
+			<li>
+			<a href="javascript:mgtvlist('2','1','2');" id="mgtvlist" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>电视剧</span>
+			</a>
+			</li>
+			<li>
+			<a href="javascript:mgtvlist('1','1','2');" id="mgtvlist" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>综艺</span>
+			</a>
+			</li>
+			<li>
+			<a href="javascript:mgtvlist('7','1','2');" id="mgtvlist" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>动漫</span>
+			</a>
+			</li>
+			<li>
+			<a href="javascript:mgtvlist('4','1','2');" id="mgtvlist" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>音乐</span>
+			</a>
+			</li>
+			<li>
+			<a href="javascript:mgtvlist('5','1','2');" id="mgtvlist" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>纪录片</span>
+			</a>
+			</li>
+	</ul>
+</li>
+<!--/芒果tv-->
+<!--乐视--
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/4249139.png" width="30" height="30"></i>
+		<span>乐视网</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li><a href="javascript:letvplay('1','-1@-1@-1@-1@2');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>VIP电影</span></a></li>
+		<li><a href="#kaolaqiqita" class="auto"><span class="pull-right text-muted"><i class="fa fa-angle-left text"></i><i class="fa fa-angle-down text-active"></i></span><i class="fa fa-angle-right text-xs"></i><span>电影</span></a>
+		<ul class="nav dker">
+		<li><a href="javascript:letvplay('1','2016@-1@-1@-1@-1');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>2016电影</span></a></li>
+		<li><a href="javascript:letvplay('1','-1@30009@-1@-1@-1');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>喜剧电影</span></a></li>
+		<li><a href="javascript:letvplay('1','-1@30022@-1@-1@-1');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>武侠电影</span></a></li>
+		<li><a href="javascript:letvplay('1','-1@30010@-1@-1@-1');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>动作电影</span></a></li>
+		<li><a href="javascript:letvplay('1','-1@30020@-1@-1@-1');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>科幻电影</span></a></li>
+		<li><a href="javascript:letvplay('1','-1@30011@-1@-1@-1');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>爱情电影</span></a></li>
+		<li><a href="javascript:letvplay('1','-1@30011@-1@-1@-1');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>恐怖电影</span></a></li>
+		<li><a href="javascript:letvplay('1','-1@30021@-1@-1@-1');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>警匪电影</span></a></li>
+		<li><a href="javascript:letvplay('1','-1@30008@-1@-1@-1');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>剧情电影</span></a></li>
+		</li></ul>
+		<li><a href="javascript:;" class="auto"><i class="fa fa-angle-right text-xs"></i><span>待添加</span></a></li>
+	</ul>
+</li>
+!--/乐视-->
+<!--风行网--
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/4225532.png" width="30" height="30"></i>
+		<span>风行网</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="http://fj365.gear.host/php/fxw.php?zid=/retrieve/c-e794b5e5bdb1.pg-1.uc-221" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>电影</span>
+			</a>
+			</li>
+			<li>
+			<a href="http://fj365.gear.host/php/fxw.php?zid=/retrieve/c-e794b5e8a786e589a7.pg-1.uc-221" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>电视剧</span>
+			</a>
+			</li>
+			<li>
+			<a href="http://fj365.gear.host/php/fxw.php?zid=/retrieve/c-e58aa8e6bcab.pg-1.uc-221" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>动漫</span>
+			</a>
+			</li>
+			<li>
+			<a href="http://fj365.gear.host/php/fxw.php?zid=/retrieve/c-e7bbbce889ba.pg-1.uc-221" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>综艺</span>
+			</a>
+			</li>
+			<li>
+			<a href="http://fj365.gear.host/php/fxw.php?zid=/retrieve/c-e5beaee794b5e5bdb1.pg-1.uc-221" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>微电影</span>
+			</a>
+		</li>
+	</ul>
+</li>
+!--/风行网-->
+<!--YYMV--
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/2203760.png" width="30" height="30"></i>
+		<span>YY MV</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyv_27@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>热舞</span></a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyv_25@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>动听</span></a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyv_26@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>说唱</span></a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyv_28@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>乐器演奏</span></a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyv_29@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>另类</span></a>
+		</li>
+	</ul>
+</li>
+!--/YYMV-->
+<!--音乐台-->
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/1860705.png" width="30" height="30"></i>
+		<span>音乐台</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="/jp/jsonp/yyt1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="/jp/jsonp/yyt2.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="/jp/jsonp/yyt3.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台组合歌手</span>
+			</a>
+		</li>
+		<!--<li>
+			<a href="http://fj365.gear.host/j.php/yyt_cn-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyt_cn-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>港台组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyt_k-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyt_k-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyt_k-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>韩组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyt_j-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyt_j-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyt_j-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>日组合</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyt_eu-man-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美男歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyt_eu-woman-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美女歌手</span>
+			</a>
+		</li>
+		<li>
+			<a href="http://fj365.gear.host/j.php/yyt_eu-team-all@1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i>
+				<span>欧美组合</span>
+			</a>
+		</li>-->
+	</ul>
+</li>
+<!--/音乐台-->
+<!--秒拍--
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/4606884.png" width="30" height="30"></i>
+		<span>秒拍</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="http://fj365.gear.host/j.php/miaopai_1.html" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>秒拍</span></a>
+		</li>
+	</ul>
+</li>
+!--/秒拍-->
+<!--抖音--
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/5139373.png" width="30" height="30"></i>
+		<span>抖音</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="javascript:listplay('http://fj365.gear.host/php/my.php?dyuid=52898476419');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>抖音测试1</span></a>
+		</li>
+		<li>
+			<a href="javascript:listplay('http://fj365.gear.host/php/my.php?dyuid=55400200248');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>抖音测试2</span></a>
+		</li>
+		<li>
+			<a href="javascript:listplay('http://fj365.gear.host/php/my.php?dyuid=58265705658');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>抖音测试3</span></a>
+		</li>
+		<li>
+			<a href="javascript:listplay('http://fj365.gear.host/php/my.php?dyuid=54579996202');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>抖音测试4</span></a>
+		</li>
+		<li>
+			<a href="javascript:listplay('http://fj365.gear.host/php/my.php?dyuid=58367610723');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>抖音测试5</span></a>
+		</li>
+	</ul>
+</li>
+!--/抖音-->
+<!--爱拍--
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/5113531.png" width="30" height="30"></i>
+		<span>爱拍</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="/php/aipai.php?lid=1" data-bjax data-target="#fenleilist" data-el="#content .row" class="auto"><i class="fa fa-angle-right text-xs"></i><span>王者荣耀</span></a>
+		</li>
+	</ul>
+</li>
+!--/爱拍-->
+<!--TV-->
+<li>
+	<a href="javascript:;" class="auto">
+		<span class="pull-right text-muted">
+			<i class="fa fa-angle-left text"></i>
+			<i class="fa fa-angle-down text-active"></i>
+		</span>
+		<i><img src="http://static.yingyonghui.com/icon/128/5079046.png" width="30" height="30"></i>
+		<span>网络电视</span>
+	</a>
+	<ul class="nav dk text-sm">
+		<li>
+			<a href="javascript:listplay('/jp/jsonp/tv.json');" class="auto"><i class="fa fa-angle-right text-xs"></i><span>蜗牛推荐</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_ys@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>央视CCTV</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index2_ws@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>国内卫视</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index2_yi@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>高清影视</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index2_ty@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>健身体育</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index2_dm@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>热血动漫</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_sz@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>数字频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_wl@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>网络频道</span></a>
+		</li>
+		<!--
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_hw@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>海外频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_xg@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>香港频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_am@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>澳门频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_tw@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>台湾频道</span></a>
+		</li>
+		-->
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_hn@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>湖南频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_fj@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>福建频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_js@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>江苏频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_sh@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>上海频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_gd@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>广东频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_bj@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>北京频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_ah@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>安徽频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_cq@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>重庆频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_zj@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>浙江频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_jx@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>江西频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_gx@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>广西频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_gs@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>甘肃频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_gz@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>贵州频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_he@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>河北频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_ha@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>河南频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_hlj@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>黑龙江频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_hi@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>海南频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_hb@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>湖北频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_jl@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>吉林频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_ln@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>辽宁频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_nx@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>宁夏频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_qh@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>青海频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_sd@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>山东频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_sx@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>山西频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_sn@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>陕西频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_sc@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>四川频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_tj@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>天津频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_xj@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>新疆频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_xz@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>西藏频道</span></a>
+		</li>
+		<li>
+			<a href="javascript:htmls('http://fj365.gear.host/php/91kds.php?id=index1_yn@listplay@')" class="auto"><i class="fa fa-angle-right text-xs"></i><span>云南频道</span></a>
+		</li>
+	</ul>
+</li>
+<!--/TV-->
+                      </ul>
+                    </li>
+                  </ul>
+				  <!--
+                  <ul class="nav text-sm">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                      <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
+                      Playlist
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="icon-music-tone icon"></i>
+                        <span>Hip-Pop</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="icon-playlist icon text-success-lter"></i>
+                        <b class="badge bg-success dker pull-right">9</b>
+                        <span>Jazz</span>
+                      </a>
+                    </li>
+                  </ul>
+				  -->
+                </nav>
+                <!-- / nav -->
+              </div>
+            </section>
+            
+            <footer class="footer hidden-xs no-padder text-center-nav-xs">
+              <div class="bg hidden-xs "></div>
+			</footer>
+          </section>
+        </aside>
+        <!-- /.aside -->
+        <section id="content">
+          <section class="vbox">
+          <section class="w-f-md">
+<!--面包屑
+<div class="col-lg-12 bg-black">
+	<ul class="breadcrumb">
+		<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+		<li><a href="#"><i class="fa fa-list-ul"></i> Elements</a></li>
+		<li class="active">Components</li>
+	</ul>
+</div>	
+/面包屑-->
+<!--资源列表-->
+              <section class="hbox stretch">
+                <section>
+                  <section class="vbox">
+                    <section class="scrollable padder-lg bg-black" style="padding: 5px;">
+<!--切换卡--					
+<section class="panel panel-default dker">
+	<ul class="nav nav-tabs pull-left" data-garbage="true">
+		<li class="active"><a href="#my_qhk_zy" data-toggle="tab">资源</a></li>
+		<li><a href="#my_qhk_zy_lb" data-toggle="tab">列表</a></li>
+		<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">更多<b class="caret"></b></a>
+			<ul class="dropdown-menu text-left" data-garbage="true">
+				<li><a href="#dropdown1" data-toggle="tab">1</a></li>
+				<li><a href="#dropdown2" data-toggle="tab">2</a></li>
+			</ul>
+		</li>
+	</ul>
+<div class="panel-body dk">
+	<div class="tab-content dk">
+		<div class="tab-pane fade active in" id="my_qhk_zy">
+			<div class="row row-sm" id="fenleilist">
+				<div class="row"></div>
+			
+			</div>
+		</div>
+		<div class="tab-pane fade" id="my_qhk_zy_lb" data-garbage="true" style="margin-top: 40px;">
+			<div id="jq_list">
+			</div>
+		</div>
+		<div class="tab-pane fade" id="dropdown1" data-garbage="true">dropdown1</div>
+		<div class="tab-pane fade" id="dropdown2" data-garbage="true">dropdown2</div>
+	</div>
+</div>
+</section>
+--/切换卡-->				  
+<!--面包屑-->
+<div class="bg-black" style="width:100%;height:34px;top:60px;position:fixed;z-index:5;">
+	<ul class="breadcrumb bg-black">
+		<li><a href="/jp/tj.html" data-bjax data-target="#fenleilist" data-el="#content .row">推荐</a></li>
+		<li><a href="javascript:;" id="bt_zylb_zy" style="color:red;">资源</a></li>
+		<li><a href="javascript:;" id="bt_zylb_lb">列表</a></li>
+		<!--<li><a href="javascript:;" id="my_lrc">歌词</a></li>-->
+		<li><a href="javascript:history.go(0);" title="刷新页面"><i class="fa fa-refresh"></i>刷新</a></li>
+	</ul>
+</div>	
+<!--/面包屑 class="active" style="padding: 0px 0 55px 0;"-->
+<div class="zy_row" style="margin-top:45px;margin-bottom:53px;">
+<div class="row row-sm" id="fenleilist">
+<!--zylist
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23lists%3Dhttp%3A%2F%2Fw.wo0.cn%2Fjp%2Fjsonp%2Fyn.json&title=%E8%B6%8A%E5%8D%97%E6%B5%81%E8%A1%8C%E9%9F%B3%E4%B9%90%E6%8E%92%E8%A1%8C%E6%A6%9C&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/jp/jsonp/qcc.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/yn.json');"><i class="icon-control-play"></i></a></div></div><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/yn.json');" id="jpkglist"><img class="r r-2x img-full lazy" src="http://img-android.lisisoft.com/imgmic/1/3/2231-i-tai.nhac.zingmp3.vip.mp3.jpg" width="84" height="84"></a></div><div class="padder-v"><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/yn.json');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">越南流行音乐排行榜</a><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/yn.json');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>-->
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23lists%3Dhttp%3A%2F%2Fw.wo0.cn%2Fjp%2Fjsonp%2Fdy.json&title=%E5%91%A8%E6%9C%AB%E5%BD%B1%E9%99%A2&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http%3A%2F%2Fstatic.yingyonghui.com%2Ficon%2F128%2F3719286.png&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/dy.json');" title="周末影院 VIP版"><i class="icon-control-play"></i></a></div></div><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/dy.json');"><img src="http://static.yingyonghui.com/icon/128/3719286.png" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/dy.json');" class="text-ellipsis" style="color:#ffffff;">周末影院 VIP版</a><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/dy.json');" class="text-ellipsis text-xs text-muted">芒果VIP--龒蜗牛D</a></div></div></div>
+<!--<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23lists%3Dhttp%3A%2F%2Fw.wo0.cn%2Fj.php%2Fdouyin_52898476419.jsonp&title=%E6%8A%96%E9%9F%B3&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http%3A%2F%2Fstatic.yingyonghui.com%2Ficon%2F128%2F5139373.png&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:listplay('/php/my.php?dyuid=52898476419');" title="抖音"><i class="icon-control-play"></i></a></div></div><a href="javascript:listplay('/php/my.php?dyuid=52898476419');"><img src="http://static.yingyonghui.com/icon/128/5139373.png" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:listplay('/php/my.php?dyuid=52898476419');" class="text-ellipsis" style="color:#ffffff;">抖音</a><a href="javascript:listplay('/php/my.php?dyuid=52898476419');" class="text-ellipsis text-xs text-muted">抖音--龒蜗牛D</a></div></div></div>-->
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23lists%3Dhttp%3A%2F%2Fw.wo0.cn%2Fjp%2Fjsonp%2Fqcc.json&title=QCC&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://static.yingyonghui.com/icon/128/5399653.png&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/qcc.json');"><i class="icon-control-play"></i></a></div></div><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/qcc.json');" id="jpkglist"><img class="r r-2x img-full lazy" src="http://static.yingyonghui.com/icon/128/5399653.png" width="84" height="84"></a></div><div class="padder-v"><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/qcc.json');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">QCC</a><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/qcc.json');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23lists%3Dhttp%3A%2F%2Ffj365.gear.host%2Fphp%2F163.php%3Fso%3D%25E6%258A%2596%25E9%259F%25B3&title=%E6%8A%96%E9%9F%B3%E9%9F%B3%E4%B9%90&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://static.yingyonghui.com/icon/128/5934938.png&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:listplay('http://fj365.gear.host/php/163.php?so=%E6%8A%96%E9%9F%B3');"><i class="icon-control-play"></i></a></div></div><a href="javascript:listplay('http://fj365.gear.host/php/163.php?so=%E6%8A%96%E9%9F%B3');" id="jpkglist"><img class="r r-2x img-full lazy" src="http://static.yingyonghui.com/icon/128/5934938.png" width="84" height="84"></a></div><div class="padder-v"><a href="javascript:listplay('http://fj365.gear.host/php/163.php?so=%E6%8A%96%E9%9F%B3');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">抖音音乐</a><a href="javascript:listplay('http://fj365.gear.host/php/163.php?so=%E6%8A%96%E9%9F%B3');" id="jpkglist" class="text-ellipsis text-xs text-muted">网易音乐提供</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"><!--<a href="javascript:kaolalist('1100000043349');" id="kaolalist"><i class="icon-control-play i-2x"></i></a>--></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://127.0.0.1/jp/l.html%23klgs%3D1100000043349&amp;title=%E6%B8%85%E6%96%B0%E5%A5%B3%E5%A3%B0%E6%94%BE%E6%9D%BE%E5%BF%83%E6%83%85%E2%99%AC&amp;desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&amp;site=%E9%BE%92%E8%9C%97%E7%89%9BD&amp;summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&amp;pics=http://img.kaolafm.net/mz/images/201501/4ec6e5b4-d142-4202-90d9-93063574b499/default.jpg&amp;showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:kaolalist('1100000043349');"><i class="icon-control-play"></i></a></div></div><a href="javascript:kaolalist('1100000043349');" id="kaolalist"><img src="http://img.kaolafm.net/mz/images/201501/4ec6e5b4-d142-4202-90d9-93063574b499/default.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:kaolalist('1100000043349');" id="kaolalist" class="text-ellipsis" style="color:#ffffff;">清新女声放松心情♬</a><a href="javascript:kaolalist('1100000043349');" id="kaolalist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23lists%3Dhttp%3A%2F%2Fw.wo0.cn%2Fjp%2Fjsonp%2Ftv.json&title=QCC&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://static.yingyonghui.com/icon/128/5079046.png&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/tv.json');"><i class="icon-control-play"></i></a></div></div><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/tv.json');" id="jpkglist"><img class="r r-2x img-full lazy" src="http://static.yingyonghui.com/icon/128/5079046.png" width="84" height="84"></a></div><div class="padder-v"><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/tv.json');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">网络电视</a><a href="javascript:listplay('http://w.wo0.cn/jp/jsonp/tv.json');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23klgs%3D1100000166333&amp;title=%E8%88%92%E5%BF%83%E6%99%B4%E5%A5%BD&amp;desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&amp;site=%E9%BE%92%E8%9C%97%E7%89%9BD&amp;summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&amp;pics=http%3A%2F%2Fimage.kaolafm.net%2Fmz%2Fimages%2F201604%2Fbbdb8c1a-0e55-4200-8961-12c4a4d0b84a%2Fdefault.jpg&amp;showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:kaolalist('1100000166333@1');"><i class="icon-control-play"></i></a></div></div><a href="javascript:kaolalist('1100000166333@1');"><img class="r r-2x img-full lazy" src="http://image.kaolafm.net/mz/images/201604/bbdb8c1a-0e55-4200-8961-12c4a4d0b84a/default.jpg" width="84" height="84"></a></div><div class="padder-v"><a href="javascript:kaolalist('1100000166333@1');" class="text-ellipsis" style="color:#ffffff;">舒心晴好</a><a href="javascript:kaolalist('1100000166333@1');" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23klgs%3D1100000013407&amp;title=%E9%98%B3%E5%85%89%E5%B0%8F%E8%AF%AD&amp;desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&amp;site=%E9%BE%92%E8%9C%97%E7%89%9BD&amp;summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&amp;pics=http%3A%2F%2Fimage.kaolafm.net%2Fmz%2Fimages%2F201412%2Fb2a47d1d-68e5-4d8a-b579-81f18b7ba293%2Fdefault.jpg&amp;showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:kaolalist('1100000013407@1');"><i class="icon-control-play"></i></a></div></div><a href="javascript:kaolalist('1100000013407@1');"><img class="r r-2x img-full lazy" src="http://img.kaolafm.net/mz/images/201412/b2a47d1d-68e5-4d8a-b579-81f18b7ba293/default.jpg" width="84" height="84"></a></div><div class="padder-v"><a href="javascript:kaolalist('1100000013407@1');" class="text-ellipsis" style="color:#ffffff;">阳光小语</a><a href="javascript:kaolalist('1100000013407@1');" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23klgs%3D1100000045534&amp;title=%E6%BC%AB%E6%AD%A5%E6%97%B6%E5%85%89&amp;desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&amp;site=%E9%BE%92%E8%9C%97%E7%89%9BD&amp;summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&amp;pics=http%3A%2F%2Ffdfs.xmcdn.com%2Fgroup1%2FM00%2F07%2FBF%2FwKgDrVDwLzmzuyeRAAIJcOpB7Iw467_mobile_large.jpg&amp;showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:kaolalist('1100000045534@1');"><i class="icon-control-play"></i></a></div></div><a href="javascript:kaolalist('1100000045534@1');"><img class="r r-2x img-full lazy" src="http://fdfs.xmcdn.com/group1/M00/07/BF/wKgDrVDwLzmzuyeRAAIJcOpB7Iw467_mobile_large.jpg" width="84" height="84"></a></div><div class="padder-v"><a href="javascript:kaolalist('1100000045534@1');" class="text-ellipsis" style="color:#ffffff;">漫步时光</a><a href="javascript:kaolalist('1100000045534@1');" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E5%AD%99%E9%9C%B2&title=%E5%AD%99%E9%9C%B2&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_5a2Z6Zyy.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('孙露');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('孙露');" id="jpkglist"><img class="r r-2x img-full lazy" src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160418/20160418100521462.jpg" width="84" height="84" width="84" height="84"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('孙露');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">孙露</a><a href="javascript:ajaxjplb('孙露');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E9%9B%B7%E5%A9%B7&title=%E9%9B%B7%E5%A9%B7&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_6Zu35am3.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('雷婷');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('雷婷');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20140220/20140220170905143044.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('雷婷');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">雷婷</a><a href="javascript:ajaxjplb('雷婷');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E5%AD%99%E7%87%95%E5%A7%BF&title=%E5%AD%99%E7%87%95%E5%A7%BF&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_5a2Z54eV5ae/.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('孙燕姿');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('孙燕姿');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160817/20160817194036645106.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('孙燕姿');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">孙燕姿</a><a href="javascript:ajaxjplb('孙燕姿');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3DG.E.M.%E9%82%93%E7%B4%AB%E6%A3%8B&title=G.E.M.%E9%82%93%E7%B4%AB%E6%A3%8B&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_Ry5FLk0u6YKT57Sr5qOL.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('G.E.M.邓紫棋');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('G.E.M.邓紫棋');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160616/20160616222917461623.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('G.E.M.邓紫棋');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">G.E.M.邓紫棋</a><a href="javascript:ajaxjplb('G.E.M.邓紫棋');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E7%B4%AB%E8%8F%B1&title=%E7%B4%AB%E8%8F%B1&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&ssite=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http%3A%2F%2Fstar.kuwo.cn%2Fstar%2Fstarheads%2F180%2F70%2F9%2F293578659.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('紫菱');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('紫菱');" id="jpkglist"><img src="http://star.kuwo.cn/star/starheads/180/70/9/293578659.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('紫菱');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">紫菱</a><a href="javascript:ajaxjplb('紫菱');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E9%A3%8E%E5%B0%8F%E7%AD%9D&title=%E9%A3%8E%E5%B0%8F%E7%AD%9D&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&ssite=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http%3A%2F%2Fimg4.kuwo.cn%2Fstar%2Fstarheads%2F240%2F30%2F60%2F3707289221.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('风小筝');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('风小筝');" id="jpkglist"><img src="http://img4.kuwo.cn/star/starheads/240/30/60/3707289221.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('风小筝');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">风小筝</a><a href="javascript:ajaxjplb('风小筝');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3DT-ara&title=T-ara&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&ssite=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_VC1hcmE=.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('T-ara');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('T-ara');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20140303/20140303154019930332.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('T-ara');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">T-ara</a><a href="javascript:ajaxjplb('T-ara');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3DBeyond&title=Beyond&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_QmV5b25k.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('Beyond');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('Beyond');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160418/20160418100531196.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('Beyond');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">Beyond</a><a href="javascript:ajaxjplb('Beyond');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E5%BA%84%E5%BF%83%E5%A6%8D&title=%E5%BA%84%E5%BF%83%E5%A6%8D&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_5bqE5b--D5aaN.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('庄心妍');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('庄心妍');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160419/20160419093308368476.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('庄心妍');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">庄心妍</a><a href="javascript:ajaxjplb('庄心妍');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E7%AB%A5%E5%8F%AF%E5%8F%AF&title=%E7%AB%A5%E5%8F%AF%E5%8F%AF&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_56ul5Y--v5Y--v.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('童可可');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('童可可');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160511/20160511175000437650.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('童可可');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">童可可</a><a href="javascript:ajaxjplb('童可可');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E5%AD%9F%E5%BA%AD%E8%8B%87&title=%E5%AD%9F%E5%BA%AD%E8%8B%87&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_5a2f5bqt6IuH.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('孟庭苇');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('孟庭苇');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160426/20160426113302321.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('孟庭苇');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">孟庭苇</a><a href="javascript:ajaxjplb('孟庭苇');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E9%83%AD%E7%8E%B2&title=%E9%83%AD%E7%8E%B2&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_6YOt546y.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('郭玲');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('郭玲');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20140527/20140527114153554509.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('郭玲');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">郭玲</a><a href="javascript:ajaxjplb('郭玲');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E5%BC%A0%E7%8E%AE%E4%BC%BD&title=%E5%BC%A0%E7%8E%AE%E4%BC%BD&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_5byg546u5Ly9.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('张玮伽');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('张玮伽');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20140901/20140901115326125812.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('张玮伽');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">张玮伽</a><a href="javascript:ajaxjplb('张玮伽');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E8%94%A1%E5%A6%8D&title=%E8%94%A1%E5%A6%8D&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_6JSh5aaN.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('蔡妍');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('蔡妍');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160729/20160729153242606294.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('蔡妍');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">蔡妍</a><a href="javascript:ajaxjplb('蔡妍');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div><div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E6%9D%8E%E8%B4%9E%E8%B4%A4&title=%E6%9D%8E%E8%B4%9E%E8%B4%A4&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_5p2O6LSe6LSk.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('李贞贤');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('李贞贤');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160429/20160429120233532.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('李贞贤');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">李贞贤</a><a href="javascript:ajaxjplb('李贞贤');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E6%B5%9C%E5%B4%8E%E3%81%82%E3%82%86%E3%81%BF&title=%E6%B5%9C%E5%B4%8E%E3%81%82%E3%82%86%E3%81%BF&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_5rWc5bSO44GC44KG44G/.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('浜崎あゆみ');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('浜崎あゆみ');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20150201/20150201114617891250.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('浜崎あゆみ');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">浜崎あゆみ</a><a href="javascript:ajaxjplb('浜崎あゆみ');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D2NE1&title=2NE1&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_Mk5FMQ==.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('2NE1');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('2NE1');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20140227/20140227152200133632.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('2NE1');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">2NE1</a><a href="javascript:ajaxjplb('2NE1');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3Df+x+&title=f+x+&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_ZiB4IA==.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('f\(x\)');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('f\(x\)');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20151026/20151026144554120601.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('f\(x\)');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">f x </a><a href="javascript:ajaxjplb('f\(x\)');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3D%E7%BF%81%E7%AB%8B%E5%8F%8B&title=%E7%BF%81%E7%AB%8B%E5%8F%8B&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://singerimg.kugou.com/uploadpic/pass/softhead/480/20140225/20140225145335578180.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('翁立友');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('翁立友');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20140225/20140225145335578180.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('翁立友');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">翁立友</a><a href="javascript:ajaxjplb('翁立友');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3DAvril+Lavigne&title=Avril+Lavigne&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_QXZyaWwgTGF2aWduZQ==.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('Avril Lavigne');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('Avril Lavigne');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160429/20160429120314426.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('Avril Lavigne');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">Avril Lavigne</a><a href="javascript:ajaxjplb('Avril Lavigne');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3DLady+Gaga&title=Lady+Gaga&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_TGFkeSBHYWdh.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('Lady Gaga');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('Lady Gaga');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160429/20160429120512148.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('Lady Gaga');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">Lady Gaga</a><a href="javascript:ajaxjplb('Lady Gaga');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3DM2M&title=M2M&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_TTJN.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('M2M');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('M2M');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20140403/20140403173920827257.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('M2M');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">M2M</a><a href="javascript:ajaxjplb('M2M');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3DGroove+Coverage&title=Groove+Coverage&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_R3Jvb3ZlIENvdmVyYWdl.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('Groove Coverage');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('Groove Coverage');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20160429/20160429120501103.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('Groove Coverage');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">Groove Coverage</a><a href="javascript:ajaxjplb('Groove Coverage');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23kggs%3DCascada&title=Cascada&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_Q2FzY2FkYQ==.jpg&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:ajaxjplb('Cascada');"><i class="icon-control-play"></i></a></div></div><a href="javascript:ajaxjplb('Cascada');" id="jpkglist"><img src="http://singerimg.kugou.com/uploadpic/pass/softhead/480/20140403/20140403103112836274.jpg" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:ajaxjplb('Cascada');" id="jpkglist" class="text-ellipsis" style="color:#ffffff;">Cascada</a><a href="javascript:ajaxjplb('Cascada');" id="jpkglist" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>
+			<!--/zylist-->
+					  </div>
+
+</div>
+<div class="lb_row" style="margin-top:45px;margin-bottom:53px;display:none;">
+	<div class="row row-sm" id="jq_list">
+	</div>
+</div>
+<!--
+<div class="lrc_row" style="margin-top:45px;margin-bottom:53px;display:none;">
+	<textarea id="lrc_content" name="textfield" cols="70" rows="10" style="display:none;"></textarea>
+	<div class="lrc_content" style="background-color: rgba(0, 0, 0, 0.7);">
+		<div class="content">
+			<ul id="lrc_list">
+				<li>歌词</li>
+			</ul>
+		</div>
+	</div>
+</div>
+-->
+                    </section>                    
+                  </section>
+                </section>
+              </section>
+<!--/资源列表-->
+<!-- 歌词 style="display: none;"block--
+<div class="lrc" style="background-color: rgba(0, 0, 0, 0.5);height: 150px;">
+	<div class="lrc_content" style="background-color: rgba(0, 0, 0, 0.7);">
+		<div class="content">
+			<ul id="lrc_list">
+				<li>歌词</li>
+			</ul>
+		</div>
+	</div>
+</div>
+!-- /歌词-->
+          </section>
+<!-- 弹出模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content bg-black lk">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					列表资源
+				</h4>
+			</div>
+			<div class="modal-body bg-black lk" id="jq_list"> </div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+<!-- /弹出模态框-->
+          <footer class="footer bg-success dker navbar-fixed-bottom" style="background-color: rgba(0, 0, 0, 0.5);">
+			<div id="jp_container_N">
+				<div class="jp-type-playlist">
+					<div id="jplayer_N" class="jp-jplayer dropup" style="display: none;"></div>
+					<div class="jp-gui">
+                        <div class="jp-video-play hide"><a class="jp-video-play-icon">play</a></div>
+                        <div class="jp-interface">
+							<div class="jp-controls">
+                            <!--hide<div><a class="jp-previous"><i class="icon-control-rewind i-lg"></i></a></div>block//none-->
+							<!--<div><a class=""  id="tv_toggle" data-toggle="dropdown" data-target="#jplayer_N"><i class="icon-film i-2x"></i></a></div> i-2x i-2x-->
+                            <div>
+                              <a class="jp-play"><i class="icon-control-play i-2x"></i></a>
+                              <a class="jp-pause hid"><i class="icon-control-pause i-2x"></i></a>
+                            </div>
+                            <div class="hide"><a class="jp-next" title="下一曲"><i class="icon-control-end i-2x"></i></a></div>
+                            <div class="hide"><a class="jp-stop"><i class="fa fa-stop"></i></a></div>
+                            <div><a class="auto" data-toggle="dropdown" data-target="#playlist" title="播放列表"><i class="icon-list i-2x"></i></a></div>
+							<!-- hidden-xs-->
+                            <div class="jp-progress">
+                              <div class="jp-seek-bar dk">
+                                <div class="jp-play-bar bg">
+                                </div>
+                                <div class="jp-title text-lt">
+                                  <ul>
+                                    <li></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+							<div class="jp-times">
+								<div class="jp-current-time text-xs text-muted"></div>
+								<div class="jp-duration text-xs text-muted"></div>
+							</div>
+                            <div class="hidden-xs hidden-sm">
+                              <a class="jp-mute" title="静音"><i class="icon-volume-2"></i></a>
+                              <a class="jp-unmute hid" title="unmute"><i class="icon-volume-off"></i></a>
+                            </div>
+                            <div class="hidden-xs hidden-sm jp-volume">
+                              <div class="jp-volume-bar dk">
+                                <div class="jp-volume-bar-value lter"></div>
+                              </div>
+                            </div>
+							<!--<div>
+								<a class="auto" id="bt_my_lrc" title="歌词"><i class="fa fa-tasks i-2x"></i></a>
+							</div>-xs-->
+                            <div class="body-bg" id="ffull">
+								<a class="jp-full-screen" title="full screen"><i class="icon-frame i-2x"></i></a>
+							    <a class="jp-restore-screen" title="restore screen"><i class="icon-frame i-2x text-lt"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="jp-playlist dropup" id="playlist">
+                        <ul class="dropdown-menu aside-xl dker">
+							<li class="list-group-item"></li>
+                        </ul>
+                    </div>
+                    <div class="jp-no-solution hide"></div>
+				</div>
+			</div>
+          </footer>
+        </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      </section>
+    </section>    
+  </section>
+  <script src="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/js/bootstrap.js"></script>
+  <!-- App -->
+  <script src="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/js/app.js"></script>
+  <script src="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/js/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/js/app.plugin.js"></script>
+  <script type="text/javascript" src="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/js/jPlayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="//demo.sc.chinaz.com//Files/DownLoad/moban/201408/chahua3464/js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+<script src="js/base64.js"></script>
+<script type="text/javascript">
+var myPlaylist;
+var dataStr;
+var jp_h;
+//JP
+$(document).ready(function() {
+	myPlaylist = new jPlayerPlaylist({jPlayer: "#jplayer_N",cssSelectorAncestor: "#jp_container_N"},[{mp3:"",title:""}],{
+		ready: function (event){$("#jplayer_N").jPlayer("play",0);},//$("#jplayer_N").jPlayer("playHead", 100);
+		playlistOptions: {
+			enableRemoveControls: true,
+			autoPlay: true
+		},
+		swfPath: "http://jplayer.org/latest/dist/jplayer/jquery.jplayer.swf",
+		solution: "html,flash",//flash,aurora
+		supplied: "m4v,flv,m3u8v,webmv,ogv,mp3,oga",//,ogv,webmv,flv,flac,wav,oga,m3ua,m3uv,m3u8s,m3u8v,rtmpv
+		wmode: "window",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		size: {width:"100%",height:browserRedirect()+"px"},//browserRedirect()+"px",cssClass:"jp-video-360p"
+		audioFullScreen: true,
+		preload: "auto",
+		//remainingDuration: true,
+		//toggleDuration: true,
+		timeupdate: function(event) {
+			if(event.jPlayer.status.currentTime==0){
+				time = "";
+			}else {
+				time = event.jPlayer.status.currentTime;
+			}
+			//console.log(time);
+		},
+		play: function(event) {
+		//console.log(event.jPlayer.status);
+		/*
+			if((event.jPlayer.status.src).match(/php\/kg_/)){
+				if(time<0.01){
+					$(this).jPlayer("pause",0.01);
+					return $(this).jPlayer("play",0.02);
+				}
+			}
+			*/
+			document.title = event.jPlayer.status.media.title;
+			//$("#TX_Img").attr('src',event.jPlayer.status.media.poster);
+			//$("#TX_Imgs").attr('src',event.jPlayer.status.media.poster);
+			//$("#mydown").attr("href",event.jPlayer.status.src);
+			/*
+			var lrc;
+				if((event.jPlayer.status.src).match(/php\/kg_/)){
+					lrc = (event.jPlayer.status.src).replace(/\.mp3|\.m4a/, ".lrc");
+				}else{
+					lrc = 'http://fj365.gear.host/x.php/kg_null.lrc';
+				}
+				if (lrc != "")ChangeLrc(lrc);
+				$.lrc.start($('#lrc_content').val(),function(){return time;});
+				*/
+		/*
+			if((event.jPlayer.status.src).match(/php\/kg_/)){
+				if(time < 0.01){
+					$(this).jPlayer("pause",0.01);
+					return $(this).jPlayer("play",0.02);
+				}
+			}
+			//console.log(event.jPlayer.status);
+			document.title = event.jPlayer.status.media.title;
+			$("#bodybjimg").attr('src',event.jPlayer.status.media.poster);
+			if (event.jPlayer.status.formatType === "mp3"||event.jPlayer.status.formatType === "m4a"){
+				$("#jplayer_N").css("display","none");
+				$('#lrc_list').css("display","block");
+				//$("#ffull").css("display","none");
+				var lrc;
+				if((event.jPlayer.status.src).match(/php\/kg_/)){
+					lrc = (event.jPlayer.status.src).replace(/\.mp3|\.m4a/, ".lrc");
+				}else{
+					lrc = 'http://fj365.gear.host/x.php/kg_null.lrc';
+				}
+				if (lrc != "")ChangeLrc(lrc);
+				if($('#lrc_content').val()!==""){
+					$.lrc.start($('#lrc_content').val(),function(){return time;});
+				}else{
+					$("#lrc_list").removeAttr("style").html("<li>歌曲播放完毕！</li>");
+				}
+			}else if (event.jPlayer.status.formatType === "m4v"){
+				$('#lrc_list').css("display","none");
+				$("#jplayer_N").css("display","block");
+				//$("#ffull").css("display","table-cell");
+				//browserRedirect();
+			}
+			*/
+			if (event.jPlayer.status.formatType === "m4v"){
+				$("#jplayer_N").css("display","block");
+				$("#ffull").css("display","table-cell");
+			}else if (event.jPlayer.status.formatType === "mp3"){
+				$("#jplayer_N").css("display","none");
+				$("#ffull").css("display","none");
+			}
+			browserRedirect();
+		},
+		pause: function(event) {
+			$("#jplayer_N").css("display","none");
+			$("#ffull").css("display","table-cell");
+		},
+		stop: function(event) {
+			$("#jplayer_N").css("display","none");
+			$("#ffull").css("display","none");
+		},
+		error: function(event) {
+			$("#jplayer_N").css("display","none");
+			$("#ffull").css("display","none");
+		},
+		ended:function(event){
+			//$("#lrc_list").removeAttr("style").html("<li>歌曲播放完毕！</li>");
+			//$.lrc.start($('#lrc_content').val(), function (){return time;});
+			$("#ffull").css("display","none");
+			$("#jplayer_N").css("display","none");
+		}
+	});
+	//
+	$(document).on($.jPlayer.event.pause,myPlaylist.cssSelector.jPlayer,function() {
+		$('.musicbar').removeClass('animate');
+		$('.jp-play-me').removeClass('active');
+		$('.jp-play-me').parent('li').removeClass('active');
+	});
+	$(document).on($.jPlayer.event.play,myPlaylist.cssSelector.jPlayer,function() {
+		$('.musicbar').addClass('animate');
+	});
+	$(document).on('click','.jp-play-me',function(e) {
+		e && e.preventDefault();
+		var $this = $(e.target);
+		if (!$this.is('a')) $this = $this.closest('a');
+		$('.jp-play-me').not($this).removeClass('active');
+		$('.jp-play-me').parent('li').not($this.parent('li')).removeClass('active');
+		$this.toggleClass('active');
+		$this.parent('li').toggleClass('active');
+		if (!$this.hasClass('active')){
+			myPlaylist.pause();
+		}else{
+			var pii = parseInt(($($this).attr("li_id")).replace(/(.+)/, "$1"));
+			myPlaylist.play(pii);
+		}
+	});
+	$("#ffull").css("display","none");
+});
+//JP END
+$(document).ready(function() {
+	var item;
+	var my__s001;
+	if(location.search.substring(1).match(/type=/)){
+		my__s001 = MY_E2H(location.search.substring(1));
+		srcplay(my__s001.replace(/type=(.+)&src=(.+)&label=(.+)&image=(.+)/, "$1,$2,$3,$4"));
+	}else if(location.hash.substring(1).match(/lists=/)){
+		listplay(WXFXTH(location.hash.substring(1).replace(/lists=(.+)/, "$1")));
+	}else if(location.hash.substring(1).match(/urls=/)){
+		srcplay(WXFXTH(location.hash.substring(1).replace(/urls=(.+)/, "$1")));
+	}else if(location.hash.substring(1).match(/kggs=/)){
+		ajaxjplb(WXFXTH(location.hash.substring(1).replace(/kggs=(.+)/, "$1")));
+	}else if(location.hash.substring(1).match(/qqgs=/)){
+		qqlist(WXFXTH(location.hash.substring(1).replace(/qqgs=(.+)/, "$1")));
+	}else if(location.hash.substring(1).match(/kwgs=/)){
+		listplay('http://fj365.gear.host/j.php/kw_'+WXFXTH(location.hash.substring(1).replace(/kwgs=(.+)/, "$1"))+'.so');
+	}else if(location.hash.substring(1).match(/wygs=/)){
+		listplay('http://fj365.gear.host/php/163.php?so='+WXFXTH(location.hash.substring(1).replace(/wygs=(.+)/, "$1"))+'');
+	}else if(location.hash.substring(1).match(/xmgs=/)){
+		listplay('http://fj365.gear.host/php/163.php?xmso='+WXFXTH(location.hash.substring(1).replace(/xmgs=(.+)/, "$1"))+'');
+	}else if(location.hash.substring(1).match(/klgs=/)){
+		kaolalist(WXFXTH(location.hash.substring(1).replace(/klgs=(.+)/, "$1")));
+	}else if(location.hash.substring(1).match(/lrtsgs=/)){
+		lrtslist(location.hash.substring(1).replace(/lrtsgs=(.+)/, "$1"));
+	}else if(location.hash.substring(1).match(/kldt=/)){
+		kaolasoso(WXFXTH(location.hash.substring(1).replace(/kldt=(.+)/, "$1")));
+	}else if(location.hash.substring(1).match(/bdyy=/)){
+		bdplay(location.hash.substring(1).replace(/bdyy=(.+)/, "$1"));
+	}else if(location.hash.substring(1).match(/bdgs=/)){
+		bdlist(location.hash.substring(1).replace(/bdgs=(.+)/, "$1"));
+	}else if(location.hash.substring(1).match(/mgtv=/)){
+		mgtv_vid_src(WXFXTH(location.hash.substring(1).replace(/mgtv=(.+)/, "$1")));
+	}else if(location.hash.substring(1).match(/yytgs=/)){
+		listplay('http://fj365.gear.host/php/my.php?yytso='+WXFXTH(location.hash.substring(1).replace(/yytgs=(.+)/, "$1"))+'');
+	}else if(location.hash.substring(1).match(/ikdj=/)){
+		listplay('http://fj365.gear.host/php/ik123.php?kid='+WXFXTH(location.hash.substring(1).replace(/ikdj=(.+)/, "$1"))+'');
+	}else if(location.hash.substring(1).match(/douyin=/)){
+		listplay('http://fj365.gear.host/j.php/douyin_'+WXFXTH(location.hash.substring(1).replace(/douyin=(.+)/, "$1"))+'.jsonp');
+	}
+	//console.log(location.hash.substring(1));
+	//getData();
+	$(document).keydown(function(event){ 
+		if(event.keyCode == 13){
+			$("#button_sotxt").click();
+		}
+	});
+	$("#selectTest").change(function(){
+		item = $("#selectTest").val();
+	});
+	$("#button_sotxt").click(function(){
+		var result2 = $("#sotxt").val();
+		if(item == 'kggs'){
+			ajaxjplb(result2);
+		}else if(item == 'qqgs'){
+			qqlist(result2);
+		}else if(item == 'kwgs'){
+			listplay('http://fj365.gear.host/j.php/kw_'+result2+'.so');
+		//}else if(item == 'lrts'){
+			//listplay('http://fj365.gear.host/j.php/lrts_'+result2+'.jsonp');
+		}else if(item === 'yksoso'){
+			listplay('http://fj365.gear.host/j.php/youku_'+encodeURIComponent(result2)+'.jsonp');
+		}else if(item === 'yytsoso'){
+			listplay('http://fj365.gear.host/php/my.php?yytso='+encodeURIComponent(result2)+'');
+		}else if(item == 'bdsoso'){
+			bdsoso(result2);
+		}else if(item == 'kaolasoso'){
+			kaolasoso(result2);
+		}else if(item === 'wygs'){
+			listplay('http://fj365.gear.host/php/163.php?so='+result2+'');
+		}else if(item === 'xmgs'){
+			listplay('http://fj365.gear.host/php/163.php?xmso='+result2+'');
+		}else if(item === 'douyin'){
+			listplay('http://fj365.gear.host/php/my.php?dyuid='+result2+'');
+		}else if(item === 'ikdj'){
+			listplay('http://fj365.gear.host/php/ik123.php?kid='+result2+'');
+		}else{
+			ajaxjplb(result2);
+		}
+	});
+//
+//
+$(".close").click(function(){
+//var bot="bt_"+$(this).parent().attr("class");
+	$(this).parent().hide();
+	//$("."+bot).css("color","#008afe");
+})
+$(".bt_list").on("click",function(){
+	if($(".list").is(":visible")){
+		$(".list").hide();
+	}else{
+		$(".list").show();
+	}
+	
+})
+$("#bt_my_lrc").on("click",function(){
+	if($(".lrc").is(":visible")){
+		$(".lrc").hide();
+	}else{
+		$(".lrc").show();
+	}
+	
+})
+$(".bt_llll").on("click",function(){
+	if($(".llll").is(":visible")){
+		$(".llll").hide();
+	}else{
+		$(".llll").show();
+	}
+	
+})
+$("#bt_zylb_zy").on("click",function(){
+	if($(".zy_row").is(":visible")){
+		//$(".zy_row").hide(); 
+	}else{
+		$(".zy_row").show();
+		$(".lb_row").hide();
+		//$(".lrc_row").hide();
+		$("#bt_zylb_lb").css({color:"#fff"});
+		$("#bt_zylb_zy").css({color:"red"});
+		//$("#my_lrc").css({color:"#fff"});
+	}
+})
+$("#bt_zylb_lb").on("click",function(){
+	if($(".lb_row").is(":visible")){
+		//$(".lb_row").hide();
+	}else{
+		$(".lb_row").show();
+		$(".zy_row").hide();
+		//$(".lrc_row").hide();
+		$("#bt_zylb_zy").css({color:"#fff"});
+		$("#bt_zylb_lb").css({color:"red"});
+		//$("#my_lrc").css({color:"#fff"});
+	}
+})
+/*
+$("#my_lrc").on("click",function(){
+	if($(".lrc_row").is(":visible")){
+		//$(".lb_row").hide();
+	}else{
+		$(".lrc_row").show();
+		$(".zy_row").hide();
+		$(".lb_row").hide();
+		$("#bt_zylb_zy").css({color:"#fff"});
+		$("#bt_zylb_lb").css({color:"#fff"});
+		$("#my_lrc").css({color:"red"});
+	}
+})
+*/
+});
+//单曲点播
+$("#srcplay").click(function() {
+});
+function srcplay(data){
+	$(".zy_row").hide();
+	$(".lb_row").show();
+	$("#bt_zylb_lb").css({color:"red"});
+	$("#bt_zylb_zy").css({color:"#fff"});
+	//
+	var dq_0 = (decodeURIComponent(data)).split(",");
+	var danquplay='[{'+dq_0[0]+':"'+dq_0[1]+'",title:"'+dq_0[2]+'",poster:"'+dq_0[3]+'"}]';
+	eval("dsss="+danquplay);
+	myPlaylist.setPlaylist(dsss);
+	//
+	var dq_01 = '<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto"><li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="'+dq_0[1]+'" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play(0);" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3D'+dq_0[0]+'%26src%3D'+encodeURIComponent(dq_0[1])+'%26label%3D'+encodeURIComponent(dq_0[2])+'%26image%3D'+encodeURIComponent(dq_0[3])+'&title='+encodeURIComponent(dq_0[2])+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+dq_0[3]+'&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play(0);" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play(0);" style="color:#337AB7;">'+dq_0[2]+'</a></span><span class="text-muted"> - 龒蜗牛D</span></div></li></ul>';
+	$('#jq_list').html(dq_01);
+}
+//列表点播
+$("#listplay").click(function() {
+});
+function listplay(lsrc){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: decodeURIComponent(lsrc),
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(data) {
+			listplay_success_jsonpCallback(data);
+		}
+	});
+	$(".zy_row").hide();
+	$(".lb_row").show();
+	$("#bt_zylb_lb").css({color:"red"});
+	$("#bt_zylb_zy").css({color:"#fff"});
+}
+function listplay_success_jsonpCallback(data){
+	var lq_0 = '[';
+		$.each(data, function(k, v) {
+			lq_0 += '{'+v.type+':"'+v.src+'",title:"'+v.label+'",poster:"'+v.image+'"},';
+		});
+		lq_0 += ']';
+		eval("lq_d0=" + lq_0);
+		myPlaylist.setPlaylist(lq_d0);
+		//
+		var lq_01='<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">';
+		$.each(data, function(k, v) {
+			lq_01+='<li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="'+v.src+'" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play('+k+');" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3D'+v.type+'%26src%3D'+encodeURIComponent(v.src)+'%26label%3D'+encodeURIComponent(v.label)+'%26image%3D'+encodeURIComponent(v.image)+'&title='+encodeURIComponent(v.label)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+v.image+'&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play('+k+');" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play('+k+');" style="color:#337AB7;">'+v.label+'</a></span><span class="text-muted"> - 龒蜗牛D</span></div></li>';
+		});
+		lq_01+='</ul>';
+		$('#jq_list').html(lq_01);
+}
+//资源列表点播
+function htmls(lsrc){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: decodeURIComponent(lsrc),
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(data) {
+			htmls_success_jsonpCallback(data,lsrc);
+		}
+	});
+	$(".lb_row").hide();
+	$(".zy_row").show();
+	$("#bt_zylb_zy").css({color:"red"});
+	$("#bt_zylb_lb").css({color:"#fff"});
+}
+function htmls_success_jsonpCallback(data,types){
+	var mysrc;var mypng;
+		var htmls_01='';
+		$.each(data, function(k, v) {
+			mysrc = types.match(/@([0-9a-zA-Z_]+)@/, "$1")[1];
+			if((v.PNG).indexOf("GS@")>-1){
+				mypng = (v.PNG).replace('GS@', 'http://i.gtimg.cn/music/photo/mid_singer_150/');
+			}else{
+				mypng = (v.PNG);
+			}
+			htmls_01+='<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="#" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:'+mysrc+'(\''+v.HTML+'\')"><i class="icon-control-play"></i></a></div></div><img src="'+mypng+'" width="84" height="84" class="r r-2x img-full"></div><div class="padder-v"><a href="javascript:'+mysrc+'(\''+v.HTML+'\')" id="listplay" class="text-ellipsis" style="color:#ffffff;">'+v.MZ+'</a></div></div></div>';
+		});
+		htmls_01+='';
+		$('#fenleilist').html(htmls_01);
+}	
+//酷狗列表点选播放 
+$("#jpkglist").click(function() {
+});
+function ajaxjplb(ssrc){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: "http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+ssrc+"&page=1&pagesize=500&showtype=1",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'callback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(strdata) {
+			kglist_success_jsonpCallback(strdata.data.info);
+		}
+	});
+	$(".zy_row").hide();
+	$(".lb_row").show();
+	$("#bt_zylb_lb").css({color:"red"});
+	$("#bt_zylb_zy").css({color:"#fff"});
+}
+function kglist_success_jsonpCallback(strdata){
+	var lkg_0 = '[';
+	$.each(strdata, function(k, v) {
+		lkg_0 += '{mp3:"http://fj365.gear.host/php/m.php\?kgid='+v.hash+'",title:"'+(v.filename).replace('\'', '')+'",poster:"http://fj365.gear.host/x.php/kg_'+base64encode(utf16to8(v.singername))+'.jpg"},';
+	});
+	lkg_0 += ']';
+	eval("lkg_d0=" + lkg_0);
+	myPlaylist.setPlaylist(lkg_d0);
+	//
+	var lkg_01='<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">';
+	$.each(strdata, function(k, v) {
+		lkg_01+='<li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="http://fj365.gear.host/php/m.php\?kgid='+v.hash+'" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3Dmp3%26src%3D/x.php/kg_'+v.hash+'.mp3%26label%3D'+encodeURIComponent(v.filename)+'%26image%3D/x.php/kg_'+base64encode(utf16to8(v.singername))+'.jpg&title='+encodeURIComponent(v.filename)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://fj365.gear.host/x.php/kg_'+base64encode(utf16to8(v.singername))+'.jpg&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><div class="clear text-ellipsis"><a href="javascript:;" li_id="'+k+'" class="jp-play-me pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i><span style="color:#337AB7;">&nbsp;&nbsp;'+v.filename+'</span></a></div></li>';
+	});
+	lkg_01+='</ul>';
+	$('#jq_list').html(lkg_01);
+}
+//QQ列表点选播放 
+$("#qqlist").click(function() {
+});
+function qqlist(ssrc){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: "http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+ssrc+"&type=qry_song&out=json&p=1&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",//&jsonpCallback=searchJsonCallback  encodeToGb2312(ssrc)
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'searchJsonCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(data) {
+			qqlist_success_jsonpCallback(data.list);
+		}
+	});
+	$(".zy_row").hide();
+	$(".lb_row").show();
+	$("#bt_zylb_lb").css({color:"red"});
+	$("#bt_zylb_zy").css({color:"#fff"});
+}
+function qqlist_success_jsonpCallback(strdata){
+	var lkg_0 = '[';
+	$.each(strdata, function(k, v) {
+		lkg_0 += '{mp3:"http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38",title:"'+v.songname+'",poster:"http://i.gtimg.cn/music/photo/mid_singer_150/'+(v.singermid).substring(12,13)+'/'+(v.singermid).substring(13)+'/'+v.singermid+'.jpg"},';
+	});
+	lkg_0 += ']';
+	eval("lkg_d0=" + lkg_0);
+	myPlaylist.setPlaylist(lkg_d0);
+	var lkg_01='<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">';
+	$.each(strdata, function(k, v) {
+		lkg_01+='<li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="http://link.hhtjim.com/qq/'+v.songmid+'.mp3" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play('+k+');" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3Dmp3%26src%3Dhttp://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a%253Ffromtag=38%26label%3D'+encodeURIComponent(v.songname)+'%26image%3Dhttp://i.gtimg.cn/music/photo/mid_singer_150/'+(v.singermid).substring(12,13)+'/'+(v.singermid).substring(13)+'/'+v.singermid+'.jpg&title='+encodeURIComponent(v.songname)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://i.gtimg.cn/music/photo/mid_singer_150/'+(v.singermid).substring(12,13)+'/'+(v.singermid).substring(13)+'/'+v.singermid+'.jpg&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play('+k+');" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play('+k+');" style="color:#337AB7;">'+v.songname+'</a></span></div></li>';
+	});
+	lkg_01+='</ul>';
+	$('#jq_list').html(lkg_01);
+}
+//音悦台
+/*
+$("#yytplay").click(function() {
+});
+function yytplay(src){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: 'http://m.yinyuetai.com/mv/get-simple-video-info?&videoId='+src,
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'jsonp6',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success : function(data) {
+			yyt_success_jsonpCallback(data.videoInfo);
+		}
+	});
+}
+function yyt_success_jsonpCallback(data){
+	var src_0001 = 'm4v,'+data.videoUrl3+','+data.title+','+data.headImg;
+	var dq_0 = (decodeURIComponent(src_0001)).split(",");
+	var danquplay='[{'+dq_0[0]+':"'+dq_0[1]+'",title:"'+dq_0[2]+'",poster:"'+dq_0[3]+'"}]';
+	eval("dsss="+danquplay);
+	myPlaylist.setPlaylist(dsss);
+	//
+	var dq_01 = '<li class="list-group-item"><div class="pull-right m-l"><a href="'+dq_0[1]+'" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play(0);" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/index.htm%3Ftype%3D'+dq_0[0]+'%26src%3D'+encodeURIComponent(dq_0[1])+'%26label%3D'+encodeURIComponent(dq_0[2])+'%26image%3D'+encodeURIComponent(dq_0[3])+'&title='+encodeURIComponent(dq_0[2])+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+dq_0[3]+'&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play(0);" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play(0);" style="color:#337AB7;">'+dq_0[2]+'</a></span><span class="text-muted"> - 龒蜗牛D</span></div></li>';
+	$('#jqlist').html(dq_01);
+}
+*/
+//秒拍
+$("#miaopaiplay").click(function() {
+});
+function miaopaiplay(src){
+	var dq_0 = (decodeURIComponent(src)).split(",");
+	var danquplay='[{m4v:"http://gslb.miaopai.com/stream/'+dq_0[0]+'.mp4",title:"'+dq_0[1]+'",poster:"http://gslb.miaopai.com/stream/'+dq_0[0]+'_m.jpg"}]';
+	eval("dsss="+danquplay);
+	myPlaylist.setPlaylist(dsss);
+	//
+	var dq_01 = '<li class="list-group-item"><div class="pull-right m-l"><a href="http://wsqncdn.miaopai.com/stream/'+dq_0[0]+'.mp4" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play(0);" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3Dm4v%26src%3D'+encodeURIComponent('http://wsqncdn.miaopai.com/stream/'+dq_0[0]+'.mp4')+'%26label%3D'+encodeURIComponent(dq_0[1])+'%26image%3D'+encodeURIComponent('http://wsqncdn.miaopai.com/stream/'+dq_0[0]+'_m.jpg')+'&title='+encodeURIComponent(dq_0[1])+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://wsqncdn.miaopai.com/stream/'+dq_0[0]+'_m.jpg&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play(0);" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play(0);" style="color:#337AB7;">'+dq_0[1]+'</a></span><span class="text-muted"> - 龒蜗牛D</span></div></li>';
+	$('#jqlist').html(dq_01);
+}
+//考拉fm
+//http://www-stage.kaolafm.com/webapi/resource/search?words=%E8%88%92%E5%BF%83%E6%99%B4%E5%A5%BD&rtype=30000&pagesize=20&pagenum=1&_=1476086087557
+//http://www-stage.kaolafm.com/webapi/resource/search?words=%E8%88%92%E5%BF%83%E6%99%B4%E5%A5%BD&rtype=20000&pagesize=20&pagenum=1&_=1476086087555
+$("#kaolasoso").click(function() {
+});
+function kaolasoso(src){
+	var kljpage;
+	var kljsrc;
+	if(src.match(/@/)){
+		kljsrc = src.replace(/(.+)@(.+)/, "$1");
+		kljpage = src.replace(/(.+)@(.+)/, "$2");
+	}else{
+		kljsrc = src;
+		kljpage = 1;
+	}
+	$.ajax({
+		cache: true,
+		async:false,
+		url: 'http://www.kan8kan.com/webapi/resource/search',
+		data: "words="+kljsrc+"&rtype=20000&pagesize=20&pagenum="+kljpage+"",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success : function(data) {
+			kaolasoso_success_jsonpCallback(data.result,kljsrc,kljpage);
+		}
+	});
+	$(".lb_row").hide();
+	$(".zy_row").show();
+	$("#bt_zylb_zy").css({color:"red"});
+	$("#bt_zylb_lb").css({color:"#fff"});
+}
+function kaolasoso_success_jsonpCallback(data,lid,pn){
+	var kaola_01='';
+	$.each(data.dataList, function(k, v) {//kldt%3D'+encodeURIComponent(v.albumName)+'
+		kaola_01 += '<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23klgs%3D'+v.id+'&title='+encodeURIComponent(v.albumName)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+encodeURIComponent(v.pic)+'&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:kaolalist(\''+v.id+'@1\');"><i class="icon-control-play"></i></a></div></div><a href="javascript:kaolalist(\''+v.id+'@1\');"><img class="r r-2x img-full lazy" src="'+v.pic+'" width="84" height="84" width="84" height="84"></a></div><div class="padder-v"><a href="javascript:kaolalist(\''+v.id+'@1\');" class="text-ellipsis" style="color:#ffffff;">'+v.albumName+'</a><a href="javascript:kaolalist(\''+v.id+'@1\');" class="text-ellipsis text-xs text-muted">龒蜗牛D</a></div></div></div>';
+	});
+	kaola_01+=''
+	var pns;
+		if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+		var ppp = '<div class="row row-sm" style="text-align: center;margin-bottom:50px;"><ul class="pagination pagination" id="pagelist"><li><a href="javascript:kaolasoso(\''+lid+'@'+pns+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-left"></i></a></li><li class="active"><a href="javascript:kaolasoso(\''+lid+'@'+pn+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+pn+'</a></li>';
+		if(pn<=parseInt((data.totalPages))){//totalCounts/20
+			//for (var j=parseInt(pn);j<parseInt(pn+7);j++){
+			for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+				ppp+='<li><a href="javascript:kaolasoso(\''+lid+'@'+j+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+j+'</a></li>';
+			}
+			ppp+='<li><a href="javascript:kaolasoso(\''+lid+'@'+(parseInt(pn)+5)+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-right"></i></a></li></ul></div>';
+			//jQuery('#pagelist').html(ppp);
+		}
+		$('#fenleilist').html(kaola_01+ppp);
+}
+$("#kaolalist").click(function() {
+});
+function kaolalist(src){
+	var kljpage;
+	var kljsrc;
+	if(src.match(/@/)){
+		kljsrc = src.replace(/(.+)@(.+)/, "$1");
+		kljpage = src.replace(/(.+)@(.+)/, "$2");
+	}else{
+		kljsrc = src;
+		kljpage = 1;
+	}
+	$.ajax({
+		cache: true,
+		async:false,
+		url: 'http://www.kan8kan.com/webapi/audios/list',
+		data: "id="+kljsrc+"&pagesize=20&pagenum="+kljpage+"&sorttype=1",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success : function(data) {
+			kaolalist_success_jsonpCallback(data.result,kljsrc,kljpage);
+		}
+	});
+	$(".zy_row").hide();
+	$(".lb_row").show();
+	$("#bt_zylb_lb").css({color:"red"});
+	$("#bt_zylb_zy").css({color:"#fff"});
+}
+function kaolalist_success_jsonpCallback(data,lid,pn){
+	//var pJson = $.parseJSON(data);
+	var lid = data.dataList[0].albumId;
+	var kaola_00 = '[';
+	//pJson.result
+	$.each(data.dataList, function(k, v) {
+		kaola_00 += '{mp3:"'+v.mp3PlayUrl+'",title:"'+v.audioName+'",poster:"'+v.audioPic+'"},';
+	});
+	kaola_00 += ']';
+	eval("kaola_00_d0=" + kaola_00);
+	myPlaylist.setPlaylist(kaola_00_d0);
+	//
+	var kaola_01='<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">';
+	$.each(data.dataList, function(k, v) {
+		kaola_01 += '<li class="list-group-item dk"><div class="pull-right m-l"><a href="'+v.mp3PlayUrl+'" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play('+k+');" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3Dmp3%26src%3D'+encodeURIComponent(v.mp3PlayUrl)+'%26label%3D'+encodeURIComponent(v.audioName)+'%26image%3D'+encodeURIComponent(v.audioPic)+'&title='+encodeURIComponent(v.audioName)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+v.audioPic+'&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play('+k+');" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play('+k+');" style="color:#337AB7;">'+v.audioName+'</a></span><span class="text-muted"> - 龒蜗牛D</span></div></li>';
+	});
+	kaola_01+='</ul>'
+	//console.log(kaola_01);
+	//$('#jq_list').html(kaola_01);
+	var pns;
+		if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+		var ppp = '<div class="row row-sm" style="text-align: center;margin-bottom:50px;"><ul class="pagination pagination" id="pagelist"><li><a href="javascript:kaolalist(\''+lid+'@'+pns+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-left"></i></a></li><li class="active"><a href="javascript:kaolalist(\''+lid+'@'+pn+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+pn+'</a></li>';
+		if(pn<=parseInt((data.count)/20)){//sumPage
+			//for (var j=parseInt(pn);j<parseInt(pn+7);j++){
+			for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+				ppp+='<li><a href="javascript:kaolalist(\''+lid+'@'+j+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+j+'</a></li>';
+			}
+			ppp+='<li><a href="javascript:kaolalist(\''+lid+'@'+(parseInt(pn)+5)+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-right"></i></a></li></ul></div>';
+			//jQuery('#pagelist').html(ppp);
+		}
+		$('#jq_list').html(kaola_01+ppp);
+}
+//
+$("#lrtslist").click(function() {
+});
+function lrtslist(src){
+	var kljpage;
+	var kljsrc;
+	if(src.match(/@/)){
+		kljsrc = src.replace(/(.+)@(.+)/, "$1");
+		kljpage = src.replace(/(.+)@(.+)/, "$2");
+	}else{
+		kljsrc = src;
+		kljpage = 0;
+	}
+	$.ajax({
+		cache: true,
+		async:false,
+		url: 'http://fj365.gear.host/php/lrts.php?id='+kljsrc+'@'+kljpage+'',
+		data: "",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success : function(data) {
+			lrtslist_success_jsonpCallback(data,kljsrc,kljpage);
+		}
+	});
+	$(".zy_row").hide();
+	$(".lb_row").show();
+	$("#bt_zylb_lb").css({color:"red"});
+	$("#bt_zylb_zy").css({color:"#fff"});
+}
+function lrtslist_success_jsonpCallback(data,lid,pn){
+	var lrts_0 = '[';
+		$.each(data, function(k, v) {
+			lrts_0 += '{'+v.type+':"'+v.src+'",title:"'+v.label+'",poster:"'+v.image+'"},';//(v.label).replace(/[^\u0000-\u00FF]/g,function($0){return escape($0).replace(/(%u)(\w{4})/gi,"&#x$2;")}) 
+		});
+		lrts_0 += ']';
+		eval("lrts_d0=" + lrts_0);
+		myPlaylist.setPlaylist(lrts_d0);
+		//
+		var lrts_01='<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">';
+		$.each(data, function(k, v) {
+			lrts_01+='<li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="'+v.src+'" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play('+k+');" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3D'+v.type+'%26src%3D'+v.src+'%26label%3D'+encodeURIComponent(v.label)+'%26image%3D'+encodeURIComponent(v.image)+'&title='+encodeURIComponent(v.label)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+v.image+'&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play('+k+');" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play('+k+');" style="color:#337AB7;">'+v.label+'</a></span><span class="text-muted"> - 龒蜗牛D</span></div></li>';
+		});
+		lrts_01+='</ul>';
+	var pns;
+		if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+		var lrtsppp = '<div class="row row-sm" style="text-align: center;margin-bottom:50px;"><ul class="pagination pagination" id="pagelist"><li><a href="javascript:lrtslist(\''+lid+'@'+pns+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-left"></i></a></li><li class="active"><a href="javascript:lrtslist(\''+lid+'@'+pn+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+pn+'</a></li>';
+		//if(10<parseInt((lq_0.split("title")).length)){
+			for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+				lrtsppp+='<li><a href="javascript:lrtslist(\''+lid+'@'+j+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+j+'</a></li>';
+			}
+		//}
+		lrtsppp+='<li><a href="javascript:lrtslist(\''+lid+'@'+(parseInt(pn)+5)+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-right"></i></a></li></ul></div>';
+		$('#jq_list').html(lrts_01+lrtsppp);
+}
+/*
+$("#kaolaplay").click(function() {
+});
+function kaolaplay(src){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: 'http://www.kaolafm.com/webapi/audiodetail/get',
+		data: "id="+src,
+		type: "GET",
+		dataType: "text",
+		//contentType: "application/json; charset=utf-8",
+		timeout: 3e3,
+		success : function(data) {
+			kaola_success_jsonpCallback(data);
+		}
+	});
+}
+function kaola_success_jsonpCallback(data){
+	var pJson = $.parseJSON(data);
+		var src_0001 = 'mp3,'+pJson.result.mp3PlayUrl+','+pJson.result.audioName+','+pJson.result.audioPic;
+	//var src_0001 = 'mp3,'+data.mp3PlayUrl+','+data.audioName+','+data.audioPic;
+	var dq_0 = (decodeURIComponent(src_0001)).split(",");
+	var danquplay='[{'+dq_0[0]+':"'+dq_0[1]+'",title:"'+dq_0[2]+'",poster:"'+dq_0[3]+'"}]';
+	eval("dsss="+danquplay);
+	myPlaylist.setPlaylist(dsss);
+	//
+	var dq_01 = '<li class="list-group-item"><div class="pull-right m-l"><a href="'+dq_0[1]+'" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play(0);" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/index.htm%3Ftype%3D'+dq_0[0]+'%26src%3D'+encodeURIComponent(dq_0[1])+'%26label%3D'+encodeURIComponent(dq_0[2])+'%26image%3D'+encodeURIComponent(dq_0[3])+'&title='+encodeURIComponent(dq_0[2])+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+dq_0[3]+'&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play(0);" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play(0);" style="color:#337AB7;">'+dq_0[2]+'</a></span><span class="text-muted"> - 龒蜗牛D</span></div></li>';
+	$('#jqlist').html(dq_01);
+}
+*/
+$("#bdsoso").click(function() {
+});
+function bdsoso(src){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: 'http://fj365.gear.host/x.php/bd_'+src+'.so',
+		data: "",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success : function(data) {
+			bdlist(data[0].bdsosoid);
+		}
+	});
+	$(".zy_row").hide();
+	$(".lb_row").show();
+	$("#bt_zylb_lb").css({color:"red"});
+	$("#bt_zylb_zy").css({color:"#fff"});
+}
+$("#bdlist").click(function() {
+});
+function bdlist(src){
+	var kljpage;
+	var kljsrc;
+	if(src.match(/@/)){
+		kljsrc = src.replace(/(.+)@(.+)/, "$1");
+		kljpage = src.replace(/(.+)@(.+)/, "$2");
+	}else{
+		kljsrc = src;
+		kljpage = 1;
+	}
+	$.ajax({
+		cache: true,
+		async:false,
+		url: 'http://music.baidu.com/data/user/getsongs',
+		data: "start="+(parseInt(kljpage)*25)+"&ting_uid="+kljsrc+"&order=undefined&hotmax=0&pay=undefined&.r=0.64974275766871871476929257883",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success : function(data) {
+			bdlist_success_jsonpCallback(data.data.html,kljsrc,kljpage);
+		}
+	});
+	$(".zy_row").hide();
+	$(".lb_row").show();
+	$("#bt_zylb_lb").css({color:"red"});
+	$("#bt_zylb_zy").css({color:"#fff"});
+}
+function bdlist_success_jsonpCallback(data,lid,pn){
+	//var pJson = $.parseJSON(data);
+	var pphtml = /"sid":"([^"]+)","author":"([^"]+)","sname":"([^"]+)"/ig;
+	var arr=(escape2Html(data)).match(pphtml);
+var kaola_00 = '';
+for(var i=0; i<arr.length;i++){
+	kaola_00 += ''+arr[i].replace(/"sid":"([^"]+)","author":"([^"]+)","sname":"([^"]+)"/,'<li class="list-group-item bg-black lk"><div class="clear text-ellipsis"><span><a href="javascript:bdplay\($1\);">$2-$3</a></span></div></li>');
+}
+var pns;
+		if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+		var ppp = '<div class="row row-sm" style="text-align: center;margin-bottom:50px;"><ul class="pagination pagination" id="pagelist"><li><a href="javascript:bdlist(\''+lid+'@'+pns+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-left"></i></a></li><li class="active"><a href="javascript:bdlist(\''+lid+'@'+pn+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+pn+'</a></li>';
+		if(24<=parseInt(arr.length)){
+			for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+				ppp+='<li><a href="javascript:bdlist(\''+lid+'@'+j+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+j+'</a></li>';
+			}
+			ppp+='<li><a href="javascript:bdlist(\''+lid+'@'+(parseInt(pn)+5)+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-right"></i></a></li></ul></div>';
+		}
+$('#jq_list').html(UnUnicode(kaola_00)+ppp);
+}
+function UnUnicode(str){ 
+	return unescape(str.replace(/\\u/g, "%u")); 
+}
+function escape2Html(str) {
+	var arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"'};
+	return str.replace(/&(lt|gt|nbsp|amp|quot);/ig,function(all,t){return arrEntities[t];});
+}
+$("#bdplay").click(function() {
+});
+function bdplay(src){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: 'http://play.baidu.com/data/music/songlink',
+		data: "songIds="+src,//(parseInt(src)+73819e3)
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success : function(data) {
+			bd_success_jsonpCallback(data.data);
+		}
+	});
+}
+function bd_success_jsonpCallback(data){
+	//var pJson = $.parseJSON(data.data);
+		var src_0001 = 'mp3,http://www.pinghuhd.com/tpfx/users/ytlsl/wenjian/data/nfs//ytlsl/fj365/curl.php?url='+encodeURIComponent(data.songList[0].songLink)+','+data.songList[0].songName+',/logo.png';
+	//var src_0001 = 'mp3,'+data.mp3PlayUrl+','+data.audioName+','+data.audioPic;
+	var dq_0 = (decodeURIComponent(src_0001)).split(",");
+	var danquplay='[{'+dq_0[0]+':"'+dq_0[1]+'",title:"'+dq_0[2]+'",poster:"'+dq_0[3]+'"}]';
+	eval("dsss="+danquplay);
+	myPlaylist.setPlaylist(dsss);
+}
+//乐视
+$("#letvplay").click(function() {
+});
+function letvplay(src,types){
+	$.ajax({
+		cache: true,
+		async:false,
+		url: 'http://fj365.gear.host/php/le.php',
+		data: 'jid='+src+'&t=jsonp&types='+types+'',//-1@-1@-1@-1@-1
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success : function(data) {
+			letv_success_jsonpCallback(data,src,types);
+		}
+	});
+	$(".lb_row").hide();
+	$(".zy_row").show();
+	$("#bt_zylb_zy").css({color:"red"});
+	$("#bt_zylb_lb").css({color:"#fff"});
+}
+function letv_success_jsonpCallback(data,pn,typess){
+	var jsfenleilist='';
+		jQuery.each(data, function(k, v) {
+		jsfenleilist+='<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23type%3Dm4v%26src%3D'+encodeURIComponent(''+v.src+'&label='+v.label+'&image='+v.image)+'&title='+encodeURIComponent(v.title)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+v.image+'&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:srcplay(\''+encodeURIComponent(''+v.type+','+v.src+','+v.label+','+v.image)+'\');" id="mgtv_vid_id" title="'+v.title+'"><i class="icon-control-play"></i></a></div></div><a href="javascript:srcplay(\''+encodeURIComponent(''+v.type+','+v.src+','+v.label+','+v.image)+'\');"><img src="'+v.image+'" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:srcplay(\''+encodeURIComponent(''+v.type+','+v.src+','+v.label+','+v.image)+'\');" class="text-ellipsis" style="color:#ffffff;">'+v.label+'</a>龒蜗牛D</div></div></div>';
+		});
+		var pns;
+		if(parseInt(pn-7)<=0){pns=1;}else{pns=parseInt(pn-7);}
+		var ppp = '<div class="row row-sm" style="text-align: center;margin-bottom:50px;"><ul class="pagination pagination" id="pagelist"><li><a href="javascript:letvplay(\''+(pns)+'\',\''+typess+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-left"></i></a></li><li class="active"><a href="javascript:letvplay(\''+(pn)+'\',\''+typess+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+pn+'</a></li>';
+		if(pn<=100){
+			for (var j=parseInt(pn)+1;j<parseInt(pn)+7;j++){
+				ppp+='<li><a href="javascript:letvplay(\''+j+'\',\''+typess+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+j+'</a></li>';
+			}
+			ppp+='<li><a href="javascript:letvplay(\''+(parseInt(pn)+7)+'\',\''+typess+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-right"></i></a></li></ul></div>';
+		}
+		jQuery('#fenleilist').html(jsfenleilist+ppp);
+}
+//芒果tv
+//点选载入播放
+$("#mgtvlist").click(function() {
+});
+function mgtvlist(ty_iv,pn,st){
+	if(ty_iv === '3'){
+		ty_iv = '3&ic=1';
+	}else if(ty_iv === '3vip'){
+		ty_iv = '3&ic=1&iv=1&vip=1';
+	}else if(ty_iv === '1'){
+		ty_iv = '1&ic=1';
+	}else if(ty_iv === '2'){
+		ty_iv = '2&ic=1';
+	}else if(ty_iv === '7'){
+		ty_iv = '7&ic=1';
+	}else if(ty_iv === '4'){
+		ty_iv = '4&ic=0';
+	}else if(ty_iv === '5'){
+		ty_iv = '5&ic=1';
+	}else if(ty_iv === '143'){
+		ty_iv = '143&ic=1';
+	}else if(ty_iv === '8'){
+		ty_iv = '8&ic=1';
+	}
+	jQuery.ajax({
+		cache: true,
+		async:false,
+		url: "http://mgso.hunantv.com/list?src=pc&ty="+ty_iv+"&pc=100&pn="+pn+"&st="+st+"&_=1464051209327&callback=callback",//jQuery18207296793630812317_1464050160144
+		//http://mgso.hunantv.com/list?src=pc&ic=1&ty=3电影2电视剧&iv=1&pc=32视频数&pn=1页&st=2最新1热门&ae=4欧美2港台1内地&tid=47动作49喜剧
+		//view-source:http://v.api.mgtv.com/list/tvlist?video_id=3066303&page=0&size=1000&callback=jQuery18202890025204978883_1464074925647&_=1464074926043
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'callback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(strdata) {
+			if(ty_iv === '3'||ty_iv === '4'||ty_iv === '3vip'){
+				mgtvlist_success_jsonpCallback(strdata.data,ty_iv,pn,st);//.hitDocs
+			}else{
+				mgtvlists_success_jsonpCallback(strdata.data,ty_iv,pn,st);//.hitDocs
+			}
+		}
+	});
+}
+function mgtvlist_success_jsonpCallback(datas,ty_iv,pn,st){
+	var hitCounts = datas.hitCount;
+	var strdata = datas.hitDocs;
+	var jsfenleilist='';
+		jQuery.each(strdata, function(k, v) {
+		jsfenleilist+='<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23mgtv%3D'+mgtv_vid_pp(v.url)+'&title='+encodeURIComponent(v.title)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+v.imgsmall+'&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:mgtv_vid_id(\''+encodeURIComponent(mgtv_vid_pp(v.url)+','+v.title+','+v.imgsmall)+'\');" id="mgtv_vid_id" title="'+v.title+'"><i class="icon-control-play"></i></a></div></div><a href="javascript:mgtv_vid_id(\''+encodeURIComponent(mgtv_vid_pp(v.url)+','+v.title+','+v.imgsmall)+'\');" id="mgtv_vid_id"><img src="'+v.imgsmall+'" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:mgtv_vid_id(\''+encodeURIComponent(mgtv_vid_pp(v.url)+','+v.title+','+v.imgsmall)+'\');" id="mgtv_vid_id" class="text-ellipsis" style="color:#ffffff;">'+v.title+'</a><a href="javascript:mgtv_vid_id(\''+encodeURIComponent(mgtv_vid_pp(v.url)+','+v.title+','+v.imgsmall)+'\');" id="mgtv_vid_id" class="text-ellipsis text-xs text-muted">'+v.updatetime+v.subtitle+'</a></div></div></div>';
+		});
+		//jQuery('#fenleilist').html(jsfenleilist);
+		//var arr = jQuery.makeArray(document.getElementsByTagName("h3"));
+   //arr.reverse(); // 使用数组倒序函数
+		var pns;
+		if(parseInt(pn-7)<=0){pns=1;}else{pns=parseInt(pn-7);}
+		var ppp = '<div class="row row-sm" style="text-align: center;margin-bottom:50px;"><ul class="pagination pagination" id="pagelist"><li><a href="javascript:mgtvlist(\''+ty_iv+'\',\''+(pns)+'\',\''+st+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-left"></i></a></li><li class="active"><a href="javascript:mgtvlist(\''+ty_iv+'\',\''+pn+'\',\''+st+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+pn+'</a></li>';
+		if(pn<=parseInt(hitCounts/100)){
+			//for (var j=parseInt(pn);j<parseInt(pn+7);j++){
+			for (var j=parseInt(pn)+1;j<parseInt(pn)+7;j++){
+				ppp+='<li><a href="javascript:mgtvlist(\''+ty_iv+'\',\''+j+'\',\''+st+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+j+'</a></li>';
+			}
+			ppp+='<li><a href="javascript:mgtvlist(\''+ty_iv+'\',\''+(parseInt(pn)+7)+'\',\''+st+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-right"></i></a></li></ul></div>';
+			//jQuery('#pagelist').html(ppp);
+		}
+		jQuery('#fenleilist').html(jsfenleilist+ppp);
+}
+function mgtvlists_success_jsonpCallback(datas,ty_iv,pn,st){
+	var hitCounts = datas.hitCount;
+	var strdata = datas.hitDocs;
+	var jsfenleilist='';
+		jQuery.each(strdata, function(k, v) {
+		jsfenleilist+='<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1"><div class="item"><div class="pos-rlt"><div class="item-overlay opacity r r-2x bg-black"><div class="center text-center m-t-n"></div><div class="bottom padder m-b-sm"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%23mgtv%3D'+mgtv_vid_pp(v.url)+'&title='+encodeURIComponent(v.title)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+v.imgsmall+'&showcount=1" target="_blank" class="pull-right"><i class="icon-share"></i></a><a href="javascript:mgtv_vid_src(\''+mgtv_vid_pp(v.url)+'\');" id="mgtv_vid_src" title="'+v.title+'"><i class="icon-control-play"></i></a></div></div><a href="javascript:mgtv_vid_src(\''+mgtv_vid_pp(v.url)+'\');" id="mgtv_vid_src"><img src="'+v.imgsmall+'" width="84" height="84" class="r r-2x img-full"></a></div><div class="padder-v"><a href="javascript:mgtv_vid_src(\''+mgtv_vid_pp(v.url)+'\');" id="mgtv_vid_src" class="text-ellipsis" style="color:#ffffff;">'+v.title+'</a><a href="javascript:mgtv_vid_src(\''+mgtv_vid_pp(v.url)+'\');" id="mgtv_vid_src" class="text-ellipsis text-xs text-muted">'+v.updatetime+v.subtitle+'</a></div></div></div>';
+		});
+		//jQuery('#fenleilist').html(jsfenleilist);
+		//
+		var pns;
+		if(parseInt(pn-7)<=0){pns=1;}else{pns=parseInt(pn-7);}
+		var ppp = '<div class="row row-sm" style="text-align: center;margin-bottom:50px;"><ul class="pagination pagination" id="pagelist"><li><a href="javascript:mgtvlist(\''+ty_iv+'\',\''+(pns)+'\',\''+st+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-left"></i></a></li><li class="active"><a href="javascript:mgtvlist(\''+ty_iv+'\',\''+pn+'\',\''+st+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+pn+'</a></li>';
+		if(pn<=parseInt(hitCounts/100)){
+			//for (var j=parseInt(pn);j<parseInt(pn+7);j++){
+			for (var j=parseInt(pn)+1;j<parseInt(pn)+7;j++){
+				ppp+='<li><a href="javascript:mgtvlist(\''+ty_iv+'\',\''+j+'\',\''+st+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+j+'</a></li>';
+			}
+			ppp+='<li><a href="javascript:mgtvlist(\''+ty_iv+'\',\''+(parseInt(pn)+7)+'\',\''+st+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-right"></i></a></li></ul></div>';
+			//jQuery('#pagelist').html(ppp);
+		}
+		jQuery('#fenleilist').html(jsfenleilist+ppp);
+}
+//芒果匹配地址
+function mgtv_vid_pp(str){
+	if(str.indexOf("/s/")>-1){
+	return(str.replace(/http:\/\/www.mgtv.com\/\w+\/([0-9]+).html/,function($0,$1) {return($1);}));
+	}else{
+	return(str.replace(/http:\/\/www.mgtv.com\/\w+\/\d+\/([0-9]+).html/,function($0,$1) {return($1);}));
+	//http:\/\/www.mgtv.com\/\w+\/\d+\/\d+\/\w+\/([0-9]+).html
+	}
+}
+//芒果列表播放
+$("#mgtv_vid_src").click(function() {
+});
+function mgtv_vid_src(lid){
+	jQuery.ajax({
+		cache: true,
+		async:false,
+		//url: "http://v.api.mgtv.com/list/tvlist?video_id="+lid+"&page=0&size=1000&_=1464074926043&callback=callback",
+		url: "https://v5m.api.mgtv.com/remaster/vrs/getVideoListByPartId?_support=10000000&abroad=0&partId="+lid+"&pageNum=1&pageSize=1000&needLocate=0",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'callback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 3e3,
+		success: function(strdata) {
+			mgtv_vid_list_success_jsonpCallback(strdata.data.list);
+		}
+	});
+}
+function mgtv_vid_list_success_jsonpCallback(strdata){
+	var list_src_data_json='[';
+	$.each(strdata, function(k, v) {
+	//http://proxy520.duapp.com/mgid/?v=3606229 http://proxy.dy208.com/2/mgtv/mgid.php?v=3683487_mgtv http://f8dyyy.duapp.com/mgid/?v=
+	//http://fj365.gear.host/x.php/mgtv_'+v.video_id+'.mp4//http://proxy520.duapp.com/mgid/?v=
+	//http://proxy.ec899.com/ck/mgtv/mgid.php?v=3683487_mgtv
+		list_src_data_json += '{m4v:"http://fj365.gear.host/php/mgtv.php?vid='+v.partId+'",title:"'+v.title+'",poster:"'+v.image+'"},';
+		//v.video_id
+	});
+	list_src_data_json += ']';
+	eval("listjson=" + list_src_data_json);
+	myPlaylist.setPlaylist(listjson);
+	$("#jplayer_N").jPlayer("play");
+}
+//芒果单曲播放
+$("#mgtv_vid_id").click(function() {
+});
+function mgtv_vid_id(data){
+	var dy_src_data = (decodeURIComponent(data)).split(",");
+	var dy_src_data_json = '[{m4v:"http://fj365.gear.host/php/mgtv.php?vid='+dy_src_data[0]+'",title:"'+dy_src_data[1]+'",poster:"'+dy_src_data[2]+'"}]';
+	eval("srcjson=" + dy_src_data_json);
+	myPlaylist.setPlaylist(srcjson);
+	$("#jplayer_N").jPlayer("play");
+}
+function browserRedirect(ssize){
+	var sjplyer;
+	var sUserAgent = navigator.userAgent.toLowerCase();
+	var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+	var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+	var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+	var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+	var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+	var bIsAndroid = sUserAgent.match(/android/i) == "android";
+	var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+	var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+	if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM)){
+		sjplyer = "550";
+	}else{
+		sjplyer = "250";
+	}
+	ssize = sjplyer;
+	return(ssize);
+}
+//
+function WXFXTH(str) {
+	return (str.split(/\?/))[0];
+}
+function MY_E2H(str) {
+	var arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"'};
+	return str.replace(/&(lt|gt|nbsp|amp|quot);/ig,function(all,t){return arrEntities[t];});
+}
+/*
+//更换歌词 
+function ChangeLrc(lrc) {
+	htmlobj = $.ajax({cache:true,async:false,url:lrc,type:"GET",timeout:3e3,dataType:"text",contentType:"text/plain; charset=utf-8"});
+	$('#lrc_content').html(htmlobj.responseText);
+}
+*/
+</script>
+<!--
+<script src="js/lrc.js"></script>
+<script type="text/javascript">
+$(function() {
+    $("#tv_toggle").click(function() {
+        //$("#jplayer_N").slideToggle();
+		$('#jplayer_N').slideToggle('fast', function(){
+			if($(this).is(':hidden')){
+			$("#jplayer_N").jPlayer("pause");
+			}else{
+				$("#jplayer_N").jPlayer("play");
+			}
+		});
+    });
+});	-->
+</script>
+</body>
+</html>
