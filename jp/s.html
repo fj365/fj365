@@ -432,14 +432,15 @@ function QQYY(src){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: "http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+kw+"&type=qry_song&out=json&p="+pg+"&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",//&jsonpCallback=searchJsonCallback  encodeToGb2312(ssrc)
+		url: "https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp?g_tk=5381&uin=0&format=jsonp&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&w=dj&zhidaqu=1&catZhida=1&t=0&flag=1&ie=utf-8&sem=1&aggr=0&perpage=20&n=20&p=4&remoteplace=txt.mqq.all&_=1543117347433",
+		//http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+kw+"&type=qry_song&out=json&p="+pg+"&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",//&jsonpCallback=searchJsonCallback  encodeToGb2312(ssrc)
 		type: "GET",
 		dataType: "jsonp",
-		jsonpCallback: 'searchJsonCallback',
+		jsonpCallback: 'callback',
 		contentType: "application/jsonp; charset=utf-8",
 		timeout: 3e3,
 		success: function(json) {
-			QQ_List_success_jsonpCallback(json.list);
+			QQ_List_success_jsonpCallback(json.data.song.list);
 		}
 	});
 	$(".GS_KG").hide();
@@ -448,7 +449,7 @@ function QQYY(src){
 function QQ_List_success_jsonpCallback(data){
 	var JP_List = "[";
 	$.each(data, function(k, v) {
-		JP_List += '{m4a:"http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38",artist:"龒蜗牛D",png:"http://i.gtimg.cn/music/photo/mid_singer_150/'+(v.singermid).substring(12,13)+'/'+(v.singermid).substring(13)+'/'+v.singermid+'.jpg",title:"'+(v.songname).replace(/(.+)\((.+)/, "$1")+'"},';//(v.songname).replace(/(.+)\((.+)/, "$1")
+		JP_List += '{m4a:"http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38",artist:"龒蜗牛D",png:"http://i.gtimg.cn/music/photo/mid_singer_150/'+(v.singermid).substring(12,13)+'/'+(v.singermid).substring(13)+'/'+v.singer[0].mid+'.jpg",title:"'+(v.songname).replace(/(.+)\((.+)/, "$1")+'"},';//(v.songname).replace(/(.+)\((.+)/, "$1")
 	});
 	JP_List += "]";
 	eval("JP_Lists=" + JP_List);
