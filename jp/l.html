@@ -2069,7 +2069,7 @@ function kaolalist(src){
 		contentType: "application/jsonp; charset=utf-8",
 		timeout: 3e3,
 		success : function(data) {
-			kaolalist_success_jsonpCallback(data.result,kljsrc,kljpage);
+			kaolalist_success_jsonpCallback(data,kljsrc,kljpage);//data.result
 		}
 	});
 	$(".zy_row").hide();
@@ -2078,7 +2078,25 @@ function kaolalist(src){
 	$("#bt_zylb_zy").css({color:"#fff"});
 }
 function kaolalist_success_jsonpCallback(data,lid,pn){
+//
+var kkll_0 = '[';
+$.each(data, function(k, v) {
+	kkll_0 += '{'+v.type+':"'+v.src+'",title:"'+v.label+'",poster:"'+v.image+'"},';
+});
+kkll_0 += ']';
+eval("kkll_d0=" + kkll_0);
+myPlaylist.setPlaylist(kkll_d0);
+//
+var kaola_01='<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">';
+$.each(data.dataList, function(k, v) {
+kaola_01 += '<li class="list-group-item dk"><div class="pull-right m-l"><a href="'+v.mp3PlayUrl+'" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play('+k+');" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3Dmp3%26src%3D'+encodeURIComponent(v.src)+'%26label%3D'+encodeURIComponent(v.label)+'%26image%3D'+encodeURIComponent(v.image)+'&title='+encodeURIComponent(v.label)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+v.image+'&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play('+k+');" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play('+k+');" style="color:#337AB7;">'+v.label+'</a></span><span class="text-muted"> - 龒蜗牛D</span></div></li>';
+});
+kaola_01+='</ul>'
+//console.log(kaola_01);
+//$('#jq_list').html(kaola_01);
+//
 	//var pJson = $.parseJSON(data);
+	/*
 	var lid = data.dataList[0].albumId;
 	var kaola_00 = '[';
 	//pJson.result
@@ -2096,10 +2114,11 @@ function kaolalist_success_jsonpCallback(data,lid,pn){
 	kaola_01+='</ul>'
 	//console.log(kaola_01);
 	//$('#jq_list').html(kaola_01);
+	*/
 	var pns;
 		if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
 		var ppp = '<div class="row row-sm" style="text-align: center;margin-bottom:50px;"><ul class="pagination pagination" id="pagelist"><li><a href="javascript:kaolalist(\''+lid+'@'+pns+'\');" data-bjax data-target="#fenleilist" data-el="#content .row"><i class="fa fa-chevron-left"></i></a></li><li class="active"><a href="javascript:kaolalist(\''+lid+'@'+pn+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+pn+'</a></li>';
-		if(pn<=parseInt((data.count)/20)){//sumPage
+		if(pn<=parseInt(200/20)){//sumPage (data.count)
 			//for (var j=parseInt(pn);j<parseInt(pn+7);j++){
 			for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
 				ppp+='<li><a href="javascript:kaolalist(\''+lid+'@'+j+'\');" data-bjax data-target="#fenleilist" data-el="#content .row">'+j+'</a></li>';
