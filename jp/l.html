@@ -1669,7 +1669,7 @@ $(document).ready(function() {
 	}else if(location.hash.substring(1).match(/bdgs=/)){
 		bdlist(location.hash.substring(1).replace(/bdgs=(.+)/, "$1"));
 	}else if(location.hash.substring(1).match(/html=/)){
-		htmls(location.hash.substring(1).replace(/html=(.+)/, "$1"));
+		htmls('https://fj365.gear.host/php/my.php?page=1&zdzyso='+encodeURIComponent(location.hash.substring(1).replace(/html=(.+)/, "$1")));
 	}else if(location.hash.substring(1).match(/mgtv=/)){
 		mgtv_vid_src(WXFXTH(location.hash.substring(1).replace(/mgtv=(.+)/, "$1")));
 	}else if(location.hash.substring(1).match(/yytgs=/)){
