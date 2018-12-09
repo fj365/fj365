@@ -1883,7 +1883,7 @@ function ajaxjplb(ssrc){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: "http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+ssrc+"&page=1&pagesize=500&showtype=1",
+		url: "http://fj365.gear.host/php/my.php?format=jsonp&kgso="+ssrc+"&page=1&pagesize=500&showtype=1",//http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+ssrc+"&page=1&pagesize=500&showtype=1
 		type: "GET",
 		dataType: "jsonp",
 		jsonpCallback: 'callback',
