@@ -450,7 +450,7 @@ function QQYY(src){
 function listplay_success_jsonpCallback(data){
 	var lq_0 = '[';
 		$.each(data, function(k, v) {
-			lq_0 += '{'+v.type+':"'+v.src+'",title:"'+v.label+'",poster:"'+v.image+'"},';
+			lq_0 += '{'+v.type+':"'+v.src+'",title:"'+v.label+'"},';
 		});
 		lq_0 += ']';
 		eval("lq_d0=" + lq_0);
