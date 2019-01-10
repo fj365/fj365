@@ -432,7 +432,8 @@ function QQYY(src){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: "https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp?g_tk=5381&uin=0&format=jsonp&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&w=dj&zhidaqu=1&catZhida=1&t=0&flag=1&ie=utf-8&sem=1&aggr=0&perpage=20&n=20&p=4&remoteplace=txt.mqq.all&_=1543117347433",
+		url: "http://fj365.gear.host/php/yqqy.php?j=dj",
+		//https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp?g_tk=5381&uin=0&format=jsonp&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&w=dj&zhidaqu=1&catZhida=1&t=0&flag=1&ie=utf-8&sem=1&aggr=0&perpage=20&n=20&p=4&remoteplace=txt.mqq.all&_=1543117347433",
 		//http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+kw+"&type=qry_song&out=json&p="+pg+"&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",//&jsonpCallback=searchJsonCallback  encodeToGb2312(ssrc)
 		type: "GET",
 		dataType: "jsonp",
@@ -440,11 +441,32 @@ function QQYY(src){
 		contentType: "application/jsonp; charset=utf-8",
 		timeout: 3e3,
 		success: function(json) {
-			QQ_List_success_jsonpCallback(json.data.song.list);
+			listplay_success_jsonpCallback(data);
 		}
 	});
 	$(".GS_KG").hide();
 	$(".JP_KG").show();
+}
+function listplay_success_jsonpCallback(data){
+	var lq_0 = '[';
+		$.each(data, function(k, v) {
+			lq_0 += '{'+v.type+':"'+v.src+'",title:"'+v.label+'",poster:"'+v.image+'"},';
+		});
+		lq_0 += ']';
+		eval("lq_d0=" + lq_0);
+		WNJP.setPlaylist(lq_d0);
+	var JP_HList='';//<a href="#" class="list-group-item active">资源列表</a>
+	$.each(data, function(k, v) {
+		JP_HList+='<div class="list-group-item" style="background-color: rgba(255, 255, 255, 0.3);"><span class="badge"><a href="'+v.src+'" download="m4a"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');"><p class="txt">'+v.label+'</a></p></a></div>';
+	});
+	$('#JP_HL').html(JP_HList);
+		/*
+		var lq_01='<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">';
+		$.each(data, function(k, v) {
+			lq_01+='<li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="'+v.src+'" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play('+k+');" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3D'+v.type+'%26src%3D'+encodeURIComponent(v.src)+'%26label%3D'+encodeURIComponent(v.label)+'%26image%3D'+encodeURIComponent(v.image)+'&title='+encodeURIComponent(v.label)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+v.image+'&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play('+k+');" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play('+k+');" style="color:#337AB7;">'+v.label+'</a></span><span class="text-muted"> - 龒蜗牛D</span></div></li>';
+		});
+		lq_01+='</ul>';
+		$('#jq_list').html(lq_01);*/
 }
 function QQ_List_success_jsonpCallback(data){
 	var JP_List = "[";
