@@ -1932,14 +1932,16 @@ function qqlist(ssrc){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: "http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+ssrc+"&type=qry_song&out=json&p=1&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",//&jsonpCallback=searchJsonCallback  encodeToGb2312(ssrc)
+		url: "https://fj365.gear.host/php/yqqy.php?j="+ssrc+"",
+		//http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+ssrc+"&type=qry_song&out=json&p=1&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",//&jsonpCallback=searchJsonCallback  encodeToGb2312(ssrc)
 		type: "GET",
 		dataType: "jsonp",
-		jsonpCallback: 'searchJsonCallback',
+		jsonpCallback: 'success_jsonpCallback',//searchJsonCallback
 		contentType: "application/jsonp; charset=utf-8",
 		timeout: 3e3,
 		success: function(data) {
-			qqlist_success_jsonpCallback(data.list);
+			//qqlist_success_jsonpCallback(data.list);
+			listplay_success_jsonpCallback(data);
 		}
 	});
 	$(".zy_row").hide();
