@@ -1910,7 +1910,7 @@ function ajaxjplb(ssrc){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: "https://s.wo0.cn/php/my.php?format=jsonp&kgso="+ssrc+"&page=1&pagesize=500&showtype=1",//http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+ssrc+"&page=1&pagesize=500&showtype=1
+		url: "https://fj365.gear.host/php/my.php?format=jsonp&kgso="+ssrc+"&page=1&pagesize=500&showtype=1",//http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+ssrc+"&page=1&pagesize=500&showtype=1
 		type: "GET",
 		dataType: "jsonp",
 		jsonpCallback: 'callback',
@@ -1918,6 +1918,7 @@ function ajaxjplb(ssrc){
 		timeout: 3e3,
 		success: function(strdata) {
 			kglist_success_jsonpCallback(strdata.data.info);
+
 		}
 	});
 	$(".zy_row").hide();
@@ -1928,7 +1929,7 @@ function ajaxjplb(ssrc){
 function kglist_success_jsonpCallback(strdata){
 	var lkg_0 = '[';
 	$.each(strdata, function(k, v) {
-		lkg_0 += '{mp3:"https://s.wo0.cn/php/m.php\?kgid='+v.hash+'",title:"'+(v.filename).replace('\'', '')+'",poster:"https://fj365.gear.host/x.php/kg_'+base64encode(utf16to8(v.singername))+'.jpg"},';
+		lkg_0 += '{mp3:"https://fj365.gear.host/php/m.php\?kgid='+v.hash+'",title:"'+(v.filename).replace('\'', '')+'",poster:"https://fj365.gear.host/x.php/kg_'+base64encode(utf16to8(v.singername))+'.jpg"},';
 	});
 	lkg_0 += ']';
 	eval("lkg_d0=" + lkg_0);
@@ -1948,7 +1949,7 @@ function qqlist(ssrc){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: "https://s.wo0.cn/php/yqqy.php?j="+ssrc+"",
+		url: "https://fj365.gear.host/php/yqqy.php?j="+ssrc+"",
 		//http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+ssrc+"&type=qry_song&out=json&p=1&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",//&jsonpCallback=searchJsonCallback  encodeToGb2312(ssrc)
 		type: "GET",
 		dataType: "jsonp",
@@ -2090,7 +2091,7 @@ function kaolalist(src){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: 'https://s.wo0.cn/php/klfm.php',//http://open.kaolafm.com/webapi/audios/list http://open.kaolafm.com http://www.kan8kan.com/
+		url: 'https://fj365.gear.host/php/klfm.php',//http://open.kaolafm.com/webapi/audios/list http://open.kaolafm.com http://www.kan8kan.com/
 		data: "id="+kljsrc+"&pagesize=20&pagenum="+kljpage+"&sorttype=1",
 		type: "GET",
 		dataType: "jsonp",
@@ -2513,7 +2514,7 @@ function mgtv_vid_list_success_jsonpCallback(strdata){
 	//http://proxy520.duapp.com/mgid/?v=3606229 http://proxy.dy208.com/2/mgtv/mgid.php?v=3683487_mgtv http://f8dyyy.duapp.com/mgid/?v=
 	//https://fj365.gear.host/x.php/mgtv_'+v.video_id+'.mp4//http://proxy520.duapp.com/mgid/?v=
 	//http://proxy.ec899.com/ck/mgtv/mgid.php?v=3683487_mgtv
-		list_src_data_json += '{m4v:"http://s.wo0.cn/php/mgtv.php?vid='+v.partId+'",title:"'+v.title+'",poster:"'+v.image+'"},';
+		list_src_data_json += '{m4v:"https://fj365.gear.host/php/mgtv.php?vid='+v.partId+'",title:"'+v.title+'",poster:"'+v.image+'"},';
 		//v.video_id
 	});
 	list_src_data_json += ']';
@@ -2526,7 +2527,7 @@ $("#mgtv_vid_id").click(function() {
 });
 function mgtv_vid_id(data){
 	var dy_src_data = (decodeURIComponent(data)).split(",");
-	var dy_src_data_json = '[{m4v:"http://s.wo0.cn/php/mgtv.php?vid='+dy_src_data[0]+'",title:"'+dy_src_data[1]+'",poster:"'+dy_src_data[2]+'"}]';
+	var dy_src_data_json = '[{m4v:"https://fj365.gear.host/php/mgtv.php?vid='+dy_src_data[0]+'",title:"'+dy_src_data[1]+'",poster:"'+dy_src_data[2]+'"}]';
 	eval("srcjson=" + dy_src_data_json);
 	myPlaylist.setPlaylist(srcjson);
 	$("#jplayer_N").jPlayer("play");
