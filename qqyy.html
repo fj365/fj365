@@ -1,0 +1,1378 @@
+
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="full-screen" content="yes">
+	<meta name="browsermode" content="application">
+	<!--//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js<meta name="x5-orientation" content="portrait">landscape强制横屏portrait强制竖屏
+	<script src="//apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+	-->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+	<meta name="title" content="龒蜗牛D">
+	<link href="//cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//cdn.jsdelivr.net/npm/jplayer@2.9.2/dist/skin/pink.flag/css/jplayer.pink.flag.min.css" rel="stylesheet">
+	<script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+	<script src="//cdn.jsdelivr.net/combine/npm/jplayer@2.9.2,npm/jplayer@2.9.2/dist/add-on/jplayer.playlist.min.js,npm/jplayer@2.9.2/dist/add-on/jquery.jplayer.inspector.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/jquery-lazyload@1.9.7/jquery.lazyload.min.js"></script>	
+<style type="text/css" media="screen">
+a {
+    color: #000000;
+    text-decoration: none;
+}
+.bs-glyphicons {
+  margin: 0 10px 0 10px;
+  overflow: hidden;
+}
+.bs-glyphicons-list {
+  padding-left: 0;
+  list-style: none;
+}
+.bs-glyphicons li {
+  float: left;
+  width: 20%;
+  height: 80px;
+  padding: 1px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  background-color: rgba(249, 249, 249, 0.3);
+  /*border: 1px solid #fff;*/
+  overflow:hidden;
+}
+.bs-glyphicons .glyphicon {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.bs-glyphicons .glyphicon-class {
+  display: block;
+  text-align: center;
+  word-wrap: break-word; /* Help out IE10+ with class namesrgb(255, 176, 0, 0.8) #563d7c; */
+}
+.bs-glyphicons li:hover {
+  color: #fff;
+  background-color: #FFB000;
+}
+
+@media (min-width: 768px) {
+  .bs-glyphicons {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .bs-glyphicons li {
+    width: 8%;
+    font-size: 14px;
+  }
+}
+.txt{
+    width:230px;
+    /*border:1px solid #ddd;*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+</style>
+</head>
+<body style="background-color:#FFF068;">
+<!--导航-->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+	<div class="navbar-header" style="margin-top: -9px;margin-bottom: -18px;">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="http://s.wo0.cn/qqyy.html">龒蜗牛D</a>
+		<!--搜索-->
+        <div class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-sm" id="MYsearch">
+			<div class="input-group">
+				<!--搜索分类-->
+				<span class="input-group-btn">
+					<select id="selectTest" name="selectTest" class="form-control m-b" style="width:55px;height:30px;padding: 0;">
+							<option value="QQ_SO">腾讯</option>
+							<option value="KG_SO">酷狗</option>
+							<option value="YYT_SO">音悦台</option>
+							<option value="WY_SO">网易</option>
+							<option value="SGTP_SO">搜狗图片</option>
+							<option value="SG_SO">深港</option>
+							<option value="AP_SO">爱拍</option>
+							<option value="ZD_SO">最大</option>
+							<option value="XMLY_SO">喜马拉雅</option>
+							<option value="YZB_SO">一直播</option>
+							<option value="LZTV_SO">龙珠直播</option>
+							<option value="HUAJ_SO">花椒直播</option>
+							<option value="TBK_SO">淘宝优惠卷</option>
+							<option value="ERWMA">二维码生成</option>
+							<option value="VIPJX">VIP视频解析</option>
+							<!--
+							<option value="XM_SO">虾米</option>
+							<option value="KL_SO">考拉</option>
+							-->
+					</select>
+				</span>
+				<!--/搜索分类-->
+				<input type="text" id="sotxt" class="form-control input-sm no-border rounded" placeholder=" 搜索内容" style="padding: 0;">
+				<span class="input-group-btn">
+					<button type="submit" id="button_sotxt" class="btn btn-sm bg-white btn-icon rounded"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+				</span>
+			</div>
+        </div>
+      <!--/搜索-->
+		<!--搜索--
+		<form class="navbar-header navbar-form navbar-left" role="search"  style="border-color: rgba(231, 231, 231, 0);">
+			<div class="form-group">
+				<div class="col-xs-6">
+				<input type="text" name="so" class="form-control"  placeholder="搜索内容"/>
+				</div>
+			</div>
+		</form>
+		--/搜索-->
+	</div>
+	<!--左右菜单列表-->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-th" aria-hidden="true"></span> 蜗牛推荐 
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="javascript:QQYY('雷婷');">雷婷</a></li>
+					<li><a href="javascript:QQYY('孙露');">孙露</a></li>
+					<li><a href="javascript:QQYY('谭艳');">谭艳</a></li>
+					<li><a href="javascript:QQYY('张玮伽');">张玮伽</a></li>
+					<li><a href="javascript:QQYY('刘芳');">刘芳</a></li>
+					<li><a href="javascript:QQYY('施艾敏');">施艾敏</a></li>
+					<li><a href="javascript:QQYY('樊桐舟');">樊桐舟</a></li>
+					<li><a href="javascript:QQYY('馨予');">馨予</a></li>
+					<li><a href="javascript:QQYY('风小筝');">风小筝</a></li>
+					<li><a href="javascript:QQYY('紫菱');">紫菱</a></li>
+					<li><a href="javascript:QQYY('路绮欧');">路绮欧</a></li>
+					<li><a href="javascript:QQYY('翁立友');">翁立友</a></li>
+					<li><a href="javascript:ZDZY('海贼王');">海贼王</a></li>
+					<li><a href="javascript:ZDZY('狄仁杰');">狄仁杰</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-th" aria-hidden="true"></span> 网络资源 
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="javascript:WYYY('抖音');">抖音</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@zqtv@.json');">战旗</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@qqdjs@.json');">企鹅电竞</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@bili@.json');">哔哩</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@huaj@.json');">花椒</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@douyu@.json');">斗鱼</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@panda@.json');">熊猫TV</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@yysq@.json');">YY神曲</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@letv@.json');">乐视网</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/dy.json');">热门影院</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/qcc.json');">QCC</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@klfm@.json');">考拉电台</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@sgdj@.json');">深港DJ</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@aipai@.json');">爱拍</a></li>
+					<li><a href="javascript:QQYY('http://s.wo0.cn/php/aipai.php?msj=1&p=1');">美食杰</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@mp@.json');">美拍</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@qqy@.json');">QQ音乐</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@mgtv@.json');">芒果TV</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@tv@.json');">网络电视</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@yyt@.json');">音乐台</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@xmlyfm@.json');">喜马拉雅</a></li>
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@pngs@.json');">精美壁纸</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><!----></li>
+		</ul>
+	</div>
+	<!--/左右菜单列表-->
+</nav>
+<!--/导航-->
+<div class="col-md-12 column" style="padding-right: 1px;padding-left: 1px;" id="top">
+	<div class="clearfix" style="margin-bottom: 85px;"></div>
+	<div class="bg-black" style="width:100%;left:0px;height:34px;top:50px;position:fixed;z-index:5;">
+		<!--面包屑导航 class="row clearfix"-->
+		<div style="margin:0;">
+			<div class="col-md-12 column" style="padding:0;">
+				<ul class="breadcrumb" style="background-color:rgba(168, 168, 168, 0.8);">
+					<li><a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@x@.json')" id="BT_TJ">推荐</a></li>
+					<li><a href="javascript:;" id="BT_ZY">资源</a></li>
+					<li><a href="javascript:;" id="BT_JP">列表</a></li>
+					<!--<li><a href="http://s.wo0.cn/woniu.apk" download="woniu.apk"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>安卓</a><li>
+					<li><iframe allowtransparency="true" frameborder="0" width="250" height="20" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=1&t=1&v=0&d=1&bd=0&k=000000&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=59126&w=250&h=20&align=right"></iframe></li>
+					<li>
+						<a href="#">歌词</a>
+					</li>
+					-->
+				</ul>
+			</div>
+		</div>
+		<!--/面包屑导航-->
+	</div>
+	<div id="BBZY" style="margin-bottom:65px;">
+		<!--资源-->
+		<div class="GS_KG"><div id="GS_HL"></div></div>
+		<!--/资源-->
+		<!--列表-->
+		<div class="JP_KG"><div class="list-group" id="JP_HL"></div></div>
+		<!--/列表-->
+	</div>
+</div>
+<!--框架播放器-->
+<div id="MModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">框架播放页</h5>
+				<button type="button" value="javascript:KJ_GB();" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: -20px;"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body" style="padding: 1px;">
+				<div class="col-md-12 column" id="KJ_IF">
+				<!--框架-->
+				<!--/框架-->
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" value="javascript:KJ_GB();" data-dismiss="modal" aria-hidden="true">关闭窗口</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--/框架播放器-->
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">	
+<div class="row clearfix">
+	<div class="col-md-12 column">
+		<!--播放器-->
+		<div id="jp_container_1" class="jp-video jp-video-360p" role="application" aria-label="media player" style="width: 100%;">
+			<div class="jp-type-playlist">
+				<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+				<div class="jp-gui" id="jp-gui_hover">
+					<div class="jp-interface">
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-details">
+							<div class="jp-title" aria-label="title">&nbsp;</div>
+						</div>
+						<div class="jp-controls-holder">
+							<div class="jp-volume-controls">
+								<button class="jp-mute" role="button" tabindex="0">mute</button>
+								<!--<button class="jp-volume-max" role="button" tabindex="0">max volume</button>-->
+								<div class="jp-volume-bar">
+									<div class="jp-volume-bar-value"></div>
+								</div>
+							</div>
+							<a href="javascript:QQYY('http://w.wo0.cn/jp/jsonp/@x@.json')" id="BT_TJ"><span class="glyphicon glyphicon-home" aria-hidden="true" style="right: 320px;top: 6px;"></span></a>
+							<a href="javascript:;" id="BT_ZYS"><span class="glyphicon glyphicon-th" aria-hidden="true" style="right: 310px;top: 6px;"></span></a>
+							<a href="javascript:;" id="BT_JPS"><span class="glyphicon glyphicon-th-list" aria-hidden="true" style="right: 300px;top: 6px;"></span></a>
+							<div class="jp-controls" style="width:151px;">
+								<button class="jp-previous" role="button" tabindex="0">previous</button>
+								<button class="jp-play" role="button" tabindex="0">play</button>
+								<button class="jp-next" role="button" tabindex="0">next</button>
+							</div>
+							<div class="jp-toggles" style="display: none;">
+								<a href="javascript:;" class="jp-full-screen" tabindex="1" title="全屏">全屏</a>
+								<a href="javascript:;" class="jp-restore-screen" tabindex="1" title="退出全屏">退出全屏</a>
+							</div>
+							<a href="#" id="FX_ZY" target="_Blank" title="分享"><span class="glyphicon glyphicon-share" aria-hidden="true" style="top: 4px;right: 70px;"></span></a>
+							<div class="jp-current-time" role="timer" aria-label="time" style="padding-left:0px;    font-size:1em;margin: 3px 0 0 5px;">&nbsp;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/播放器 -->
+	</div>
+</div>
+</nav>
+<script type="text/javascript">
+//全局变量
+var WNJP;var time;var url_s;var url_p;var jp_lb;var lb_lb;var lb_fy;var pns;var pn;var mys;var myx;var myy;var myld;var myid;var mymz;var mysrc;var mypng;var myxo;
+function MY_E2H(str) {
+	var arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"'};
+	return str.replace(/&(lt|gt|nbsp|amp|quot);/ig,function(all,t){return arrEntities[t];});
+}
+//
+function G_Q_S(name){
+	var so_so,reg,r,r2;
+	so_so = MY_E2H(window.location.search.substring(1)).replace(/\+/g,"%20");
+	reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+	r = decodeURIComponent(so_so).match(reg);
+	r2 = (r[2]).split(/\?/)[0];
+	if (r!=null) return(r2); return null;
+}
+//
+$(document).ready(function(){
+	var item,so_val,so_so;
+	$('#MModal').modal('hide');
+	//页面地址参数
+	so_so = (window.location.search.substring(1)).replace(/\+/g,"%20");
+	//so_sos = (window.location.hash.substring(1)).replace(/\+/g,"%20");
+	if(so_so.indexOf('so=')>-1){
+		QQYY(G_Q_S('so'));
+	}else if(so_so.match(/klfm=/)){
+		KLFM(G_Q_S('klfm'));
+	}else if(so_so.match(/sgdj=/)){
+		SGDJ(G_Q_S('sgdj'));
+	}else if(so_so.match(/yyt=/)){
+		YYT(G_Q_S('yyt'));
+	}else if(so_so.match(/zdzy=/)){
+		ZDZY(G_Q_S('zdzy'));
+	}else if(so_so.match(/wyyy=/)){
+		WYYY(G_Q_S('wyyy'));
+	}else if(so_so.match(/kgyy=/)){
+		KUGOU(G_Q_S('kgyy'));
+	}else if(so_so.match(/xmlyfm=/)){
+		XMLYSO(G_Q_S('xmlyfm'));
+	}else if(so_so.match(/aipai=/)){
+		AIPAISO(G_Q_S('aipai'));
+	}else if(so_so.match(/QQYY=/)){
+		QQYY(G_Q_S('QQYY'));
+	}else if(so_so.match(/XMLYFM=/)){
+		XMLYFM(G_Q_S('XMLYFM'));
+	}else if(so_so.match(/KLFM=/)){
+		KLFM(G_Q_S('KLFM'));
+	}else if(so_so.match(/YYT=/)){
+		YYT(G_Q_S('YYT'));
+	}else if(so_so.match(/SGDJ=/)){
+		SGDJ(G_Q_S('SGDJ'));
+	}else if(so_so.match(/ZDZY=/)){
+		ZDZY(G_Q_S('ZDZY'));
+	}else if(so_so.match(/MEIPAI=/)){
+		MEIPAI(G_Q_S('MEIPAI'));
+	}else if(so_so.match(/YYSQ=/)){
+		YYSQ(G_Q_S('YYSQ'));
+	}else if(so_so.match(/AIPAISO=/)){
+		AIPAISO(G_Q_S('AIPAISO'));
+	}else if(so_so.match(/QQDJS=/)){
+		QQDJS(G_Q_S('QQDJS'));
+	}else if(so_so.match(/HUAJ=/)){
+		HUAJ(G_Q_S('HUAJ'));
+	}else if(so_so.match(/DOUYU=/)){
+		DOUYU(G_Q_S('DOUYU'));
+	}else if(so_so.match(/YZBSO=/)){
+		YZBSO(G_Q_S('YZBSO'));
+	}else if(so_so.match(/WYYY=/)){
+		WYYY(G_Q_S('WYYY'));
+	}else if(so_so.match(/KUGOU=/)){
+		KUGOU(G_Q_S('KUGOU'));
+	}else if(so_so.match(/LZTVSO=/)){
+		LZTVSO(G_Q_S('LZTVSO'));
+	}else if(so_so.match(/TAOBAOSO=/)){
+		TAOBAOSO(G_Q_S('TAOBAOSO'));
+	}else{
+		QQYY('http://w.wo0.cn/jp/jsonp/@x@.json');
+	}
+	//搜索分类
+	$("#selectTest").change(function(){
+		item = $("#selectTest").val();
+	});
+	$("#button_sotxt").click(function(){
+		so_val = $("#sotxt").val();
+		switch (item){
+			case 'QQ_SO':
+				QQYY(so_val);
+			break;
+			case 'WY_SO':
+				WYYY(so_val);
+			break;
+			case 'YYT_SO':
+				YYT(so_val);
+			break;
+			case 'SG_SO':
+				SGDJ(so_val);
+			break;
+			case 'ZD_SO':
+				ZDZY(so_val);
+			break;
+			case 'KG_SO':
+				KUGOU(so_val);
+			break;
+			case 'XMLY_SO':
+				XMLYSO(so_val);
+			break;
+			case 'AP_SO':
+				AIPAISO(so_val);
+			break;
+			case 'TBK_SO':
+				TAOBAOSO(so_val);
+			break;
+			case 'YZB_SO':
+				YZBSO(so_val);
+			break;
+			case 'LZTV_SO':
+				LZTVSO(so_val);
+			break;
+			case 'HUAJ_SO':
+				HUAJSO(so_val);
+			break;
+			case 'SGTP_SO':
+				SGPNGS(so_val);
+			break;
+			case 'ERWMA':
+				KJ_ERWMAPNG(so_val);
+			break;
+			case 'VIPJX':
+				KJ_Play(so_val);
+			break;
+			default:
+				QQYY(so_val);
+		}
+	});
+});
+//<![CDATA[
+$(document).ready(function(){
+	WNJP = new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_1",
+		cssSelectorAncestor: "#jp_container_1"
+	},[],{
+		ready:function(){
+			//双击全屏切换
+			$("#jquery_jplayer_1").dblclick(function(){
+				if($(".jp-video-full").length > 0){
+					$(".jp-restore-screen").click();
+				}else{
+					$(".jp-full-screen").click();
+				}
+			});
+		},
+		playlistOptions: {
+			autoPlay: true,
+			playHead: '0',
+			playHeadTime: '0',
+			loopOnPrevious: false,
+			shuffleOnLoop: false,
+			enableRemoveControls: false,
+			displayTime: '0',
+			addTime: '0',
+			removeTime: '0',
+			shuffleTime: '0'
+		},
+		solution: "html",
+		supplied: "mp3,m4v,m4a",//,wav,oga,m3ua,m3uv
+		wmode: "window",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		size: {width: "100%", height:"1px", cssClass: "jp-video-360p"},
+		keyEnabled: true,
+		audioFullScreen: false,
+		playHead: '0',
+		playHeadTime: '0',
+		preload: "auto",//metadata auto none
+		timeupdate: function(event){
+			if(event.jPlayer.status.currentTime > 0){
+				time = event.jPlayer.status.currentTime;
+			}
+		},
+		play: function(event){
+			document.title = event.jPlayer.status.media.title;
+			//$("body").css("background-image","url(" + event.jPlayer.status.media.poster + ")");
+			if (event.jPlayer.status.formatType === "m4v"){
+				$("#jquery_jplayer_1").css("height",JP_HG()+"px");//"300px"
+				$("#jp_video_0").css({"height":"100%","margin-top":"0px"});
+				$("#BBZY").css({"margin-bottom":""+(parseInt(JP_HG())+65)+"px"});
+			}else if (event.jPlayer.status.formatType === "mp3"||event.jPlayer.status.formatType === "m4a"){
+				$("#jquery_jplayer_1").css("height","1px");
+				$("#BBZY").css({"margin-bottom":"65px"});
+			}
+			if(typeof(event.jPlayer.status.media.poster) === 'undefined'){
+				mypng = 'http://s.wo0.cn/logo.png';
+			}else{
+				mypng = (event.jPlayer.status.media.poster);
+			}
+		},
+		pause: function(event) {
+			$("#jquery_jplayer_1").css("height","1px");
+			$("#jp_video_0").css("margin-top","65px");
+			$("#BBZY").css({"margin-bottom":"65px"});
+		},
+		stop: function(event) {
+			$("#jquery_jplayer_1").css("height","1px");
+			$("#jp_video_0").css("margin-top","65px");
+			$("#BBZY").css({"margin-bottom":"65px"});
+		},
+		error: function(event) {
+			$("#jquery_jplayer_1").css("height","1px");
+			$("#jp_video_0").css("margin-top","65px");
+			$("#BBZY").css({"margin-bottom":"65px"});
+		},
+		ended:function(event){
+			$("#jquery_jplayer_1").css("height","1px");
+			$("#jp_video_0").css("margin-top","65px");
+			$("#BBZY").css({"margin-bottom":"65px"});
+		}
+	});
+	$(document.documentElement).keydown(function(event) {
+		//暂停空格键
+		if(event.which === 32){
+			if($(".jp-jplayer").data("jPlayer").status.paused){
+			   $(".jp-jplayer").jPlayer("play");
+			}else{
+			   $(".jp-jplayer").jPlayer("pause");
+			}
+			event.preventDefault();
+		}
+		//取消全屏ESC键
+		if(event.which === 27){
+			$(".jp-video-full .jp-restore-screen").click();
+			event.preventDefault();
+		}
+		//搜索回车、确定键
+		if(event.which === 13){
+			$("#button_sotxt").click();
+		}
+	});
+});
+//]]>
+function FX_ZYS(lsrc){
+	myx = lsrc.match(/^([A-Z]+)@@@(.+)@@@(.+)@@@(.+)$/, "$1$2$3$4");
+	myid = myx[1]; mysrc = myx[2]; mymz = myx[3];
+	if((myx[4]).indexOf("GS@")>-1){
+		mypng = (myx[4]).replace('GS@', 'http://i.gtimg.cn/music/photo/mid_singer_150/');
+	}else if((myx[4]).indexOf("//image")>-1){
+		mypng = 'http:'+myx[4];
+	}else{
+		mypng = (myx[4]);
+	}
+	/*
+	switch(myx[1]){
+		case 'QQYY':
+			myxo = 'so';
+		break;
+		default:
+			myxo = myx;
+	}
+	*/
+	$("#FX_ZY").attr('href','http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/qqyy.html%3F'+myid+'%3D'+encodeURIComponent(mysrc)+'&title='+encodeURIComponent(mymz)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+encodeURIComponent(mypng)+'&showcount=1');
+}
+function QQYY(lsrc){
+	if(lsrc.indexOf("http")>-1){
+		url_s = decodeURIComponent(lsrc);
+	}else{
+		url_s = "http://s.wo0.cn/php/qqyy.php?type=jsonp&so=" + decodeURIComponent(lsrc);
+	}
+	$.ajax({
+		cache: true,
+		async: true,
+		url: url_s,
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: "success_jsonpCallback",
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 8e3,
+		success: function(data){
+			if(lsrc.match(/@([0-9a-zA-Z_]+)@/)){
+				QQYYS_success_jsonpCallback(data,lsrc);
+				$(".JP_KG").hide();$(".GS_KG").show();
+				$('html,body').animate({scrollTop: '0px'}, 200);
+				$("img").lazyload({effect:"fadeIn",threshold: 200,event: 'click',container: $("#GS_HL"),failurelimit : 10});
+			}else{
+				QQYY_success_jsonpCallback(data,lsrc);
+				$(".GS_KG").hide();$(".JP_KG").show();
+				$('html,body').animate({scrollTop: '0px'}, 200);
+			}
+		},
+		error: function (jqXHR, textStatus, errorThrown){
+        }
+	});
+}
+function QQYY_success_jsonpCallback(data,fy){
+	var myhz;
+	//播放列表
+		jp_lb  = '[';
+	$.each(data, function(k, v) {
+		jp_lb += '{'+v.type+':"'+v.src+'",title:"'+v.label+'"},';
+	});
+		jp_lb += ']';
+	eval("qqyy_lb=" + jp_lb);
+	WNJP.setPlaylist(qqyy_lb);
+	WNJP.play(0);
+	//分页
+	if(fy.indexOf("http")>-1){
+		//列表 
+			lb_lb  = '';
+		$.each(data, function(k, v){
+			if((v.type).indexOf("m4v")>-1){
+				myhz = '.mp4';
+			}else{
+				myhz = '.mp3';
+			}
+			if(k%2 == 0){myxo = 'style="background-color: rgba(255, 255, 255, 0.3);"';}else{myxo = 'style="background-color: rgba(185, 185, 185, 0.5);"';}
+			lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="'+v.src+'" download="'+v.label+myhz+'"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.label+'</a></p></a></div>';
+		});
+			lb_lb += '';
+		if(fy.indexOf("&p=")>-1){
+			myx = fy.match(/(.+)&p=([0-9]+)/, "$1$2");
+			mys = myx[1];
+			pn = myx[2];
+			if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+				lb_fy  = '</div><div class="text-center"><div class="pagination" style="margin:3px 0 12px 0;"><ul class="pagination" style="margin:0;"><li><a href="javascript:QQYY(\''+mys+'&p='+pns+'\');"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>';
+			for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+				lb_fy += '<li><a href="javascript:QQYY(\''+mys+'&p='+j+'\');">'+j+'</a></li>';
+			}
+				lb_fy += '<li><a href="javascript:QQYY(\''+mys+'&p='+(parseInt(pn)+5)+'\');"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li><li><a class="back-to-top" href="#top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li></ul></div>';
+		}
+	}else{
+		//列表 
+			lb_lb  = '';
+		$.each(data, function(k, v){
+			if(k%2 == 0){myxo = 'style="background-color: rgba(255, 255, 255, 0.3);"';}else{myxo = 'style="background-color: rgba(185, 185, 185, 0.5);"';}
+			lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="'+v.src+'&type=flac" download="'+v.label+'.flac">FLAC</a></span><span class="badge"><a href="'+v.src+'&type=ape" download="'+v.label+'.ape">APE</a></span><span class="badge"><a href="'+v.src+'&type=MP3" download="'+v.label+'.mp3">MP3</a></span><span class="badge"><a href="'+v.src+'&type=aac" download="'+v.label+'.m4a">AAC</a></span><span class="badge"><a href="'+v.src+'&type=ogg" download="'+v.label+'.ogg">OGG</a></span><span class="badge"><a href="'+v.src+'&type=mp3" download="'+v.label+'.mp3">mP3</a></span><span class="badge"><a href="'+v.src+'&type=M4A" download="'+v.label+'.m4a">M4A</a></span><br><span class="badge"><a href="'+v.src+'" download="'+v.label+'.m4a"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.label+'</a></p></a></div>';
+		});
+			lb_lb += '';
+		if(fy.indexOf("____")>-1){
+			myx = fy.match(/^(.+)____([0-9]+)$/, "$1$2");
+			mys = myx[1];
+			pn = myx[2];
+		}else{
+			mys = fy;
+			pn = 1;
+		}
+		if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+			lb_fy  = '</div><div class="text-center"><div class="pagination" style="margin:3px 0 12px 0;"><ul class="pagination" style="margin:0;"><li><a href="javascript:QQYY(\''+mys+'____'+pns+'\');"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>';
+		for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+			lb_fy += '<li><a href="javascript:QQYY(\''+mys+'____'+j+'\');">'+j+'</a></li>';
+		}
+			lb_fy += '<li><a href="javascript:QQYY(\''+mys+'____'+(parseInt(pn)+5)+'\');"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li><li><a class="back-to-top" href="#top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li></ul></div>';
+	}
+	if (typeof(lb_fy) == "undefined" || parseInt(data.length)<=3){
+		lb_fy = '';
+	}
+	$("#JP_HL").html(lb_lb+lb_fy);
+}
+function QQYYS_success_jsonpCallback(data,fy){
+		lb_lb  ='<div class="bs-glyphicons"><ul class="bs-glyphicons-list">';
+		//var pg = data[0].HTML;
+	$.each(data, function(k, v) {
+		mysrc = fy.match(/@([0-9a-zA-Z_]+)@/, "$1")[1];
+		if((v.PNG).indexOf("GS@")>-1){
+			mypng = (v.PNG).replace('GS@', 'http://i.gtimg.cn/music/photo/mid_singer_150/');
+		}else{
+			mypng = (v.PNG);
+		}
+		if((v.HTML).indexOf("@@@")>-1){
+			myx = (/(.+)@@@(.+)@@@(.+)/g).exec(v.HTML);
+			myld = myx[1];myid = myx[2];mymz = myx[3];
+			if(mysrc === 'tbke'){
+				lb_lb +='<li><a href="#MModal" onclick="javascript:'+myld+'(\''+mymz+'__'+myid+'__'+mypng+'\');"><img src="/ing.gif" data-original="'+mypng+'" width="60" height="60" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="#" class="text-ellipsis" title="'+mymz+'">'+mymz+'</a></span></li>';
+			}else{
+				lb_lb +='<li><a href="javascript:'+myld+'(\''+myid+'\');" onclick="javascript:FX_ZYS(\''+v.HTML+'@@@'+mypng+'\');"><img src="/ing.gif" data-original="'+mypng+'" width="60" height="60" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="javascript:'+myld+'(\''+myid+'\')" class="text-ellipsis" title="'+mymz+'">'+mymz+'</a></span></li>';
+			}
+		}else{
+			lb_lb +='<li><a href="javascript:'+mysrc+'(\''+v.HTML+'\');" onclick="javascript:FX_ZYS(\''+v.HTML+'@@@'+mypng+'\');"><img src="/ing.gif" data-original="'+mypng+'" width="60" height="60" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="javascript:'+mysrc+'(\''+v.HTML+'\');" class="text-ellipsis" title="'+v.HTML+'">'+v.HTML+'</a></span></li>';
+		}
+	});
+		lb_lb +='</ul></div>';
+	//分页
+	if(fy.indexOf("&pg=")>-1){
+		var kj_fy;
+		if(mysrc === 'tbke'){
+			kj_fy = 'tbke';
+		}else{
+			kj_fy = 'all';
+		}
+		myx = fy.match(/(.+)&pg=([0-9]+)/, "$1$2");
+		mys = myx[1];
+		pn = myx[2];
+		if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+			lb_fy  = '</div><div class="text-center"><div class="PAGE" style="margin:3px 0 12px 0;"><ul class="pagination" style="margin:0;"><li><a href="javascript:QQYY(\''+mys+'&pg='+pns+'&@'+kj_fy+'@\');"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>';
+		for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+			lb_fy += '<li><a href="javascript:QQYY(\''+mys+'&pg='+j+'&@'+kj_fy+'@\');">'+j+'</a></li>';
+		}
+			lb_fy += '<li><a href="javascript:QQYY(\''+mys+'&pg='+(parseInt(pn)+5)+'&@'+kj_fy+'@\');"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li><li><a class="back-to-top" href="#top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li></ul></div>';
+	}
+	if(fy.indexOf("@x@.json")>-1){
+		lb_fy = '';
+	}
+	if(typeof(lb_fy) == "undefined" || parseInt(data.length)<=3){
+		lb_fy = '';
+	}
+	$('#GS_HL').html(lb_lb+lb_fy);
+}
+//酷狗音乐
+function KUGOU(lsrc){
+	if(lsrc.indexOf("@")>-1){
+		myx = (/^(.+)@([0-9]+)$/g).exec(lsrc);
+		url_s = myx[1];url_p = myx[2];
+	}else{
+		url_s = lsrc;url_p = 1;
+	}
+	$.ajax({
+		cache: true,
+		async: false,
+		url: "http://ioscdn.kugou.com/api/v3/search/song?format=jsonp&iscorrect=1&pagesize=100&plat=2&sver=5&showtype=10&page="+url_p+"&keyword="+url_s+"&version=8550",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 8e3,
+		success: function(strdata) {
+			kglist_success_jsonpCallback(strdata.data.info,url_s,url_p);
+			$(".GS_KG").hide();$(".JP_KG").show();
+			$('html,body').animate({scrollTop: '0px'}, 200);
+		}
+	});
+}
+function kglist_success_jsonpCallback(data,kid,pn){
+		jp_lb  = '[';
+	$.each(data, function(k, v) {
+		jp_lb += '{mp3:"http://s.wo0.cn/php/m.php?kgid='+v.hash+'",title:"'+v.filename+'"},';
+	});
+		jp_lb += ']';
+	eval("kugou_lb=" + jp_lb);
+	WNJP.setPlaylist(kugou_lb);
+	WNJP.play(0);
+	//列表 
+		lb_lb  = '';
+	$.each(data, function(k, v){
+		if(k%2 == 0){myxo = 'style="background-color: rgba(255, 255, 255, 0.3);"';}else{myxo = 'style="background-color: rgba(185, 185, 185, 0.5);"';}
+		lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="http://s.wo0.cn/php/m.php?kgid='+v.hash+'" download="'+v.filename+'.mp3"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.filename+'</a></p></a></div>';
+	});
+		lb_lb += '';
+	//分页
+	if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+		lb_fy  = '</div><div class="text-center"><div class="pagination" style="margin:3px 0 12px 0;"><ul class="pagination" style="margin:0;"><li><a href="javascript:KUGOU(\''+kid+'@'+pns+'\');"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>';
+	for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+		lb_fy += '<li><a href="javascript:KUGOU(\''+kid+'@'+j+'\');">'+j+'</a></li>';
+	}
+		lb_fy += '<li><a href="javascript:KUGOU(\''+kid+'@'+(parseInt(pn)+5)+'\');"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li><li><a class="back-to-top" href="#top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li></ul></div>';
+	if(typeof(lb_fy) == "undefined" || parseInt(data.length)<=3){
+		lb_fy = '';
+	}
+	$("#JP_HL").html(lb_lb+lb_fy);
+}
+//考拉电台
+function KLFM(lsrc){
+	//return QQYY('http://s.wo0.cn/php/qqyy.php?kllid='+lsrc+'');
+	//http://www.tingban.cn/webapi/resource/search?cid=1339&rtype=20000&sorttype=HOT_RANK_DESC&pagesize=24&pagenum=1&_=1552211988794
+	var kl_01;var kl_src;var kl_pg;var kl_url;var kl_data;
+	if(lsrc.indexOf("@")>-1){
+		kl_01 = (/^([0-9]+)@([0-9]+)$/g).exec(lsrc);
+		kl_src = kl_01[1];kl_pg = kl_01[2];
+		kl_url = 'http://m.kaolafm.com/webapi/audios/list';
+		kl_data = "id="+kl_src+"&pagesize=50&pagenum="+kl_pg+"&sorttype=1";
+	}else if(lsrc.indexOf("_")>-1){
+		kl_01 = (/^([0-9]+)_([0-9]+)$/g).exec(lsrc);
+		kl_src = kl_01[1];kl_pg = kl_01[2];
+		kl_url = 'http://m.kaolafm.com/webapi/resource/search';
+		kl_data = "cid="+kl_src+"&rtype=20000&sorttype=HOT_RANK_DESC&pagesize=50&pagenum="+kl_pg+"";
+	}else{
+		kl_src = lsrc;kl_pg = 1;
+		kl_url = 'http://m.kaolafm.com/webapi/audios/list';
+		kl_data = "id="+kl_src+"&pagesize=50&pagenum="+kl_pg+"&sorttype=1";
+	}
+	$.ajax({
+		cache: true,
+		async: false,
+		url: kl_url,
+		data: kl_data,
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 8e3,
+		success : function(data) {
+			if(lsrc.indexOf("_")>-1){
+				kaolalists_success_jsonpCallback(data.result,kl_src,kl_pg);
+				$(".JP_KG").hide();$(".GS_KG").show();
+				$('html,body').animate({scrollTop: '0px'}, 200);
+				$("img").lazyload({effect:"fadeIn",threshold: 200,event: 'click',container: $("#GS_HL"),failurelimit : 10});
+			}else{
+				kaolalist_success_jsonpCallback(data.result,kl_src,kl_pg);
+				$(".GS_KG").hide();$(".JP_KG").show();
+				$('html,body').animate({scrollTop: '0px'}, 200);
+			}
+		}
+	});
+}
+function kaolalist_success_jsonpCallback(data,lid,pn){
+	var kid = data.dataList[0].albumId;
+		jp_lb  = '[';
+	$.each(data.dataList, function(k, v) {
+		jp_lb += '{mp3:"'+v.mp3PlayUrl+'",title:"'+v.audioName+'"},';
+	});
+		jp_lb += ']';
+	eval("kaola_lb=" + jp_lb);
+	WNJP.setPlaylist(kaola_lb);
+	WNJP.play(0);
+	//列表 
+		lb_lb  = '';
+	$.each(data.dataList, function(k, v){
+		if(k%2 == 0){myxo = 'style="background-color: rgba(255, 255, 255, 0.3);"';}else{myxo = 'style="background-color: rgba(185, 185, 185, 0.5);"';}
+		lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="'+v.mp3PlayUrl+'" download="'+v.audioName+'.mp3"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.audioName+'</a></p></a></div>';
+	});
+		lb_lb += '';
+	//分页
+	if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+		lb_fy  = '</div><div class="text-center"><div class="pagination" style="margin:3px 0 12px 0;"><ul class="pagination" style="margin:0;"><li><a href="javascript:KLFM(\''+kid+'@'+pns+'\');"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>';
+	for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+		lb_fy += '<li><a href="javascript:KLFM(\''+kid+'@'+j+'\');">'+j+'</a></li>';
+	}
+		lb_fy += '<li><a href="javascript:KLFM(\''+kid+'@'+(parseInt(pn)+5)+'\');"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li><li><a class="back-to-top" href="#top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li></ul></div>';
+	if(typeof(lb_fy) == "undefined" || parseInt((data.dataList).length)<=3){
+		lb_fy = '';
+	}
+	$("#JP_HL").html(lb_lb+lb_fy);
+}
+function kaolalists_success_jsonpCallback(data,lid,pn){
+		lb_lb  = '<div class="bs-glyphicons"><ul class="bs-glyphicons-list">';
+	$.each(data.dataList, function(k, v) {
+		if((v.pic).indexOf("/default.jpg")>-1){
+			mypng = (v.pic).replace('/default.jpg', '/100_100.jpg');
+		}else{
+			mypng = (v.pic);
+		}
+		lb_lb += '<li><a href="javascript:KLFM(\''+v.id+'@1\');"><img src="/ing.gif" data-original="'+mypng+'" width="60" height="60" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="javascript:KLFM(\''+v.id+'@1\');" class="text-ellipsis" title="'+v.name+'">'+v.name+'</a></span></li>';
+	});
+		lb_lb += '</ul></div>';
+	if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+		lb_fy  = '</div><div class="text-center"><div class="pagination" style="margin:3px 0 12px 0;"><ul class="pagination" style="margin:0;"><li><a href="javascript:KLFM(\''+lid+'_'+(pns)+'\');"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>';
+	for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+		lb_fy += '<li><a href="javascript:KLFM(\''+lid+'_'+j+'\');">'+j+'</a></li>';
+	}
+		lb_fy += '<li><a href="javascript:KLFM(\''+lid+'_'+(parseInt(pn)+7)+'\');"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li><li><a class="back-to-top" href="#top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li></ul></div>';
+	if (typeof(lb_fy) == "undefined" || parseInt((data.dataList).length)<=3){
+		lb_fy = '';
+	}
+	$('#GS_HL').html(lb_lb+lb_fy);
+}
+//深港DJ
+function SGDJ(lsrc){
+	if(lsrc.indexOf("/")>-1){
+		return QQYY('http://s.wo0.cn/php/ik123.php?lid='+lsrc+'&p=1');
+	}else{
+		return QQYY('http://s.wo0.cn/php/ik123.php?kid='+lsrc+'');
+	}
+}
+//音乐台
+function YYT(lsrc){
+	return QQYY('http://s.wo0.cn/php/yinyuetai.php?yyt='+lsrc+'&p=1');
+}
+//最大资源
+function ZDZY(lsrc){
+	return QQYY('http://s.wo0.cn/php/my.php?zdzyso='+lsrc+'&p=1&@QQYY@1.json');
+}
+//网易云音乐
+function WYYY(lsrc){
+	return QQYY('http://s.wo0.cn/php/163.php?so='+lsrc+'&p=1');
+}
+//美拍
+function MEIPAI(lsrc){
+	return QQYY('http://s.wo0.cn/php/meipai.php?j='+lsrc+'&p=1');
+}
+//爱拍
+function AIPAISO(lsrc){
+	return QQYY('http://s.wo0.cn/php/aipai.php?so='+lsrc+'&p=1');
+}
+//YY神曲
+function YYSQ(lsrc){
+	return QQYY('http://s.wo0.cn/php/aipai.php?yysq='+lsrc+'&p=1');
+}
+//淘宝优惠卷
+function TAOBAOSO(lsrc){
+	return QQYY('http://s.wo0.cn/php/tbke.php?so='+lsrc+'&pg=1&@tbke@.json');
+}
+//喜马拉雅FM
+function XMLYFM(lsrc){
+	return QQYY('http://s.wo0.cn/php/xmly.php?lid='+lsrc+'&p=1');
+}
+//熊猫TV
+function PANDA(lsrc){
+	return QQYY('http://s.wo0.cn/php/panda.php?lid='+lsrc+'&p=1');
+}
+//一直播
+function YZBTV(lsrc){
+	return QQYY('http://s.wo0.cn/php/panda.php?yzbqid='+lsrc+'&p=1');
+}
+function YZBSO(lsrc){
+	return QQYY('http://s.wo0.cn/php/panda.php?yzbso='+lsrc+'&pg=1&@yzbtv@.json');
+}
+//斗鱼
+function DOUYU(lsrc){
+	return QQYY('http://s.wo0.cn/php/panda.php?dylid='+lsrc+'&p=1');
+}
+//花椒
+function HUAJ(lsrc){
+	return QQYY('http://s.wo0.cn/php/panda.php?hjlid='+lsrc+'&p=1');
+}
+function HUAJSO(lsrc){
+	return QQYY('http://s.wo0.cn/php/panda.php?hjso='+lsrc+'&p=1');
+}
+//龙珠直播
+function LZTVSO(lsrc){
+	return QQYY('http://s.wo0.cn/php/panda.php?lzso='+lsrc+'&p=1');
+}
+//哔哩直播
+function BLIBLI(lsrc){
+	return QQYY('http://s.wo0.cn/php/panda.php?blilid='+lsrc+'&p=1');
+}
+//企鹅电竞
+function QQDJS(lsrc){
+	return QQYY('http://s.wo0.cn/php/panda.php?qqlid='+lsrc+'&p=1');
+}
+//战旗直播
+function ZQTV(lsrc){
+	return QQYY('http://s.wo0.cn/php/panda.php?zqlid='+lsrc+'&p=1');
+}
+//
+function XMLYSO(lsrc){
+	if(lsrc.indexOf("@")>-1){
+		myx = (/^(.+)@([0-9]+)$/g).exec(lsrc);
+		url_s = myx[1];url_p = myx[2];
+		return QQYY('http://s.wo0.cn/php/xmly.php?so='+url_s+'&pg='+url_p+'&@xmlyfm@.json');	
+	}else{
+		return QQYY('http://s.wo0.cn/php/xmly.php?so='+lsrc+'&pg=1&@xmlyfm@.json');
+	}
+}
+//芒果tv
+function MGTV(ty_iv,pn,st){
+	var ttt = new Date();
+	switch(ty_iv){
+		case '3':
+			url_s = '3&ic=1';
+		break;
+		case '3vip':
+			url_s = '3&ic=1&iv=1&vip=1';
+		break;
+		case '1':
+			url_s = '1&ic=1';
+		break;
+		case '2':
+			url_s = '2&ic=1';
+		break;
+		case '7':
+			url_s = '7&ic=1';
+		break;
+		case '4':
+			url_s = '4&ic=0';
+		break;
+		case '5':
+			url_s = '5&ic=1';
+		break;
+		case '143':
+			url_s = '143&ic=1';
+		break;
+		case '8':
+			url_s = '8&ic=1';
+		break;
+		default:
+			url_s = ty_iv;
+	}
+	$.ajax({
+		cache: true,
+		async: true,
+		url: "http://mgso.hunantv.com/list?src=pc&ty="+url_s+"&pc=100&pn="+pn+"&st="+st+"&_="+ttt+"&callback=callback",
+		//http://mgso.hunantv.com/list?src=pc&ic=1&ty=3电影2电视剧&iv=1&pc=32视频数&pn=1页&st=2最新1热门&ae=4欧美2港台1内地&tid=47动作49喜剧
+		//view-source:http://v.api.mgtv.com/list/tvlist?video_id=3066303&page=0&size=1000&callback=jQuery18202890025204978883_1464074925647&_=1464074926043
+		//https://pianku.api.mgtv.com/rider/list/msite?abroad=0&_support=10000000&fstlvlId=3&ic=3&pn=1&pc=30&kind=a4&isfull=.html&callback=jsonp_dj90fx2bwsw7j7c  http://pianku.api.mgtv.com/rider/list/adapter
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'callback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 8e3,
+		success: function(strdata) {
+			if(ty_iv === '3'||ty_iv === '4'||ty_iv === '3vip'){
+				mgtvlist_success_jsonpCallback(strdata.data,ty_iv,pn,st);//.hitDocs
+				$(".JP_KG").hide();$(".GS_KG").show();
+				$('html,body').animate({scrollTop: '0px'}, 200);
+				$("img").lazyload({effect:"fadeIn",threshold: 200,event: 'click',container: $("#GS_HL"),failurelimit : 10});
+			}else{
+				mgtvlists_success_jsonpCallback(strdata.data,ty_iv,pn,st);//.hitDocs
+				$(".JP_KG").hide();$(".GS_KG").show();
+				$('html,body').animate({scrollTop: '0px'}, 200);
+				$("img").lazyload({effect:"fadeIn",threshold: 200,event: 'click',container: $("#GS_HL"),failurelimit : 10});
+			}
+		}
+	});
+}
+function mgtvlist_success_jsonpCallback(data,ty_iv,pn,st){
+	var hitCounts = data.hitCount;var datas = data.hitDocs;
+		lb_lb  = '<div class="bs-glyphicons"><ul class="bs-glyphicons-list">';
+	$.each(datas, function(k, v) {
+		lb_lb += '<li><a href="#MModal" onclick="javascript:KJ_Play(\''+v.url+'\');"><img src="/ing.gif" data-original="'+v.imgsmall+'" width="60" height="60" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="#" class="text-ellipsis" title="'+v.title+'">'+v.title+'</a></span></li>';//mgtv_vid_pp(
+	});//<a href="#MModal" onclick="javascript:KJ_Play(\'http://v.d9y.net/vip/?url=http://www.mgtv.com/b/'+v.clipId+'/'+v.partId+'.html\');">
+	//javascript:mgtv_vid_id(\''+mgtv_vid_pp(v.url)+','+encodeURIComponent(v.title)+'\'); <a href="javascript:mgtv_vid_id(\''+v.url+','+encodeURIComponent(v.title)+'\');">
+		lb_lb += '</ul></div>';
+	if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+		lb_fy  = '</div><div class="text-center"><div class="pagination" style="margin:3px 0 12px 0;"><ul class="pagination" style="margin:0;"><li><a href="javascript:MGTV(\''+ty_iv+'\',\''+(pns)+'\',\''+st+'\');"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>';
+	if(pn<=parseInt(hitCounts/100)){
+		for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+			lb_fy += '<li><a href="javascript:MGTV(\''+ty_iv+'\',\''+j+'\',\''+st+'\');">'+j+'</a></li>';
+		}
+			lb_fy += '<li><a href="javascript:MGTV(\''+ty_iv+'\',\''+(parseInt(pn)+7)+'\',\''+st+'\');"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li><li><a class="back-to-top" href="#top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li></ul></div>';
+	}
+	if (typeof(lb_fy) == "undefined" || parseInt(datas.length)<=3){
+		lb_fy = '';
+	}
+	$('#GS_HL').html(lb_lb+lb_fy);
+}
+function mgtvlists_success_jsonpCallback(data,ty_iv,pn,st){
+	var hitCounts = data.hitCount;var datas = data.hitDocs;
+		lb_lb  = '<div class="bs-glyphicons"><ul class="bs-glyphicons-list">';
+	$.each(datas, function(k, v) {
+		lb_lb += '<li><a href="javascript:mgtv_vid_src(\''+mgtv_vid_pp(v.url)+'\');"><img src="/ing.gif" data-original="'+v.imgsmall+'" width="60" height="60" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="#" class="text-ellipsis" title="'+v.title+'">'+v.title+'</a></span></li>';
+	});
+	//javascript:mgtv_vid_src(\''+mgtv_vid_pp(v.url)+'\'); <a href="javascript:mgtv_vid_src(\''+mgtv_vid_pp(v.url)+'\');">
+		lb_lb += '</ul></div>';
+	if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
+		lb_fy  = '</div><div class="text-center"><div class="pagination" style="margin:3px 0 12px 0;"><ul class="pagination" style="margin:0;"><li><a href="javascript:MGTV(\''+ty_iv+'\',\''+(pns)+'\',\''+st+'\');"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>';
+	if(pn<=parseInt(hitCounts/100)){
+		for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+			lb_fy += '<li><a href="javascript:MGTV(\''+ty_iv+'\',\''+j+'\',\''+st+'\');">'+j+'</a></li>';
+		}
+			lb_fy += '<li><a href="javascript:MGTV(\''+ty_iv+'\',\''+(parseInt(pn)+7)+'\',\''+st+'\');"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li><li><a class="back-to-top" href="#top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li></ul></div>';
+	}
+	if (typeof(lb_fy) == "undefined" || parseInt(datas.length)<=3){
+		lb_fy = '';
+	}
+	$('#GS_HL').html(lb_lb+lb_fy);
+}
+//芒果匹配地址
+function mgtv_vid_pp(str){
+	if(str.indexOf("/s/")>-1){
+		return(str.replace(/http:\/\/www.mgtv.com\/\w+\/([0-9]+).html/,function($0,$1) {return($1);}));
+	}else{
+		return(str.replace(/http:\/\/www.mgtv.com\/\w+\/\d+\/([0-9]+).html/,function($0,$1) {return($1);}));
+	}
+}
+//芒果列表播放
+function mgtv_vid_src(lid){
+	$.ajax({
+		cache: true,
+		async: true,
+		//url: "http://v.api.mgtv.com/list/tvlist?video_id="+lid+"&page=0&size=1000&_=1464074926043",
+		url: "https://v5m.api.mgtv.com/remaster/vrs/getVideoListByPartId?_support=10000000&abroad=0&partId="+lid+"&pageNum=1&pageSize=1000&needLocate=0",
+		type: "GET",
+		dataType: "jsonp",
+		jsonpCallback: 'jsonp_gfavgb6rjz6eznk',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 8e3,
+		success: function(strdata) {
+			mgtv_vid_list_success_jsonpCallback(strdata.data.list);
+			$(".GS_KG").hide();$(".JP_KG").show();
+			$('html,body').animate({scrollTop: '0px'}, 200);
+		}
+	});
+}
+function mgtv_vid_list_success_jsonpCallback(strdata){//clipId partId title
+/*
+		jp_lb = '[';
+	$.each(strdata, function(k, v) {
+		jp_lb += '{m4v:"http://s.wo0.cn/php/mgtv.php?vid='+v.partId+'",title:"'+v.title+'"},';
+	});
+		jp_lb += ']';
+	eval("mgtv_lb=" + jp_lb);
+	WNJP.setPlaylist(mgtv_lb);
+	WNJP.play(0);
+*/
+	//列表 
+		lb_lb  = '';
+	$.each(strdata, function(k, v){
+		if(k%2 == 0){myxo = 'style="background-color: rgba(255, 255, 255, 0.3);"';}else{myxo = 'style="background-color: rgba(185, 185, 185, 0.5);"';}
+		lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>暂无下载</a></span><a href="#MModal" onclick="javascript:KJ_Play(\'http://www.mgtv.com/b/'+v.clipId+'/'+v.partId+'.html\');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.title+'</a></p></a></div>';//javascript:WNJP.play('+k+'); http://s.wo0.cn/php/mgtv.php?vid='+v.partId+'" download="'+v.label+'.mp4  data-toggle="modal"
+		//<a href="#MModal" onclick="javascript:KJ_Play(\'http://v.d9y.net/vip/?url=http://www.mgtv.com/b/'+v.clipId+'/'+v.partId+'.html\');">
+	});
+		lb_lb += '';
+	$("#JP_HL").html(lb_lb);
+}
+//芒果单曲播放
+function mgtv_vid_id(data){
+	var dy_src_data = data.split(",");
+/*
+	
+		jp_lb  = '[{m4v:"http://s.wo0.cn/php/mgtv.php?vid='+dy_src_data[0]+'",title:"'+decodeURIComponent(dy_src_data[1])+'"}]';
+	eval("mgtv_id=" + jp_lb);
+	WNJP.setPlaylist(mgtv_id);
+	WNJP.play(0);
+*/
+	//列表 
+		lb_lb  = '';
+	$.each(data, function(k, v){
+		lb_lb += '<div class="list-group-item" style="background-color: rgba(255, 255, 255, 0.3);"><span class="badge"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>暂无下载</a></span><a href="#MModal" onclick="javascript:KJ_Play(\''+dy_src_data[0]+'\');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+dy_src_data[1]+'</a></p></a></div>';// data-toggle="modal" http://s.wo0.cn/php/mgtv.php?vid='+dy_src_data[0]+'" download="'+v.label+'.mp4  javascript:WNJP.play('+k+');
+		//<a href="#MModal" onclick="javascript:KJ_Play(\'http://v.d9y.net/vip/?url='+dy_src_data[0]+'\');">
+	});
+		lb_lb += '';
+	$("#JP_HL").html(lb_lb);
+}
+//框架播放
+function KJ_Play(data){
+	$(".jp-jplayer").jPlayer("stop");
+	var sUserAgent = navigator.userAgent.toLowerCase();
+	if(sUserAgent.match(/(iphone|ipad|ipod|android|symbianos|windows phone|ucweb|BlackBerry|midp|mobile)/i)){
+		//myx = (/url=(.+)$/g).exec(data);
+		//url_s = myx[1];
+		mys = '<h5>以下为第三方解析资源||且勿相信视频广告信息</h5><hr><a class="btn btn-default" href="https://jx.618g.com/?url='+data+'" target="_Blank">解析1</a>&nbsp;<a class="btn btn-default" href="https://www.myxin.top/jx/api/?url='+data+'" target="_Blank">解析2</a>&nbsp;';
+		$('#MModal').modal({ show: true });
+	}else{
+		mys = '<h5>以下为第三方解析资源||且勿相信视频广告信息</h5><hr><a class="btn btn-default" href="https://jx.618g.com/?url='+data+'" target="_Blank">解析1</a>&nbsp;<a class="btn btn-default" href="https://www.myxin.top/jx/api/?url='+data+'" target="_Blank">解析2</a>&nbsp;</div>';// id="KJ_IF"http://v.d9y.net/vip/?url= <iframe src="'+data+'" width="100%" onload="this.height=300" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="true"></iframe>https://vod-eu.parse.wudutv.cc/?url=http://aikan-tv.com/?url=<a class="btn btn-default" href="http://v.d9y.net/vip/?url='+data+'" target="_Blank">解析2</a>&nbsp;<a class="btn btn-default" href="http://jiexi.92fz.cn/player/vip.php?url='+data+'" target="_Blank">解析3</a>&nbsp;<a class="btn btn-default" href="http://aikan-tv.com/?url='+data+'" target="_Blank">解析4</a>&nbsp;<a class="btn btn-default" href="http://api.47ks.com/webcloud/?v='+data+'" target="_Blank">解析5</a>&nbsp;
+		//$("#KJ_IF").attr("src", data);
+		$('#MModal').modal({ show: true });//, backdrop: 'static'
+	}
+	$("#KJ_IF").html(mys);
+	
+}
+function KJ_GB(){
+	$('#MModal').on('hidden.bs.modal', function () {
+		$("#word").hide();
+		$("#play_header").empty().hide();
+		$("#playad").empty().hide();
+		$("#KJ_IF").attr("src", '');
+		$("#KJ_IF").attr("height", '0');
+		$("#KJ_IF").attr("width", '0');
+		window.parent.getElementById("#KJ_IF").style.display = "none";
+		$('#MModal').modal({ hide: true });
+	});
+}
+//乐视列表播放
+function LETV(lsrc){
+	if(lsrc.indexOf("@")>-1){
+		myx = (/^(.+)@([0-9]+)$/g).exec(lsrc);
+		url_s = myx[1];url_p = myx[2];
+		return QQYY('http://s.wo0.cn/php/aipai.php?le='+url_s+'&pg='+url_p+'&@letv@.json');	
+	}else{
+		return QQYY('http://s.wo0.cn/php/aipai.php?le='+lsrc+'&pg=1&@letv@.json');
+	}
+}
+function LETV_lid(lid){
+	if(lid.indexOf("_")>-1){
+		mys = 's.wo0.cn';
+		myx = (/^_([0-9]+)$/g).exec(lid);
+		url_s = myx[1];
+		jp_lb = '[{m4v:"http://s.wo0.cn/php/le.php?vid='+url_s+'&hd=1",title:"'+url_s+'"}]';
+		eval("letv_lb=" + jp_lb);
+		WNJP.setPlaylist(letv_lb);
+		WNJP.play(0);
+	}else{
+		time = new Date().getTime();
+		$.ajax({
+			cache: true,
+			async: false,
+			url: "http://d.api.m.le.com/detail/episode?pid="+lid+"&platform=pc&page=1&pagesize=500&type=1&_="+time,
+			type: "GET",
+			dataType: "jsonp",
+			jsonpCallback: 'success_jsonpCallback',
+			contentType: "application/jsonp; charset=utf-8",
+			timeout: 8e3,
+			success: function(strdata) {
+				LETV_vid_list_success_jsonpCallback(strdata.data.list);
+				$(".GS_KG").hide();$(".JP_KG").show();
+				$('html,body').animate({scrollTop: '0px'}, 200);
+			}
+		});
+	}
+}
+function LETV_vid_list_success_jsonpCallback(strdata){
+		jp_lb = '[';
+	$.each(strdata, function(k, v) {
+		jp_lb += '{m4v:"http://s.wo0.cn/php/le.php?vid='+v.vid+'&hd=4",title:"'+v.title+'"},';
+	});
+		jp_lb += ']';
+	eval("letv_lb=" + jp_lb);
+	WNJP.setPlaylist(letv_lb);
+	WNJP.play(0);
+	//列表 
+		lb_lb  = '';
+	$.each(strdata, function(k, v){
+		if(k%2 == 0){myxo = 'style="background-color: rgba(255, 255, 255, 0.3);"';}else{myxo = 'style="background-color: rgba(185, 185, 185, 0.5);"';}
+		lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="http://s.wo0.cn/php/le.php?vid='+v.vid+'&hd=4" download="'+v.label+'.mp4"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.title+'</a></p></a></div>';
+	});
+		lb_lb += '';
+	$("#JP_HL").html(lb_lb);
+}
+// ajax加载来自360的壁纸 http://image.baidu.com/search/down?tn=download&word=download&ie=utf8&fr=detail&url=http://p19.qhimg.com/bdm/0_0_100/t01f722c341524318a3.jpg
+function PNGS(lid){
+	if(lid.indexOf("_")>-1){
+		mys = 's.wo0.cn';
+		myx = (/^([0-9]+)_([0-9]+)$/g).exec(lid);
+		url_s = myx[1];url_p = parseInt((myx[2])*60);myid = myx[2];
+	}else{
+		url_s = lid;url_p = 0;
+	}
+    $.ajax({
+		cache: true,
+		async: false,
+        type: "GET", 
+        url: 'http://s.wo0.cn/php/apipng.php', 
+        data: "cid=" + url_s + "&start=" + url_p + "&count=30",
+        dataType : "json",
+		contentType: "application/json; charset=utf-8",
+		timeout: 8e3,
+        success: function(jsonData){
+			var datas = jsonData.data;
+				lb_lb  = '<div class="bs-glyphicons"><ul class="bs-glyphicons-list">';
+			$.each(datas, function(k, v) {
+				if (typeof(v.utag) == "undefined"){
+					mymz = '图片资源';
+				}else{
+					mymz = v.utag;
+				}
+				mypng = decode360Url((v.url), 80, 80, 100);
+				lb_lb += '<li><a href="#MModal" onclick="javascript:KJ_PNG(\''+v.url+'\');"><img src="/ing.gif" data-original="'+mypng+'" width="60" height="60" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="#" class="text-ellipsis" title="'+mymz+'">'+mymz+'</a></span></li>';
+			});
+				lb_lb += '</ul></div>';
+			pn = myid;
+			if((parseInt(pn)-5)<=0){pns=0;}else{pns=(parseInt(pn)-5);}
+				lb_fy  = '</div><div class="text-center"><div class="pagination" style="margin:3px 0 12px 0;"><ul class="pagination" style="margin:0;"><li><a href="javascript:PNGS(\''+url_s+'_'+pns+'\');"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>';
+			for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+				lb_fy += '<li><a href="javascript:PNGS(\''+url_s+'_'+j+'\');">'+j+'</a></li>';
+			}
+				lb_fy += '<li><a href="javascript:PNGS(\''+url_s+'_'+(parseInt(pn)+5)+'\');"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li><li><a class="back-to-top" href="#top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li></ul></div>';
+			if (typeof(lb_fy) == "undefined" || parseInt(datas.length) <= 3){
+				lb_fy = '';
+			}
+			$('#GS_HL').html(lb_lb+lb_fy);
+			$(".JP_KG").hide();$(".GS_KG").show();
+			$('html,body').animate({scrollTop: '0px'}, 200);
+			$("img").lazyload({effect:"fadeIn",threshold: 200,event: 'click',container: $("#GS_HL"),failurelimit : 10});
+        }
+    });
+}
+function KJ_PNG(data){
+	var png_0;var png_1;var png_2;var png_3;var png_4;var png_5;var png_6;
+	//myx = (/(.+)$/g).exec(data);
+	//url_s = myx[1];
+	png_0 = decode360Url(data, 0, 0, 100);//原始尺寸
+	png_6 = decode360Url(data, 480, 320, 100);//480x320
+	png_5 = decode360Url(data, 600, 420, 100);//600x420
+	png_1 = decode360Url(data, 800, 600, 100);//800x600
+	png_2 = decode360Url(data, 1024, 768, 100);//1024x768
+	png_3 = decode360Url(data, 1440, 900, 100);//1440x900
+	png_4 = decode360Url(data, 2560, 1600, 100);//2560x1600
+	mys = '<h5>以下为第三方解析资源||且勿疯狂下载图片谢谢</h5><hr><div class="text-center"><img src="'+png_6+ '" width="100%" height="320"></div><hr><a class="btn btn-default" href="'+png_0+ '"  target="_Blank">原始尺寸</a><a class="btn btn-default" href="'+png_6+ '" target="_Blank">480x320</a><a class="btn btn-default" href="'+png_5+ '" target="_Blank">600x420</a><a class="btn btn-default" href="'+decode360Url(data, 640, 1136, 100)+ '" target="_Blank">640x1136</a><a class="btn btn-default" href="'+png_1+ '" target="_Blank">800x600</a><a class="btn btn-default" href="'+decode360Url(data, 800, 1280, 100)+ '" target="_Blank">800x1280</a><a class="btn btn-default" href="'+decode360Url(data, 1080, 1920, 100)+ '" target="_Blank">1080x1920</a><a class="btn btn-default" href="'+png_2+ '" target="_Blank">1024x768</a><a class="btn btn-default" href="'+decode360Url(data, 1440, 2960, 100)+ '" target="_Blank">1440x2960</a><a class="btn btn-default" href="'+png_3+ '" target="_Blank">1440x900</a><a class="btn btn-default" href="'+png_4+ '" target="_Blank">2560x1600</a>';
+	$('#MModal').modal({ show: true });
+	$("#KJ_IF").html(mys);
+}
+// 解码360图片的链接，获得指定尺寸图片
+function decode360Url(oldUrl, width, height, quality){
+    return oldUrl.replace("r\/__85", "m\/" + parseInt(width) + "_" + parseInt(height) + "_" + quality);
+}
+//淘宝优惠卷
+function TAOBAOK(data){
+	myx = (/^(.+)__(.+)__(.+)$/g).exec(data);
+	mymz = myx[1];url_s = myx[2];mypng = (myx[3]).replace('_80x80.jpg','_310x310.jpg');
+	mys = '<h5>以下为淘宝优惠卷资源||龒淘惠提供资源</h5><hr><div class="text-center"><img src="'+mypng+'" width="100%" height="320"><hr><h4>'+mymz+'</h4><br><a class="btn btn-default" href="http://s.wo0.cn/php/tbke.php?id='+url_s+'" target="_Blank">点击领取优惠卷入口</a><hr><a class="btn btn-default" href="http://s.wo0.cn/" target="_Blank">更多淘宝优惠卷请访问龒淘惠主页</a></div>';
+	$('#MModal').modal({ show: true });
+	$("#KJ_IF").html(mys);
+}
+//
+//搜狗图片
+function SGPNGS(lsrc){
+	if(lsrc.indexOf("_")>-1){
+		myx = (/^(.+)_([0-9]+)$/g).exec(lsrc);
+		url_s = myx[1];url_p = parseInt((myx[2])*60);myid = myx[2];
+	}else{
+		url_s = lsrc;url_p = 0;myid = 1;
+	}
+	$.ajax({
+		cache: true,
+		async: false,
+        type: "POST", 
+        url: "//pic.sogou.com/pics/json.jsp",
+        data: "query="+url_s+"&st=5&start="+url_p+"&xml_len=60&reqFrom=wap_result&",
+        dataType: "jsonp",
+		jsonpCallback: 'success_jsonpCallback',
+		contentType: "application/jsonp; charset=utf-8",
+		timeout: 8e3,
+        success: function(jsonData){
+			var datas = jsonData.items;
+				lb_lb  = '<div class="bs-glyphicons"><ul class="bs-glyphicons-list">';
+			$.each(datas, function(k, v) {
+				if (typeof(v.title) == "undefined"){
+					mymz = '图片资源';
+				}else{
+					mymz = safeStr(unescape((v.title).replace(/\\u/g,'%u')));
+				}
+				mypng = v.locImageLink;
+				lb_lb += '<li><a href="#MModal" onclick="javascript:KJ_SGPNG(\''+mypng+'\');"><img src="/ing.gif" data-original="'+mypng+'" width="60" height="60" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="#" class="text-ellipsis" title="'+mymz+'">'+mymz+'</a></span></li>';
+			});
+				lb_lb += '</ul></div>';
+			pn = myid;
+			if((parseInt(pn)-5)<=0){pns=0;}else{pns=(parseInt(pn)-5);}
+				lb_fy  = '</div><div class="text-center"><div class="pagination" style="margin:3px 0 12px 0;"><ul class="pagination" style="margin:0;"><li><a href="javascript:SGPNGS(\''+url_s+'_'+pns+'\');"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a></li>';
+			for (var j=parseInt(pn)+1;j<parseInt(pn)+5;j++){
+				lb_fy += '<li><a href="javascript:SGPNGS(\''+url_s+'_'+j+'\');">'+j+'</a></li>';
+			}
+				lb_fy += '<li><a href="javascript:SGPNGS(\''+url_s+'_'+(parseInt(pn)+5)+'\');"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li><li><a class="back-to-top" href="#top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a></li></ul></div>';
+			if (typeof(lb_fy) == "undefined" || parseInt(datas.length) <= 3){
+				lb_fy = '';
+			}
+			$('#GS_HL').html(lb_lb+lb_fy);
+			$(".JP_KG").hide();$(".GS_KG").show();
+			$('html,body').animate({scrollTop: '0px'}, 200);
+			$("img").lazyload({effect:"fadeIn",threshold: 200,event: 'click',container: $("#GS_HL"),failurelimit : 10});
+		}
+	});
+}
+function KJ_SGPNG(data){
+	mys = '<h5>以下为第三方解析资源||且勿疯狂下载图片谢谢</h5><hr><div class="text-center"><img src="'+data+ '" width="120" height="120"></div><hr><a class="btn btn-default" href="'+data+ '" target="_Blank">原始尺寸</a>';// target="_Blank"
+	$('#MModal').modal({ show: true });
+	$("#KJ_IF").html(mys);
+}
+function KJ_ERWMAPNG(data){
+	mys = '<h5>以下为虾米接口提供二维码图片生成</h5><hr><div class="text-center"><img src="https://www.xiami.com/qrcode?u='+data+ '&w=110" width="110" height="110"></div><hr><a class="btn btn-default" href="https://www.xiami.com/qrcode?u='+data+ '&w=110" target="_Blank">原始尺寸</a>';
+	$('#MModal').modal({ show: true });
+	$("#KJ_IF").html(mys);
+}
+function safeStr(str){
+    return str.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+}
+//资源列表互相切换
+$("#BT_JPS").on("click",function(){
+	if($(".JP_KG").is(":visible")){
+		//$(".lb_row").hide();
+	}else{
+		$(".JP_KG").show();
+		$(".GS_KG").hide();
+	}
+});
+$("#BT_ZYS").on("click",function(){
+	if($(".GS_KG").is(":visible")){
+		//$(".lb_row").hide();
+	}else{
+		$(".GS_KG").show();
+		$(".JP_KG").hide();
+	}
+});
+$("#BT_JP").on("click",function(){
+	if($(".JP_KG").is(":visible")){
+		//$(".lb_row").hide();
+	}else{
+		$(".JP_KG").show();
+		$(".GS_KG").hide();
+	}
+});
+$("#BT_ZY").on("click",function(){
+	if($(".GS_KG").is(":visible")){
+		//$(".lb_row").hide();
+	}else{
+		$(".GS_KG").show();
+		$(".JP_KG").hide();
+	}
+});
+//判断手机、PC
+function JP_HG(){
+	var sUserAgent = navigator.userAgent.toLowerCase();
+	if(sUserAgent.match(/(iphone|ipad|ipod|android|symbianos|windows phone|ucweb|BlackBerry|midp|mobile)/i)){
+		mys = "250";
+	}else{
+		mys = "450";
+	}
+	return(mys);
+}
+</script>
+</body>
+</html>
