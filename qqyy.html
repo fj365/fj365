@@ -90,7 +90,7 @@ a {
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="http://s.wo0.cn/qqyy.html">龒蜗牛D</a>
+		<a class="navbar-brand" href="https://s.wo0.cn/qqyy.html">龒蜗牛D</a>
 		<!--搜索-->
         <div class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-sm" id="MYsearch">
 			<div class="input-group">
@@ -181,7 +181,7 @@ a {
 					<li><a href="javascript:QQYY('https://w.wo0.cn/jp/jsonp/@klfm@.json');">考拉电台</a></li>
 					<li><a href="javascript:QQYY('https://w.wo0.cn/jp/jsonp/@sgdj@.json');">深港DJ</a></li>
 					<li><a href="javascript:QQYY('https://w.wo0.cn/jp/jsonp/@aipai@.json');">爱拍</a></li>
-					<li><a href="javascript:QQYY('http://s.wo0.cn/php/aipai.php?msj=1&p=1');">美食杰</a></li>
+					<li><a href="javascript:QQYY('https://s.wo0.cn/php/aipai.php?msj=1&p=1');">美食杰</a></li>
 					<li><a href="javascript:QQYY('https://w.wo0.cn/jp/jsonp/@mp@.json');">美拍</a></li>
 					<li><a href="javascript:QQYY('https://w.wo0.cn/jp/jsonp/@qqy@.json');">QQ音乐</a></li>
 					<li><a href="javascript:QQYY('https://w.wo0.cn/jp/jsonp/@mgtv@.json');">芒果TV</a></li>
@@ -209,7 +209,7 @@ a {
 					<li><a href="javascript:QQYY('https://w.wo0.cn/jp/jsonp/@x@.json')" id="BT_TJ">推荐</a></li>
 					<li><a href="javascript:;" id="BT_ZY">资源</a></li>
 					<li><a href="javascript:;" id="BT_JP">列表</a></li>
-					<!--<li><a href="http://s.wo0.cn/woniu.apk" download="woniu.apk"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>安卓</a><li>
+					<!--<li><a href="https://s.wo0.cn/woniu.apk" download="woniu.apk"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>安卓</a><li>
 					<li><iframe allowtransparency="true" frameborder="0" width="250" height="20" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=1&t=1&v=0&d=1&bd=0&k=000000&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=59126&w=250&h=20&align=right"></iframe></li>
 					<li>
 						<a href="#">歌词</a>
@@ -490,7 +490,7 @@ $(document).ready(function(){
 				$("#BBZY").css({"margin-bottom":"65px"});
 			}
 			if(typeof(event.jPlayer.status.media.poster) === 'undefined'){
-				mypng = 'http://s.wo0.cn/logo.png';
+				mypng = 'https://s.wo0.cn/logo.png';
 			}else{
 				mypng = (event.jPlayer.status.media.poster);
 			}
@@ -542,7 +542,7 @@ function FX_ZYS(lsrc){
 	myx = lsrc.match(/^([A-Z]+)@@@(.+)@@@(.+)@@@(.+)$/, "$1$2$3$4");
 	myid = myx[1]; mysrc = myx[2]; mymz = myx[3];
 	if((myx[4]).indexOf("GS@")>-1){
-		mypng = (myx[4]).replace('GS@', 'http://i.gtimg.cn/music/photo/mid_singer_150/');
+		mypng = (myx[4]).replace('GS@', 'https://i.gtimg.cn/music/photo/mid_singer_150/');
 	}else if((myx[4]).indexOf("//image")>-1){
 		mypng = 'http:'+myx[4];
 	}else{
@@ -557,13 +557,13 @@ function FX_ZYS(lsrc){
 			myxo = myx;
 	}
 	*/
-	$("#FX_ZY").attr('href','http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://w.wo0.cn/qqyy.html%3F'+myid+'%3D'+encodeURIComponent(mysrc)+'&title='+encodeURIComponent(mymz)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+encodeURIComponent(mypng)+'&showcount=1');
+	$("#FX_ZY").attr('href','https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://w.wo0.cn/qqyy.html%3F'+myid+'%3D'+encodeURIComponent(mysrc)+'&title='+encodeURIComponent(mymz)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics='+encodeURIComponent(mypng)+'&showcount=1');
 }
 function QQYY(lsrc){
 	if(lsrc.indexOf("http")>-1){
 		url_s = decodeURIComponent(lsrc);
 	}else{
-		url_s = "http://s.wo0.cn/php/qqyy.php?type=jsonp&so=" + decodeURIComponent(lsrc);
+		url_s = "https://s.wo0.cn/php/qqyy.php?type=jsonp&so=" + decodeURIComponent(lsrc);
 	}
 	$.ajax({
 		cache: true,
@@ -660,7 +660,7 @@ function QQYYS_success_jsonpCallback(data,fy){
 	$.each(data, function(k, v) {
 		mysrc = fy.match(/@([0-9a-zA-Z_]+)@/, "$1")[1];
 		if((v.PNG).indexOf("GS@")>-1){
-			mypng = (v.PNG).replace('GS@', 'http://i.gtimg.cn/music/photo/mid_singer_150/');
+			mypng = (v.PNG).replace('GS@', 'https://i.gtimg.cn/music/photo/mid_singer_150/');
 		}else{
 			mypng = (v.PNG);
 		}
@@ -714,7 +714,7 @@ function KUGOU(lsrc){
 	$.ajax({
 		cache: true,
 		async: false,
-		url: "http://ioscdn.kugou.com/api/v3/search/song?format=jsonp&iscorrect=1&pagesize=100&plat=2&sver=5&showtype=10&page="+url_p+"&keyword="+url_s+"&version=8550",
+		url: "https://ioscdn.kugou.com/api/v3/search/song?format=jsonp&iscorrect=1&pagesize=100&plat=2&sver=5&showtype=10&page="+url_p+"&keyword="+url_s+"&version=8550",
 		type: "GET",
 		dataType: "jsonp",
 		jsonpCallback: 'success_jsonpCallback',
@@ -730,7 +730,7 @@ function KUGOU(lsrc){
 function kglist_success_jsonpCallback(data,kid,pn){
 		jp_lb  = '[';
 	$.each(data, function(k, v) {
-		jp_lb += '{mp3:"http://s.wo0.cn/php/m.php?kgid='+v.hash+'",title:"'+v.filename+'"},';
+		jp_lb += '{mp3:"https://s.wo0.cn/php/m.php?kgid='+v.hash+'",title:"'+v.filename+'"},';
 	});
 		jp_lb += ']';
 	eval("kugou_lb=" + jp_lb);
@@ -740,7 +740,7 @@ function kglist_success_jsonpCallback(data,kid,pn){
 		lb_lb  = '';
 	$.each(data, function(k, v){
 		if(k%2 == 0){myxo = 'style="background-color: rgba(255, 255, 255, 0.3);"';}else{myxo = 'style="background-color: rgba(185, 185, 185, 0.5);"';}
-		lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="http://s.wo0.cn/php/m.php?kgid='+v.hash+'" download="'+v.filename+'.mp3"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.filename+'</a></p></a></div>';
+		lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="https://s.wo0.cn/php/m.php?kgid='+v.hash+'" download="'+v.filename+'.mp3"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.filename+'</a></p></a></div>';
 	});
 		lb_lb += '';
 	//分页
@@ -757,22 +757,22 @@ function kglist_success_jsonpCallback(data,kid,pn){
 }
 //考拉电台
 function KLFM(lsrc){
-	//return QQYY('http://s.wo0.cn/php/qqyy.php?kllid='+lsrc+'');
-	//http://www.tingban.cn/webapi/resource/search?cid=1339&rtype=20000&sorttype=HOT_RANK_DESC&pagesize=24&pagenum=1&_=1552211988794
+	//return QQYY('https://s.wo0.cn/php/qqyy.php?kllid='+lsrc+'');
+	//https://www.tingban.cn/webapi/resource/search?cid=1339&rtype=20000&sorttype=HOT_RANK_DESC&pagesize=24&pagenum=1&_=1552211988794
 	var kl_01;var kl_src;var kl_pg;var kl_url;var kl_data;
 	if(lsrc.indexOf("@")>-1){
 		kl_01 = (/^([0-9]+)@([0-9]+)$/g).exec(lsrc);
 		kl_src = kl_01[1];kl_pg = kl_01[2];
-		kl_url = 'http://m.kaolafm.com/webapi/audios/list';
+		kl_url = 'https://m.kaolafm.com/webapi/audios/list';
 		kl_data = "id="+kl_src+"&pagesize=50&pagenum="+kl_pg+"&sorttype=1";
 	}else if(lsrc.indexOf("_")>-1){
 		kl_01 = (/^([0-9]+)_([0-9]+)$/g).exec(lsrc);
 		kl_src = kl_01[1];kl_pg = kl_01[2];
-		kl_url = 'http://m.kaolafm.com/webapi/resource/search';
+		kl_url = 'https://m.kaolafm.com/webapi/resource/search';
 		kl_data = "cid="+kl_src+"&rtype=20000&sorttype=HOT_RANK_DESC&pagesize=50&pagenum="+kl_pg+"";
 	}else{
 		kl_src = lsrc;kl_pg = 1;
-		kl_url = 'http://m.kaolafm.com/webapi/audios/list';
+		kl_url = 'https://m.kaolafm.com/webapi/audios/list';
 		kl_data = "id="+kl_src+"&pagesize=50&pagenum="+kl_pg+"&sorttype=1";
 	}
 	$.ajax({
@@ -853,89 +853,89 @@ function kaolalists_success_jsonpCallback(data,lid,pn){
 //深港DJ
 function SGDJ(lsrc){
 	if(lsrc.indexOf("/")>-1){
-		return QQYY('http://s.wo0.cn/php/ik123.php?lid='+lsrc+'&p=1');
+		return QQYY('https://s.wo0.cn/php/ik123.php?lid='+lsrc+'&p=1');
 	}else{
-		return QQYY('http://s.wo0.cn/php/ik123.php?kid='+lsrc+'');
+		return QQYY('https://s.wo0.cn/php/ik123.php?kid='+lsrc+'');
 	}
 }
 //音乐台
 function YYT(lsrc){
-	return QQYY('http://s.wo0.cn/php/yinyuetai.php?yyt='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/yinyuetai.php?yyt='+lsrc+'&p=1');
 }
 //最大资源
 function ZDZY(lsrc){
-	return QQYY('http://s.wo0.cn/php/my.php?zdzyso='+lsrc+'&p=1&@QQYY@1.json');
+	return QQYY('https://s.wo0.cn/php/my.php?zdzyso='+lsrc+'&p=1&@QQYY@1.json');
 }
 //网易云音乐
 function WYYY(lsrc){
-	return QQYY('http://s.wo0.cn/php/163.php?so='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/163.php?so='+lsrc+'&p=1');
 }
 //美拍
 function MEIPAI(lsrc){
-	return QQYY('http://s.wo0.cn/php/meipai.php?j='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/meipai.php?j='+lsrc+'&p=1');
 }
 //爱拍
 function AIPAISO(lsrc){
-	return QQYY('http://s.wo0.cn/php/aipai.php?so='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/aipai.php?so='+lsrc+'&p=1');
 }
 //YY神曲
 function YYSQ(lsrc){
-	return QQYY('http://s.wo0.cn/php/aipai.php?yysq='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/aipai.php?yysq='+lsrc+'&p=1');
 }
 //淘宝优惠卷
 function TAOBAOSO(lsrc){
-	return QQYY('http://s.wo0.cn/php/tbke.php?so='+lsrc+'&pg=1&@tbke@.json');
+	return QQYY('https://s.wo0.cn/php/tbke.php?so='+lsrc+'&pg=1&@tbke@.json');
 }
 //喜马拉雅FM
 function XMLYFM(lsrc){
-	return QQYY('http://s.wo0.cn/php/xmly.php?lid='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/xmly.php?lid='+lsrc+'&p=1');
 }
 //熊猫TV
 function PANDA(lsrc){
-	return QQYY('http://s.wo0.cn/php/panda.php?lid='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/panda.php?lid='+lsrc+'&p=1');
 }
 //一直播
 function YZBTV(lsrc){
-	return QQYY('http://s.wo0.cn/php/panda.php?yzbqid='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/panda.php?yzbqid='+lsrc+'&p=1');
 }
 function YZBSO(lsrc){
-	return QQYY('http://s.wo0.cn/php/panda.php?yzbso='+lsrc+'&pg=1&@yzbtv@.json');
+	return QQYY('https://s.wo0.cn/php/panda.php?yzbso='+lsrc+'&pg=1&@yzbtv@.json');
 }
 //斗鱼
 function DOUYU(lsrc){
-	return QQYY('http://s.wo0.cn/php/panda.php?dylid='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/panda.php?dylid='+lsrc+'&p=1');
 }
 //花椒
 function HUAJ(lsrc){
-	return QQYY('http://s.wo0.cn/php/panda.php?hjlid='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/panda.php?hjlid='+lsrc+'&p=1');
 }
 function HUAJSO(lsrc){
-	return QQYY('http://s.wo0.cn/php/panda.php?hjso='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/panda.php?hjso='+lsrc+'&p=1');
 }
 //龙珠直播
 function LZTVSO(lsrc){
-	return QQYY('http://s.wo0.cn/php/panda.php?lzso='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/panda.php?lzso='+lsrc+'&p=1');
 }
 //哔哩直播
 function BLIBLI(lsrc){
-	return QQYY('http://s.wo0.cn/php/panda.php?blilid='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/panda.php?blilid='+lsrc+'&p=1');
 }
 //企鹅电竞
 function QQDJS(lsrc){
-	return QQYY('http://s.wo0.cn/php/panda.php?qqlid='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/panda.php?qqlid='+lsrc+'&p=1');
 }
 //战旗直播
 function ZQTV(lsrc){
-	return QQYY('http://s.wo0.cn/php/panda.php?zqlid='+lsrc+'&p=1');
+	return QQYY('https://s.wo0.cn/php/panda.php?zqlid='+lsrc+'&p=1');
 }
 //
 function XMLYSO(lsrc){
 	if(lsrc.indexOf("@")>-1){
 		myx = (/^(.+)@([0-9]+)$/g).exec(lsrc);
 		url_s = myx[1];url_p = myx[2];
-		return QQYY('http://s.wo0.cn/php/xmly.php?so='+url_s+'&pg='+url_p+'&@xmlyfm@.json');	
+		return QQYY('https://s.wo0.cn/php/xmly.php?so='+url_s+'&pg='+url_p+'&@xmlyfm@.json');	
 	}else{
-		return QQYY('http://s.wo0.cn/php/xmly.php?so='+lsrc+'&pg=1&@xmlyfm@.json');
+		return QQYY('https://s.wo0.cn/php/xmly.php?so='+lsrc+'&pg=1&@xmlyfm@.json');
 	}
 }
 //芒果tv
@@ -975,10 +975,10 @@ function MGTV(ty_iv,pn,st){
 	$.ajax({
 		cache: true,
 		async: true,
-		url: "http://mgso.hunantv.com/list?src=pc&ty="+url_s+"&pc=100&pn="+pn+"&st="+st+"&_="+ttt+"&callback=callback",
-		//http://mgso.hunantv.com/list?src=pc&ic=1&ty=3电影2电视剧&iv=1&pc=32视频数&pn=1页&st=2最新1热门&ae=4欧美2港台1内地&tid=47动作49喜剧
-		//view-source:http://v.api.mgtv.com/list/tvlist?video_id=3066303&page=0&size=1000&callback=jQuery18202890025204978883_1464074925647&_=1464074926043
-		//https://pianku.api.mgtv.com/rider/list/msite?abroad=0&_support=10000000&fstlvlId=3&ic=3&pn=1&pc=30&kind=a4&isfull=.html&callback=jsonp_dj90fx2bwsw7j7c  http://pianku.api.mgtv.com/rider/list/adapter
+		url: "https://mgso.hunantv.com/list?src=pc&ty="+url_s+"&pc=100&pn="+pn+"&st="+st+"&_="+ttt+"&callback=callback",
+		//https://mgso.hunantv.com/list?src=pc&ic=1&ty=3电影2电视剧&iv=1&pc=32视频数&pn=1页&st=2最新1热门&ae=4欧美2港台1内地&tid=47动作49喜剧
+		//view-source:https://v.api.mgtv.com/list/tvlist?video_id=3066303&page=0&size=1000&callback=jQuery18202890025204978883_1464074925647&_=1464074926043
+		//https://pianku.api.mgtv.com/rider/list/msite?abroad=0&_support=10000000&fstlvlId=3&ic=3&pn=1&pc=30&kind=a4&isfull=.html&callback=jsonp_dj90fx2bwsw7j7c  https://pianku.api.mgtv.com/rider/list/adapter
 		type: "GET",
 		dataType: "jsonp",
 		jsonpCallback: 'callback',
@@ -1004,7 +1004,7 @@ function mgtvlist_success_jsonpCallback(data,ty_iv,pn,st){
 		lb_lb  = '<div class="bs-glyphicons"><ul class="bs-glyphicons-list">';
 	$.each(datas, function(k, v) {
 		lb_lb += '<li><a href="#MModal" onclick="javascript:KJ_Play(\''+v.url+'\');"><img src="/ing.gif" data-original="'+v.imgsmall+'" width="60" height="60" class="r r-2x img-full"></a><span class="glyphicon-class"><a href="#" class="text-ellipsis" title="'+v.title+'">'+v.title+'</a></span></li>';//mgtv_vid_pp(
-	});//<a href="#MModal" onclick="javascript:KJ_Play(\'http://v.d9y.net/vip/?url=http://www.mgtv.com/b/'+v.clipId+'/'+v.partId+'.html\');">
+	});//<a href="#MModal" onclick="javascript:KJ_Play(\'https://v.d9y.net/vip/?url=https://www.mgtv.com/b/'+v.clipId+'/'+v.partId+'.html\');">
 	//javascript:mgtv_vid_id(\''+mgtv_vid_pp(v.url)+','+encodeURIComponent(v.title)+'\'); <a href="javascript:mgtv_vid_id(\''+v.url+','+encodeURIComponent(v.title)+'\');">
 		lb_lb += '</ul></div>';
 	if((parseInt(pn)-5)<=0){pns=1;}else{pns=(parseInt(pn)-5);}
@@ -1054,7 +1054,7 @@ function mgtv_vid_src(lid){
 	$.ajax({
 		cache: true,
 		async: true,
-		//url: "http://v.api.mgtv.com/list/tvlist?video_id="+lid+"&page=0&size=1000&_=1464074926043",
+		//url: "https://v.api.mgtv.com/list/tvlist?video_id="+lid+"&page=0&size=1000&_=1464074926043",
 		url: "https://v5m.api.mgtv.com/remaster/vrs/getVideoListByPartId?_support=10000000&abroad=0&partId="+lid+"&pageNum=1&pageSize=1000&needLocate=0",
 		type: "GET",
 		dataType: "jsonp",
@@ -1072,7 +1072,7 @@ function mgtv_vid_list_success_jsonpCallback(strdata){//clipId partId title
 /*
 		jp_lb = '[';
 	$.each(strdata, function(k, v) {
-		jp_lb += '{m4v:"http://s.wo0.cn/php/mgtv.php?vid='+v.partId+'",title:"'+v.title+'"},';
+		jp_lb += '{m4v:"https://s.wo0.cn/php/mgtv.php?vid='+v.partId+'",title:"'+v.title+'"},';
 	});
 		jp_lb += ']';
 	eval("mgtv_lb=" + jp_lb);
@@ -1083,8 +1083,8 @@ function mgtv_vid_list_success_jsonpCallback(strdata){//clipId partId title
 		lb_lb  = '';
 	$.each(strdata, function(k, v){
 		if(k%2 == 0){myxo = 'style="background-color: rgba(255, 255, 255, 0.3);"';}else{myxo = 'style="background-color: rgba(185, 185, 185, 0.5);"';}
-		lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>暂无下载</a></span><a href="#MModal" onclick="javascript:KJ_Play(\'http://www.mgtv.com/b/'+v.clipId+'/'+v.partId+'.html\');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.title+'</a></p></a></div>';//javascript:WNJP.play('+k+'); http://s.wo0.cn/php/mgtv.php?vid='+v.partId+'" download="'+v.label+'.mp4  data-toggle="modal"
-		//<a href="#MModal" onclick="javascript:KJ_Play(\'http://v.d9y.net/vip/?url=http://www.mgtv.com/b/'+v.clipId+'/'+v.partId+'.html\');">
+		lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>暂无下载</a></span><a href="#MModal" onclick="javascript:KJ_Play(\'https://www.mgtv.com/b/'+v.clipId+'/'+v.partId+'.html\');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.title+'</a></p></a></div>';//javascript:WNJP.play('+k+'); https://s.wo0.cn/php/mgtv.php?vid='+v.partId+'" download="'+v.label+'.mp4  data-toggle="modal"
+		//<a href="#MModal" onclick="javascript:KJ_Play(\'https://v.d9y.net/vip/?url=https://www.mgtv.com/b/'+v.clipId+'/'+v.partId+'.html\');">
 	});
 		lb_lb += '';
 	$("#JP_HL").html(lb_lb);
@@ -1094,7 +1094,7 @@ function mgtv_vid_id(data){
 	var dy_src_data = data.split(",");
 /*
 	
-		jp_lb  = '[{m4v:"http://s.wo0.cn/php/mgtv.php?vid='+dy_src_data[0]+'",title:"'+decodeURIComponent(dy_src_data[1])+'"}]';
+		jp_lb  = '[{m4v:"https://s.wo0.cn/php/mgtv.php?vid='+dy_src_data[0]+'",title:"'+decodeURIComponent(dy_src_data[1])+'"}]';
 	eval("mgtv_id=" + jp_lb);
 	WNJP.setPlaylist(mgtv_id);
 	WNJP.play(0);
@@ -1102,8 +1102,8 @@ function mgtv_vid_id(data){
 	//列表 
 		lb_lb  = '';
 	$.each(data, function(k, v){
-		lb_lb += '<div class="list-group-item" style="background-color: rgba(255, 255, 255, 0.3);"><span class="badge"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>暂无下载</a></span><a href="#MModal" onclick="javascript:KJ_Play(\''+dy_src_data[0]+'\');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+dy_src_data[1]+'</a></p></a></div>';// data-toggle="modal" http://s.wo0.cn/php/mgtv.php?vid='+dy_src_data[0]+'" download="'+v.label+'.mp4  javascript:WNJP.play('+k+');
-		//<a href="#MModal" onclick="javascript:KJ_Play(\'http://v.d9y.net/vip/?url='+dy_src_data[0]+'\');">
+		lb_lb += '<div class="list-group-item" style="background-color: rgba(255, 255, 255, 0.3);"><span class="badge"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>暂无下载</a></span><a href="#MModal" onclick="javascript:KJ_Play(\''+dy_src_data[0]+'\');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+dy_src_data[1]+'</a></p></a></div>';// data-toggle="modal" https://s.wo0.cn/php/mgtv.php?vid='+dy_src_data[0]+'" download="'+v.label+'.mp4  javascript:WNJP.play('+k+');
+		//<a href="#MModal" onclick="javascript:KJ_Play(\'https://v.d9y.net/vip/?url='+dy_src_data[0]+'\');">
 	});
 		lb_lb += '';
 	$("#JP_HL").html(lb_lb);
@@ -1118,7 +1118,7 @@ function KJ_Play(data){
 		mys = '<h5>以下为第三方解析资源||且勿相信视频广告信息</h5><hr><a class="btn btn-default" href="https://jx.618g.com/?url='+data+'" target="_Blank">解析1</a>&nbsp;<a class="btn btn-default" href="https://www.myxin.top/jx/api/?url='+data+'" target="_Blank">解析2</a>&nbsp;';
 		$('#MModal').modal({ show: true });
 	}else{
-		mys = '<h5>以下为第三方解析资源||且勿相信视频广告信息</h5><hr><a class="btn btn-default" href="https://jx.618g.com/?url='+data+'" target="_Blank">解析1</a>&nbsp;<a class="btn btn-default" href="https://www.myxin.top/jx/api/?url='+data+'" target="_Blank">解析2</a>&nbsp;</div>';// id="KJ_IF"http://v.d9y.net/vip/?url= <iframe src="'+data+'" width="100%" onload="this.height=300" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="true"></iframe>https://vod-eu.parse.wudutv.cc/?url=http://aikan-tv.com/?url=<a class="btn btn-default" href="http://v.d9y.net/vip/?url='+data+'" target="_Blank">解析2</a>&nbsp;<a class="btn btn-default" href="http://jiexi.92fz.cn/player/vip.php?url='+data+'" target="_Blank">解析3</a>&nbsp;<a class="btn btn-default" href="http://aikan-tv.com/?url='+data+'" target="_Blank">解析4</a>&nbsp;<a class="btn btn-default" href="http://api.47ks.com/webcloud/?v='+data+'" target="_Blank">解析5</a>&nbsp;
+		mys = '<h5>以下为第三方解析资源||且勿相信视频广告信息</h5><hr><a class="btn btn-default" href="https://jx.618g.com/?url='+data+'" target="_Blank">解析1</a>&nbsp;<a class="btn btn-default" href="https://www.myxin.top/jx/api/?url='+data+'" target="_Blank">解析2</a>&nbsp;</div>';// id="KJ_IF"https://v.d9y.net/vip/?url= <iframe src="'+data+'" width="100%" onload="this.height=300" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="true"></iframe>https://vod-eu.parse.wudutv.cc/?url=https://aikan-tv.com/?url=<a class="btn btn-default" href="https://v.d9y.net/vip/?url='+data+'" target="_Blank">解析2</a>&nbsp;<a class="btn btn-default" href="https://jiexi.92fz.cn/player/vip.php?url='+data+'" target="_Blank">解析3</a>&nbsp;<a class="btn btn-default" href="https://aikan-tv.com/?url='+data+'" target="_Blank">解析4</a>&nbsp;<a class="btn btn-default" href="https://api.47ks.com/webcloud/?v='+data+'" target="_Blank">解析5</a>&nbsp;
 		//$("#KJ_IF").attr("src", data);
 		$('#MModal').modal({ show: true });//, backdrop: 'static'
 	}
@@ -1142,9 +1142,9 @@ function LETV(lsrc){
 	if(lsrc.indexOf("@")>-1){
 		myx = (/^(.+)@([0-9]+)$/g).exec(lsrc);
 		url_s = myx[1];url_p = myx[2];
-		return QQYY('http://s.wo0.cn/php/aipai.php?le='+url_s+'&pg='+url_p+'&@letv@.json');	
+		return QQYY('https://s.wo0.cn/php/aipai.php?le='+url_s+'&pg='+url_p+'&@letv@.json');	
 	}else{
-		return QQYY('http://s.wo0.cn/php/aipai.php?le='+lsrc+'&pg=1&@letv@.json');
+		return QQYY('https://s.wo0.cn/php/aipai.php?le='+lsrc+'&pg=1&@letv@.json');
 	}
 }
 function LETV_lid(lid){
@@ -1152,7 +1152,7 @@ function LETV_lid(lid){
 		mys = 's.wo0.cn';
 		myx = (/^_([0-9]+)$/g).exec(lid);
 		url_s = myx[1];
-		jp_lb = '[{m4v:"http://s.wo0.cn/php/le.php?vid='+url_s+'&hd=1",title:"'+url_s+'"}]';
+		jp_lb = '[{m4v:"https://s.wo0.cn/php/le.php?vid='+url_s+'&hd=1",title:"'+url_s+'"}]';
 		eval("letv_lb=" + jp_lb);
 		WNJP.setPlaylist(letv_lb);
 		WNJP.play(0);
@@ -1161,7 +1161,7 @@ function LETV_lid(lid){
 		$.ajax({
 			cache: true,
 			async: false,
-			url: "http://d.api.m.le.com/detail/episode?pid="+lid+"&platform=pc&page=1&pagesize=500&type=1&_="+time,
+			url: "https://d.api.m.le.com/detail/episode?pid="+lid+"&platform=pc&page=1&pagesize=500&type=1&_="+time,
 			type: "GET",
 			dataType: "jsonp",
 			jsonpCallback: 'success_jsonpCallback',
@@ -1178,7 +1178,7 @@ function LETV_lid(lid){
 function LETV_vid_list_success_jsonpCallback(strdata){
 		jp_lb = '[';
 	$.each(strdata, function(k, v) {
-		jp_lb += '{m4v:"http://s.wo0.cn/php/le.php?vid='+v.vid+'&hd=4",title:"'+v.title+'"},';
+		jp_lb += '{m4v:"https://s.wo0.cn/php/le.php?vid='+v.vid+'&hd=4",title:"'+v.title+'"},';
 	});
 		jp_lb += ']';
 	eval("letv_lb=" + jp_lb);
@@ -1188,12 +1188,12 @@ function LETV_vid_list_success_jsonpCallback(strdata){
 		lb_lb  = '';
 	$.each(strdata, function(k, v){
 		if(k%2 == 0){myxo = 'style="background-color: rgba(255, 255, 255, 0.3);"';}else{myxo = 'style="background-color: rgba(185, 185, 185, 0.5);"';}
-		lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="http://s.wo0.cn/php/le.php?vid='+v.vid+'&hd=4" download="'+v.label+'.mp4"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.title+'</a></p></a></div>';
+		lb_lb += '<div class="list-group-item" '+myxo+'><span class="badge"><a href="https://s.wo0.cn/php/le.php?vid='+v.vid+'&hd=4" download="'+v.label+'.mp4"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></span><a href="javascript:WNJP.play('+k+');"><p class="txt"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp;'+v.title+'</a></p></a></div>';
 	});
 		lb_lb += '';
 	$("#JP_HL").html(lb_lb);
 }
-// ajax加载来自360的壁纸 http://image.baidu.com/search/down?tn=download&word=download&ie=utf8&fr=detail&url=http://p19.qhimg.com/bdm/0_0_100/t01f722c341524318a3.jpg
+// ajax加载来自360的壁纸 https://image.baidu.com/search/down?tn=download&word=download&ie=utf8&fr=detail&url=https://p19.qhimg.com/bdm/0_0_100/t01f722c341524318a3.jpg
 function PNGS(lid){
 	if(lid.indexOf("_")>-1){
 		mys = 's.wo0.cn';
@@ -1206,7 +1206,7 @@ function PNGS(lid){
 		cache: true,
 		async: false,
         type: "GET", 
-        url: 'http://s.wo0.cn/php/apipng.php', 
+        url: 'https://s.wo0.cn/php/apipng.php', 
         data: "cid=" + url_s + "&start=" + url_p + "&count=30",
         dataType : "json",
 		contentType: "application/json; charset=utf-8",
@@ -1264,7 +1264,7 @@ function decode360Url(oldUrl, width, height, quality){
 function TAOBAOK(data){
 	myx = (/^(.+)__(.+)__(.+)$/g).exec(data);
 	mymz = myx[1];url_s = myx[2];mypng = (myx[3]).replace('_80x80.jpg','_310x310.jpg');
-	mys = '<h5>以下为淘宝优惠卷资源||龒淘惠提供资源</h5><hr><div class="text-center"><img src="'+mypng+'" width="100%" height="320"><hr><h4>'+mymz+'</h4><br><a class="btn btn-default" href="http://s.wo0.cn/php/tbke.php?id='+url_s+'" target="_Blank">点击领取优惠卷入口</a><hr><a class="btn btn-default" href="http://s.wo0.cn/" target="_Blank">更多淘宝优惠卷请访问龒淘惠主页</a></div>';
+	mys = '<h5>以下为淘宝优惠卷资源||龒淘惠提供资源</h5><hr><div class="text-center"><img src="'+mypng+'" width="100%" height="320"><hr><h4>'+mymz+'</h4><br><a class="btn btn-default" href="https://s.wo0.cn/php/tbke.php?id='+url_s+'" target="_Blank">点击领取优惠卷入口</a><hr><a class="btn btn-default" href="https://s.wo0.cn/" target="_Blank">更多淘宝优惠卷请访问龒淘惠主页</a></div>';
 	$('#MModal').modal({ show: true });
 	$("#KJ_IF").html(mys);
 }
