@@ -1910,7 +1910,7 @@ function ajaxjplb(ssrc){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: "https://fj365.gear.host/php/my.php?format=jsonp&kgso="+ssrc+"&page=1&pagesize=100&showtype=1",//http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+ssrc+"&page=1&pagesize=500&showtype=1
+		url: "http://songsearch.kugou.com/song_search_v2?keyword="+ssrc+"&page=1&pagesize=100&showtype=10&plat=2&version=9168&tag=1&correct=1&privilege=1&sver=5&highlight=em&tag_aggr=1&tagtype=%E5%85%A8%E9%83%A8&api_ver=1&area_code=1",//http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+ssrc+"&page=1&pagesize=500&showtype=1
 		type: "GET",
 		dataType: "jsonp",
 		jsonpCallback: 'callback',
@@ -1929,7 +1929,7 @@ function ajaxjplb(ssrc){
 function kglist_success_jsonpCallback(strdata){
 	var lkg_0 = '[';
 	$.each(strdata, function(k, v) {
-		lkg_0 += '{mp3:"https://fj365.gear.host/php/m.php\?kgid='+v.hash+'",title:"'+(v.filename).replace('\'', '')+'",poster:"https://fj365.gear.host/x.php/kg_'+base64encode(utf16to8(v.singername))+'.jpg"},';
+		lkg_0 += '{mp3:"http://s.wo0.cn/o.php/KUGOU_' + v.FileHash + '.mp3",title:"'+(v.FileName).replace('\'', '')+'",poster:"https://fj365.gear.host/x.php/kg_'+base64encode(utf16to8(v.singername))+'.jpg"},';
 	});
 	lkg_0 += ']';
 	eval("lkg_d0=" + lkg_0);
@@ -1937,7 +1937,7 @@ function kglist_success_jsonpCallback(strdata){
 	//
 	var lkg_01='<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">';
 	$.each(strdata, function(k, v) {
-		lkg_01+='<li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="https://fj365.gear.host/php/m.php\?kgid='+v.hash+'" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3Dmp3%26src%3D/x.php/kg_'+v.hash+'.mp3%26label%3D'+encodeURIComponent(v.filename)+'%26image%3D/x.php/kg_'+base64encode(utf16to8(v.singername))+'.jpg&title='+encodeURIComponent(v.filename)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=https://fj365.gear.host/x.php/kg_'+base64encode(utf16to8(v.singername))+'.jpg&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><div class="clear text-ellipsis"><a href="javascript:;" li_id="'+k+'" class="jp-play-me pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i><span style="color:#337AB7;">&nbsp;&nbsp;'+v.filename+'</span></a></div></li>';
+		lkg_01+='<li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="http://s.wo0.cn/o.php/KUGOU_' + v.FileHash + '.mp3" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3Dmp3%26src%3D/o.php/KUGOU_' + v.FileHash + '.mp3%26label%3D'+encodeURIComponent(v.filename)+'%26image%3D/x.php/kg_'+base64encode(utf16to8(v.singername))+'.jpg&title='+encodeURIComponent(v.filename)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=https://fj365.gear.host/x.php/kg_'+base64encode(utf16to8(v.singername))+'.jpg&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><div class="clear text-ellipsis"><a href="javascript:;" li_id="'+k+'" class="jp-play-me pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i><span style="color:#337AB7;">&nbsp;&nbsp;'+v.FileName+'</span></a></div></li>';
 	});
 	lkg_01+='</ul>';
 	$('#jq_list').html(lkg_01);
@@ -1949,7 +1949,7 @@ function qqlist(ssrc){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: "https://fj365.gear.host/php/yqqy.php?j="+ssrc+"",
+		url: 'http://s.wo0.cn/o.php/QQZY_' + decodeURIComponent(ssrc)+'.jsonp?&p=1',
 		//http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg?source=10&w="+ssrc+"&type=qry_song&out=json&p=1&perpage=500&ie=utf-8&uin=121027740&inCharset=UTF-8&outCharset=UTF-8&hostUin=121027740&notice=0&needNewCode=0&format=jsonp&platform=musicbox&g_tk=1401129420",//&jsonpCallback=searchJsonCallback  encodeToGb2312(ssrc)
 		type: "GET",
 		dataType: "jsonp",
@@ -1969,14 +1969,14 @@ function qqlist(ssrc){
 function qqlist_success_jsonpCallback(strdata){
 	var lkg_0 = '[';
 	$.each(strdata, function(k, v) {
-		lkg_0 += '{mp3:"http://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a?fromtag=38",title:"'+v.songname+'",poster:"http://i.gtimg.cn/music/photo/mid_singer_150/'+(v.singermid).substring(12,13)+'/'+(v.singermid).substring(13)+'/'+v.singermid+'.jpg"},';
+		lkg_0 += '{' + v.type + ':"' + v.src + '8",title:"' + v.label + '",poster:"http://static.yingyonghui.com/icon/128/6383836.png"},';
 	});
 	lkg_0 += ']';
 	eval("lkg_d0=" + lkg_0);
 	myPlaylist.setPlaylist(lkg_d0);
 	var lkg_01='<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">';
 	$.each(strdata, function(k, v) {
-		lkg_01+='<li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="http://link.hhtjim.com/qq/'+v.songmid+'.mp3" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play('+k+');" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3Dmp3%26src%3Dhttp://dl.stream.qqmusic.qq.com/C100'+v.songmid+'.m4a%253Ffromtag=38%26label%3D'+encodeURIComponent(v.songname)+'%26image%3Dhttp://i.gtimg.cn/music/photo/mid_singer_150/'+(v.singermid).substring(12,13)+'/'+(v.singermid).substring(13)+'/'+v.singermid+'.jpg&title='+encodeURIComponent(v.songname)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://i.gtimg.cn/music/photo/mid_singer_150/'+(v.singermid).substring(12,13)+'/'+(v.singermid).substring(13)+'/'+v.singermid+'.jpg&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play('+k+');" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play('+k+');" style="color:#337AB7;">'+v.songname+'</a></span></div></li>';
+		lkg_01+='<li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="' + v.src + '" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="javascript:myPlaylist.play('+k+');" class="m-r-sm"><i class="icon-plus"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3Dmp3%26src%3D' + v.src + '%253Ffromtag=38%26label%3D'+encodeURIComponent(v.label)+'%26image%3Dhttp://i.gtimg.cn/music/photo/mid_singer_150/'+(v.singermid).substring(12,13)+'/'+(v.singermid).substring(13)+'/'+v.singermid+'.jpg&title='+encodeURIComponent(v.label)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://i.gtimg.cn/music/photo/mid_singer_150/'+(v.singermid).substring(12,13)+'/'+(v.singermid).substring(13)+'/'+v.singermid+'.jpg&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><a href="javascript:myPlaylist.play('+k+');" class="jp-play-me m-r-sm pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i></a><div class="clear text-ellipsis"><span><a href="javascript:myPlaylist.play('+k+');" style="color:#337AB7;">'+v.label+'</a></span></div></li>';
 	});
 	lkg_01+='</ul>';
 	$('#jq_list').html(lkg_01);
