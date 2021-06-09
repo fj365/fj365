@@ -1968,7 +1968,7 @@ function qqlist(ssrc){
 function qqlist_success_jsonpCallback(strdata){
 	var lkg_0 = '[';
 	$.each(strdata, function(k, v) {
-		lkg_0 += '{' + v.type + ':"' + (v.src).replace('http://s.wo0.cn/', 'https://fj365.gear.host') + '",title:"' + v.label + '",poster:"http://static.yingyonghui.com/icon/128/6383836.png"},';
+		lkg_0 += '{' + v.type + ':"' + (v.src).replace('https://s.wo0.cn/', 'https://fj365.gear.host/') + '",title:"' + v.label + '",poster:"http://static.yingyonghui.com/icon/128/6383836.png"},';
 	});
 	lkg_0 += ']';
 	eval("lkg_d0=" + lkg_0);
