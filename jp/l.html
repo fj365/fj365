@@ -1928,7 +1928,7 @@ function ajaxjplb(ssrc){
 function kglist_success_jsonpCallback(strdata){
 	var lkg_0 = '[';
 	$.each(strdata, function(k, v) {
-		lkg_0 += '{mp3:"http://s.wo0.cn/o.php/KUGOU_' + v.FileHash + '.mp3",title:"'+(v.SongName).replace('\'', '')+'",poster:"http://static.yingyonghui.com/icon/128/6583623.png"},';
+		lkg_0 += '{mp3:"https://fj365.gear.host/o.php/KUGOU_' + v.FileHash + '.mp3",title:"'+(v.SongName).replace('\'', '')+'",poster:"http://static.yingyonghui.com/icon/128/6583623.png"},';
 	});
 	lkg_0 += ']';
 	eval("lkg_d0=" + lkg_0);
@@ -1936,7 +1936,7 @@ function kglist_success_jsonpCallback(strdata){
 	//
 	var lkg_01='<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">';
 	$.each(strdata, function(k, v) {
-		lkg_01+='<li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="http://s.wo0.cn/o.php/KUGOU_' + v.FileHash + '.mp3" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3Dmp3%26src%3D/o.php/KUGOU_' + v.FileHash + '.mp3%26label%3D'+encodeURIComponent(v.filename)+'%26image%3Dhttp://static.yingyonghui.com/icon/128/6583623.png&title='+encodeURIComponent(v.SongName)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://static.yingyonghui.com/icon/128/6583623.png&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><div class="clear text-ellipsis"><a href="javascript:;" li_id="'+k+'" class="jp-play-me pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i><span style="color:#337AB7;">&nbsp;&nbsp;'+v.SongName+'</span></a></div></li>';
+		lkg_01+='<li class="list-group-item bg-black lk"><div class="pull-right m-l"><a href="http://s.wo0.cn/o.php/KUGOU_' + v.FileHash + '.mp3" target="_blank" class="m-r-sm"><i class="icon-cloud-download"></i></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://w.wo0.cn/jp/l.html%3Ftype%3Dmp3%26src%3Dhttp://s.wo0.cn/o.php/KUGOU_' + v.FileHash + '.mp3%26label%3D'+encodeURIComponent(v.filename)+'%26image%3Dhttp://static.yingyonghui.com/icon/128/6583623.png&title='+encodeURIComponent(v.SongName)+'&desc=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3&site=%E9%BE%92%E8%9C%97%E7%89%9BD&summary=%E9%BE%92%E8%9C%97%E7%89%9BD%E6%BB%9A%E7%90%83%E5%BD%B1%E9%9F%B3_Q%3A121027740%0A&pics=http://static.yingyonghui.com/icon/128/6583623.png&showcount=1" target="_blank" style="color:#337AB7;"><i class="icon-share"></i></a></div><div class="clear text-ellipsis"><a href="javascript:;" li_id="'+k+'" class="jp-play-me pull-left"><i class="icon-control-play text"></i><i class="icon-control-pause text-active"></i><span style="color:#337AB7;">&nbsp;&nbsp;'+v.SongName+'</span></a></div></li>';
 	});
 	lkg_01+='</ul>';
 	$('#jq_list').html(lkg_01);
