@@ -1929,7 +1929,7 @@ function ajaxjplb(ssrc){
 function kglist_success_jsonpCallback(strdata){
 	var lkg_0 = '[';
 	$.each(strdata, function(k, v) {
-		lkg_0 += '{mp3:"http://s.wo0.cn/o.php/KUGOU_' + v.FileHash + '.mp3",title:"'+(v.SongName).replace('\'', '')+'",poster:"http://static.yingyonghui.com/icon/128/6583623.png"},';
+		lkg_0 += '{mp3:"https://api.fj365.ml/o.php/KUGOU_' + v.FileHash + '.mp3",title:"'+(v.SongName).replace('\'', '')+'",poster:"http://static.yingyonghui.com/icon/128/6583623.png"},';
 	});
 	lkg_0 += ']';
 	eval("lkg_d0=" + lkg_0);
