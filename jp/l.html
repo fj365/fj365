@@ -1910,7 +1910,7 @@ function ajaxjplb(ssrc){
 	$.ajax({
 		cache: true,
 		async:false,
-		url: "https://songsearch.kugou.com/song_search_v2?keyword="+ssrc+"&page=1&pagesize=100&showtype=10&plat=2&version=9168&tag=1&correct=1&privilege=1&sver=5&highlight=em&tag_aggr=1&tagtype=%E5%85%A8%E9%83%A8&api_ver=1&area_code=1",//http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+ssrc+"&page=1&pagesize=500&showtype=1
+		url: "http://songsearch.kugou.com/song_search_v2?keyword="+ssrc+"&page=1&pagesize=100&showtype=10&plat=2&version=9168&tag=1&correct=1&privilege=1&sver=5&highlight=em&tag_aggr=1&tagtype=%E5%85%A8%E9%83%A8&api_ver=1&area_code=1",//http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp&keyword="+ssrc+"&page=1&pagesize=500&showtype=1
 		type: "GET",
 		dataType: "jsonp",
 		jsonpCallback: 'success_jsonpCallback',
