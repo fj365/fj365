@@ -1585,7 +1585,6 @@ $(document).ready(function() {
 				$("#jplayer_N").css("display","none");
 				$('#lrc_list').css("display","block");
 				//$("#ffull").css("display","none");
-				event.jPlayer.status.src = (event.jPlayer.status.src).replace(/https:/, "http:");
 				var lrc;
 				if((event.jPlayer.status.src).match(/php\/kg_/)){
 					lrc = (event.jPlayer.status.src).replace(/\.mp3|\.m4a/, ".lrc");
@@ -1939,8 +1938,8 @@ function kglist_success_jsonpCallback(strdata){
 		lkg_0 += '{mp3:"http://fj365.ga/wp-content/themes/WebStack-1.1422/xmly.php?kgid=' + v.FileHash + '",title:"'+(v.SongName).replace('\'', '')+'",poster:"http://static.yingyonghui.com/icon/128/6583623.png"},';
 	});
 	lkg_0 += ']';
-	eval("lkg_d0=" + lkg_0.replace(/https:/, "http:"));
-	myPlaylist.setPlaylist(lkg_d0.replace(/https:/, "http:"));
+	eval("lkg_d0=" + lkg_0);
+	myPlaylist.setPlaylist(lkg_d0);
 	//
 	var lkg_01='<ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">';
 	$.each(strdata, function(k, v) {
